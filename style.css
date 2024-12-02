@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* CSS Document */
+/******MODIFICHE GENERALI*****/
+:root{
+    --gg-bg-color: #040222;
+    --gg-txt-color: #f1f1e6;
+    --gg-ice-color: #c8f1f9;
+    --gg-deepblue-color: #011fe1;
+}
+
+body {
+    background-color: var(--gg-bg-color)
+}
+
+a {
+    text-decoration: none;
+}
+
+h1{
+    font-family: panchang;
+    font-weight: bold;
+    font-size: 84px;
+    color: var(--gg-ice-color);
+    filter: drop-shadow(0px 0px 50px var(--gg-deepblue-color));
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+h2{
+    font-family: panchang;
+    font-weight: normal;
+    font-size: 48px;
+    color: var(--gg-ice-color);
+}
+
+.header{
+    text-align: center;
+    margin-top: 185px;
+}
+
+.body{
+    margin-top: 100px;
+}
+
+.tty{
+    margin-top:20px;
+}
+
+
+
+/*****HOME PAGE****/
+
+.box{
+    border: var(--gg-border-drop);
+    height: 700px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
+    border-radius: 50px;
+}
+
+.box:active{
+    box-shadow: inset 0px 0px 50px 0px var(--gg-txt-color);
+
+}
+
+.icon{
+    width: 143px;
+    height: 143px;
+    color: var(--gg-txt-color);
+}
+
+.row{
+    margin: 0px 155px;
+}
+
+.box-txt{
+    color: var(--gg-txt-color);
+    font-weight: bold;
+}
