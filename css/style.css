@@ -8,6 +8,20 @@
     --gg-deepblue-color: #011fe1;
 }
 
+.reset-padding {
+    padding: 0 !important;
+}
+
+.reset-margin {
+    margin: 0 !important;
+}
+
+.reset-all {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
 body {
     background-color: var(--gg-bg-color)
 }
@@ -54,6 +68,7 @@ h2{
     border: var(--gg-border-drop);
     height: 700px;
     margin: 30px;
+    padding: 0%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,10 +89,167 @@ h2{
 }
 
 .row{
-    margin: 0px 155px;
+    margin: 0px 60px;/* fra: modificato il magine da 155 a 60 come da mockup (vedi margini griglia) */
 }
 
 .box-txt{
     color: var(--gg-txt-color);
     font-weight: bold;
 }
+
+
+/*****Areas*****/
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    opacity: 0.45;
+}
+
+
+
+.areas{
+    background-color: black;
+    box-shadow: none;
+    height: 100vh;  
+}
+
+.low{
+
+    height: 50vh;
+}
+
+.stop{
+    height: 500px; 
+}
+
+.join{
+    margin-top: -50vh;
+}
+
+.tcard{
+    position: absolute;
+}
+
+.box-footer{
+    margin-top: 150px;
+    
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    box-shadow: 0px 0px 50px 0px #011fe1; /* Aggiunge un'ombra */
+}
+
+.bi-house{
+    font-size: 80px;
+    color: #c8f1f9;
+}
+
+
+/*****Lumineth*****/
+
+
+
+
+/* 
+permette di tenere il menu sotto l'immagine */
+.overlay-header{
+    position: absolute;
+    padding: 0px;
+    z-index: 1;
+}
+
+
+
+/* 
+specifiche per l'immagine */
+.wallpaper{
+    width: 100%;
+    height: 1180px;
+    position: relative;
+    z-index: -1;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+}
+.goverlay{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--gg-bg-color), rgba(0, 0, 0, 0.0));
+    border-bottom: #011fe1;
+    border: 10px;
+}
+
+.img-wall{
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+
+}
+
+
+
+/* specifiche del menu*/
+.header-button{
+    padding: 0px;
+    display: flex;
+}
+
+.btn-primary{
+    font-family: panchang;
+    font-weight: bold;
+    color: var(--gg-bg-color);
+    font-size: 28px;
+    height: 117px;
+    width: 240px;
+    background-color: var(--gg-ice-color);
+    padding: auto;
+} 
+
+.title-area{
+
+    position: absolute;
+    bottom: 0;
+    align-items: end;
+}
+
+/* 
+specifiche per il body */
+
+.selplacer:first-child{
+    width: 560px;
+}
+
+.icons-alert{
+
+    width: 78px;
+    height: 78px;
+    justify-content: end;
+
+
+    svg{
+        color: var(--gg-ice-color);
+        width: 78px;
+        height: 78px;
+        padding: 0%;
+    }
+
+}
+
+.heavy-h2{
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 50px var(--gg-deepblue-color));
+}
+
+
+.selplacer:scd-child{
+    
+}
+
+/* .debug{
+    background-color: red;
+} */
