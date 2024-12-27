@@ -246,8 +246,9 @@ specifiche per il body */
 }
 
 
-.selplacer:scd-child{
-    
+.selplacer:nth-child(2){
+    width: 560px;
+    margin-left: 50px;
 }
 
 /* .debug{
