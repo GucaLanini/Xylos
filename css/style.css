@@ -6,6 +6,7 @@
     --gg-txt-color: #f1f1e6;
     --gg-ice-color: #c8f1f9;
     --gg-deepblue-color: #011fe1;
+    --gg-backgroungblue-color: #0A073A;
 }
 
 body {
@@ -81,6 +82,28 @@ h2{
     color: var(--gg-txt-color);
     font-weight: bold;
 }
+
+
+/*****EXPERIENCES****/
+
+.space-experiences {
+    margin-bottom: 450px;
+}
+
+.big-box{
+    border: var(--gg-border-drop);
+    height: 577px;
+    width: 1690px;
+    margin: 30px 0px 100px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
+    border-radius: 50px;
+    background-color: var(--gg-backgroungblue-color);
+}
+
 
 /*****SINGLE BOOKING****/
 .space {
@@ -171,6 +194,7 @@ h2{
     justify-content: center;
     align-items: center;
     box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
+    background-color: var(--gg-backgroungblue-color);
 }
 
 /*****EXPERIENCES****/
