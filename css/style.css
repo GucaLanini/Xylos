@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: var(--gg-bg-color)
+    background-color: var(--gg-bg-color);
 }
 
 a {
@@ -230,4 +230,3 @@ h2{
     color: var(--gg-txt-color);
     padding: 30px;
 }
-
