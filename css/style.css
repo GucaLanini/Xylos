@@ -1,6 +1,15 @@
 @charset "UTF-8";
 /* CSS Document */
 /******MODIFICHE GENERALI*****/
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+
+}
+
+
 :root{
     --gg-bg-color: #040222;
     --gg-txt-color: #f1f1e6;
@@ -15,6 +24,11 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.row {
+    margin-left: 75px;
+    margin-right: 75px;
 }
 
 h1{
@@ -74,9 +88,6 @@ h2{
     color: var(--gg-txt-color);
 }
 
-.row{
-    margin: 0px 155px;
-}
 
 .box-txt{
     color: var(--gg-txt-color);
@@ -164,9 +175,6 @@ h2{
     padding: 0px;
 }
 
-.row {
-    margin: 0px 75px;
-}
 
 .overlay {
     position: absolute; /* Posiziona l'overlay sopra l'immagine */
@@ -229,4 +237,120 @@ h2{
     font-size: 48px;
     color: var(--gg-txt-color);
     padding: 30px;
+}
+
+.calendars{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*****CALENDARIO*****/
+
+.calendar {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px, solid, var(--gg-deepblue-color);
+    flex: 2;
+    padding: 20px;
+}
+
+.calendarheader {
+    background-color: #1e4bf8;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calendarbody {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: var(--gg-txt-color);
+}
+
+.calendar-header button {
+    background-color: var(--gg-deepblue-color);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: var(--gg-ice-color);
+    cursor: pointer;
+}
+
+
+.calendar-header span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: var(--gg-txt-color);
+}
+
+
+.day:active {
+    background-color: #6c87ff;
+}
+
+.time-selector {
+    flex: 1;
+}
+
+.time-selector {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--gg-txt-color);
+}
+
+.time-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.time-option {
+    width: 235px;
+    padding: 10px 20px;
+    border: 2px solid var(--gg-ice-color);
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.time-option:active {
+    background-color: var(--gg-ice-color);
+}
+
+.container-fluid .calendar > .row{
+    margin: 0px;
 }
