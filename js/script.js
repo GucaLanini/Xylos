@@ -21,7 +21,7 @@ fauna.addEventListener('click', () => {
 
             <a href="" class="col box areas low">
 
-                <img class="img" src="tunnel.jpg" alt="Arakhara">
+                <img class="img" src="tunnel.png" alt="Arakhara">
                 <h2 class="tty box-txt tcard">Arakhara</h2>
 
             </a> 
@@ -161,7 +161,7 @@ flora.addEventListener('click', () => {
 
             <a href="" class="col box areas">
                 
-                <img class="img" src="tunnel.jpg" alt="Aerathos">
+                <img class="img" src="tunnel.png" alt="Aerathos">
                 <h2 class="tty box-txt tcard">Aerathos</h2>
                 
             </a> 
