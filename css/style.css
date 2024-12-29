@@ -131,7 +131,7 @@ h2{
 }
 
 .join{
-    margin-top: -50vh;
+    margin-top: -50vh !important;
 }
 
 .tcard{
@@ -296,7 +296,7 @@ div.container-fluid.reset-all div.row.justify-content-between{
 
 .items-menu{
     height: 130px;
-    margin-left: 10px !important;
+    margin-right: 10px !important;
     border-radius: 15px;
 }
 
@@ -352,6 +352,25 @@ h2.semibold{
     font-weight: 600;
 }
 
-.wip{
-    height: 5500px;
+.unconfort{
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+}
+
+
+div.container-fluid.reset-all div.row div.col-6.reset-padding div.row.reset-all{
+    margin-top: 200px !important;
+}
+
+div.container-fluid.reset-all{
+    height: 1000px;
+}
+
+.map{
+
+    justify-self: center;
+    width: 480px;
+    height: 500px;
+    margin-top: 100px ;
+    background-color: aqua;
 }
