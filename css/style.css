@@ -9,6 +9,19 @@
     --gg-backgroungblue-color: #0A073A;
 }
 
+.reset-padding {
+    padding: 0 !important;
+}
+
+.reset-margin {
+    margin: 0 !important;
+}
+
+.reset-all {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 body {
     background-color: var(--gg-bg-color);
 }
@@ -24,7 +37,7 @@ h1{
     color: var(--gg-ice-color);
     filter: drop-shadow(0px 0px 50px var(--gg-deepblue-color));
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 75px;
 }
 
 h2{
@@ -74,9 +87,6 @@ h2{
     color: var(--gg-txt-color);
 }
 
-.row{
-    margin: 0px 155px;
-}
 
 .box-txt{
     color: var(--gg-txt-color);
@@ -93,8 +103,7 @@ h2{
 .big-box{
     border: var(--gg-border-drop);
     height: 577px;
-    width: 1690px;
-    margin: 30px 0px 100px 0px;
+    margin: 0px 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,11 +113,16 @@ h2{
     background-color: var(--gg-backgroungblue-color);
 }
 
+.space-box {
+    margin-bottom:200px;
+}
+
 
 /*****SINGLE BOOKING****/
 .space {
     margin-bottom: 125px;
 }
+
 
 .card {
     border: none; 
@@ -164,9 +178,6 @@ h2{
     padding: 0px;
 }
 
-.row {
-    margin: 0px 75px;
-}
 
 .overlay {
     position: absolute; /* Posiziona l'overlay sopra l'immagine */
@@ -203,25 +214,28 @@ h2{
     margin-bottom: 150px;
 }
 
+.padding-100 {
+    padding: 0px 100px;
+}
+
 .card-experience {
     border: none;
     background: none;
     height: 490px;
     width: 1690px;
     border-radius: 15px;
-    margin: 75px 25px;
     object-fit: cover;
     box-shadow: 0px 0px 40px 0px var(--gg-txt-color);
+}
+
+.space-card-experience {
+    margin: 0px 0px 100px 0px;
 }
 
 .dimension-experience {
     height: 490px;
     width: 1690px;
     border-radius: 15px;
-}
-
-.container-experience {
-    padding: 0px 75px;
 }
 
 .h2-card-experince {
@@ -326,17 +340,8 @@ h2{
     white-space: nowrap
 }
 
-.selplacer:scd-child{
-    
-}
 
-.reset-margin {
-    margin: 0px;
-}
 
-.reset-padding {
-    padding: 0px;
-}
 
 /*.margin-left {
     margin-left: 25px;
