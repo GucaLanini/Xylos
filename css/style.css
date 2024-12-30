@@ -231,3 +231,32 @@ h2{
     padding: 30px;
 }
 
+/****TRANSPORTS****/
+.small-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    border: var(--gg-border-drop);
+    height: 300px;
+    width: 1688px;
+    margin: 30px 0px 100px 0px;
+    box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
+    border-radius: 50px;
+  }
+
+.h2-transport {
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--gg-txt-color);
+    margin-left: 245px;
+}
+
+.h3-transport {
+    font-family: Chillax;
+    font-weight: medium;
+    font-size: 40px;
+    color: var(--gg-txt-color);
+    margin-right: 245px;
+}
