@@ -374,6 +374,10 @@ p {
     margin-top: 150px;
 }
 
+.bottom-150 {
+    margin-bottom: 150px;
+}
+
 
 
 /*Card "cosa puoi trovare"*/
@@ -467,5 +471,30 @@ p {
     margin: 25px 0px 0px 25px;
 }
 
+/*Tariffe*/
 
+.card-tariffs {
+    height: 530px;
+    width: 498px;
+    border: 5px solid var(--gg-deepblue-color);
+    border-radius: 50px;
+}
+
+.icon-margin-40 {
+    margin: 40px;
+}
+
+.margin-70 {
+    margin: 0px 0px 70px 0px;
+}
+
+.padding-70 {
+    padding: 0px 70px;
+}
+
+.margin-50 {
+    margin-right: 50px;
+}
+  
+  
 
