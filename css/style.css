@@ -382,11 +382,21 @@ p {
 
 /*Card "cosa puoi trovare"*/
 
+.card-dimension {
+    height: 580px;
+    width: 530px;
+}
+
 .card-find {
     height: 315px;
     width: 530px;
     object-fit: cover;
     margin-top: 20px;
+    border-radius: 15px;
+}
+
+.card-title-margin {
+    margin: 0px 0px 20px 0px; 
 }
 
 .card-space {
