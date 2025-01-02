@@ -136,8 +136,6 @@ h3 {
     border: none; 
     background: none;
     border-radius: 50px;
-    margin: 25px;
-    
 }
 
 .card-img {
@@ -162,16 +160,31 @@ h3 {
 .lumineth {
     height: 1031px;
     width: 820px;
+    margin: 0px 50px 50px 0px;
 }
 
 .Arakhara {
-    height: 550;
+    height: 550px;
     width: 820px;
+    margin: 0px 0px 25px 25px;
+}
+
+.Nyxanthis {
+    height: 550px;
+    width: 820px;
+    margin: 25px 25px 25px 0px;
+}
+
+.Aerathos {
+    height: 1031px;
+    width: 820px;
+    margin: 25px 0px 25px 25px;
 }
 
 .Kharaxos {
     height: 550;
     width: 1689px;
+    margin: 25px 0px 0px 0px;;
 }
 
 .h2-card {
@@ -214,6 +227,7 @@ h3 {
     align-items: center;
     box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
     background-color: var(--gg-backgroungblue-color);
+    padding:0px;
 }
 
 /*****EXPERIENCES****/
