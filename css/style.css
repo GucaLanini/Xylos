@@ -260,3 +260,60 @@ h2{
     color: var(--gg-txt-color);
     margin-right: 245px;
 }
+
+.h2-special-vehicles{
+    font-family: panchang;
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--gg-ice-color);
+    margin-bottom: 90px;
+}
+
+/****MAP****/
+.pop_up-map {
+    background-color: var(--gg-bg-color);
+    border: 2px solid var(--gg-deepblue-color);
+    width: 1690px;
+    height: 1110px;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: left;
+}
+
+.p_fauna_Aerathos {
+    font-family: chillax;
+    font-weight: normal;
+    font-size: 24px;
+    color: var(--gg-txt-color);    
+}
+
+.close {
+    color: #C8F1F9;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.h1_Arboryx {
+    font-family: panchang;
+    font-weight: bold;
+    font-size: 48px;
+    color: #C8F1F9;    
+}
+
+.content p {
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--gg-ice-color);
+    color: var(--gg-bg-color);
+    font-family: panchang;
+    font-size: 28px;
+    font-weight: medium;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
