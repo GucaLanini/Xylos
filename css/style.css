@@ -689,3 +689,23 @@ p {
     border-radius: 5px;
     text-align: center;
 }
+
+/*RIEPILOGO*/
+.h3-esperienza {
+    font-family: Panchang;
+    font-weight: 600px;
+    font-size: 36px;
+    color: var(--gg-txt-color);
+    margin-bottom: 40px;
+}
+
+.line {
+    padding-bottom: 45px;
+    border-bottom: 5px solid var(--gg-deepblue-color);
+}
+
+.space-40 {
+    margin-bottom: 40px;
+}
+
+
