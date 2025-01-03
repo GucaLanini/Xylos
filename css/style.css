@@ -39,10 +39,6 @@ a {
     text-decoration: none;
 }
 
-.row {
-    margin-left: 75px;
-    margin-right: 75px;
-}
 
 h1{
     font-family: panchang;
@@ -714,8 +710,9 @@ p {
 }
 
 .line {
-    padding-bottom: 45px;
+    padding: 0px 0px 45px 0px;
     border-bottom: 5px solid var(--gg-deepblue-color);
+    margin: 0px
 }
 
 .space-40 {
@@ -729,6 +726,10 @@ p {
     height: 500px;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.space-430 {
+    margin-bottom: 430px;
 }
 
 
