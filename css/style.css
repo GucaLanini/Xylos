@@ -629,34 +629,43 @@ p {
     width: 1690px;
     height: 1110px;
     border-radius: 30px;
-    padding: 20px;
     text-align: left;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px; 
+    padding-bottom: 120px;
+    padding-top: 120px;
 }
 
-.p_fauna_Aerathos {
-    font-family: chillax;
-    font-weight: normal;
-    font-size: 24px;
-    color: var(--gg-txt-color);    
-}
-
-.close {
-    color: #C8F1F9;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.h1_Arboryx {
+.h1_map {
     font-family: panchang;
     font-weight: bold;
     font-size: 48px;
-    color: #C8F1F9;    
+    color: #C8F1F9;   
 }
 
-.content p {
+.content {
+    display: flex;
+    align-items: flex-start; 
+    padding: 140px;
+    gap: 50px;
+}
+
+.dome-container {
+    width: 676px;
+    height: 864px;
+    border-radius: 30px;
+    margin-right: 50px;
+}
+
+.p_map {
+    font-family: chillax;
+    font-weight: normal;
     font-size: 24px;
-    line-height: 1.5;
-    margin: 0 0 10px;
+    color: var(--gg-txt-color);
+    text-align: justify;
 }
 
 .button {
@@ -666,7 +675,18 @@ p {
     font-family: panchang;
     font-size: 28px;
     font-weight: medium;
-    padding: 10px 20px;
-    border-radius: 5px;
+    width: 240px;
+    height: 117px;
+    border-radius: 15px;
     text-align: center;
+    margin-top: 190px;
+    margin-left: 190px;
 }
+
+.content p {
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+
