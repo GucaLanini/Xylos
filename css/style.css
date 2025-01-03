@@ -248,23 +248,35 @@ h2{
     flex-wrap: wrap;
 }
 
+
+
+
 /*****CALENDARIO*****/
 
+
+
+
 .calendar {
+    height: 720px;
     border-radius: 8px;
     overflow: hidden;
-    border: 2px, solid, var(--gg-deepblue-color);
+    border: 5px, solid, var(--gg-deepblue-color);
     flex: 2;
-    padding: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .calendarheader {
-    background-color: #1e4bf8;
-    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    background-color: var(--gg-deepblue-color);
+    padding: 10px 25px;
     text-align: left;
-    font-size: 18px;
+    font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    color: var(--gg-txt-color);
+    height: 120px;
 }
 
 .calendarbody {
@@ -275,33 +287,37 @@ h2{
 
 
 
-.calendar-header {
+.calendar-selector {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     color: var(--gg-txt-color);
+    height: 100px;
+    border: 5px var(--gg-deepblue-color);
+    border-style: none none solid none;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.calendar-header button {
+.calendar-selector h3 {
+    font-size: 40px;
+}
+
+.calendar-selector button {
     background-color: var(--gg-deepblue-color);
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
     color: var(--gg-ice-color);
-    cursor: pointer;
 }
 
-
-.calendar-header span {
-    font-size: 16px;
-    font-weight: bold;
-}
 
 .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
+    gap: 50px;
+    margin: 10px;
 }
 
 .day {
@@ -311,6 +327,7 @@ h2{
     cursor: pointer;
     transition: background-color 0.3s;
     color: var(--gg-txt-color);
+    font-size: 32px;
 }
 
 
@@ -319,33 +336,40 @@ h2{
 }
 
 .time-selector {
-    flex: 1;
+    justify-content: center;
 }
 
-.time-selector {
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 16px;
-    color: var(--gg-txt-color);
+.border-right{
+    border: 5px var(--gg-deepblue-color);
+    border-style: none solid none none;
 }
 
 .time-options {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 60px;
     justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .time-option {
     width: 235px;
-    padding: 10px 20px;
-    border: 2px solid var(--gg-ice-color);
+    height: 40px;
+    border: 5px solid var(--gg-ice-color);
     text-align: center;
-    color: white;
+    color: #f1f1e6;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 20px;
+    
 }
 
+.p-bot {
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+}
 
 .time-option:active {
     background-color: var(--gg-ice-color);
