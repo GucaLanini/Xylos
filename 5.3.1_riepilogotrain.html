@@ -7,27 +7,23 @@
     <link href="css/style.css" rel="stylesheet" type="text/css"> 
 </head>
 <body>
-    <div class="selection">
-        <p id="display-date">Selected Date: </p>
-        <p id="display-time">Selected Time: </p>
+    <div class="container text-center mt-5">
+        <h1>Riepilogo Prenotazione</h1>
+        <p id="selected-day" class="fs-4 mt-4">Giorno selezionato: <span></span></p>
+        <p id="selected-time" class="fs-4">Ora selezionata: <span class></span></p>
     </div>
 
 </body>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const selectedDate = localStorage.getItem('selectedDate');
-        const selectedHour = localStorage.getItem('selectedHour');
+   // Recupera i dati salvati in localStorage
+   document.addEventListener('DOMContentLoaded', () => {
+            const selectedDay = localStorage.getItem('selectedDate');
+            const selectedTime = localStorage.getItem('selectedHour');
+            console.log("Dati recuperati:", { selectedDay, selectedTime });
 
-        if (selectedDate && selectedHour) {
-            document.getElementById('display-date').textContent = `Selected Date: ${selectedDate}`;
-            document.getElementById('display-time').textContent = `Selected Time: ${selectedHour}`;
-        } else {
-            document.getElementById('display-date').textContent = 'No date selected';
-            document.getElementById('display-time').textContent = 'No time selected';
-        }
-    });
 
-    function goBack() {
-        window.location.href = 'index.html'; // Replace with the main page URL
-    }
+            // Mostra i dati recuperati
+            document.querySelector('#selected-day span').textContent = selectedDay || "Nessun giorno selezionato";
+            document.querySelector('#selected-time span').textContent = selectedTime || "Nessun orario selezionato";
+        });
 </script>
