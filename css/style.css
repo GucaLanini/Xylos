@@ -801,8 +801,40 @@ p {
 }
 
 
+/*RIEPILOGO*/ 
+.h3-esperienza {
+    font-family: Panchang;
+    font-weight: 600px;
+    font-size: 36px;
+    color: var(--gg-txt-color);
+    margin-bottom: 40px;
+}
 
-/***RIEPILOGO***/
+.line {
+    padding: 0px 0px 45px 0px;
+    border-bottom: 5px solid var(--gg-deepblue-color);
+    margin: 0px
+}
+
+.space-40 {
+    margin-bottom: 40px;
+}
+
+.calendars{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.space-430 {
+    margin-bottom: 430px;
+}
+
+
+
 
 .selection{
     display: flex;
