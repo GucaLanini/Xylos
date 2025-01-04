@@ -5,12 +5,33 @@
 
 
 
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+
+}
+
 
 :root{
     --gg-bg-color: rgb(4, 2, 34);
     --gg-txt-color: #f1f1e6;
     --gg-ice-color: #c8f1f9;
     --gg-deepblue-color: #011fe1;
+    --gg-backgroungblue-color: #0A073A;
+}
+
+.reset-padding {
+    padding: 0 !important;
+}
+
+.reset-margin {
+    margin: 0 !important;
+}
+
+.reset-all {
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .reset-padding {
@@ -28,12 +49,13 @@
 
 
 body {
-    background-color: var(--gg-bg-color)
+    background-color: var(--gg-bg-color);
 }
 
 a {
     text-decoration: none;
 }
+
 
 h1{
     font-family: panchang;
@@ -42,7 +64,7 @@ h1{
     color: var(--gg-ice-color);
     filter: drop-shadow(0px 0px 50px var(--gg-deepblue-color));
     text-align: center;
-    margin-bottom: 75px;
+    margin-bottom: 50px;
 }
 
 h2{
@@ -52,13 +74,21 @@ h2{
     color: var(--gg-ice-color);
 }
 
+h3 {
+    font-family: panchang;
+    font-weight: 600px;
+    font-size: 36px;
+    color: var(--gg-ice-color);
+    margin: none;
+}
+
 .header{
     text-align: center;
-    margin-top: 185px;
+    margin-top: 150px;
 }
 
 .body{
-    margin-top: 100px;
+    margin: 100px 0px 0px 0px;
 }
 
 .tty{
@@ -162,6 +192,179 @@ h2{
 
 /* 
 permette di tenere il menu sotto l'immagine */
+/*****EXPERIENCES****/
+
+.space-experiences {
+    margin-bottom: 450px;
+}
+
+.big-box{
+    border: var(--gg-border-drop);
+    height: 577px;
+    margin: 0px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
+    border-radius: 50px;
+    background-color: var(--gg-backgroungblue-color);
+}
+
+.space-box {
+    margin-bottom:200px;
+}
+
+
+/*****SINGLE BOOKING****/
+.space {
+    margin-bottom: 125px;
+}
+
+
+.card {
+    border: none; 
+    background: none;
+    border-radius: 50px;
+}
+
+.card-img {
+    border-radius: 50px;
+    object-fit: cover;
+    
+}
+
+.img-long {
+    height: 1031px;
+}
+
+.img-short {
+    height: 550px;
+}
+
+.img-large {
+    width: 1690px;
+    height: 550px;
+}
+
+.lumineth {
+    height: 1031px;
+    width: 820px;
+    margin: 0px 25px 50px 0px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+}
+
+.Arakhara {
+    height: 550px;
+    width: 820px;
+    margin: 0px 0px 50px 25px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+}
+
+.Nyxanthis {
+    height: 550px;
+    width: 820px;
+    margin: 25px 25px 25px 0px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+}
+
+.Aerathos {
+    height: 1031px;
+    width: 820px;
+    margin: 25px 0px 25px 25px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+}
+
+.Kharaxos {
+    height: 550;
+    width: 1689px;
+    margin: 25px 0px 0px 0px;;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+}
+
+.h2-card {
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--gg-txt-color);
+}
+
+.container-custom {
+    width: 1890px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.overlay {
+    position: absolute; /* Posiziona l'overlay sopra l'immagine */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+  }
+
+.card-img-overlay {
+    z-index: 2;
+}
+  
+.footer {
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 150px;
+    border: var(--gg-border-drop);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 50px 0px var(--gg-deepblue-color);
+    background-color: var(--gg-backgroungblue-color);
+    padding:0px;
+}
+
+/*****EXPERIENCES****/
+
+.space-experience {
+    margin-bottom: 150px;
+}
+
+.padding-100 {
+    padding: 0px 100px;
+}
+
+.card-experience {
+    border: none;
+    background: none;
+    height: 490px;
+    width: 1690px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0px 0px 40px 0px var(--gg-txt-color);
+}
+
+.space-card-experience {
+    margin: 0px 0px 100px 0px;
+}
+
+.dimension-experience {
+    height: 490px;
+    width: 1690px;
+    border-radius: 15px;
+}
+
+.h2-card-experince {
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--gg-txt-color);
+    padding: 30px;
+}
+
+/*ESPERIENZA SINGOLA*/
+
+/* permette di tenere il menu sotto l'immagine */
 .overlay-header{
     position: absolute;
     padding: 0px;
@@ -217,6 +420,7 @@ specifiche per l'immagine */
 .btn-primary{
     font-family: panchang;
     font-weight: bold;
+    font-weight: 600px;
     color: var(--gg-bg-color);
     font-size: 28px;
     height: 117px;
@@ -373,4 +577,378 @@ div.container-fluid.reset-all{
     height: 500px;
     margin-top: 100px ;
     background-color: aqua;
+}
+.path{
+    border-color: var(--gg-ice-color);
+    padding: auto;
+} 
+
+.title-area{
+    position: absolute;
+    bottom: 0;
+    align-items: end;
+}
+
+/* specifiche per l'immagine */
+.wallpaper{
+    width: 100%;
+    height: 1180px;
+    position: relative;
+    z-index: -1;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+}
+.goverlay{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--gg-bg-color), rgba(0, 0, 0, 0.0));
+    border-bottom: #011fe1;
+    border: 10px;
+}
+
+.img-wall{
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+/* specifiche per il body */
+
+
+.icons-alert{
+    width: 78px;
+    height: 78px;
+    justify-content: end;
+
+    svg{
+        color: var(--gg-ice-color);
+        width: 78px;
+        height: 78px;
+        padding: 0%;
+    }
+}
+
+.h1-experience {
+    font-family: panchang;
+    font-weight: bold;
+    font-size: 84px;
+    color: var(--gg-txt-color);
+    filter: none;
+    text-align: start;
+}
+
+.heavy-h2{
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 50px var(--gg-deepblue-color));
+    white-space: nowrap;
+    margin-bottom: 40px;
+}
+
+.space-30 {
+    padding:30px 0px 0px 0px;
+}
+
+.space-50 {
+    margin: 0px 0px 50px 0px;
+}
+
+.space-90 {
+    padding-bottom: 90px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.p-lightblue {
+    color: var(--gg-ice-color)
+}
+
+p {
+    font-family: chillax;
+    font-weight: 600px;
+    font-size: 24px;
+    color: var(--gg-txt-color);
+    text-align: left;
+}
+
+.top-150 {
+    margin-top: 150px;
+}
+
+.bottom-150 {
+    margin-bottom: 150px;
+}
+
+
+
+/*Card "cosa puoi trovare"*/
+
+.card-dimension {
+    height: 580px;
+    width: 530px;
+}
+
+.card-find {
+    height: 315px;
+    width: 530px;
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.card-title-margin {
+    margin: 0px 0px 20px 0px; 
+}
+
+.card-space {
+    padding: 0px 50px;
+}
+
+/*Galleria*/
+
+.card-1 {
+    height: 560px;
+    width: 505px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 0px 25px 0px 0px
+
+}
+
+.card-1-img {
+    height: 560px;
+    width: 505px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-2 {
+    height: 255px;
+    width: 625px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 0px 25px 25px 25px;
+}
+
+.card-2-img {
+    height: 255px;
+    width: 625px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-3 {
+    height: 255px;
+    width: 460px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 0px 0px 25px 25px;
+}
+
+.card-3-img {
+    height: 255px;
+    width: 460px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-4 {
+    height: 255px;
+    width: 530px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-4-img {
+    height: 255px;
+    width: 530px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 25px 25px 0px 25px;
+}
+
+.card-5 {
+    height: 255px;
+    width: 560px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-5-img {
+    height: 255px;
+    width: 560px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 25px 0px 0px 25px;
+}
+
+/*Tariffe*/
+
+.card-tariffs {
+    height: auto;
+    width: 498px;
+    border: 5px solid var(--gg-deepblue-color);
+    border-radius: 50px;
+    padding: 0px;
+    justify-content: center; 
+}
+
+.icon-margin-70 {
+    margin: 70px;
+}
+
+.margin-70 {
+    margin: 0px 0px 70px 0px;
+}
+
+.padding-70 {
+    padding: 0px 70px;
+}
+
+.margin-50 {
+    margin-right: 50px;
+}
+  
+/*Prenota*/ 
+
+.checkbox-style
+{
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--gg-deepblue-color);
+    border-radius: 3px;
+    background-color: var(--gg-bg-color);
+    filter: none; 
+    display: flex;
+    align-items: center;
+}
+
+.padding-30 {
+    padding: 30px 0px 0px 0px;
+}
+
+/*Qrcode*/ 
+.p-align {
+    text-align: center;
+}
+
+.heigh-page {
+    height: 3024px;
+}
+
+
+/****TRANSPORTS****/
+.small-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    border: var(--gg-border-drop);
+    height: 300px;
+    width: 1688px;
+    margin: 30px 0px 100px 0px;
+    box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
+    border-radius: 50px;
+  }
+
+.h2-transport {
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--gg-txt-color);
+    margin-left: 245px;
+}
+
+.h3-transport {
+    font-family: Chillax;
+    font-weight: medium;
+    font-size: 40px;
+    color: var(--gg-txt-color);
+    margin-right: 245px;
+}
+
+.h2-special-vehicles{
+    font-family: panchang;
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--gg-ice-color);
+    margin-bottom: 90px;
+}
+
+/****MAP****/
+/*search bar*/
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #011FE1;
+    width: 1400px;
+    height: 86px;
+    border-radius: 15px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+.search-input {
+    flex: 1;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 40px;
+    color: var(--gg-txt-color);
+    font-family: Chillax;
+    font-weight: medium;
+    margin-left: 95px;
+  }
+
+.search-input::placeholder {
+    color: #F1F1E6;
+  }
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-right: 95px;
+  }
+
+.space-map {
+    margin-bottom: 270px;
+}
+
+.space-bar {
+    margin-bottom: 311px;
+}
+
+/*pop up*/
+.card-pop-up {
+    width: 1690px;
+    height: 1110px;
+    border: 10px solid var(--gg-deepblue-color);
+    border-radius: 30px;
+    margin: 0px 100px;
+    padding: 135px;
+}
+
+.col-img-dome {
+    width: 676px;
+    height: 864px;
+    gap: 50px;
+}
+
+.p_map {
+    margin-top: 50px;
+}
+
+
+
+/***RIEPILOGO***/
+
+.selection{
+    display: flex;
 }
