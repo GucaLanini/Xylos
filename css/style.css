@@ -762,8 +762,6 @@ p {
     border-radius: 50%;
     width: 68px;
     margin: auto;
-    display: inline-flex;
-    justify-content: center;
 }
 
 .time-selector {
