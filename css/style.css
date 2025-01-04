@@ -686,7 +686,7 @@ p {
     padding: 110px 135px;
 }
 
-.col-img-dome {
+.col-img-card {
     width: 676px;
     height: 864px;
     gap: 50px;
@@ -697,6 +697,17 @@ p {
     text-align: justify;
 }
 
+.btn-primary-map{
+    font-family: panchang;
+    font-weight: 600px;
+    color: var(--gg-bg-color);
+    font-size: 28px;
+    height: 117px;
+    width: 240px;
+    background-color: var(--gg-ice-color);
+    border-color: var(--gg-ice-color);
+    margin-left: 270px;
+}
 
 /*****CALENDARIO*****/
 
