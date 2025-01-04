@@ -657,8 +657,8 @@ p {
     height: 1110px;
     border: 10px solid var(--gg-deepblue-color);
     border-radius: 30px;
-    margin: 0px 100px;
-    padding: 135px;
+    margin: 587px 100px;
+    padding: 110px 135px;
 }
 
 .col-img-dome {
@@ -669,4 +669,5 @@ p {
 
 .p_map {
     margin-top: 50px;
+    text-align: justify;
 }
