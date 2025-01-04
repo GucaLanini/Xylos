@@ -295,7 +295,7 @@ h3 {
     box-shadow: inset 100px 100px 100px 100px var(--gg-deepblue-color);
     border-radius: 30px;
     background-color: var(--gg-backgroungblue-color);
-    stroke:#011fe1;
+    stroke: var(--gg-deepblue-color);
 }
 
 .h3{
@@ -356,7 +356,7 @@ h3 {
     width: 100%;
     height: 100%;
     background: linear-gradient(to top, var(--gg-bg-color), rgba(0, 0, 0, 0.0));
-    border-bottom: #011fe1;
+    border-bottom: var(--gg-deepblue-color);
     border: 10px;
 }
 
@@ -637,7 +637,7 @@ p {
 .search-bar {
     display: flex;
     align-items: center;
-    background-color: #011FE1;
+    background-color: var(--gg-deepblue-color);
     width: 1400px;
     height: 86px;
     border-radius: 15px;
@@ -658,7 +658,7 @@ p {
   }
 
 .search-input::placeholder {
-    color: #F1F1E6;
+    color: var(--gg-txt-color);
   }
 
 .search-button {
