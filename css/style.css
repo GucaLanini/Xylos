@@ -340,8 +340,6 @@ h3 {
 }
 
 /* specifiche per il body */
-
-
 .icons-alert{
     width: 78px;
     height: 78px;
@@ -406,8 +404,6 @@ p {
 .bottom-150 {
     margin-bottom: 150px;
 }
-
-
 
 /*Card "cosa puoi trovare"*/
 
@@ -657,8 +653,8 @@ p {
     height: 1110px;
     border: 10px solid var(--gg-deepblue-color);
     border-radius: 30px;
-    margin: 0px 100px;
-    padding: 135px;
+    margin: 587px 100px;
+    padding: 110px 135px;
 }
 
 .col-img-dome {
@@ -669,4 +665,5 @@ p {
 
 .p_map {
     margin-top: 50px;
+    text-align: justify;
 }
