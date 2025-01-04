@@ -704,7 +704,11 @@ p {
 /*****CALENDARIO*****/
 
 
-
+.calendar-wrapper{
+    width: 1690px;
+    padding: 0px;
+    margin: 0px 100px;
+}
 
 .calendar {
     height: 720px;
@@ -766,7 +770,7 @@ p {
 .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 50px;
+    gap: 40px;
     margin: 10px;
 }
 
@@ -781,8 +785,9 @@ p {
 }
 
 
-.day:active {
-    background-color: #6c87ff;
+.day.selected {
+    background-color: var(--gg-ice-color);
+    color: var(--gg-bg-color);
 }
 
 .time-selector {
@@ -797,7 +802,7 @@ p {
 .time-options {
     display: flex;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 50px;
     justify-content: center;
     margin-bottom: 20px;
     margin-top: 30px;
@@ -808,7 +813,7 @@ p {
     height: 40px;
     border: 5px solid var(--gg-ice-color);
     text-align: center;
-    color: #f1f1e6;
+    color: var(--gg-txt-color);
     cursor: pointer;
     transition: background-color 0.3s;
     font-size: 20px;
@@ -821,8 +826,9 @@ p {
     padding-right: 0;
 }
 
-.time-option:active {
+.time-option.selected {
     background-color: var(--gg-ice-color);
+    color: var(--gg-bg-color)
 }
 
 .container-fluid .calendar > .row{

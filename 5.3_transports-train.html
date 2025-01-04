@@ -79,9 +79,15 @@
   </div>
 </div>
 </div>
-</div> 
+</div>
 </body>
+
+
 <script>
+
+
+/***SELEZIONE GIORNO E ORA****/
+
   document.addEventListener('DOMContentLoaded', () => {
       let selectedDay = document.querySelector('.day.selected');
       let selectedTime = document.querySelector('.time-option.selected');
@@ -115,7 +121,6 @@
           const selectedDate = selectedDay ? selectedDay.textContent : null;
           const selectedHour = selectedTime ? selectedTime.textContent : null;
           console.log(`Selected Date: ${selectedDate}, Selected Time: ${selectedHour}`);
-          // Here, you can save the data to a server or local storage if needed
       }
   });
 </script>

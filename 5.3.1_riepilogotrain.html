@@ -18,7 +18,6 @@
         const selectedDate = localStorage.getItem('selectedDate');
         const selectedHour = localStorage.getItem('selectedHour');
 
-        // Display the retrieved values
         if (selectedDate && selectedHour) {
             document.getElementById('display-date').textContent = `Selected Date: ${selectedDate}`;
             document.getElementById('display-time').textContent = `Selected Time: ${selectedHour}`;
