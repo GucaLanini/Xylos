@@ -670,3 +670,11 @@ p {
 .p_map {
     margin-top: 50px;
 }
+
+
+
+/***RIEPILOGO***/
+
+.selection{
+    display: flex;
+}
