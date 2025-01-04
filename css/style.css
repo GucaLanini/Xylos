@@ -600,7 +600,7 @@ p {
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
-    color: #fff;
+    color: var(--gg-txt-color);
     border: var(--gg-border-drop);
     height: 300px;
     width: 1688px;
