@@ -672,6 +672,135 @@ p {
 }
 
 
+/*****CALENDARIO*****/
+
+
+
+
+.calendar {
+    height: 720px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 5px, solid, var(--gg-deepblue-color);
+    flex: 2;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.calendarheader {
+    display: flex;
+    align-items: center;
+    background-color: var(--gg-deepblue-color);
+    padding: 10px 25px;
+    text-align: left;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--gg-txt-color);
+    height: 120px;
+}
+
+.calendarbody {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+
+.calendar-selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    color: var(--gg-txt-color);
+    height: 100px;
+    border: 5px var(--gg-deepblue-color);
+    border-style: none none solid none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.calendar-selector h3 {
+    font-size: 40px;
+}
+
+.calendar-selector button {
+    background-color: var(--gg-deepblue-color);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: var(--gg-ice-color);
+}
+
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 50px;
+    margin: 10px;
+}
+
+.day {
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: var(--gg-txt-color);
+    font-size: 32px;
+}
+
+
+.day:active {
+    background-color: #6c87ff;
+}
+
+.time-selector {
+    justify-content: center;
+}
+
+.border-right{
+    border: 5px var(--gg-deepblue-color);
+    border-style: none solid none none;
+}
+
+.time-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.time-option {
+    width: 235px;
+    height: 40px;
+    border: 5px solid var(--gg-ice-color);
+    text-align: center;
+    color: #f1f1e6;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+    
+}
+
+.p-bot {
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.time-option:active {
+    background-color: var(--gg-ice-color);
+}
+
+.container-fluid .calendar > .row{
+    margin: 0px;
+}
+
+
 
 /***RIEPILOGO***/
 
