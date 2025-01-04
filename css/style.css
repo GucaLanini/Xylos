@@ -1,6 +1,15 @@
 @charset "UTF-8";
 /* CSS Document */
 /******MODIFICHE GENERALI*****/
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+
+}
+
+
 :root{
     --gg-bg-color: #040222;
     --gg-txt-color: #f1f1e6;
@@ -29,6 +38,7 @@ body {
 a {
     text-decoration: none;
 }
+
 
 h1{
     font-family: panchang;
@@ -136,8 +146,6 @@ h3 {
     border: none; 
     background: none;
     border-radius: 50px;
-    margin: 25px;
-    
 }
 
 .card-img {
@@ -162,16 +170,36 @@ h3 {
 .lumineth {
     height: 1031px;
     width: 820px;
+    margin: 0px 25px 50px 0px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
 }
 
 .Arakhara {
-    height: 550;
+    height: 550px;
     width: 820px;
+    margin: 0px 0px 50px 25px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+}
+
+.Nyxanthis {
+    height: 550px;
+    width: 820px;
+    margin: 25px 25px 25px 0px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+}
+
+.Aerathos {
+    height: 1031px;
+    width: 820px;
+    margin: 25px 0px 25px 25px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
 }
 
 .Kharaxos {
     height: 550;
     width: 1689px;
+    margin: 25px 0px 0px 0px;;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
 }
 
 .h2-card {
@@ -212,8 +240,9 @@ h3 {
     text-align: center;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
+    box-shadow: 0px 0px 50px 0px var(--gg-deepblue-color);
     background-color: var(--gg-backgroungblue-color);
+    padding:0px;
 }
 
 /*****EXPERIENCES****/
@@ -679,14 +708,4 @@ p {
     height: 117px;
     border-radius: 15px;
     text-align: center;
-    margin-top: 190px;
-    margin-left: 190px;
 }
-
-.content p {
-    font-size: 24px;
-    line-height: 1.5;
-    margin: 0 0 10px;
-}
-
-
