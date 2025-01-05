@@ -874,3 +874,12 @@ p {
 .selection{
     display: flex;
 }
+
+/*INDEX*/ 
+
+.bodyindex {
+    background-image: url ('img/sfondo index.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
