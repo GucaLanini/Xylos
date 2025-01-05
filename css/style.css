@@ -740,7 +740,7 @@ p {
 .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 40px;
+    gap: 30px;
     margin: 10px;
 }
 
