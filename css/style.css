@@ -928,18 +928,18 @@ p {
 .selection{
     display: flex;
 }
-<<<<<<< HEAD
+
 
 /*INDEX*/ 
 
-<<<<<<< HEAD
+
 .bodyindex {
     background-image: url ('img/sfondo index.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-=======
+
 body, html { /*bottone e testo*/
     margin: 0;
     padding: 0;
@@ -975,8 +975,6 @@ body, html { /*bottone e testo*/
    
 }
 
-}
-
 
 
 
@@ -991,10 +989,3 @@ body, html { /*bottone e testo*/
 
  
  
-    
-<<<<<<< HEAD
->>>>>>> sam
-=======
-=======
->>>>>>> origin/main
->>>>>>> sam
