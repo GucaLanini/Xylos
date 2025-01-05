@@ -779,10 +779,10 @@ p {
 .time-options {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 45px;
     justify-content: center;
-    margin-bottom: 50px;
-    margin-top: 30px;
+    margin: 50px, 0px;
+
 }
 
 .time-option {
@@ -795,11 +795,6 @@ p {
     transition: background-color 0.3s;
 }
 
-.p-bot {
-    padding-bottom: 20px;
-    padding-left: 0;
-    padding-right: 0;
-}
 
 .time-option.selected {
     background-color: var(--gg-ice-color);
