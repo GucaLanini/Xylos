@@ -676,6 +676,47 @@ p {
     margin-bottom: 311px;
 }
 
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space-630 {
+    margin-top: 630px;
+}
+
+/*filtro*/
+.filter-title {
+    margin-left: 100px;
+}  
+.filter-options {
+    display: flex;
+    margin-left: 100px;
+    gap: 70px;
+  }
+  
+.space-filter {
+    padding-top: 90px;
+}
+  
+.filter-item span {
+    font-size: 28px;
+    font-family: chillax;
+    font-weight: medium;
+    color: var(--gg-txt-color);
+    text-align: center;
+  }
+
+.filter-item.active img {
+    filter: none;
+  }
+  
+.filter-item.active {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
 /*pop up*/
 .card-pop-up {
     width: 1690px;
@@ -882,6 +923,10 @@ p {
 .selection{
     display: flex;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> sam
 
 /*INDEX*/ 
 
@@ -945,4 +990,9 @@ body, html { /*bottone e testo*/
  
  
     
+<<<<<<< HEAD
+>>>>>>> sam
+=======
+=======
+>>>>>>> origin/main
 >>>>>>> sam
