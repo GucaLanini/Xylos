@@ -7,23 +7,20 @@
     <link href="css/style.css" rel="stylesheet" type="text/css"> 
 </head>
 <body>
-    <div class="container text-center mt-5">
-        <h1>Riepilogo Prenotazione</h1>
-        <p id="selected-day" class="fs-4 mt-4">Giorno selezionato: <span></span></p>
-        <p id="selected-time" class="fs-4">Ora selezionata: <span></span></p>
+    <div id="selection-result">
+        <p>Data: <span id="selected-date"></span></p>
+        <p>Ora: <span id="selected-time"></span></p>
     </div>
 
 </body>
 <script>
-   // Recupera i dati salvati in localStorage
-   document.addEventListener('DOMContentLoaded', () => {
-            const selectedDay = localStorage.getItem('selectedDate');
-            const selectedTime = localStorage.getItem('selectedHour');
-            console.log("Dati recuperati:", { selectedDay, selectedTime });
+     const selectedData = JSON.parse(localStorage.getItem('selectedData'));
+     const selectedMonth = JSON.parse(localStorage.getItem('selectedMonth'));
 
-
-            // Mostra i dati recuperati
-            document.querySelector('#selected-day span').textContent = selectedDay || "Nessun giorno selezionato";
-            document.querySelector('#selected-time span').textContent = selectedTime || "Nessun orario selezionato";
-        });
+if (selectedData) {
+    document.getElementById('selected-date').textContent = selectedData.date;
+    document.getElementById('selected-time').textContent = selectedData.time;
+} else {
+    document.getElementById('selection-result').textContent = "Nessuna data o ora selezionata.";
+}
 </script>

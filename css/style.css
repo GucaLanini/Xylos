@@ -759,11 +759,7 @@ p {
 /*****CALENDARIO*****/
 
 
-.calendar-wrapper{
-    width: 1690px;
-    padding: 0px;
-    margin: 0px 100px;
-}
+
 
 .calendar {
     height: 720px;
@@ -773,6 +769,9 @@ p {
     flex: 2;
     padding-left: 0px;
     padding-right: 0px;
+    width: 1690px;
+    padding: 0px;
+    margin: 0px 100px;
 }
 
 .calendarheader {
@@ -825,7 +824,7 @@ p {
 .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 40px;
+    gap: 30px;
     margin: 10px;
 }
 
@@ -839,10 +838,17 @@ p {
     font-size: 32px;
 }
 
+.selected {
+    background-color: var(--gg-ice-color);
+}
+
 
 .day.selected {
     background-color: var(--gg-ice-color);
     color: var(--gg-bg-color);
+    border-radius: 50%;
+    width: 68px;
+    margin: auto;
 }
 
 .time-selector {
@@ -857,10 +863,10 @@ p {
 .time-options {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 45px;
     justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    margin: 50px, 0px;
+
 }
 
 .time-option {
@@ -871,15 +877,8 @@ p {
     color: var(--gg-txt-color);
     cursor: pointer;
     transition: background-color 0.3s;
-    font-size: 20px;
-    
 }
 
-.p-bot {
-    padding-bottom: 20px;
-    padding-left: 0;
-    padding-right: 0;
-}
 
 .time-option.selected {
     background-color: var(--gg-ice-color);
