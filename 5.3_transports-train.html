@@ -80,6 +80,12 @@
 </div>
 </div>
 </div>
+
+<div> 
+  <a href="5.3.1_riepilogotrain.html" class="col-auto header-button justify-content-center body">
+      <button type="button" class="btn btn-primary">Prenota</button>
+  </a>
+</div>
 </body>
 
 
@@ -88,39 +94,43 @@
 
 /***SELEZIONE GIORNO E ORA****/
 
-  document.addEventListener('DOMContentLoaded', () => {
-      let selectedDay = document.querySelector('.day.selected');
-      let selectedTime = document.querySelector('.time-option.selected');
+document.addEventListener('DOMContentLoaded', () => {
+    let selectedDay = document.querySelector('.day.selected');
+    let selectedTime = document.querySelector('.time-option.selected');
 
-      const days = document.querySelectorAll('.day');
-      const timeOptions = document.querySelectorAll('.time-option');
+    const days = document.querySelectorAll('.day');
+    const timeOptions = document.querySelectorAll('.time-option');
 
-      days.forEach(day => {
-          day.addEventListener('click', () => {
-              if (selectedDay) {
-                  selectedDay.classList.remove('selected');
-              }
-              day.classList.add('selected');
-              selectedDay = day;
-              saveSelection();
-          });
-      });
+    days.forEach(day => {
+        day.addEventListener('click', () => {
+            if (selectedDay) {
+                selectedDay.classList.remove('selected');
+            }
+            day.classList.add('selected');
+            selectedDay = day;
+            saveSelection();
+        });
+    });
 
-      timeOptions.forEach(time => {
-          time.addEventListener('click', () => {
-              if (selectedTime) {
-                  selectedTime.classList.remove('selected');
-              }
-              time.classList.add('selected');
-              selectedTime = time;
-              saveSelection();
-          });
-      });
+    timeOptions.forEach(time => {
+        time.addEventListener('click', () => {
+            if (selectedTime) {
+                selectedTime.classList.remove('selected');
+            }
+            time.classList.add('selected');
+            selectedTime = time;
+            saveSelection();
+        });
+    });
 
-      function saveSelection() {
-          const selectedDate = selectedDay ? selectedDay.textContent : null;
-          const selectedHour = selectedTime ? selectedTime.textContent : null;
-          console.log(`Selected Date: ${selectedDate}, Selected Time: ${selectedHour}`);
-      }
-  });
+    function saveSelection() {
+        const selectedDate = selectedDay ? selectedDay.textContent : null;
+        const selectedHour = selectedTime ? selectedTime.textContent : null;
+
+        if (selectedDate && selectedHour) {
+            localStorage.setItem('selectedDate', selectedDate);
+            localStorage.setItem('selectedHour', selectedHour);
+        }
+    }
+});
 </script>
