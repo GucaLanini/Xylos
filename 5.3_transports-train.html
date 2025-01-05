@@ -7,120 +7,177 @@
    <link href="css/style.css" rel="stylesheet" type="text/css"> 
 </head>
 <body>
-   <div class="container-fluid calendar-wrapper">
-      <div class="row">
-      <div class="col">
-      <div class="calendarheader">
-          <p>Data e ora del ritiro</p>
-      </div>
-      <div class="calendarbody">
-          <div class="container-fluid calendar">
-            <div class="row">
-               <div class="col-7 border-right p-bot">
+    <div class="calendarbody">
+        <div class="container-fluid calendar">
+          <div class="row">
+            <div class="col-7 border-right p-bot">
               <div class="calendar-selector">
-                  <button>&lt;</button>
-                  <h3>Luglio</h3>
-                  <button>&gt;</button>
+                <button id="prev-month">&lt;</button>
+                <span id="current-month">Luglio 2024</span>
+                <button id="next-month">&gt;</button>
               </div>
-              <div class="days">
-                  <div class="day">1</div>
-                  <div class="day">2</div>
-                  <div class="day">3</div>
-                  <div class="day">4</div>
-                  <div class="day">5</div>
-                  <div class="day">6</div>
-                  <div class="day">7</div>
-                  <div class="day">8</div>
-                  <div class="day">9</div>
-                  <div class="day">10</div>
-                  <div class="day">11</div>
-                  <div class="day">12</div>
-                  <div class="day">13</div>
-                  <div class="day">14</div>
-                  <div class="day">15</div>
-                  <div class="day">16</div>
-                  <div class="day">17</div>
-                  <div class="day">18</div>
-                  <div class="day">19</div>
-                  <div class="day">20</div>
-                  <div class="day">21</div>
-                  <div class="day">22</div>
-                  <div class="day">23</div>
-                  <div class="day">24</div>
-                  <div class="day">25</div>
-                  <div class="day">26</div>
-                  <div class="day">27</div>
-                  <div class="day">28</div>
-                  <div class="day">29</div>
-                  <div class="day">30</div>
-                  <div class="day">31</div>
-              </div>
+              <div class="days" id="days-container"></div>
             </div>
-            <div class="col-5 p-bot">
-          <div class="time-selector calendar-selector">
-              <h3>Orario</h3></div>
-              <div class="time-options">
-                <div class="time-option">8:00</div>
-                  <div class="time-option">9:00</div>
-                  <div class="time-option">10:00</div>
-                  <div class="time-option">11:00</div>
-                  <div class="time-option">12:00</div>
-                  <div class="time-option">13:00</div>
-                  <div class="time-option">14:00</div>
-                  <div class="time-option">15:00</div>
-                  <div class="time-option">16:00</div>
-                  <div class="time-option">17:00</div>
-                  <div class="time-option">18:00</div>
-                  <div class="time-option">19:00</div>
-               </div>
-              </div>
+          <div class="col-5 p-bot">
+            <div class="time-selector calendar-selector p-bot">
+              <h3>Orario</h3>
+            </div>
+            <div class="time-options">
+              <p class="time-option">8:00</p>
+              <p class="time-option">9:00</p>
+              <p class="time-option">10:00</p>
+              <p class="time-option">11:00</p>
+              <p class="time-option">12:00</p>
+              <p class="time-option">13:00</p>
+              <p class="time-option">14:00</p>
+              <p class="time-option">15:00</p>
+              <p class="time-option">16:00</p>
+              <p class="time-option">17:00</p>
+              <p class="time-option">18:00</p>
+              <p class="time-option">19:00</p>
+            </div>
           </div>
+        </div>
+    </div>
+    </div>
+    <div> 
+        <a href="5.3.1_riepilogotrain.html" class="col-auto header-button justify-content-center body">
+            <button type="button" class="btn btn-primary">Prenota</button>
+        </a>
       </div>
-  </div>
-</div>
-</div>
-</div>
 </body>
 
 
 <script>
 
+  /****CAMBIO MESE****/
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const currentMonthElement = document.getElementById('current-month');
+    const daysContainer = document.getElementById('days-container');
+    const prevMonthButton = document.getElementById('prev-month');
+    const nextMonthButton = document.getElementById('next-month');
+
+    let currentDate = new Date();
+
+    function getMonthYear(date) {
+        const monthNames = [
+            'Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno',
+            'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'
+        ];
+        return `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+    }
+
+    function generateCalendar(date) {
+        const year = date.getFullYear();
+        const month = date.getMonth();
+
+        const firstDay = new Date(year, month, 1).getDay();
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        daysContainer.innerHTML = '';
+
+        for (let i = 0; i < firstDay; i++) {
+            const emptySlot = document.createElement('div');
+            emptySlot.classList.add('day');
+            daysContainer.appendChild(emptySlot);
+        }
+
+        for (let day = 1; day <= daysInMonth; day++) {
+            const dayElement = document.createElement('div');
+            dayElement.classList.add('day');
+            dayElement.textContent = day;
+
+            dayElement.addEventListener('click', () => {
+                document.querySelectorAll('.day.selected').forEach(el => {
+                    el.classList.remove('selected');
+                });
+                dayElement.classList.add('selected');
+                saveSelection();
+            });
+
+            daysContainer.appendChild(dayElement);
+        }
+
+        currentMonthElement.textContent = getMonthYear(date);
+    }
+
+    prevMonthButton.addEventListener('click', () => {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        generateCalendar(currentDate);
+    });
+
+    nextMonthButton.addEventListener('click', () => {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        generateCalendar(currentDate);
+    });
+
+    function saveSelection() {
+        const selectedDay = document.querySelector('.day.selected');
+        const selectedDate = selectedDay ? selectedDay.textContent : null;
+        const selectedMonth = currentDate.getMonth() + 1;
+        const selectedYear = currentDate.getFullYear();
+
+        console.log(`Selected Date: ${selectedDate}/${selectedMonth}/${selectedYear}`);
+    }
+
+    generateCalendar(currentDate);
+});
+
 
 /***SELEZIONE GIORNO E ORA****/
 
-  document.addEventListener('DOMContentLoaded', () => {
-      let selectedDay = document.querySelector('.day.selected');
-      let selectedTime = document.querySelector('.time-option.selected');
+document.addEventListener('DOMContentLoaded', () => {
+    let selectedDay = null;
+    let selectedTime = null;
 
-      const days = document.querySelectorAll('.day');
-      const timeOptions = document.querySelectorAll('.time-option');
+    const days = document.querySelectorAll('.day');
+    const timeOptions = document.querySelectorAll('.time-option');
 
-      days.forEach(day => {
-          day.addEventListener('click', () => {
-              if (selectedDay) {
-                  selectedDay.classList.remove('selected');
-              }
-              day.classList.add('selected');
-              selectedDay = day;
-              saveSelection();
-          });
-      });
+    if (days.length === 0 || timeOptions.length === 0) {
+        console.error('Errore: Elementi .day o .time-option non trovati.');
+        return;
+    }
 
-      timeOptions.forEach(time => {
-          time.addEventListener('click', () => {
-              if (selectedTime) {
-                  selectedTime.classList.remove('selected');
-              }
-              time.classList.add('selected');
-              selectedTime = time;
-              saveSelection();
-          });
-      });
+    days.forEach(day => {
+        day.addEventListener('click', () => {
+            if (selectedDay !== null) {
+                selectedDay.classList.remove('selected');
+            }
+            day.classList.add('selected');
+            selectedDay = day;
+            saveSelection();
+        });
+    });
 
-      function saveSelection() {
-          const selectedDate = selectedDay ? selectedDay.textContent : null;
-          const selectedHour = selectedTime ? selectedTime.textContent : null;
-          console.log(`Selected Date: ${selectedDate}, Selected Time: ${selectedHour}`);
-      }
-  });
+    timeOptions.forEach(time => {
+        time.addEventListener('click', () => {
+            if (selectedTime !== null) {
+                selectedTime.classList.remove('selected');
+            }
+            time.classList.add('selected');
+            selectedTime = time;
+            saveSelection();
+        });
+    });
+
+    function saveSelection() {
+        const selectedDate = selectedDay ? selectedDay.textContent.trim() : null;
+        const selectedHour = selectedTime ? selectedTime.textContent.trim() : null;
+
+        if (selectedDate && selectedHour) {
+            const selectedData = {
+                date: selectedDate,
+                time: selectedHour
+            };
+
+            localStorage.setItem('selectedData', JSON.stringify(selectedData));
+
+            console.log('Dati salvati:', selectedData); // Debug
+        } else {
+            console.warn('Seleziona sia una data che un orario.');
+        }
+    }
+});
+
 </script>

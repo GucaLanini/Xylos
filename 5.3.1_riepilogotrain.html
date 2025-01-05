@@ -7,27 +7,20 @@
     <link href="css/style.css" rel="stylesheet" type="text/css"> 
 </head>
 <body>
-    <div class="selection">
-        <p id="display-date">Selected Date: </p>
-        <p id="display-time">Selected Time: </p>
+    <div id="selection-result">
+        <p>Data: <span id="selected-date"></span></p>
+        <p>Ora: <span id="selected-time"></span></p>
     </div>
 
 </body>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const selectedDate = localStorage.getItem('selectedDate');
-        const selectedHour = localStorage.getItem('selectedHour');
+     const selectedData = JSON.parse(localStorage.getItem('selectedData'));
+     const selectedMonth = JSON.parse(localStorage.getItem('selectedMonth'));
 
-        if (selectedDate && selectedHour) {
-            document.getElementById('display-date').textContent = `Selected Date: ${selectedDate}`;
-            document.getElementById('display-time').textContent = `Selected Time: ${selectedHour}`;
-        } else {
-            document.getElementById('display-date').textContent = 'No date selected';
-            document.getElementById('display-time').textContent = 'No time selected';
-        }
-    });
-
-    function goBack() {
-        window.location.href = 'index.html'; // Replace with the main page URL
-    }
+if (selectedData) {
+    document.getElementById('selected-date').textContent = selectedData.date;
+    document.getElementById('selected-time').textContent = selectedData.time;
+} else {
+    document.getElementById('selection-result').textContent = "Nessuna data o ora selezionata.";
+}
 </script>
