@@ -940,15 +940,7 @@ p {
     background-repeat: no-repeat;
 }
 
-body, html { /*bottone e testo*/
-    margin: 0;
-    padding: 0;
-    height: 3024px;
-    width: 1890%px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .containerindex {  /*contenitore */
     display: flex;
