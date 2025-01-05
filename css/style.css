@@ -885,9 +885,64 @@ p {
 
 /*INDEX*/ 
 
+<<<<<<< HEAD
 .bodyindex {
     background-image: url ('img/sfondo index.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+=======
+body, html { /*bottone e testo*/
+    margin: 0;
+    padding: 0;
+    height: 3024px;
+    width: 1890%px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerindex {  /*contenitore */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+.box { /*bottone e testo */
+    text-align:center;
+    padding:0px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    box-shadow: none;
+
+}
+
+.footbox { /*footer */
+  display: inline;
+
+   
+}
+
+}
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+ 
+ 
+    
+>>>>>>> sam
