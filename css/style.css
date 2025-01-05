@@ -682,8 +682,8 @@ p {
     align-items: center;
 }
 
-.space-630 {
-    margin-top: 630px;
+.space-620 {
+    margin-top: 60px;
 }
 
 /*filtro*/
@@ -699,15 +699,16 @@ p {
 .space-filter {
     padding-top: 90px;
 }
-  
+
 .filter-item span {
     font-size: 28px;
     font-family: chillax;
     font-weight: medium;
     color: var(--gg-txt-color);
-    text-align: center;
+    text-align: center; 
+    padding: 0px 35px;
   }
-
+  
 .filter-item.active img {
     filter: none;
   }
@@ -727,6 +728,10 @@ p {
     padding: 110px 135px;
 }
 
+.card-title {
+    font-weight: bold;
+}
+
 .col-img-card {
     width: 676px;
     height: 864px;
@@ -734,13 +739,13 @@ p {
 }
 
 .p_map {
-    margin-top: 50px;
-    text-align: justify;
+        text-align: justify;
+        margin-top: 50px;
 }
 
 .btn-primary-map{
     font-family: panchang;
-    font-weight: 600px;
+    font-weight: medium;
     color: var(--gg-bg-color);
     font-size: 28px;
     height: 117px;
@@ -748,6 +753,7 @@ p {
     background-color: var(--gg-ice-color);
     border-color: var(--gg-ice-color);
     margin-left: 270px;
+    align-content: baseline;
 }
 
 /*****CALENDARIO*****/
