@@ -927,50 +927,51 @@ p {
 
 /*INDEX*/ 
 
-<<<<<<< HEAD
 .bodyindex {
     background-image: url ('img/sfondo index.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-=======
-body, html { /*bottone e testo*/
-    margin: 0;
-    padding: 0;
-    height: 3024px;
-    width: 1890%px;
+
+.containerindex {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
-.containerindex {  /*contenitore */
+.boxindex {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.footericons {
+    position: fixed;
+    bottom: 100px; /* Distanza dal fondo della pagina */
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+    justify-content: space-between;
+    padding: 0 100px; /* Distanza laterale */
 }
 
-
-.box { /*bottone e testo */
-    text-align:center;
-    padding:0px;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    box-shadow: none;
+.icon1 {
+    font-size: 50px; 
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+    border-radius: 20;
 
 }
 
-.footbox { /*footer */
-  display: inline;
-
-   
+icon2 {
+    font-size: 50px; 
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
-}
 
 
 
