@@ -604,11 +604,18 @@ p {
 }
 
 /*Qrcode*/ 
-.p-align {
+.p-qrcode {
+    font-size: 48px;
+    color: var(--gg-ice-color);
     text-align: center;
+    margin: 150px 0px;
 }
 
-.heigh-page {
+.qrcode {
+    margin-top: 150px;
+}
+
+.height-page {
     height: 3024px;
 }
 
