@@ -772,7 +772,6 @@ p {
     flex: 2;
     padding-left: 0px;
     padding-right: 0px;
-    width: 1690px;
     padding: 0px;
 }
 
@@ -790,7 +789,9 @@ p {
     height: 80px;
 }
 
-
+.calendarheader p{
+    margin-bottom: 0px;
+}
 
 .calendar-selector {
     display: flex;
