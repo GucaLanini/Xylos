@@ -988,3 +988,62 @@ display:flex;
 
 }
 
+/* 5.5_space-shuttle.html*/
+
+.dropdown {
+    width: 100%; /* Assicura che il contenitore del pulsante sia largo quanto la pagina */
+    margin: 0; /* Rimuove eventuali margini laterali */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--gg-backgroungblue-color);
+    padding: 0px;
+    z-index: 1000;
+    
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-toggle {
+    width: 100%; /* Rende il bottone lungo quanto il contenitore */
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: var(--gg-deepblue-color); /* Colore di sfondo del bottone */
+    color: white; /* Colore del testo */
+    font-family: Chillax;
+    font-size: 28px;
+    font-weight: normal;
+    border: none; /* Rimuove i bordi predefiniti */
+    padding: 0px; /* Spaziatura interna del bottone */
+    font-size: 16px; /* Dimensione del testo */
+    cursor: pointer; /* Cambia il cursore in una mano su hover */
+    text-align: left; /* Allinea il contenuto del bottone a sinistra */
+    border-radius: 30px;
+}
+
+.dropdown-toggle:hover {
+    background-color: #0056b3; /* Cambia il colore al passaggio del mouse */
+}
+
+.calendarheader {
+    display: flex; /* Disposizione orizzontale degli elementi interni */
+    justify-content: space-between; /* Spazia gli elementi internamente */
+    align-items: center; /* Centra verticalmente gli elementi */
+}
+
+.container-fluid .calendar-shuttle > .row{
+    background-color: transparent !important;
+    margin: 0px;
+}
+
+.dropdown-toggle:hover {
+    background-color: #0056b3;
+}
+
+.calendarbody-shuttle {
+    background-color: transparent !important;
+}
