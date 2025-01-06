@@ -762,8 +762,9 @@ p {
 /*****CALENDARIO*****/
 
 .calendar {
-    height: 800px;
-    border-radius: 8px;
+    height: 720px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     overflow: hidden;
     border: 5px, solid, var(--gg-deepblue-color);
     flex: 2;
@@ -779,18 +780,15 @@ p {
     align-items: center;
     background-color: var(--gg-deepblue-color);
     padding: 25px;
+    margin: 0 100px 0 100px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     text-align: left;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     color: var(--gg-txt-color);
     height: 80px;
-}
-
-.calendarbody {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
 }
 
 
