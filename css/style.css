@@ -960,7 +960,7 @@ p {
     background-position: center;
     background-repeat: no-repeat;
 }
-======
+
 body, html { /*bottone e testo*/
     margin: 0;
     padding: 0;
@@ -1012,6 +1012,7 @@ body, html { /*bottone e testo*/
 
 
 
+
 /*EVENTI NATURALI prima parte che non esce */
 .container {
     position: relative;
@@ -1035,5 +1036,3 @@ body, html { /*bottone e testo*/
    color: var(--gg-txt-color);
    text-align: right;
 }
-
-
