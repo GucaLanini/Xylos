@@ -948,12 +948,11 @@ p {
 
 .footericons {
     position: fixed;
-    bottom: 100px; /* Distanza dal fondo della pagina */
+    bottom: 100px; 
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 100px; /* Distanza laterale */
-}
+    padding: 0 100px; 
 
 .icon1 {
     font-size: 50px; 
@@ -964,7 +963,7 @@ p {
 
 }
 
-icon2 {
+.icon2 {
     font-size: 50px; 
     color: #333;
     cursor: pointer;
@@ -972,8 +971,77 @@ icon2 {
 }
 
 
+/*EVENTI NATURALI scacchiera*/
+
+.img {
+    height: 25vh;
+}
 
 
+/* DEEVO GUARDARE DA QUA  */
+
+
+.title-area{
+    position: absolute;
+    bottom: 0;
+    align-items: end;
+}
+
+
+.wallpaper{
+    width: 100%;
+    height: 1180px;
+    position: relative;
+    z-index: -1;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+}
+.goverlay{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--gg-bg-color), rgba(0, 0, 0, 0.0));
+    border-bottom: var(--gg-deepblue-color);
+    border: 10px;
+}
+
+.img-wall{
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+
+.h1-experience {
+    font-family: panchang;
+    font-weight: bold;
+    font-size: 84px;
+    color: var(--gg-txt-color);
+    filter: none;
+    text-align: start;
+}
+
+
+.card-dimension {
+    height: 580px;
+    width: 530px;
+}
+
+.card-find {
+    height: 315px;
+    width: 530px;
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.card-title-margin {
+    margin: 0px 0px 20px 0px; 
+}
+
+.card-space {
+    padding: 0px 50px;
+}
 
 
 
@@ -987,9 +1055,4 @@ icon2 {
  
  
     
-<<<<<<< HEAD
->>>>>>> sam
-=======
-=======
->>>>>>> origin/main
->>>>>>> sam
+
