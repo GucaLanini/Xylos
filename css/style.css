@@ -772,7 +772,6 @@ p {
     padding-right: 0px;
     width: 1690px;
     padding: 0px;
-    margin: 0px 100px;
 }
 
 .calendarheader {
@@ -780,7 +779,6 @@ p {
     align-items: center;
     background-color: var(--gg-deepblue-color);
     padding: 25px;
-    margin: 0 100px 0 100px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     text-align: left;
