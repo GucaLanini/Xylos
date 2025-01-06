@@ -82,7 +82,7 @@ h3 {
 
 /*****HOME PAGE****/
 
-.box{
+.boxhome{
     border: var(--gg-border-drop);
     height: 700px;
     margin: 30px;
@@ -94,7 +94,7 @@ h3 {
     border-radius: 50px;
 }
 
-.box:active{
+.boxhome:active{
     box-shadow: inset 0px 0px 50px 0px var(--gg-txt-color);
 
 }
