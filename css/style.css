@@ -949,12 +949,11 @@ p {
 
 .footericons {
     position: fixed;
-    bottom: 100px; /* Distanza dal fondo della pagina */
+    bottom: 100px; 
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 100px; /* Distanza laterale */
-}
+    padding: 0 100px; 
 
 .icon1 {
     font-size: 50px; 
@@ -965,7 +964,7 @@ p {
 
 }
 
-icon2 {
+.icon2 {
     font-size: 50px; 
     color: #333;
     cursor: pointer;
@@ -975,22 +974,28 @@ icon2 {
 
 
 
+/*EVENTI NATURALI prima parte che non esce */
+.container {
+    position: relative;
+    width: 50%;
+}
+   
+.container img {
+    width: 100%;
+    height:25vh;
+}
+
+.photoevents {
+    width: 100%;
+    height:25vh;
+}
+
+.parboryx {
+   font-family: chillax;
+   font-weight:normal;
+   font-size: 24px;
+   color: var(--gg-txt-color);
+   text-align: right;
+}
 
 
-
-
-
-
- 
-  
-
-
- 
- 
-    
-<<<<<<< HEAD
->>>>>>> sam
-=======
-=======
->>>>>>> origin/main
->>>>>>> sam
