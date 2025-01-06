@@ -756,10 +756,10 @@ p {
     align-content: baseline;
 }
 
+
+
+
 /*****CALENDARIO*****/
-
-
-
 
 .calendar {
     height: 720px;
@@ -858,14 +858,16 @@ p {
 .border-right{
     border: 5px var(--gg-deepblue-color);
     border-style: none solid none none;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .time-options {
     display: flex;
     flex-wrap: wrap;
-    gap: 45px;
+    gap: 40px;
     justify-content: center;
-    margin: 50px, 0px;
+    padding-bottom: 50px;
 
 }
 
