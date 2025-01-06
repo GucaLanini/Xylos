@@ -167,38 +167,40 @@ h3 {
     height: 550px;
 }
 
+.space-column {
+    margin-right: 50px;
+}
+
 .lumineth {
     height: 1031px;
     width: 820px;
-    margin: 0px 25px 50px 0px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+    margin-bottom: 50px;
 }
 
 .Arakhara {
     height: 550px;
     width: 820px;
-    margin: 0px 0px 50px 25px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+    margin-bottom: 50px;
 }
 
 .Nyxanthis {
     height: 550px;
     width: 820px;
-    margin: 25px 25px 25px 0px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
 }
 
 .Aerathos {
     height: 1031px;
     width: 820px;
-    margin: 25px 0px 25px 25px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
 }
 
 .Kharaxos {
     height: 550;
     width: 1689px;
-    margin: 25px 0px 0px 0px;;
+    margin-top: 50px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
 }
 
