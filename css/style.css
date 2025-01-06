@@ -47,7 +47,7 @@ h1{
     color: var(--gg-ice-color);
     filter: drop-shadow(0px 0px 50px var(--gg-deepblue-color));
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 h2{
@@ -83,6 +83,17 @@ h3 {
 /*****HOME PAGE****/
 
 .boxhome{
+    border: var(--gg-border-drop);
+    height: 709px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
+    border-radius: 50px;
+}
+
+.box-btn{
     border: var(--gg-border-drop);
     height: 700px;
     margin: 30px;
