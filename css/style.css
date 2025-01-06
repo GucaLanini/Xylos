@@ -128,7 +128,7 @@ h3 {
     align-items: center;
     box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
     border-radius: 50px;
-    background-color: var(--gg-backgroungblue-color);
+    background-color: var(--gg-bg-color);
 }
 
 .space-box {
