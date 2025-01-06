@@ -784,7 +784,6 @@ p {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     text-align: left;
-    font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     color: var(--gg-txt-color);
