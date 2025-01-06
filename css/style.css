@@ -15,7 +15,7 @@ box-sizing: border-box;
     --gg-txt-color: #f1f1e6;
     --gg-ice-color: #c8f1f9;
     --gg-deepblue-color: #011fe1;
-    --gg-backgroungblue-color: #0A073A;
+
 }
 
 .reset-padding {
@@ -47,7 +47,7 @@ h1{
     color: var(--gg-ice-color);
     filter: drop-shadow(0px 0px 50px var(--gg-deepblue-color));
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 h2{
@@ -82,7 +82,18 @@ h3 {
 
 /*****HOME PAGE****/
 
-.box{
+.boxhome{
+    border: var(--gg-border-drop);
+    height: 709px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
+    border-radius: 50px;
+}
+
+.box-btn{
     border: var(--gg-border-drop);
     height: 700px;
     margin: 30px;
@@ -94,7 +105,7 @@ h3 {
     border-radius: 50px;
 }
 
-.box:active{
+.boxhome:active{
     box-shadow: inset 0px 0px 50px 0px var(--gg-txt-color);
 
 }
@@ -128,7 +139,11 @@ h3 {
     align-items: center;
     box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
     border-radius: 50px;
-    background-color: var(--gg-backgroungblue-color);
+    background-color: var(--gg-bg-color);
+}
+
+.big-box:active{
+    box-shadow: inset 0px 0px 50px 0px var(--gg-txt-color);
 }
 
 .space-box {
@@ -167,38 +182,40 @@ h3 {
     height: 550px;
 }
 
+.space-column {
+    margin-right: 50px;
+}
+
 .lumineth {
     height: 1031px;
     width: 820px;
-    margin: 0px 25px 50px 0px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+    margin-bottom: 50px;
 }
 
 .Arakhara {
     height: 550px;
     width: 820px;
-    margin: 0px 0px 50px 25px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+    margin-bottom: 50px;
 }
 
 .Nyxanthis {
     height: 550px;
     width: 820px;
-    margin: 25px 25px 25px 0px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
 }
 
 .Aerathos {
     height: 1031px;
     width: 820px;
-    margin: 25px 0px 25px 25px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
 }
 
 .Kharaxos {
     height: 550;
     width: 1689px;
-    margin: 25px 0px 0px 0px;;
+    margin-top: 50px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
 }
 
@@ -262,7 +279,11 @@ h3 {
     width: 1690px;
     border-radius: 15px;
     object-fit: cover;
-    box-shadow: 0px 0px 40px 0px var(--gg-txt-color);
+    box-shadow: 0px 0px 50px 0px var(--gg-txt-color);
+}
+
+.card-experience:active{
+    box-shadow: 0px 0px 50px 0px var(--gg-deepblue-color);
 }
 
 .space-card-experience {
@@ -281,6 +302,8 @@ h3 {
     color: var(--gg-txt-color);
     padding: 30px;
 }
+
+
 
 /******Space-shuttle****/
 .select {
@@ -581,11 +604,18 @@ p {
 }
 
 /*Qrcode*/ 
-.p-align {
+.p-qrcode {
+    font-size: 48px;
+    color: var(--gg-ice-color);
     text-align: center;
+    margin: 150px 0px;
 }
 
-.heigh-page {
+.qrcode {
+    margin-top: 150px;
+}
+
+.height-page {
     height: 3024px;
 }
 
@@ -682,8 +712,8 @@ p {
     align-items: center;
 }
 
-.space-630 {
-    margin-top: 630px;
+.space-620 {
+    margin-top: 60px;
 }
 
 /*filtro*/
@@ -699,15 +729,16 @@ p {
 .space-filter {
     padding-top: 90px;
 }
-  
+
 .filter-item span {
     font-size: 28px;
     font-family: chillax;
     font-weight: medium;
     color: var(--gg-txt-color);
-    text-align: center;
+    text-align: center; 
+    padding: 0px 35px;
   }
-
+  
 .filter-item.active img {
     filter: none;
   }
@@ -727,6 +758,10 @@ p {
     padding: 110px 135px;
 }
 
+.card-title {
+    font-weight: bold;
+}
+
 .col-img-card {
     width: 676px;
     height: 864px;
@@ -734,13 +769,13 @@ p {
 }
 
 .p_map {
-    margin-top: 50px;
-    text-align: justify;
+        text-align: justify;
+        margin-top: 50px;
 }
 
 .btn-primary-map{
     font-family: panchang;
-    font-weight: 600px;
+    font-weight: medium;
     color: var(--gg-bg-color);
     font-size: 28px;
     height: 117px;
@@ -748,47 +783,43 @@ p {
     background-color: var(--gg-ice-color);
     border-color: var(--gg-ice-color);
     margin-left: 270px;
+    align-content: baseline;
 }
+
+
+
 
 /*****CALENDARIO*****/
 
-
-.calendar-wrapper{
-    width: 1690px;
-    padding: 0px;
-    margin: 0px 100px;
-}
-
 .calendar {
     height: 720px;
-    border-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     overflow: hidden;
     border: 5px, solid, var(--gg-deepblue-color);
     flex: 2;
     padding-left: 0px;
     padding-right: 0px;
+    padding: 0px;
 }
 
 .calendarheader {
     display: flex;
     align-items: center;
     background-color: var(--gg-deepblue-color);
-    padding: 10px 25px;
+    padding: 25px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     text-align: left;
-    font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     color: var(--gg-txt-color);
-    height: 120px;
+    height: 80px;
 }
 
-.calendarbody {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+.calendarheader p{
+    margin-bottom: 0px;
 }
-
-
 
 .calendar-selector {
     display: flex;
@@ -819,7 +850,7 @@ p {
 .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 40px;
+    gap: 30px;
     margin: 10px;
 }
 
@@ -833,10 +864,17 @@ p {
     font-size: 32px;
 }
 
+.selected {
+    background-color: var(--gg-ice-color);
+}
+
 
 .day.selected {
     background-color: var(--gg-ice-color);
     color: var(--gg-bg-color);
+    border-radius: 50%;
+    width: 68px;
+    margin: auto;
 }
 
 .time-selector {
@@ -851,10 +889,10 @@ p {
 .time-options {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 40px;
     justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    padding: 15px 0 50px 0;
+
 }
 
 .time-option {
@@ -865,23 +903,12 @@ p {
     color: var(--gg-txt-color);
     cursor: pointer;
     transition: background-color 0.3s;
-    font-size: 20px;
-    
 }
 
-.p-bot {
-    padding-bottom: 20px;
-    padding-left: 0;
-    padding-right: 0;
-}
 
 .time-option.selected {
     background-color: var(--gg-ice-color);
     color: var(--gg-bg-color)
-}
-
-.container-fluid .calendar > .row{
-    margin: 0px;
 }
 
 
@@ -923,7 +950,7 @@ p {
 .selection{
     display: flex;
 }
-<<<<<<< HEAD
+
 
 /*INDEX*/ 
 
@@ -933,12 +960,23 @@ p {
     background-position: center;
     background-repeat: no-repeat;
 }
-
-.containerindex {
+======
+body, html { /*bottone e testo*/
+    margin: 0;
+    padding: 0;
+    height: 3024px;
+    width: 1890%px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+
+.containerindex {  /*contenitore */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .boxindex {
