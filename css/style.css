@@ -871,28 +871,15 @@ p {
 
 /*create your travel*/
 
-/* General Reset */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #0B0E34;
-    color: #fff;
+.body-travel {
+    font-family: Panchang;
+    font-weight: normal;
+    font-size: 28px;
 }
-
-.reset-padding {
-    padding: 0;
-}
-
-.reset-margin {
-    margin: 0;
-}
-
-
 
 /* Section */
 .section-title {
-    margin-top: 753px;
+    margin-top: 739px;
     font-family: Panchang;
     font-weight: bold;
     font-size: 36px;
@@ -901,13 +888,21 @@ body {
 
 }
 
+.line-section {
+    padding: 0px 0px 45px 0px;
+    border-bottom: 5px solid var(--gg-deepblue-color);
+    width: calc(100% - 200px);
+    margin-left: 100px !important;
+    margin-right: 100px !important;
+}
+
 .section-sub {
     font-family: Panchang;
     font-weight: normal;
     font-size: 36px;
     color: var(--gg-txt-color);
     display: flex;
-    flex-direction: column;
+    margin-top: 40px;
     justify-content: center;
     align-items: center;
 
@@ -916,18 +911,21 @@ body {
 /* Option Boxes */
 
 .container-box {
-    display: flex;
+display:flex;
     gap: 50px;
 }
 
 .option-box {
     margin-top: 149px;
+    margin-left: 100px;
     height: 530px;
     width: 530px;
     border: 5px solid var(--gg-deepblue-color);
+    box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
     border-radius: 50px;
-    display: flex;
+    display:flex;
     flex-direction: column;
+    gap: 12px;
     justify-content:center;
     align-items: center;
 }
@@ -938,6 +936,9 @@ body {
 .option-box:hover {
     transform: scale(1.1);
     background: rgba(255, 255, 255, 0.2);
+    border: 5px solid var(--gg-txt-color);
+    box-shadow: inset 0px 0px 50px 0px var(--gg-txt-color);
+
 }
 
 .option-box.selected {
@@ -961,16 +962,29 @@ body {
 
 /* Dots Navigation */
 .dots-navigation {
-    margin-top: 50px;
+    margin-top: 868px;
+    margin-bottom: 150px;
 }
 
 .dot {
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.5);
+    width: 50px;
+    height: 50px;
+    background: #011fe166;
     border-radius: 50%;
-    margin: 5px;
+    margin-left: 50px;
     transition: background 0.3s;
+}
+
+.dot-active {
+
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: var(--gg-deepblue-color);
+    border-radius: 50%;
+    margin-left: 50px;
+    transition: background 0.3s;
+
 }
 
