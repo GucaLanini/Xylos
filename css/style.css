@@ -762,7 +762,7 @@ p {
 /*****CALENDARIO*****/
 
 .calendar {
-    height: 720px;
+    height: 800px;
     border-radius: 8px;
     overflow: hidden;
     border: 5px, solid, var(--gg-deepblue-color);
@@ -778,13 +778,13 @@ p {
     display: flex;
     align-items: center;
     background-color: var(--gg-deepblue-color);
-    padding: 10px 25px;
+    padding: 25px;
     text-align: left;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     color: var(--gg-txt-color);
-    height: 120px;
+    height: 80px;
 }
 
 .calendarbody {
