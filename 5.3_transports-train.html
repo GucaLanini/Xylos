@@ -365,6 +365,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+/***TOTALE DINAMICO***/
+
 document.addEventListener('DOMContentLoaded', () => {
     
     const cards = document.querySelectorAll('.card-tariffs');
@@ -373,9 +375,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let totalPrice = 0;
 
         cards.forEach(card => {
-            const unitPrice = parseFloat(card.dataset.unitPrice); // Prezzo unitario dalla card
-            const quantity = parseInt(card.querySelector('.number').textContent, 10); // Valore del contatore
-            totalPrice += unitPrice * quantity; // Somma il totale
+            const unitPrice = parseFloat(card.dataset.unitPrice);
+            const quantity = parseInt(card.querySelector('.number').textContent, 10);
+            totalPrice += unitPrice * quantity;
         });
 
         document.getElementById('total-price').textContent = `${totalPrice.toFixed(2)}€`;
