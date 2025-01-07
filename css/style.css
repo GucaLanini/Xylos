@@ -911,6 +911,39 @@ p {
     color: var(--gg-bg-color)
 }
 
+/***COUNTER BIGLIETTI***/
+
+
+.counter{
+    margin-top: 85px;
+    margin-bottom: 65px;
+}
+
+
+.number{
+    height: 32px;
+    width: 70px;
+    text-align: center;
+    border: 2px, solid, var(--gg-ice-color);
+    border-radius: 6px;
+    margin: 0 10px;
+    color: var(--gg-ice-color);
+}
+
+
+
+.counter-button{
+    background-color: var(--gg-ice-color);
+    border-radius: 6px;
+}
+
+.counter-sign{
+    color: var(--gg-bg-color);
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    
+}
 
 /*RIEPILOGO*/ 
 .h3-esperienza {
