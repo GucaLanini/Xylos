@@ -954,18 +954,11 @@ p {
 
 /*INDEX*/ 
 
-.bodyindex {
-    background-image: url ('img/sfondo index.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-body, html { /*bottone e testo*/
+.indexbody { /*bottone e testo*/
     margin: 0;
     padding: 0;
     height: 3024px;
-    width: 1890%px;
+    width: 1890px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -977,15 +970,10 @@ body, html { /*bottone e testo*/
     align-items: center;
     height: 100%;
     width: 100%;
-}
-
-.boxindex {
     text-align: center;
-    padding: 20px;
-    border-radius: 8px;
 }
 
-.footericons {
+.footbox {
     position: fixed;
     bottom: 100px; 
     width: 100%;
@@ -1008,9 +996,6 @@ body, html { /*bottone e testo*/
     cursor: pointer;
     transition: color 0.3s;
 }
-
-
-
 
 
 /*EVENTI NATURALI prima parte che non esce */
