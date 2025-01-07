@@ -954,18 +954,11 @@ p {
 
 /*INDEX*/ 
 
-.bodyindex {
-    background-image: url ('img/sfondo index.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-======
-body, html { /*bottone e testo*/
+.indexbody { /*bottone e testo*/
     margin: 0;
     padding: 0;
     height: 3024px;
-    width: 1890%px;
+    width: 1890px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -977,15 +970,10 @@ body, html { /*bottone e testo*/
     align-items: center;
     height: 100%;
     width: 100%;
-}
-
-.boxindex {
     text-align: center;
-    padding: 20px;
-    border-radius: 8px;
 }
 
-.footericons {
+.footbox {
     position: fixed;
     bottom: 100px; 
     width: 100%;
@@ -1010,14 +998,7 @@ body, html { /*bottone e testo*/
 }
 
 
-
-
-/*EVENTI NATURALI prima parte che non esce */
-.container {
-    position: relative;
-    width: 50%;
-}
-   
+/* EVENTS */
 .container img {
     width: 100%;
     height:25vh;
@@ -1028,12 +1009,105 @@ body, html { /*bottone e testo*/
     height:25vh;
 }
 
-.parboryx {
-   font-family: chillax;
-   font-weight:normal;
-   font-size: 24px;
-   color: var(--gg-txt-color);
-   text-align: right;
+.h2events{
+    font-weight:bold;
 }
 
 
+.containerbtn {
+    width:240px;
+    height:25vh;
+}
+
+.paper {
+    border: none; 
+    background: none;
+    border-radius: 50px;
+}
+
+.paper-img {
+    border-radius: 50px;
+    object-fit: cover;
+    
+}
+
+.img-big {
+    height: 1494px;
+}
+
+.img-mini {
+    height: 1107px;
+}
+
+.birds {
+    height: 1107px;
+    width: 820px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+    margin-bottom: 50px;
+}
+
+.sand {
+    height: 1494px;
+    width: 820px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+    margin-bottom: 50px;
+}
+
+.sky {
+    height: 1494px;
+    width: 820px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+}
+
+.moon{
+    height: 1031px;
+    width: 820px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+}
+
+.ring {
+    height: 1107px;
+    width: 820px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+    margin-bottom: 50px;
+}
+
+.hole {
+    height: 1494px;
+    width: 820px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+    margin-bottom: 50px;
+}
+
+sunrise {
+    height: 1494px;
+    width: 820px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+}
+
+.life{
+    height: 1031px;
+    width: 820px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+}
+
+.h2-paper {
+    font-weight:bolder;
+    font-size: 48px;
+    color:#f1f1e6;
+
+}
+
+.shadow {
+    position: absolute; /* Posiziona l'overlay sopra l'immagine */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+  }
+
+.paper-img-shadow {
+    z-index: 2;
+}
