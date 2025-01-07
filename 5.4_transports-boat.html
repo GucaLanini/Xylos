@@ -111,7 +111,7 @@
     <div class="col">
 <div class="container-fluid space-90">
 <div> 
-    <p class="bold-text reset-margin space-30">Prezzo Totale: 130€</p>
+    <p class="bold-text reset-margin space-30">Prezzo Totale: <span id="total-price">0€</span></p>
 </div>
 
 <div class="row d-flex reset-margin padding-30"> 
@@ -328,12 +328,25 @@ document.addEventListener('DOMContentLoaded', () => {
         generateCalendar(currentDate);
     });
 
-    /****SALVATAGGIO SELEZIONE****/
+/****SALVATAGGIO SELEZIONE****/
+
     function saveSelection() {
-        const selectedDate = selectedDay ? selectedDay.textContent.trim() : null;
-        const selectedMonth = getMonthName(currentDate.getMonth());
-        const selectedYear = currentDate.getFullYear();
-        const selectedHour = selectedTime ? selectedTime.textContent.trim() : null;
+        let selectedDate;
+            if (selectedDay) {
+                selectedDate = selectedDay.textContent.trim();
+            } else {
+                selectedDate = null;
+            }
+
+    const selectedMonth = getMonthName(currentDate.getMonth());
+    const selectedYear = currentDate.getFullYear();
+
+    let selectedHour;
+    if (selectedTime) {
+        selectedHour = selectedTime.textContent.trim();
+    } else {
+        selectedHour = null;
+    }
 
         if (selectedDate && selectedHour) {
             const selectedData = {
