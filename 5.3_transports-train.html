@@ -37,12 +37,12 @@
             
             <div class="row margin-70"> 
                 <p class="col padding-70 d-flex justify-content-star reset-margin">Prezzo</p> 
-                <p class="col padding-70 d-flex justify-content-end reset-margin">60€</p> 
+                <p class="col padding-70 d-flex justify-content-end reset-margin">6€</p> 
             </div>
 
             <div class="row margin-70"> 
                 <p class="col padding-70 d-flex justify-content-star reset-margin">Citypass</p> 
-                <p class="col padding-70 d-flex justify-content-end reset-margin">25€</p> 
+                <p class="col padding-70 d-flex justify-content-end reset-margin">3€</p> 
             </div>
             <div class="counter d-flex justify-content-center">
                 <button id="minus" class="counter-button"><p class="no-bottom reset-margin counter-sign">-</p></button>
@@ -63,12 +63,12 @@
                 
                 <div class="row margin-70"> 
                     <p class="col padding-70 d-flex justify-content-star reset-margin">Prezzo</p> 
-                    <p class="col padding-70 d-flex justify-content-end reset-margin">40€</p> 
+                    <p class="col padding-70 d-flex justify-content-end reset-margin">4€</p> 
                 </div>
 
                 <div class="row margin-70"> 
                     <p class="col padding-70 d-flex justify-content-star reset-margin">Citypass</p> 
-                    <p class="col padding-70 d-flex justify-content-end reset-margin">10€</p> 
+                    <p class="col padding-70 d-flex justify-content-end reset-margin">2€</p> 
                 </div>  
             </div>
             <div class="counter d-flex justify-content-center">
@@ -89,12 +89,12 @@
             
             <div class="row margin-70"> 
                 <p class="col padding-70 d-flex justify-content-star reset-margin">Prezzo</p> 
-                <p class="col padding-70 d-flex justify-content-end reset-margin">50€</p> 
+                <p class="col padding-70 d-flex justify-content-end reset-margin">5€</p> 
             </div>
 
             <div class="row margin-70"> 
                 <p class="col padding-70 d-flex justify-content-star reset-margin">Citypass</p> 
-                <p class="col padding-70 d-flex justify-content-end reset-margin">20€</p> 
+                <p class="col padding-70 d-flex justify-content-end reset-margin">2,50€</p> 
             </div>
         </div>
         <div class="counter d-flex justify-content-center">
@@ -111,7 +111,7 @@
     <div class="col">
 <div class="container-fluid space-90">
 <div> 
-    <p class="bold-text reset-margin space-30">Prezzo Totale: 130€</p>
+    <p class="bold-text reset-margin space-30">Prezzo Totale: <span id="total-price"></span></p>
 </div>
 
 <div class="row d-flex reset-margin padding-30"> 
@@ -133,9 +133,9 @@
           <div class="row">
             <div class="col-7 border-right px-0">
               <div class="calendar-selector">
-                <button id="prev-month">&lt;</button>
+                <button id="prev-month"><p class="reset-margin">&lt;</p></button>
                 <h3><span id="current-month"></span></h3>
-                <button id="next-month">&gt;</button>
+                <button id="next-month"><p class="reset-margin">&gt;</p></button>
               </div>
               <div class="days" id="days-container"></div>
             </div>
@@ -373,6 +373,7 @@ const buttonMinus = document.getElementById('minus');
 
 buttonPlus.addEventListener('click', add);
 buttonMinus.addEventListener('click', subtract);
+ 
 
 let value = 0;
 

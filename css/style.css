@@ -839,10 +839,9 @@ p {
 }
 
 .calendar-selector button {
-    background-color: var(--gg-deepblue-color);
+    background-color: var(--gg-backgroungblue-color);
     border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
+    padding: 0 10px;
     color: var(--gg-ice-color);
 }
 
@@ -910,6 +909,8 @@ p {
     background-color: var(--gg-ice-color);
     color: var(--gg-bg-color)
 }
+
+
 
 /***COUNTER BIGLIETTI***/
 
