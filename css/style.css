@@ -1014,6 +1014,8 @@ p {
     display: flex;
     justify-content: space-between;
     padding: 0 100px; 
+}
+
 
 .icon1 {
     font-size: 50px; 
