@@ -36,24 +36,28 @@
                 </div>
                 <div class="dropdown-menu container-fluid reset-padding reset-margin custom-d-m">
                     <div class="row reset-margin dropdown-wrapper">
-                        <!-- Prima lista -->
-                        <ul class="col d-flex route-selection reset-padding">
-                            <li class="dropdown-item dropdown-item-route"><p>Action</p></li>
-                            <li class="dropdown-item dropdown-item-route"><p>Action</p></li>
-                            <li class="dropdown-item dropdown-item-route"><p>Action</p></li>
-                            <li class="dropdown-item dropdown-item-route"><p>Action</p></li>
-                            <li class="dropdown-item dropdown-item-route"><p>Action</p></li>
-                            <li class="dropdown-item dropdown-item-route"><p>Action</p></li>
+                       <div class="col reset-padding border-right">
+                        <div class="zone-selection"><p>Zona di partenza:</p></div>
+                        <ul class=" d-flex route-selection reset-padding justify-content-between">
+                            <li class="dropdown-item dropdown-item-route dropdown-item-route-start"><p>Cupola</p></li>
+                            <li class="dropdown-item dropdown-item-route dropdown-item-route-start"><p>Xharaxos</p></li>
+                            <li class="dropdown-item dropdown-item-route dropdown-item-route-start"><p>Lumineth</p></li>
+                            <li class="dropdown-item dropdown-item-route dropdown-item-route-start"><p>Aerathos</p></li>
+                            <li class="dropdown-item dropdown-item-route dropdown-item-route-start"><p>Arakhara</p></li>
+                            <li class="dropdown-item dropdown-item-route dropdown-item-route-start"><p>Nyhanthis</p></li>
                         </ul>
-                        <!-- Seconda lista -->
-                        <ul class="col d-flex route-selection reset-padding">
-                            <li class="dropdown-item dropdown-item-route"><p>Action</p></li>
-                            <li class="dropdown-item dropdown-item-route"><p>Action</p></li>
-                            <li class="dropdown-item dropdown-item-route"><p>Action</p></li>
-                            <li class="dropdown-item dropdown-item-route"><p>Action</p></li>
-                            <li class="dropdown-item dropdown-item-route"><p>Action</p></li>
-                            <li class="dropdown-item dropdown-item-route"><p>Action</p></li>
+                    </div>
+                        <div class="col reset-padding">
+                         <div class="zone-selection"><p>Zona di arrivo:</p></div>
+                        <ul class="d-flex route-selection reset-padding justify-content-between">
+                            <li class="dropdown-item dropdown-item-route dropdown-item-route-end"><p>Cupola</p></li>
+                            <li class="dropdown-item dropdown-item-route dropdown-item-route-end"><p>Xharaxos</p></li>
+                            <li class="dropdown-item dropdown-item-route dropdown-item-route-end"><p>Lumineth</p></li>
+                            <li class="dropdown-item dropdown-item-route dropdown-item-route-end"><p>Aerathos</p></li>
+                            <li class="dropdown-item dropdown-item-route dropdown-item-route-end"><p>Arakhara</p></li>
+                            <li class="dropdown-item dropdown-item-route dropdown-item-route-end"><p>Nyxanthis</p></li>
                         </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -453,6 +457,52 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCounter(plusButton, true);
         });
     });
+});
+
+/*****Il menù non si chiude***/
+
+document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.stopPropagation(); // Impedisce la chiusura del dropdown
+        });
+    });
+
+
+/***classe selected a dropdown***/
+document.addEventListener('DOMContentLoaded', () => {
+    let currentPlace = null;
+    let currentDestination = null;
+
+    const selectedPlaces = document.querySelectorAll('.dropdown-item-route-start');
+    selectedPlaces.forEach(place => {
+        place.addEventListener('click', () => {
+            if (currentPlace) {
+                currentPlace.classList.remove('selected');
+            }
+            place.classList.add('selected');
+            currentPlace = place;
+            saveRouteSelection();
+        });
+    });
+
+    const selectedDestinations = document.querySelectorAll('.dropdown-item-route-end');
+    selectedDestinations.forEach(destination => {
+        destination.addEventListener('click', () => {
+            if (currentDestination) {
+                currentDestination.classList.remove('selected');
+            }
+            destination.classList.add('selected');
+            currentDestination = destination;
+            saveRouteSelection();
+        });
+    });
+
+    function saveRouteSelection() {
+        const place = currentPlace ? currentPlace.textContent.trim() : null;
+        const destination = currentDestination ? currentDestination.textContent.trim() : null;
+
+        console.log(`Place: ${place}, Destination: ${destination}`);
+    }
 });
 
 </script>
