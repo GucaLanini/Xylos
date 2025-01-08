@@ -1093,5 +1093,32 @@ display:flex;
 
 }
 
+ /* 4.1.1_your_travel */
+
+.title-travel {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+}
+
+ .style-title-travel {
+
+    font-family: Panchang;
+    font-size: 48px;
+    font-weight: bolder;
+    color: #F1F1E6;
+    margin: 0px;
+ }
+
+ .style-title-experience-travel {
+    
+    font-family: Panchang;
+    font-size: 24px;
+    font-weight: bold;
+    color: #F1F1E6;
+
+ }
 
 
