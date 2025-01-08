@@ -1150,4 +1150,74 @@ sunrise {
     z-index: 2;
 }
 
+/***BOAT-TRAIN***/
 
+.b-radius{
+    border-radius: 6px;
+}
+
+.dropdown-toggle{
+    font-size: 32px;
+}
+
+.route-selection{
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 0px;
+    border: none;
+    margin: 70px 0 50px 0;
+}
+
+.dropdown-wrapper{
+    margin-bottom: 0px;
+    background-color: var(--gg-bg-color);
+    border: 5px, solid, var(--gg-deepblue-color);
+    border-radius: 6px;
+}
+
+.dropdown-item-route{
+width: 290px;
+height: 72px;
+padding-left: 25px;
+padding-top: 20px;
+margin: 10px 0;
+border-radius: 8px;
+}
+
+.custom-d-m{
+    position: relative !important;
+    transform: none !important;
+}
+
+.dropdown-item-route.selected p{
+    color: var(--gg-bg-color)
+}
+
+.dropdown-item:hover{
+    background-color: var(--gg-ice-color);
+} 
+  
+.zone-selection{
+    height: 100px;
+    margin-top: 50px;
+    padding: 34px 0;
+    border: 5px;
+    border-style: solid;
+    border-color: var(--gg-deepblue-color);
+    border-radius: 30px;
+}
+
+.zone-selection p {
+    text-align: center;
+}
+ 
+ .zone-selection-right{
+    margin-left: auto;
+ }
+
+ .btn, .btn:hover, .btn.show, .btn:hover.show, .btn:active.show, .btn:active, .btn:disabled, .btn:disabled.show, .btn:focus, .btn:focus.show {
+    background-color: var(--gg-deepblue-color) !important;
+    border-style: none;
+}
