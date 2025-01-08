@@ -78,7 +78,9 @@ h3 {
     margin-top:20px;
 }
 
-
+.margin-x-70{
+    margin: 70px 0;
+}
 
 /*****HOME PAGE****/
 
@@ -1023,12 +1025,44 @@ p {
    
 }
 
+/***BOAT-TRAIN***/
+
+.b-radius{
+    border-radius: 8px;
+}
+
+.dropdown-toggle{
+    font-size: 32px;
+}
+
+.route-selection{
+
+    flex-wrap: wrap;
+    background-color: var(--gg-deepblue-color);
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 0px;
+    padding-top: 20px;
 
 
 
+}
 
+.dropdown-wrapper{
+    margin-bottom: 0px;
+}
 
+.dropdown-item-route{
+width: 300px;
+height: 72px;
+padding-left: 25px;
+padding-top: 20px;
+}
 
+.custom-d-m{
+    position: relative !important;
+    transform: none !important;
+}
 
 
  
