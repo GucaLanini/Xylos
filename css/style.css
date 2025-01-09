@@ -1121,4 +1121,21 @@ display:flex;
 
  }
 
+ .body-travel {
+
+    font-family: Chillax;
+    font-size: 24px;
+    font-weight: normal;
+    color: #F1F1E6;
+ }
+
+ .body-bold-travel {
+
+    font-family: Chillax;
+    font-size: 24px;
+    font-weight: bold;
+    color: #F1F1E6;
+ }
+
+
 
