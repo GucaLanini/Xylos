@@ -1217,7 +1217,7 @@ border-radius: 8px;
     margin-left: auto;
  }
 
- .btn, .btn:hover, .btn.show, .btn:hover.show, .btn:active.show, .btn:active, .btn:disabled, .btn:disabled.show, .btn:focus, .btn:focus.show {
+ .dropdown-selection {
     background-color: var(--gg-deepblue-color) !important;
     border-style: none;
 }
