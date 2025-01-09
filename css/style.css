@@ -1098,9 +1098,9 @@ display:flex;
 .title-travel {
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 0px;
+    justify-content: space-between;
+   
 }
 
  .style-title-travel {
@@ -1180,11 +1180,11 @@ display:flex;
  }
 
  .card-content-travel {
-    text-align: center;
     margin-top: 52px;
     margin-left: 52px;
     margin-bottom: 52px;
     margin-right: 52px;
+    
  }
 
  .card-title-travel {
@@ -1210,13 +1210,14 @@ display:flex;
  }
 
  .time-travel {
-    margin-top: 44px;
+    margin-top: 30px;
     text-align: center;
     
  }
 
  .text-travel {
-    margin-top: 75px;
+    margin-top: 30px;
+    margin-bottom: 50px;
     text-align: left;
     width: 406px;
     height: 166px;
@@ -1226,19 +1227,20 @@ display:flex;
  .box-svg-price-travel {
     display:flex;
     align-items: center;
-    gap:91px;
+    gap:63px;
+    
  }
 
  .box-svg-travel {
-    gap: 50px;
+    gap: 0px;
  }
 
  .box-svg-price-travel:nth-of-type(1) {
-    margin-bottom: 50px; /* Spazio di 50px sotto il primo elemento */
+    margin-bottom: 52px; /* Spazio di 50px sotto il primo elemento */
 }
 
 .box-svg-price-travel:nth-of-type(2) {
-    margin-bottom: 50px; /* Spazio di 50px sotto il secondo elemento */
+    margin-bottom: 52px; /* Spazio di 50px sotto il secondo elemento */
 }
 
  .svg-price-first-travel {
@@ -1254,16 +1256,11 @@ display:flex;
 
 
  .cards-container-travel {
-    display:flex;
-    gap:48px;
-    justify-content: space-between;
+   display: flex;
+   gap: 57px;
  }
 
-.part2-travel {
 
-    align-items: center;
-    gap: 85px;
-}
 
 
 
