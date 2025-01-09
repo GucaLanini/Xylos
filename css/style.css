@@ -1112,9 +1112,15 @@ display:flex;
     margin-left: 100px;
  }
 
- .margin-button-travel {
+ .margin-border-button-travel {
 
     margin-right: 100px;
+    border-radius: 15px;
+ }
+
+ .border-button-travel {
+
+    border-radius: 15px;
  }
 
  .style-title-experience-travel {
@@ -1172,43 +1178,92 @@ display:flex;
     margin-bottom: 206px;
 
  }
+
+ .card-content-travel {
+    text-align: center;
+    margin-top: 52px;
+    margin-left: 52px;
+    margin-bottom: 52px;
+    margin-right: 52px;
+ }
+
  .card-title-travel {
 
-    margin-top: 52px !important;
-    margin-left: 115px;
-    margin-right: 72px;
-    text-align: center;
+    margin:0px;
+    text-align:center;
+    white-space: nowrap; /* Impedisce l'andata a capo del testo */
+    
 
  }
 
  .box-title-travel {
     display: flex;
     align-items: center; /* Allinea verticalmente l'SVG e il titolo */
-     /* Distanza tra l'SVG e il titolo */
+    margin: 0px;
+    gap:34px;
  }
 
  .svg-travel {
-    margin-left: 52px;
-    gap: 33px;
+   margin:0px;
+   gap:20px;
+    
  }
 
  .time-travel {
+    margin-top: 44px;
     text-align: center;
+    
  }
 
  .text-travel {
-    margin-left: 52px;
-    margin-right: 72px;
+    margin-top: 75px;
     text-align: left;
+    width: 406px;
+    height: 166px;
 
  }
 
- .cards-container-travel {
+ .box-svg-price-travel {
+    display:flex;
+    align-items: center;
+    gap:91px;
+ }
 
+ .box-svg-travel {
+    gap: 50px;
+ }
+
+ .box-svg-price-travel:nth-of-type(1) {
+    margin-bottom: 50px; /* Spazio di 50px sotto il primo elemento */
+}
+
+.box-svg-price-travel:nth-of-type(2) {
+    margin-bottom: 50px; /* Spazio di 50px sotto il secondo elemento */
+}
+
+ .svg-price-first-travel {
+   margin:0px;
+    display: flex; /* Garantisce che l'SVG mantenga il layout */
+    
+ }
+
+ .svg-price-travel {
+    margin:0px;
+    display: flex;
+ }
+
+
+ .cards-container-travel {
     display:flex;
     gap:48px;
     justify-content: space-between;
  }
+
+.part2-travel {
+
+    align-items: center;
+    gap: 85px;
+}
 
 
 
