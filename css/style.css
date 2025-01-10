@@ -1071,10 +1071,12 @@ p {
 
 .img-big {
     height: 1494px;
+    width: 725px;
 }
 
 .img-mini {
     height: 1107px;
+    width: 725px;
 }
 
 .birds {
