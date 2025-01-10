@@ -78,7 +78,7 @@ h3 {
     margin-top:20px;
 }
 
-.margin-x-70{
+.margin-y-70{
     margin: 70px 0;
 }
 
@@ -1220,4 +1220,31 @@ border-radius: 8px;
  .dropdown-selection {
     background-color: var(--gg-deepblue-color) !important;
     border-style: none;
+}
+
+
+/****CITY PASS****/
+
+.margin-x-70{
+    margin: 0 70px;
+}
+
+.citypass-tariffs{
+    box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
+    border-radius: 50px;
+    border: var(--gg-border-drop);
+
+}
+
+.citypass-hour{
+    width: 530px;
+    height: 250px;
+}
+
+.citypass-hour h3{
+    margin: 100px 0;
+}
+
+.m-bottom-100{
+    margin-bottom: 100px;
 }
