@@ -1230,7 +1230,7 @@ border-radius: 8px;
 }
 
 .citypass-tariffs{
-    box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
+    box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
     border-radius: 50px;
     border: var(--gg-border-drop);
 
