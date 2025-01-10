@@ -85,13 +85,13 @@ h3 {
 /*****HOME PAGE****/
 
 .boxhome{
-    border: var(--gg-border-drop);
+    border: solid 5px var(--gg-deepblue-color);
     height: 709px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
+    box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
     border-radius: 50px;
 }
 
@@ -629,11 +629,11 @@ p {
     align-items: center;
     text-decoration: none;
     color: var(--gg-txt-color);
-    border: var(--gg-border-drop);
+    border: solid 5px var(--gg-deepblue-color);
     height: 300px;
     width: 1688px;
     margin: 30px 0px 100px 0px;
-    box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
+    box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
     border-radius: 50px;
   }
 
