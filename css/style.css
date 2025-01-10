@@ -234,7 +234,7 @@ h3 {
 }
 
 
-.overlay {
+.card-img-overlay-black {
     position: absolute; /* Posiziona l'overlay sopra l'immagine */
     top: 0;
     left: 0;
@@ -245,7 +245,7 @@ h3 {
   }
 
 .card-img-overlay {
-    z-index: 2;
+    z-index: 2; 
 }
   
 .footer {
