@@ -879,7 +879,7 @@ p {
 
 /* Section */
 .section-title {
-    margin-top: 739px;
+    margin-top: 740px;
     font-family: Panchang;
     font-weight: bold;
     font-size: 36px;
@@ -892,8 +892,8 @@ p {
     padding: 0px 0px 45px 0px;
     border-bottom: 5px solid var(--gg-deepblue-color);
     width: calc(100% - 200px);
-    margin-left: 100px !important;
-    margin-right: 100px !important;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .section-sub {
@@ -905,19 +905,20 @@ p {
     margin-top: 40px;
     justify-content: center;
     align-items: center;
-
 }
 
 /* Option Boxes */
+.container-box-create {
+    display: flex;
+    margin-top: 130px;
 
-.container-box {
-display:flex;
-    gap: 50px;
+}
+
+.space-col-g {
+    margin: 0px 50px;
 }
 
 .option-box {
-    margin-top: 149px;
-    margin-left: 100px;
     height: 530px;
     width: 530px;
     border: 5px solid var(--gg-deepblue-color);
@@ -925,17 +926,12 @@ display:flex;
     border-radius: 50px;
     display:flex;
     flex-direction: column;
-    gap: 12px;
     justify-content:center;
     align-items: center;
 }
 
-.space {
-    gap:50px;
-}
 .option-box:hover {
     transform: scale(1.1);
-    background: rgba(255, 255, 255, 0.2);
     border: 5px solid var(--gg-txt-color);
     box-shadow: inset 0px 0px 50px 0px var(--gg-txt-color);
 
