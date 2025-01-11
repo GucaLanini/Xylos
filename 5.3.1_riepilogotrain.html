@@ -40,8 +40,8 @@
 
         <div class="bottom-150" id="selection-result">
             <h3 class="h3-esperienza">Giorno e ora selezionata:</h3>
-            <p class="space-40">Giorno: <span id="selected-date"></span></p>
-            <p class="line">Ora: <span id="selected-time"></span></p>
+            <p class="space-40"><strong>Giorno:</strong> <span id="selected-date"></span></p>
+            <p class="line"><strong>Ora:</strong><span id="selected-time"></span></p>
         </div>
 
         <div class="bottom-150">
@@ -81,7 +81,13 @@ if (selectedData) {
     document.getElementById('selected-date').textContent = selectedData.date;
     document.getElementById('selected-time').textContent = selectedData.time;
 } else {
-    document.getElementById('selection-result').textContent = "Nessuna data o ora selezionata.";
+    let resultElement = document.getElementById('selection-result');
 }
+if (!resultElement) {
+        resultElement = document.createElement('p');
+        resultElement.id = 'selection-result';
+        document.body.appendChild(resultElement);
+    }
+    resultElement.textContent = "Nessuna data e ora selezionata.";
 </script>
 </body>
