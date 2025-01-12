@@ -1314,6 +1314,8 @@ border-radius: 8px;
     align-items: center;
 }
 
+
+
 .option-box:hover {
     transform: scale(1.1);
     border: 5px solid var(--gg-txt-color);
