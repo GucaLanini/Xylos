@@ -135,7 +135,7 @@ h3 {
 }
 
 .big-box{
-    border: var(--gg-border-drop);
+    border: solid 5px var(--gg-deepblue-color);
     height: 577px;
     margin: 0px 100px;
     display: flex;
@@ -148,6 +148,7 @@ h3 {
 }
 
 .big-box:active{
+    border: solid 5px var(--gg-ice-color);
     box-shadow: inset 0px 0px 90px 0px var(--gg-ice-color);
 }
 
@@ -194,34 +195,54 @@ h3 {
 .lumineth {
     height: 1031px;
     width: 820px;
-    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+    box-shadow: 0px 0px 50px 8px var(--gg-bg-color);
     margin-bottom: 50px;
+}
+
+.lumineth:active{
+    box-shadow: 0px 0px 50px 0px var(--gg-ice-color);
 }
 
 .Arakhara {
     height: 550px;
     width: 820px;
-    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+    box-shadow: 0px 0px 50px 8px var(--gg-bg-color);
     margin-bottom: 50px;
+}
+
+.Arakhara:active{
+    box-shadow: 0px 0px 50px 0px var(--gg-ice-color);
 }
 
 .Nyxanthis {
     height: 550px;
     width: 820px;
-    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+    box-shadow: 0px 0px 50px 8px var(--gg-bg-color);
+}
+
+.Nyxanthis:active{
+    box-shadow: 0px 0px 50px 0px var(--gg-ice-color);
 }
 
 .Aerathos {
     height: 1031px;
     width: 820px;
-    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+    box-shadow: 0px 0px 50px 8px var(--gg-bg-color);
+}
+
+.Aerathos:active{
+    box-shadow: 0px 0px 50px 0px var(--gg-ice-color);
 }
 
 .Kharaxos {
     height: 550;
     width: 1689px;
     margin-top: 50px;
-    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+    box-shadow: 0px 0px 50px 8px var(--gg-bg-color);
+}
+
+.Kharaxos:active{
+    box-shadow: 0px 0px 50px 0px var(--gg-ice-color);
 }
 
 .h2-card {
@@ -653,7 +674,7 @@ p {
 
 .h3-transport {
     font-family: Chillax;
-    font-weight: medium;
+    font-weight: normal;
     font-size: 40px;
     color: var(--gg-txt-color);
     margin-right: 245px;
