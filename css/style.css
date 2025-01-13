@@ -782,8 +782,8 @@ p {
 }
 
 .p_map {
-        text-align: justify;
-        margin-top: 50px;
+    text-align: justify;
+    margin-top: 50px;
 }
 
 .btn-primary-map{
@@ -796,7 +796,6 @@ p {
     background-color: var(--gg-ice-color);
     border-color: var(--gg-ice-color);
     margin-left: 270px;
-    align-content: baseline;
 }
 
 
