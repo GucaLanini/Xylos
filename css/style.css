@@ -96,20 +96,23 @@ h3 {
 }
 
 .box-btn{
-    border: var(--gg-border-drop);
+    border: solid 5px var(--gg-deepblue-color);
     height: 700px;
-    margin: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
+    box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
     border-radius: 50px;
+}
+.box-btn:active{
+    box-shadow: inset 0px 0px 50px 0px var(--gg-ice-color);
+    border-color: var(--gg-ice-color);
 }
 
 .boxhome:active{
-    box-shadow: inset 0px 0px 50px 0px var(--gg-txt-color);
-
+    box-shadow: inset 0px 0px 50px 0px var(--gg-ice-color);
+    border-color: var(--gg-ice-color);
 }
 
 .iconhome{
@@ -636,7 +639,7 @@ p {
     border: solid 5px var(--gg-deepblue-color);
     height: 300px;
     width: 1688px;
-    margin: 30px 0px 100px 0px;
+    margin: 0px 0px 100px 0px;
     box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
     border-radius: 50px;
   }
@@ -662,6 +665,10 @@ p {
     font-size: 48px;
     color: var(--gg-ice-color);
     margin-bottom: 90px;
+}
+
+.bottom-265 {
+    margin: 0px 0px 265px 0px;
 }
 
 /****MAP****/
