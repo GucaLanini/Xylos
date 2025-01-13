@@ -145,7 +145,40 @@
              <button type="button" class="btn btn-primary">Prenota</button>
          </a>
      </div> 
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+<script>
+    
+    function updateCounter(button, increment) {
+        const counter = button.closest('.counter').querySelector('.number');
+        let currentValue = parseInt(counter.textContent, 10);
+
+        if (increment) {
+    currentValue = currentValue + 1;
+        } else {
+    currentValue = Math.max(0, currentValue - 1);
+}        counter.textContent = currentValue;
+    }
+
+    const cards = document.querySelectorAll('.counter');
+
+
+    cards.forEach(card => {
+        const minusButton = card.querySelector('.minus');
+        const plusButton = card.querySelector('.plus');
+
+
+        minusButton.addEventListener('click', () => {
+            updateCounter(minusButton, false);
+        });
+
+
+        plusButton.addEventListener('click', () => {
+            updateCounter(plusButton, true);
+        });
+    });
+
+</script>
 
 
 
