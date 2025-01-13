@@ -1354,7 +1354,7 @@ border-radius: 8px;
 
 /* Dots Navigation */
 .dots-navigation {
-    margin-top: 868px;
+    margin-top: 700px;
     margin-bottom: 150px;
 }
 
@@ -1378,6 +1378,13 @@ border-radius: 8px;
     margin-left: 50px;
     transition: background 0.3s;
 
+}
+
+.button-create {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 200px !important;
 }
 
 /* 5.5_space-shuttle.html*/
