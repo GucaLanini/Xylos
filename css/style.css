@@ -123,10 +123,6 @@ h3 {
     color: var(--gg-txt-color);
 }
 
-.row{
-    margin: 0px 60px;/* fra: modificato il magine da 155 a 60 come da mockup (vedi margini griglia) */
-}
-
 .box-txt{
     color: var(--gg-txt-color);
     font-weight: bold;
@@ -148,20 +144,10 @@ h3 {
 .areas{
     background-color: black;
     box-shadow: none;
-    height: 100vh;  
-}
-
-.low{
-
-    height: 50vh !important;
 }
 
 .stop{
     height: 500px; 
-}
-
-.join{
-    margin-top: -50vh !important;
 }
 
 .tcard{
@@ -169,20 +155,26 @@ h3 {
 }
 
 .box-footer{
-    margin-top: 150px;
-    
+    margin-top: 100px;
     height: 150px;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;   
-    box-shadow: 0px 0px 50px 0px #011fe1; /* Aggiunge un'ombra */
+    align-items: center;
 }
 
 .bi-house{
     font-size: 80px;
     color: #c8f1f9;
 }
+
+
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* qui dovrebbero esserci i classi low e up */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+
 
 
 /*****Lumineth*****/
@@ -221,11 +213,11 @@ permette di tenere il menu sotto l'immagine */
     margin-bottom: 125px;
 }
 
-
 .card {
     border: none; 
     background: none;
     border-radius: 50px;
+    margin-bottom: 50px !important;
 }
 
 .card-img {
@@ -243,9 +235,30 @@ permette di tenere il menu sotto l'immagine */
 }
 
 .img-large {
-    width: 1690px;
+    width: 100%;
     height: 550px;
 }
+
+
+
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+.up {
+    height: 1030px;
+    width: 100%;
+}
+.low {
+    height: 550px;
+    width: 100%;
+}
+.margin-left{
+ margin-left: 25px !important;
+}
+.margin-right{
+    margin-right: 25px !important;
+   }
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
 
 .lumineth {
     height: 1031px;
@@ -323,6 +336,7 @@ permette di tenere il menu sotto l'immagine */
     box-shadow: 0px 0px 50px 0px var(--gg-deepblue-color);
     background-color: var(--gg-backgroungblue-color);
     padding:0px;
+    z-index: 2;
 }
 
 /*****EXPERIENCES****/
@@ -332,7 +346,7 @@ permette di tenere il menu sotto l'immagine */
 }
 
 .padding-100 {
-    padding: 0px 100px;
+    padding: 0px 100px !important;
 }
 
 .card-experience {
@@ -367,7 +381,7 @@ permette di tenere il menu sotto l'immagine */
 /* permette di tenere il menu sotto l'immagine */
 .overlay-header{
     position: absolute;
-    padding: 0px;
+
     z-index: 1;
 }
 
@@ -405,7 +419,7 @@ specifiche per l'immagine */
     width: auto;
     filter: none;
     text-align: start;
-    margin-left: 60px !important;
+    margin-left: 100px !important;
 
 }
 
@@ -493,16 +507,21 @@ div.row.reset-all p.col.reset-all:nth-child(2){
 }
 
 
-div.container-fluid.reset-all div.row.justify-content-between{
+body div.container-fluid.reset-all.padding-100{
     margin-top: 280px !important;
+    height: 100%;
 }
 
-
-.items-menu{
+div.row.reset-all button.col.btn.reset-all.box{
     height: 130px;
-    margin-right: 10px !important;
     border-radius: 15px;
+    margin-right: 15px !important;
 }
+
+#rovine{
+    margin-right: 0px !important;
+}
+
 
 /* sistemare il colore */
 .line{
@@ -516,22 +535,20 @@ div.container-fluid.reset-all div.row.justify-content-between{
 
 .area-item{
     background-color: black;
-    border: 2px solid var(--gg-deepblue-color);
     box-shadow: none;
     position: relative;
-    height: 100vh;
+
     
 }
 
-.overlay-item{
-    display: flex;
-    position: absolute;    
-    width: 100%;
-    height: 100%;
+.area-item .overlay{
+    border: 2px solid var(--gg-deepblue-color);
     border-radius: 50px;
-  
-    background: linear-gradient(to top, var(--gg-bg-color), rgba(4, 2, 34, 0.0));
+    background: linear-gradient(to top, var(--gg-bg-color), rgba(0, 0, 0, 0.0));
+    z-index: 0;
+    
 }
+
 
 .img-item{
     width: 100%;
@@ -556,14 +573,10 @@ h2.semibold{
     font-weight: 600;
 }
 
-.unconfort{
-    margin-left: 30px !important;
-    margin-right: 30px !important;
-}
 
 
 div.container-fluid.reset-all div.row div.col-6.reset-padding div.row.reset-all{
-    margin-top: 200px !important;
+    margin-top: 150px !important;
 }
 
 div.container-fluid.reset-all{
@@ -601,8 +614,6 @@ div.container-fluid.reset-all{
     width: 100%;
     height: 100%;
     background: linear-gradient(to top, var(--gg-bg-color), rgba(0, 0, 0, 0.0));
-    border-bottom: #011fe1;
-    border: 10px;
 }
 
 .img-wall{
