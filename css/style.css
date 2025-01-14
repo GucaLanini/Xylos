@@ -2,6 +2,9 @@
 /* CSS Document */
 /******MODIFICHE GENERALI*****/
 
+
+
+
 *{
 padding: 0;
 margin: 0;
@@ -11,7 +14,7 @@ box-sizing: border-box;
 
 
 :root{
-    --gg-bg-color: #040222;
+    --gg-bg-color: rgb(4, 2, 34);
     --gg-txt-color: #f1f1e6;
     --gg-ice-color: #c8f1f9;
     --gg-deepblue-color: #011fe1;
@@ -30,6 +33,20 @@ box-sizing: border-box;
     padding: 0 !important;
     margin: 0 !important;
 }
+
+.reset-padding {
+    padding: 0 !important;
+}
+
+.reset-margin {
+    margin: 0 !important;
+}
+
+.reset-all {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 
 body {
     background-color: var(--gg-bg-color);
@@ -98,6 +115,7 @@ h3 {
 .box-btn{
     border: solid 5px var(--gg-deepblue-color);
     height: 700px;
+    padding: 0%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,13 +139,67 @@ h3 {
     color: var(--gg-txt-color);
 }
 
-
 .box-txt{
     color: var(--gg-txt-color);
     font-weight: bold;
 }
 
 
+/*****Areas*****/
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    opacity: 0.45;
+}
+
+
+
+.areas{
+    background-color: black;
+    box-shadow: none;
+}
+
+.stop{
+    height: 500px; 
+}
+
+.tcard{
+    position: absolute;
+}
+
+.box-footer{
+    margin-top: 100px;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bi-house{
+    font-size: 80px;
+    color: #c8f1f9;
+}
+
+
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* qui dovrebbero esserci i classi low e up */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+
+
+
+/*****Lumineth*****/
+
+
+
+
+/* 
+permette di tenere il menu sotto l'immagine */
 /*****EXPERIENCES****/
 
 .space-experiences {
@@ -162,11 +234,11 @@ h3 {
     margin-bottom: 125px;
 }
 
-
 .card {
     border: none; 
     background: none;
     border-radius: 50px;
+    margin-bottom: 50px !important;
 }
 
 .card-img {
@@ -184,13 +256,34 @@ h3 {
 }
 
 .img-large {
-    width: 1690px;
+    width: 100%;
     height: 550px;
 }
 
 .space-column {
     margin-right: 50px;
 }
+
+
+
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+.up {
+    height: 1030px;
+    width: 100%;
+}
+.low {
+    height: 550px;
+    width: 100%;
+}
+.margin-left{
+ margin-left: 25px !important;
+}
+.margin-right{
+    margin-right: 25px !important;
+   }
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
 
 .lumineth {
     height: 1031px;
@@ -287,6 +380,7 @@ h3 {
     box-shadow: 0px 0px 50px 0px var(--gg-deepblue-color);
     background-color: var(--gg-bg-color);
     padding:0px;
+    z-index: 2;
 }
 
 /*****EXPERIENCES BOX****/
@@ -372,6 +466,46 @@ h3 {
     z-index: 1;
 }
 
+
+
+/* 
+specifiche per l'immagine */
+.wallpaper{
+    width: 100%;
+    height: 1180px;
+    position: relative;
+    z-index: -1;
+
+}
+.goverlay{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--gg-bg-color), rgba(0, 0, 0, 0.0));
+
+}
+
+.img-wall{
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+
+}
+
+.title-area{
+
+    position: absolute;
+    bottom: 0;
+    width: auto;
+    filter: none;
+    text-align: start;
+    margin-left: 100px !important;
+
+}
+
+
+
 /* specifiche del menu*/
 .header-button{
     padding: 0px;
@@ -380,12 +514,165 @@ h3 {
 
 .btn-primary{
     font-family: panchang;
+    font-weight: bold;
     font-weight: 600px;
     color: var(--gg-bg-color);
     font-size: 28px;
     height: 117px;
     width: 240px;
     background-color: var(--gg-ice-color);
+    padding: auto;
+} 
+
+
+
+/* 
+specifiche per il body */
+
+
+
+
+.col.icons-alert{
+
+    width: 80px;
+    height: 80px;
+    
+    justify-content: end;
+    padding: 0px;
+
+    svg{
+        color: var(--gg-ice-color);
+
+        width: 80px;
+        height: 80px;
+    }
+
+}
+
+.heavy-h2{
+    padding: 0px;
+    margin-top: 85px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 50px var(--gg-deepblue-color));
+}
+
+
+.text{
+    width: auto;
+    height: auto;
+    font-family: chillax;
+    color: var(--gg-ice-color);
+}
+
+
+
+
+
+.col-6.reset-padding .row.reset-all:nth-child(-n + 6){
+    margin-top: 75px !important;
+    font-family: chillax;
+    color: var(--gg-ice-color);
+    align-items: center;
+}
+
+.col-6.reset-padding .row.reset-all:nth-child(4){
+    margin-top: 180px !important;
+    font-family: chillax;
+    color: var(--gg-ice-color);
+    align-items: center;
+}
+
+div.row.reset-all p.col.reset-all:nth-child(2){
+    margin-left: 55px !important;
+}
+
+
+body div.container-fluid.reset-all.padding-100{
+    margin-top: 280px !important;
+    height: 100%;
+}
+
+div.row.reset-all button.col.btn.reset-all.box{
+    height: 130px;
+    border-radius: 15px;
+    margin-right: 15px !important;
+}
+
+#rovine{
+    margin-right: 0px !important;
+}
+
+
+/* sistemare il colore */
+.line{
+    width: auto;
+    height: 5px;
+    margin: 50px 0px 50px 0px;
+    background-color: var(--gg-deepblue-color);
+    border-radius: 5px;
+    opacity: 1;
+} 
+
+
+.area-item{
+    background-color: black;
+    box-shadow: none;
+    position: relative;
+
+    
+}
+
+.area-item .overlay{
+    border: 2px solid var(--gg-deepblue-color);
+    border-radius: 50px;
+    background: linear-gradient(to top, var(--gg-bg-color), rgba(0, 0, 0, 0.0));
+    z-index: 0;
+    
+}
+
+
+.img-item{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    opacity: 1;
+}
+
+.text-item{
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    align-items: end;
+    padding: 30px !important;
+}
+
+/* 
+trovare il semibold */
+h2.semibold{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+
+div.container-fluid.reset-all div.row div.col-6.reset-padding div.row.reset-all{
+    margin-top: 150px !important;
+}
+
+div.container-fluid.reset-all{
+    height: 1000px;
+}
+
+.map{
+
+    justify-self: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px ;
+}
+.path{
     border-color: var(--gg-ice-color);
     border-radius: 15px;
     padding: auto;
@@ -690,6 +977,14 @@ p {
 
 .bottom-265 {
     margin: 0px 0px 265px 0px;
+}
+
+.counter-transports {
+    margin-left: 200px;
+}
+
+.margin-b-transports {
+    margin: 0px 0px 110px 0px;
 }
 
 /****MAP****/
@@ -1040,22 +1335,17 @@ p {
     text-align: center;
 }
 
-.footbox { /*box sotto delle due icone*/ 
+.footbox {
     position: fixed;
     bottom: 100px; 
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0 100px; 
-<<<<<<< HEAD
-    
-}
-=======
 }
 
->>>>>>> refs/remotes/origin/main
 
-.icon1 { 
+.icon1 {
     font-size: 50px; 
     color: #333;
     cursor: pointer;
@@ -1065,38 +1355,12 @@ p {
 }
 
 .icon2 {
-    width: 200px;
-    height: 200px;
-    
+    font-size: 50px; 
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
-.btnindex {
-    width: 200px;
-    height: 200px;
-    background-image: url('../img/accessibility.jpg')
-    background-position:center;
-    border: none; 
-    display: flex;
-}
-
-
-  .clickitaly:active { /*on click ma non funziona*/ 
-    border-color: #011fe1;
-}
-
-.clickitaly {
-    width: 200px;
-    height: 200px;
-    background-image: url('../img/italia.jpg');  
-    background-size: cover;
-    background-position: center;
-    border: none; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  
 
 /* EVENTS */
 .container img {
@@ -1113,18 +1377,12 @@ p {
     font-weight:bold;
 }
 
+
 .containerbtn {
     width:240px;
     height:25vh;
-    display: inline;
-}
-.btnevents{
-    padding-left: 150px ; 
 }
 
-<<<<<<< HEAD
-.arboryx {
-=======
 .paper {
     border: none; 
     background: none;
@@ -1148,7 +1406,6 @@ p {
 }
 
 .birds {
->>>>>>> refs/remotes/origin/main
     height: 1107px;
     width: 820px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
@@ -1162,33 +1419,31 @@ p {
     margin-bottom: 50px;
 }
 
-.sky{
+.sky {
     height: 1494px;
     width: 820px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
 }
 
-.moon {
+.moon{
     height: 1031px;
     width: 820px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
 }
 
-.p-card {
-    font-weight:normal;
-    font-size: 24px;
-    color: var(--gg-txt-color);
-}
-
-.img-dance {
+.ring {
     height: 1107px;
+    width: 820px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+    margin-bottom: 50px;
 }
 
-.img-wind {
+.hole {
     height: 1494px;
+    width: 820px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+    margin-bottom: 50px;
 }
-<<<<<<< HEAD
-=======
 
 sunrise {
     height: 1494px;
@@ -1677,4 +1932,13 @@ border-radius: 8px;
     
     margin-right: 100px 
 }
->>>>>>> refs/remotes/origin/main
+
+.zona{
+    fill: var(--gg-backgroungblue-color);
+}
+.zona:hover{
+    stroke-width: 3;
+   
+}
+
+
