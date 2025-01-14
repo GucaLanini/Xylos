@@ -9,7 +9,7 @@
 }
 
 :root{
-    --gg-bg-color: rgb(4, 2, 34);
+    --gg-bg-color: #040222;
     --gg-txt-color: #f1f1e6;
     --gg-ice-color: #c8f1f9;
     --gg-deepblue-color: #011fe1;
@@ -1257,21 +1257,13 @@ p {
 
 .footbox {
     position: fixed;
-    bottom: 100px; 
+    bottom: 150px; 
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 100px; 
+    padding: 0px 100px; 
 }
 
-.containerindex {  /*contenitore */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-}
 
 .btn-accessibility{
     height: 124px;
@@ -1284,44 +1276,28 @@ p {
 .btn-language {
     width: 170px;
     height: 124px;
-    background-color: var(--gg-bg-color);
-    opacity: 0.5;
+    background-color: var(--gg-bg-color) 0.7;
+    border: none;
+    padding: 0px;
 }
 
 .dropdown-menu {
-    background-color: var(--gg-backgroungblue-color);
+    width: 170px;
+    background-color: var(--gg-bg-color);
     opacity: 0.7;
+    border: none;
+    padding: 0px;
+    align-items: center;
 }
 
-
-/*.indexbody { /*bottone e testo
-    margin: 0;
-    padding: 0;
-    height: 3024px;
-    width: 1890px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}*/
-
-
-
-
-
-/*.icon1 {
-    font-size: 50px; 
-    color: #333;
-    cursor: pointer;
-    transition: color 0.3s;
-    border-radius: 20;
+.flag {
+    margin: 0px 24px 65px 24px;
 }
 
-.icon2 {
-    font-size: 50px; 
-    color: #333;
-    cursor: pointer;
-    transition: color 0.3s;
-} */ 
+.btn.show {
+    background-color: var(--gg-bg-color); 
+}
+
 
 /* EVENTS */
 .container img {
