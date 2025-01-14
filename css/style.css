@@ -330,7 +330,6 @@ permette di tenere il menu sotto l'immagine */
 .Kharaxos {
     height: 550;
     width: 1689px;
-    margin-top: 50px;
     box-shadow: 0px 0px 50px 8px var(--gg-bg-color);
 }
 
