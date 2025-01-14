@@ -9,7 +9,7 @@
 }
 
 :root{
-    --gg-bg-color: rgb(4, 2, 34);
+    --gg-bg-color: #040222;
     --gg-txt-color: #f1f1e6;
     --gg-ice-color: #c8f1f9;
     --gg-deepblue-color: #011fe1;
@@ -308,7 +308,6 @@ permette di tenere il menu sotto l'immagine */
 .Kharaxos {
     height: 550;
     width: 1689px;
-    margin-top: 50px;
     box-shadow: 0px 0px 50px 8px var(--gg-bg-color);
 }
 
@@ -484,6 +483,7 @@ specifiche per l'immagine */
     width: 240px;
     background-color: var(--gg-ice-color);
     padding: auto;
+    border-radius: 15px;
 } 
 
 /* 
@@ -1261,48 +1261,74 @@ p {
 
 
 /*INDEX*/ 
-.indexbody { /*bottone e testo*/
-    margin: 0;
-    padding: 0;
-    height: 3024px;
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 1890px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 3024px;
+    object-fit: cover;
+    z-index: -2;
 }
 
-.containerindex {  /*contenitore */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+.video-overlay-black {
+    position: absolute; 
+    top: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: -1; 
+  }
+
+.topindex {
+    margin-top: 1773px;
 }
 
 .footbox {
     position: fixed;
-    bottom: 100px; 
+    bottom: 150px; 
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 100px; 
+    padding: 0px 100px; 
 }
 
-.icon1 {
-    font-size: 50px; 
-    color: #333;
-    cursor: pointer;
-    transition: color 0.3s;
-    border-radius: 20;
+
+.btn-accessibility{
+    height: 124px;
+    width: 124px;
+    background-color: var(--gg-ice-color);
+    padding: auto;
+    border-radius: 15px;
+} 
+
+.btn-language {
+    width: 170px;
+    height: 124px;
+    background-color: var(--gg-bg-color) 0.7;
+    border: none;
+    padding: 0px;
 }
 
-.icon2 {
-    font-size: 50px; 
-    color: #333;
-    cursor: pointer;
-    transition: color 0.3s;
+.dropdown-menu {
+    width: 170px;
+    background-color: var(--gg-bg-color);
+    opacity: 0.7;
+    border: none;
+    padding: 0px;
+    align-items: center;
 }
+
+.flag {
+    margin: 0px 24px 65px 24px;
+}
+
+.btn.show {
+    background-color: var(--gg-bg-color); 
+}
+
 
 /* EVENTS */
 .container img {
