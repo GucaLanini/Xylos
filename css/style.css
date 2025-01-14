@@ -1325,16 +1325,16 @@ border-radius: 8px;
 
 
 
-.option-box:hover {
+/* .option-box:hover {
     transform: scale(1.1);
     border: 5px solid var(--gg-txt-color);
     box-shadow: inset 0px 0px 50px 0px var(--gg-txt-color);
 
-}
+} */
 
 .option-box.selected {
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+    background: var(--gg-deepblue-color);
+    box-shadow: 0 0 30px var(--gg-deepblue-color);
 }
 
 .icon {
@@ -1352,8 +1352,12 @@ border-radius: 8px;
 }
 
 /* Dots Navigation */
+
 .dots-navigation {
-    margin-top: 700px;
+    margin-top: 874px;
+}
+.dots-final-navigation {
+    margin-top: 150px;
     margin-bottom: 150px;
 }
 
@@ -1383,7 +1387,8 @@ border-radius: 8px;
 
     display: flex;
     justify-content: center;
-    margin-top: 200px !important;
+    align-items: center;
+    margin-top: 607px !important;
 }
 
 /* 5.5_space-shuttle.html*/
@@ -1487,7 +1492,7 @@ border-radius: 8px;
 
     font-family: Chillax;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 400px;
     color: #F1F1E6;
  }
 
@@ -1545,6 +1550,8 @@ border-radius: 8px;
     margin: 0px;
     gap:34px;
  }
+
+
 
  .svg-travel {
    margin:0px;
@@ -1615,4 +1622,17 @@ border-radius: 8px;
 .m-r-booking {
     
     margin-right: 100px 
+}
+
+.calendar-travel {
+    height: 720px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+    border: 5px, solid, var(--gg-deepblue-color);
+    flex: 2;
+    border-radius: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding: 0px;
 }
