@@ -1060,6 +1060,7 @@ p {
     width: 676px;
     height: 864px;
     gap: 50px;
+    border-radius: 30px;
 }
 
 .p_map {
