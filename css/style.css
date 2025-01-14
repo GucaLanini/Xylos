@@ -1926,12 +1926,20 @@ border-radius: 8px;
 }
 
 .zona{
-    fill: var(--gg-backgroungblue-color);
-}
-.zona:hover{
-    stroke-width: 3;
-   
+    fill: rgb(4, 2, 34);
+    stroke-width: 3px;
 }
 
 
+.superstroke{
+    stroke-width: 10;
+}
 
+
+.start{
+    display: none;
+}
+
+.visible{
+    display:flex !important;
+}
