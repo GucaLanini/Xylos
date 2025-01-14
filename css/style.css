@@ -530,6 +530,7 @@ div.row.reset-all button.col.btn.reset-all.box{
     margin: 50px 0px 50px 0px;
     background-color: var(--gg-deepblue-color);
     border-radius: 5px;
+    opacity: 1;
 } 
 
 
@@ -586,10 +587,9 @@ div.container-fluid.reset-all{
 .map{
 
     justify-self: center;
-    width: 480px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     margin-top: 100px ;
-    background-color: aqua;
 }
 .path{
     border-color: var(--gg-ice-color);
@@ -963,3 +963,14 @@ p {
 .selection{
     display: flex;
 }
+
+.zona{
+    fill: var(--gg-backgroungblue-color);
+}
+.zona:hover{
+    stroke-width: 3;
+   
+}
+
+
+

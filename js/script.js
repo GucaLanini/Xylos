@@ -1,12 +1,13 @@
-// Trova il pulsante e il div
+//variabili 
 const fauna = document.getElementById('fauna');
 const flora = document.getElementById('flora');
 const fluviale = document.getElementById('fluviale');
-const Rovine = document.getElementById('rovine');
+const rovine = document.getElementById('rovine');
 
 const content = document.getElementById('content');
 
-// Aggiungi un event listener al pulsante
+
+//funzioni pagine luoghi
 fauna.addEventListener('click', () => {
   // Sostituisci l'intero contenuto del div
   content.innerHTML = `
@@ -89,7 +90,6 @@ fauna.addEventListener('click', () => {
 
   `;
 });
-
 flora.addEventListener('click', () => {
     // Sostituisci l'intero contenuto del div
     content.innerHTML = `
@@ -170,7 +170,7 @@ flora.addEventListener('click', () => {
                 </div>
     `;
   });
-  fluviale.addEventListener('click', () => {
+fluviale.addEventListener('click', () => {
     // Sostituisci l'intero contenuto del div
     content.innerHTML = `
                 <div class="row reset-all align-items-start">
@@ -235,8 +235,7 @@ flora.addEventListener('click', () => {
                 </div>
     `;
   });
-
-  rovine.addEventListener('click', () => {
+rovine.addEventListener('click', () => {
     // Sostituisci l'intero contenuto del div
     content.innerHTML = `
                 <div class="row reset-all align-items-start">
@@ -286,6 +285,3 @@ flora.addEventListener('click', () => {
                 </div>
     `;
   });
-
-
-
