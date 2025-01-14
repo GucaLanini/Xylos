@@ -1041,6 +1041,7 @@ p {
     display: flex;
 }
 
+
   .clickitaly:active { /*on click ma non funziona*/ 
     border-color: #011fe1;
 }
