@@ -1371,41 +1371,25 @@ p {
 .photoevents {
     width: 100%;
     height:25vh;
-}
 
-.h2events{
-    font-weight:bold;
 }
-
 
 .containerbtn {
     width:240px;
     height:25vh;
 }
 
-.paper {
-    border: none; 
-    background: none;
-    border-radius: 50px;
-}
-
-.paper-img {
-    border-radius: 50px;
-    object-fit: cover;
-    
-}
-
-.img-big {
+.img-bird {
     height: 1494px;
     width: 725px;
 }
 
-.img-mini {
+.img-wind {
     height: 1107px;
     width: 725px;
 }
 
-.birds {
+.bird {
     height: 1107px;
     width: 820px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
@@ -1426,7 +1410,7 @@ p {
 }
 
 .moon{
-    height: 1031px;
+    height: 1107px;
     width: 820px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
 }
@@ -1452,493 +1436,22 @@ sunrise {
 }
 
 .life{
-    height: 1031px;
+    height: 1107px;
     width: 820px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
 }
 
-.h2-paper {
-    font-weight:bolder;
-    font-size: 48px;
-    color:#f1f1e6;
-
-}
-
-.shadow {
-    position: absolute; /* Posiziona l'overlay sopra l'immagine */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); 
-    z-index: 1; 
-  }
-
-.paper-img-shadow {
-    z-index: 2;
-}
-
-/***BOAT-TRAIN***/
-
-.b-radius{
-    border-radius: 6px;
-}
-
-.dropdown-toggle{
-    font-size: 32px;
-}
-
-.route-selection{
-
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 10px;
-    margin-bottom: 0px;
-    border: none;
-    margin: 70px 0 50px 0;
-}
-
-.dropdown-wrapper{
-    margin-bottom: 0px;
-    background-color: var(--gg-bg-color);
-    border: 5px, solid, var(--gg-deepblue-color);
-    border-radius: 6px;
-}
-
-.dropdown-item-route{
-width: 290px;
-height: 72px;
-padding-left: 25px;
-padding-top: 20px;
-margin: 10px 0;
-border-radius: 8px;
-}
-
-.custom-d-m{
-    position: relative !important;
-    transform: none !important;
-}
-
-.dropdown-item-route.selected p{
-    color: var(--gg-bg-color)
-}
-
-.dropdown-item:hover{
-    background-color: var(--gg-ice-color);
-} 
-  
-.zone-selection{
-    height: 100px;
-    margin-top: 50px;
-    padding: 28px 0;
-    border: 5px;
-    border-style: solid;
-    border-color: var(--gg-deepblue-color);
-    border-radius: 30px;
-}
-
-.zone-selection p {
-    text-align: center;
-}
- 
- .zone-selection-right{
-    margin-left: auto;
- }
-
- .dropdown-selection {
-    background-color: var(--gg-deepblue-color) !important;
-    border-style: none;
-}
-
-
-/****CITY PASS****/
-
-.margin-x-70{
-    margin: 0 70px;
-}
-
-.citypass-tariffs{
-    box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
-    border-radius: 50px;
-    border: var(--gg-border-drop);
-
-}
-
-.citypass-hour{
-    width: 530px;
-    height: 250px;
-}
-
-.citypass-hour h3{
-    margin: 100px 0;
-}
-
-.m-bottom-100{
-    margin-bottom: 100px;
-}
-
-
-/*create your travel*/
-
-.body-create-travel {
-    font-family: Panchang;
-    font-weight: normal;
-    font-size: 28px;
-}
-
-/* Section */
-.section-title {
-    margin-top: 740px;
-    font-family: Panchang;
-    font-weight: bold;
-    font-size: 36px;
-    color: var(--gg-txt-color);
-    justify-content: center;
-
-}
-
-.line-section {
-    padding: 0px 0px 45px 0px;
-    border-bottom: 5px solid var(--gg-deepblue-color);
-    width: calc(100% - 200px);
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-.section-sub {
-    font-family: Panchang;
-    font-weight: normal;
-    font-size: 36px;
-    color: var(--gg-txt-color);
-    display: flex;
-    margin-top: 40px;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Option Boxes */
-.container-box-create {
-    display: flex;
-    margin-top: 130px;
-
-}
-
-.space-col-g {
-    margin: 0px 50px;
-}
-
-.option-box {
-    height: 530px;
-    width: 530px;
-    border: 5px solid var(--gg-deepblue-color);
-    box-shadow: inset 0px 0px 50px 0px var(--gg-deepblue-color);
-    border-radius: 50px;
+.contbox { /* div del testo */
     display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
 }
 
-
-
-.option-box:hover {
-    transform: scale(1.1);
-    border: 5px solid var(--gg-txt-color);
-    box-shadow: inset 0px 0px 50px 0px var(--gg-txt-color);
-
+.insta { 
+    margin-bottom: 20px;
 }
 
-.option-box.selected {
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
-}
-
-.icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-}
-
-.option-label {
-    font-size: 28px;
-    font-weight: lighter;
-    text-transform: uppercase;
-    text-align: center; 
-
-}
-
-/* Dots Navigation */
-.dots-navigation {
-    margin-top: 700px;
-    margin-bottom: 150px;
-}
-
-.dot {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background: #011fe166;
-    border-radius: 50%;
-    margin-left: 50px;
-    transition: background 0.3s;
-}
-
-.dot-active {
-
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background: var(--gg-deepblue-color);
-    border-radius: 50%;
-    margin-left: 50px;
-    transition: background 0.3s;
-
-}
-
-.button-create {
-
-    display: flex;
-    justify-content: center;
-    margin-top: 200px !important;
-}
-
-/* 5.5_space-shuttle.html*/
-
-
-.box-shuttle {
-    margin-top: 100px !important;
-    margin-left: 100px !important;
-    margin-right: 100px;
-    height: 120px;
-    width: 1690px;
-    border: 5px solid var(--gg-deepblue-color);
-    border-radius: 30px;
-    gap: 12px;
-}
-
-.box-shuttle-2 {
-    margin-top: 60px !important;
-    margin-left: 100px !important;
-    margin-right: 100px;
-    height: 120px;
-    width: 1690px;
-    border: 5px solid var(--gg-deepblue-color);
-    border-radius: 30px;
-    gap: 12px;
-}
-
-.p-bot-shuttle {
-    padding-bottom: 20px;
-    padding-left: 0;
-    padding-right: 0;
-
-}
-
-.box-text {
-   
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    color: var(--gg-txt-color);
-    height: 120px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-between; 
-    text-align: center; 
-    font-family: Panchang;
-    padding:0px 60px;
-    align-items: center;
-    
-
-}
-
- /* 4.1.1_your_travel */
-
-.title-travel {
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-   
-}
-
- .style-title-travel {
-
-    font-family: Panchang;
-    font-size: 48px;
-    font-weight: bolder;
-    color: #F1F1E6;
-    margin-left: 100px;
- }
-
- .margin-border-button-travel {
-
-    margin-right: 100px;
-    border-radius: 15px;
- }
-
- .border-button-travel {
-
-    border-radius: 15px;
- }
-
- .style-title-experience-travel {
-    
-    font-family: Panchang;
-    font-size: 24px;
-    font-weight: bold;
-    color: #F1F1E6;
-
- }
-
- .body-travel {
-
-    font-family: Chillax;
-    font-size: 24px;
-    font-weight: normal;
-    color: #F1F1E6;
- }
-
- .body-bold-travel {
-
-    font-family: Chillax;
-    font-size: 24px;
-    font-weight: bold;
-    color: #F1F1E6;
- }
-
- .card-first-travel {
-    height: 702px;
-    width: 530px;
-    border: 3px solid var(--gg-deepblue-color);
-    border-radius: 50px;
-    padding: 0px;
-    align-items: center;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    margin-left:100px;
-    margin-top: 50px;
-    margin-bottom: 206px;
-
- }
-
- .card-travel {
-    height: 702px;
-    width: 530px;
-    border: 3px solid var(--gg-deepblue-color);
-    border-radius: 50px;
-    padding: 0px;
-    align-items: center;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 206px;
-
- }
-
- .card-content-travel {
-    margin-top: 52px;
-    margin-left: 52px;
-    margin-bottom: 52px;
-    margin-right: 52px;
-    
- }
-
- .card-title-travel {
-
-    margin:0px;
-    text-align:center;
-    white-space: nowrap; /* Impedisce l'andata a capo del testo */
-    
-
- }
-
- .box-title-travel {
-    display: flex;
-    align-items: center; /* Allinea verticalmente l'SVG e il titolo */
-    margin: 0px;
-    gap:34px;
- }
-
- .svg-travel {
-   margin:0px;
-   gap:20px;
-    
- }
-
- .time-travel {
-    margin-top: 30px;
-    text-align: center;
-    
- }
-
- .text-travel {
-    margin-top: 30px;
-    margin-bottom: 50px;
-    text-align: left;
-    width: 406px;
-    height: 166px;
-
- }
-
- .box-svg-price-travel {
-    display:flex;
-    align-items: center;
-    gap:63px;
-    
- }
-
- .box-svg-travel {
-    gap: 0px;
- }
-
- .box-svg-price-travel:nth-of-type(1) {
-    margin-bottom: 52px; /* Spazio di 50px sotto il primo elemento */
-}
-
-.box-svg-price-travel:nth-of-type(2) {
-    margin-bottom: 52px; /* Spazio di 50px sotto il secondo elemento */
-}
-
- .svg-price-first-travel {
-   margin:0px;
-    display: flex; /* Garantisce che l'SVG mantenga il layout */
-    
- }
-
- .svg-price-travel {
-    margin:0px;
-    display: flex;
- }
-
-
- .cards-container-travel {
+.inside { /* testo del div non fuzniona :) */
    display: flex;
-   gap: 57px;
- }
-
-
-/* 4.1.3_booking */
-
-.m-l-booking {
-    
-    margin-left: 100px;
-
-}
-
-.m-r-booking {
-    
-    margin-right: 100px 
-}
-
-.zona{
-    fill: var(--gg-backgroungblue-color);
-}
-.zona:hover{
-    stroke-width: 3;
-   
+   align-items: flex-end;
 }
 
 
