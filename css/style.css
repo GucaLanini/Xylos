@@ -188,7 +188,7 @@ h3 {
     border: none; 
     background: none;
     border-radius: 50px;
-    margin-bottom: 50px !important;
+    margin-bottom: 50px;
 }
 
 .card-img {
@@ -393,14 +393,13 @@ h3 {
 
 .btn-primary{
     font-family: panchang;
-    font-weight: bold;
-    font-weight: 600px;
+    font-weight: 800PX;
     color: var(--gg-bg-color);
     font-size: 28px;
     height: 117px;
     width: 240px;
     background-color: var(--gg-ice-color);
-border-color: var(--gg-ice-color);
+    border-color: var(--gg-ice-color);
     border-radius: 15px;
     padding: auto;
 } 
