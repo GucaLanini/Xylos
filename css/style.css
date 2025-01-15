@@ -1216,6 +1216,13 @@ sunrise {
    align-items: flex-end;
 }
 
+/* bagliori celesti */
+
+.card-text {
+  text-align: justify;
+}
+
+
 /***BOAT-TRAIN***/
 .b-radius{
     border-radius: 6px;
