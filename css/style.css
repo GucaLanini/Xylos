@@ -1853,7 +1853,8 @@ p {
 }
 
 .zona{
-    fill: var(--gg-backgroungblue-color);
+    fill: #040222;
+    
 }
 
 
@@ -1866,6 +1867,10 @@ p {
     display: none;
 }
 
-.visible{
+.visible-icon{
+    display:flex !important;
+}
+
+.visible-area{
     display:flex !important;
 }

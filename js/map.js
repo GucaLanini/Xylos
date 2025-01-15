@@ -1,33 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
     const filterItems = document.querySelectorAll('.filter-item');
     const zonas = document.querySelectorAll('.zona');
-    const popper = document.querySelectorAll(".start");
-    
+    const pins = document.querySelectorAll('.primo');
+ 
+
+
+
+    pins.forEach(pin => {
+        pin.addEventListener("click", () =>{
+
+            
+            console.log("la cosa funziona");
+
+        });
+    });
 
     zonas.forEach(zona => {
         zona.addEventListener("click", () =>{
 
-            const nome_zona = zona.getAttribute("id");
-
-
+            
             zona.classList.toggle("superstroke");
      
-
+            const nome_zona = zona.getAttribute("id");
             const area = document.getElementsByClassName("area-" + nome_zona);
 
 
             Array.from(area).forEach(icon => {
-                icon.classList.toggle("visible");
+                icon.classList.toggle("visible-area");
             });
 
-
-
-            console.log(popper);
-
-            
-
-            console.log(`Toggled filter: ${zona}`);
-            console.log(nome_zona);
         });
     });
 
@@ -44,14 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
        
        // Itera su ogni elemento della collezione e aggiungi la classe "visible"
        Array.from(type).forEach(icon => {
-           icon.classList.toggle("visible");;
+           icon.classList.toggle("visible-icon");;
        });
 
-
-
-       // Handle icon activation/deactivation (connect this logic to your map)
-       console.log(`Toggled filter: ${filterType}`);
-       console.log("icon-" + filterType);
     });
 
     });
