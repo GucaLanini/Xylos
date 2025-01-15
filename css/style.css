@@ -294,6 +294,10 @@ h3 {
     z-index: 1; 
   }
 
+.card-img-overlay {
+    z-index: 2;
+}
+
 .overlay-exp {
     position: absolute;
     top: 0;
@@ -306,14 +310,15 @@ h3 {
     z-index: 1; 
 }
   
-.card-img-overlay {
+.card-img-overlay-txt {
     display: flex;
-    flex-direction: column; /* Allinea gli elementi in colonna */
-    align-items: center; /* Centra orizzontalmente */
-    justify-content: center; /* Centra verticalmente */
-    text-align: center; /* Centra il testo */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
     z-index: 2; 
 }
+
   
 .footer {
     position: fixed;
