@@ -1874,3 +1874,17 @@ p {
 .visible-area{
     display:flex !important;
 }
+
+.pin{
+    display: none;
+}
+
+.pin-vis-area{
+    display: flex !important;
+
+}
+
+.pin-vis-icon{
+    display: flex !important;
+
+}
