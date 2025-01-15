@@ -750,7 +750,7 @@ p {
 
 /****MAP****/
 /*search bar*/
-.search-bar {
+.dropdown-map {
     display: flex;
     align-items: center;
     background-color: var(--gg-deepblue-color);
@@ -777,23 +777,12 @@ p {
     color: var(--gg-txt-color);
   }
 
-.search-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin-right: 95px;
-  }
+.space-bar {
+    margin-bottom: 311px;
+}
 
 .space-map {
     margin-bottom: 270px;
-}
-
-.space-bar {
-    margin-bottom: 311px;
 }
 
 .map-container {
@@ -874,6 +863,20 @@ p {
     background-color: var(--gg-ice-color);
     border-color: var(--gg-ice-color);
     margin-left: 270px;
+}
+
+.card-title-popup {
+    font-weight: bold;
+    width: 604px;
+}
+
+.cross {
+    justify-content: end;
+    width: 70px;
+}
+
+.button-s {
+    position: absolute;
 }
 
 /*****CALENDARIO*****/
