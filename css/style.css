@@ -1143,15 +1143,12 @@ p {
     height:25vh;
 }
 
-
-.img-birds {
+.img-bird {
     height: 1494px;
-    width: 725px;
 }
 
 .img-wind {
     height: 1107px;
-    width: 725px;
 }
 
 .bird {
@@ -1194,7 +1191,7 @@ p {
     margin-bottom: 50px;
 }
 
-.sunrise {
+sunrise {
     height: 1494px;
     width: 820px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
@@ -1206,12 +1203,18 @@ p {
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
 }
 
-.h2-paper {
-    font-weight:bolder;
-    font-size: 48px;
-    color:#f1f1e6;
+.contbox { /* div del testo */
+    display:flex;
 }
 
+.insta { 
+    margin-bottom: 20px;
+}
+
+.inside { /* testo del div non fuzniona :) */
+   display: flex;
+   align-items: flex-end;
+}
 
 /***BOAT-TRAIN***/
 .b-radius{
