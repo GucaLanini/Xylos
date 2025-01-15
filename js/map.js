@@ -28,7 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
             Array.from(area).forEach(icon => {
                 icon.classList.toggle("visible-area");
             });
-
+            
+            console.log("quello che voglio"); 
+            
         });
     });
 
