@@ -909,8 +909,8 @@ p {
 /*****CALENDARIO*****/
 .calendar {
     height: 720px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     overflow: hidden;
     border: 5px, solid, var(--gg-deepblue-color);
     flex: 2;
@@ -924,8 +924,8 @@ p {
     align-items: center;
     background-color: var(--gg-deepblue-color);
     padding: 25px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     text-align: left;
     font-weight: bold;
     cursor: pointer;
@@ -1281,7 +1281,7 @@ sunrise {
     margin-bottom: 0px;
     background-color: var(--gg-bg-color);
     border: 5px, solid, var(--gg-deepblue-color);
-    border-radius: 6px;
+    border-radius: 30px;
 }
 
 .dropdown-item-route{
