@@ -1265,6 +1265,7 @@ border-radius: 8px;
 /*create your travel*/
 
 .body-create-travel {
+    margin: 20px 0px 0px 0px;
     font-family: Panchang;
     font-weight: normal;
     font-size: 28px;
@@ -1325,16 +1326,17 @@ border-radius: 8px;
 
 
 
-/* .option-box:hover {
+.option-box:hover {
     transform: scale(1.1);
     border: 5px solid var(--gg-txt-color);
     box-shadow: inset 0px 0px 50px 0px var(--gg-txt-color);
 
-} */
+} 
 
 .option-box.selected {
-    background: var(--gg-deepblue-color);
-    box-shadow: 0 0 30px var(--gg-deepblue-color);
+    background: transparent;
+    box-shadow: inset 0px 0px 30px var(--gg-ice-color);
+    border: solid 5px var(--gg-ice-color);
 }
 
 .icon {
