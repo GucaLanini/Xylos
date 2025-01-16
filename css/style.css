@@ -1207,6 +1207,12 @@ sunrise {
    padding-left: 40px;
 }
 
+.title-area-events{
+    bottom: 0;
+    align-items: end;
+    margin-top: 590px;
+}
+
 
 
 /* bagliori celesti */
