@@ -4,7 +4,11 @@
 
 
 /******MODIFICHE GENERALI*****/
-
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 
 :root{
     --gg-bg-color: rgb(4, 2, 34);
@@ -101,6 +105,14 @@ h3 {
 
 .margin-y-70{
     margin: 70px 0;
+}
+
+.margin-right{
+    margin-right: 50px !important;
+}
+
+.margin-bottom{
+    margin-bottom: 50px !important;
 }
 
 /*****HOME PAGE****/
@@ -317,7 +329,6 @@ h3 {
 
   
 .footer {
-    position: fixed;
     bottom: 0; 
     left: 0;
     width: 100%;
