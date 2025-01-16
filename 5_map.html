@@ -17,18 +17,15 @@
    </div>
 
    <div class="row d-flex justify-content-center">
-      <div class="search-bar space-bar">
-         <input type="text" placeholder="Dove vuoi andare?" class="search-input">
-         <button class="search-button">
-           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-             <g clip-path="url(#clip0_1002_14358)">
-               <path d="M39.2667 35.742L31.5248 27.9969C37.3177 20.2556 35.7381 9.2839 27.9968 3.49103C20.2556 -2.30184 9.2839 -0.722313 3.49103 7.01898C-2.30184 14.7603 -0.722313 25.7319 7.01898 31.5248C13.2374 36.1781 21.7783 36.1781 27.9968 31.5248L35.742 39.27C36.7153 40.2433 38.2934 40.2433 39.2666 39.27C40.2399 38.2967 40.2399 36.7186 39.2666 35.7454L39.2667 35.742ZM17.5725 30.0299C10.6924 30.0299 5.11501 24.4526 5.11501 17.5725C5.11501 10.6924 10.6924 5.11501 17.5725 5.11501C24.4525 5.11501 30.0299 10.6924 30.0299 17.5725C30.0226 24.4494 24.4495 30.0226 17.5725 30.0299Z" fill="#F1F1E6"/>
-             </g>
-             <defs><clipPath id="clip0_1002_14358"><rect width="40" height="40" fill="white"/></clipPath></defs>
-           </svg>
-         </button>
-       </div>
-   </div>
+      <div class="dropdown-map space-bar">
+         <button class="btn btn-secondary dropdown-toggle search-input" type="button" data-bs-toggle="dropdown" aria-expanded="false">Seleziona la regione</button>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+      </div>
+   </div>   
 
    <div class="map-container">
       <svg class = "map-svg" width="1102" height="1530" viewBox="0 0 1102 1530" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,13 +78,255 @@
          <path class = "start area-lumineth  type-ristorante" d="M517.502 579.999C514.52 580.015 511.577 579.315 508.921 577.959C506.264 576.604 503.971 574.631 502.234 572.208C488.737 553.589 481.891 539.592 481.891 530.604C481.891 521.159 485.643 512.101 492.321 505.423C498.999 498.744 508.057 494.992 517.502 494.992C526.947 494.992 536.005 498.744 542.683 505.423C549.362 512.101 553.114 521.159 553.114 530.604C553.114 539.592 546.268 553.589 532.77 572.208C531.033 574.631 528.74 576.604 526.083 577.959C523.427 579.315 520.484 580.015 517.502 579.999V579.999ZM517.502 502.724C510.109 502.732 503.02 505.673 497.792 510.901C492.564 516.129 489.623 523.217 489.615 530.611C489.615 537.729 496.319 550.894 508.489 567.678C509.522 569.101 510.877 570.259 512.444 571.058C514.01 571.856 515.744 572.272 517.502 572.272C519.261 572.272 520.994 571.856 522.561 571.058C524.127 570.259 525.483 569.101 526.516 567.678C538.685 550.894 545.389 537.729 545.389 530.611C545.381 523.217 542.44 516.129 537.212 510.901C531.984 505.673 524.896 502.732 517.502 502.724V502.724Z" fill="#F1F1E6"/>
          <path class = "start area-kharaxos  type-ristorante" d="M721.502 1216C718.52 1216.01 715.577 1215.32 712.921 1213.96C710.264 1212.6 707.971 1210.63 706.234 1208.21C692.737 1189.59 685.891 1175.59 685.891 1166.6C685.891 1157.16 689.643 1148.1 696.321 1141.42C702.999 1134.74 712.057 1130.99 721.502 1130.99C730.947 1130.99 740.005 1134.74 746.683 1141.42C753.362 1148.1 757.114 1157.16 757.114 1166.6C757.114 1175.59 750.268 1189.59 736.77 1208.21C735.033 1210.63 732.74 1212.6 730.083 1213.96C727.427 1215.32 724.484 1216.01 721.502 1216V1216ZM721.502 1138.72C714.109 1138.73 707.02 1141.67 701.792 1146.9C696.564 1152.13 693.623 1159.22 693.615 1166.61C693.615 1173.73 700.319 1186.89 712.489 1203.68C713.522 1205.1 714.877 1206.26 716.444 1207.06C718.01 1207.86 719.744 1208.27 721.502 1208.27C723.261 1208.27 724.994 1207.86 726.561 1207.06C728.127 1206.26 729.483 1205.1 730.516 1203.68C742.685 1186.89 749.389 1173.73 749.389 1166.61C749.381 1159.22 746.44 1152.13 741.212 1146.9C735.984 1141.67 728.896 1138.73 721.502 1138.72V1138.72Z" fill="#F1F1E6"/>
          <path class = "start area-arakhara  type-ristorante" d="M606.502 118.999C603.52 119.015 600.577 118.315 597.921 116.959C595.264 115.604 592.971 113.631 591.234 111.208C577.737 92.5891 570.891 78.5924 570.891 69.6036C570.891 60.1589 574.643 51.101 581.321 44.4225C587.999 37.7441 597.057 33.9922 606.502 33.9922C615.947 33.9922 625.005 37.7441 631.683 44.4225C638.362 51.101 642.114 60.1589 642.114 69.6036C642.114 78.5924 635.268 92.5891 621.77 111.208C620.033 113.631 617.74 115.604 615.083 116.959C612.427 118.315 609.484 119.015 606.502 118.999V118.999ZM606.502 41.7236C599.109 41.7321 592.02 44.6729 586.792 49.9009C581.564 55.1289 578.623 62.2172 578.615 69.6107C578.615 76.7295 585.319 89.8939 597.489 106.678C598.522 108.101 599.877 109.259 601.444 110.058C603.01 110.856 604.744 111.272 606.502 111.272C608.261 111.272 609.994 110.856 611.561 110.058C613.127 109.259 614.483 108.101 615.516 106.678C627.685 89.8939 634.389 76.7295 634.389 69.6107C634.381 62.2172 631.44 55.1289 626.212 49.9009C620.984 44.6729 613.896 41.7321 606.502 41.7236V41.7236Z" fill="#F1F1E6"/>
-         
 
          <!-- rettangoli di selezione -->
-         
 
+
+         <rect class = "pin p-area-kharaxos p-type-flora"x="189" y="912" width="85" height="121"   fill="none"/>
+         <rect class = "pin p-area-arakhara p-type-flora"x="732" y="455" width="85" height="121"   fill="none"/>
+         <rect class = "pin p-area-lumineth p-type-flora"x="552" y="254" width="85" height="121"   fill="none"/>
+         <rect class = "pin p-area-nyxanthis p-type-fauna"x="67" y="712" width="85" height="121"    fill="none"/>
+         <rect class = "pin p-area-kharaxos p-type-fauna"x="847" y="914" width="85" height="121"   fill="none"/>
+         <rect class = "pin p-area-aerathos p-type-fauna"x="662" y="852" width="85" height="121"   fill="none"/>
+         <rect class = "pin p-area-lumineth p-type-cupola"x="635" y="380" width="85" height="121"   fill="none"/>
+         <rect class = "pin p-area-arakhara p-type-rovine"x="830" y="619" width="85" height="121"   fill="none"/>
+         <rect class = "pin p-area-nyxanthis p-type-rovine"x="108" y="309" width="85" height="121"   fill="none"/>
+         <rect class = "pin p-area-arakhara p-type-farmacia"x="366" y="177" width="85" height="121"   fill="none"/>
+         <rect class = "pin p-area-nyxanthis p-type-farmacia"x="247" y="576" width="85" height="121"   fill="none"/>
+         <rect class = "pin p-area-aerathos p-type-ristorante"x="475" y="670" width="85" height="121"   fill="none"/>
+         <rect class = "pin p-area-arakhara p-type-ristorante"x="567" y="16" width="85" height="121"    fill="none"/>
+         <rect class = "pin p-area-kharaxos p-type-ristorante"x="677" y="1125" width="85" height="121"  fill="none"/>
+         <rect class = "pin p-area-lumineth p-type-ristorante" x="475" y="484" width="85" height="121"/>
      </svg>
    </div>
+   
+   
+   <!-- pop up Lumineth -->
+   <div class="container-fluid card-pop-up">
+      <div class="row reset-margin">
+            <div class="col margin-50 reset-padding">
+               <img src="img/arboryx.png" class="col-img-card" alt="Arboryx">
+            </div>
+            <div class="col reset-all">
+               <div class="row d-flex reset-all">
+                     <h2 class="card-title-popup">Arboryx</h2>
+                     <svg class= "cross" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M54.565 19.5611C55.704 18.4221 55.704 16.5753 54.565 15.4363C53.426 14.2973 51.5792 14.2973 50.4402 15.4363L35.0026 30.8739L19.565 15.4363C18.426 14.2973 16.5792 14.2973 15.4402 15.4363C14.3012 16.5753 14.3012 18.4221 15.4402 19.5611L30.8778 34.9987L15.4402 50.4363C14.3012 51.5753 14.3012 53.4221 15.4402 54.5611C16.5792 55.7001 18.426 55.7001 19.565 54.5611L35.0026 39.1235L50.4402 54.5611C51.5792 55.7001 53.426 55.7001 54.565 54.5611C55.704 53.4221 55.704 51.5753 54.565 50.4363L39.1274 34.9987L54.565 19.5611Z" fill="#C8F1F9"/>
+                     </svg>                    
+               </div>
+               <p class="p_map">
+                     La <strong>fauna</strong> di Lumineth è profondamente intrecciata con l’ambiente magico che la circonda. Ogni specie contribuisce al delicato equilibrio dell’ecosistema, avvolgendo Lumineth in un’aura di meraviglia e magia. Gli <strong>Arboryx</strong> sono maestosi uccelli dalle piume iridescenti che cambiano colore e che volano sopra il fiume, costruendo i loro nidi sulle antiche rovine, rendendo questi luoghi ancora più suggestivi. Si radunano vicino ai turisti, creando una coreografia naturale unica nel suo genere.
+               </p>
+               <div class="row reset-margin button-s">
+                     <button type="button" class="btn btn-primary-map">Scopri</button>
+               </div>
+            </div>
+      </div>
+   </div>
+
+   <div class="container-fluid card-pop-up">
+      <div class="row reset-margin">
+            <div class="col margin-50 reset-padding">
+               <img src="img/aurelias_lumineth.png" class="col-img-card" alt="Aurelias">
+            </div>
+            <div class="col reset-all">
+               <div class="row d-flex reset-all">
+                     <h2 class="card-title-popup">Aurelias</h2>
+                     <svg class= "cross" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M54.565 19.5611C55.704 18.4221 55.704 16.5753 54.565 15.4363C53.426 14.2973 51.5792 14.2973 50.4402 15.4363L35.0026 30.8739L19.565 15.4363C18.426 14.2973 16.5792 14.2973 15.4402 15.4363C14.3012 16.5753 14.3012 18.4221 15.4402 19.5611L30.8778 34.9987L15.4402 50.4363C14.3012 51.5753 14.3012 53.4221 15.4402 54.5611C16.5792 55.7001 18.426 55.7001 19.565 54.5611L35.0026 39.1235L50.4402 54.5611C51.5792 55.7001 53.426 55.7001 54.565 54.5611C55.704 53.4221 55.704 51.5753 54.565 50.4363L39.1274 34.9987L54.565 19.5611Z" fill="#C8F1F9"/>
+                     </svg>                    
+               </div>
+               <p class="p_map">
+                     La <strong>flora</strong> di Lumineth è un trionfo di vita e magia, con una foresta bioluminescente che si anima al calar del sole, con piante che brillano in tonalità di blu, verde e viola, creando un’atmosfera incantata. Tra queste meraviglie spuntano piante rare, i cui petali risplendono sotto la luce delle stelle. La Lumiflora Aurelias è una pianta a forma di campana. Quando sfiorata, emette un bagliore colorato che si diffonde lungo i suoi petali, quasi come un’onda di luce. 
+               </p>
+               <div class="row reset-margin button-s">
+                     <button type="button" class="btn btn-primary-map">Scopri</button>
+               </div>
+            </div>
+      </div>
+   </div>
+
+   <div class="container-fluid card-pop-up">
+      <div class="row reset-margin">
+            <div class="col margin-50 reset-padding">
+               <img src="img/ruins_lumineth.png" class="col-img-card" alt="Ruins">
+            </div>
+            <div class="col reset-all">
+               <div class="row d-flex reset-all">
+                     <h2 class="card-title-popup">Rovine</h2>
+                     <svg class= "cross" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M54.565 19.5611C55.704 18.4221 55.704 16.5753 54.565 15.4363C53.426 14.2973 51.5792 14.2973 50.4402 15.4363L35.0026 30.8739L19.565 15.4363C18.426 14.2973 16.5792 14.2973 15.4402 15.4363C14.3012 16.5753 14.3012 18.4221 15.4402 19.5611L30.8778 34.9987L15.4402 50.4363C14.3012 51.5753 14.3012 53.4221 15.4402 54.5611C16.5792 55.7001 18.426 55.7001 19.565 54.5611L35.0026 39.1235L50.4402 54.5611C51.5792 55.7001 53.426 55.7001 54.565 54.5611C55.704 53.4221 55.704 51.5753 54.565 50.4363L39.1274 34.9987L54.565 19.5611Z" fill="#C8F1F9"/>
+                     </svg>                    
+               </div>
+               <p class="p_map">
+                     La <strong>rovine</strong> di Lumineth sono i resti di un'antica civiltà aliena, immerse nella foresta e avvolte dal muschio e dalle radici. Costruite con un materiale sconosciuto che reagisce alla luce delle stelle, si illuminano di riflessi argentei nelle notti serene, dando l’impressione di essere vive. Strutture imponenti come archi, pilastri e torri semi-crollate si ergono tra gli alberi, creando un contrasto suggestivo con la natura circostante. Le rovine sono un luogo di mistero, frequentate da studiosi e avventurieri alla ricerca di segreti nascosti e leggende dimenticate.
+               </p>
+               <div class="row reset-margin button-s">
+                     <button type="button" class="btn btn-primary-map">Scopri</button>
+               </div>
+            </div>
+      </div>
+  </div>
+
+   <div class="container-fluid card-pop-up">
+      <div class="row reset-margin">
+            <div class="col margin-50 reset-padding">
+               <img src="img/dome.png" class="col-img-card" alt="Dome">
+            </div>
+            <div class="col reset-all">
+               <div class="row d-flex reset-all">
+                     <h2 class="card-title-popup">Cupola</h2>
+                     <svg class= "cross" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M54.565 19.5611C55.704 18.4221 55.704 16.5753 54.565 15.4363C53.426 14.2973 51.5792 14.2973 50.4402 15.4363L35.0026 30.8739L19.565 15.4363C18.426 14.2973 16.5792 14.2973 15.4402 15.4363C14.3012 16.5753 14.3012 18.4221 15.4402 19.5611L30.8778 34.9987L15.4402 50.4363C14.3012 51.5753 14.3012 53.4221 15.4402 54.5611C16.5792 55.7001 18.426 55.7001 19.565 54.5611L35.0026 39.1235L50.4402 54.5611C51.5792 55.7001 53.426 55.7001 54.565 54.5611C55.704 53.4221 55.704 51.5753 54.565 50.4363L39.1274 34.9987L54.565 19.5611Z" fill="#C8F1F9"/>
+                     </svg>                    
+               </div>
+               <p class="p_map">
+                     La <strong>Cupola</strong> di Xylos è il primo punto di approdo per chi arriva su questo affascinante pianeta. Questo centro polifunzionale e accogliente si distingue per la sua architettura avveniristica, che trasmette un senso di spaziosità grazie alla luce naturale che filtra attraverso la struttura in vetro e acciaio, creando suggestivi giochi di luce negli ambienti interni. Al suo interno, il complesso offre una vasta gamma di servizi essenziali, tra cui alloggi confortevoli per i visitatori, farmacie, centri medici, negozi e ristoranti. Le sue linee curve e i materiali moderni creano un’atmosfera armoniosa e rilassante, rendendo la Cupola non solo un centro operativo, ma anche un luogo ideale per socializzare e ambientarsi a Xylos.
+               </p>
+               <div class="row reset-margin button-s">
+                     <button type="button" class="btn btn-primary-map">Scopri</button>
+               </div>
+            </div>
+      </div>
+  </div>
+
+
+   <!-- pop up Arakhara -->
+   <div class="container-fluid card-pop-up">
+      <div class="row reset-margin">
+            <div class="col margin-50 reset-padding">
+               <img src="img/drakhari.jpeg" class="col-img-card" alt="Drakhaari">
+            </div>
+            <div class="col reset-all">
+               <div class="row d-flex reset-all">
+                     <h2 class="card-title-popup">Drakhaari</h2>
+                     <svg class= "cross" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M54.565 19.5611C55.704 18.4221 55.704 16.5753 54.565 15.4363C53.426 14.2973 51.5792 14.2973 50.4402 15.4363L35.0026 30.8739L19.565 15.4363C18.426 14.2973 16.5792 14.2973 15.4402 15.4363C14.3012 16.5753 14.3012 18.4221 15.4402 19.5611L30.8778 34.9987L15.4402 50.4363C14.3012 51.5753 14.3012 53.4221 15.4402 54.5611C16.5792 55.7001 18.426 55.7001 19.565 54.5611L35.0026 39.1235L50.4402 54.5611C51.5792 55.7001 53.426 55.7001 54.565 54.5611C55.704 53.4221 55.704 51.5753 54.565 50.4363L39.1274 34.9987L54.565 19.5611Z" fill="#C8F1F9"/>
+                     </svg>                    
+               </div>
+               <p class="p_map">
+                     Arakhara vanta una <strong>fauna</strong> straordinaria, adattata ai suoi paesaggi estremi. I <strong>Drakhaari</strong>,sono maestosi rettili alati noti per la loro eleganza e potenza. Con un’apertura alare imponente e scaglie dorate che riflettono la luce del sole, sfrecciano sopra le dune di Saharhii come spiriti del deserto. I Drakhaari sono anche simboli di leggenda, protagonisti di racconti locali che li descrivono come guardiani delle antiche civiltà di Arakhara. Si dice che i loro canti riecheggino al tramonto, un suono profondo e armonioso che sembra fondersi con il vento caldo, lasciando un’impronta indelebile nei cuori di chi ha la fortuna di vederli.
+               </p>
+               <div class="row reset-margin button-s">
+                     <button type="button" class="btn btn-primary-map">Scopri</button>
+               </div>
+            </div>
+      </div>
+   </div>
+
+   <div class="container-fluid card-pop-up">
+      <div class="row reset-margin">
+            <div class="col margin-50 reset-padding">
+               <img src="img/floris-map.png" class="col-img-card" alt="Floris">
+            </div>
+            <div class="col reset-all">
+               <div class="row d-flex reset-all">
+                     <h2 class="card-title-popup">Floris</h2>
+                     <svg class= "cross" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M54.565 19.5611C55.704 18.4221 55.704 16.5753 54.565 15.4363C53.426 14.2973 51.5792 14.2973 50.4402 15.4363L35.0026 30.8739L19.565 15.4363C18.426 14.2973 16.5792 14.2973 15.4402 15.4363C14.3012 16.5753 14.3012 18.4221 15.4402 19.5611L30.8778 34.9987L15.4402 50.4363C14.3012 51.5753 14.3012 53.4221 15.4402 54.5611C16.5792 55.7001 18.426 55.7001 19.565 54.5611L35.0026 39.1235L50.4402 54.5611C51.5792 55.7001 53.426 55.7001 54.565 54.5611C55.704 53.4221 55.704 51.5753 54.565 50.4363L39.1274 34.9987L54.565 19.5611Z" fill="#C8F1F9"/>
+                     </svg>                    
+               </div>
+               <p class="p_map">
+                     La <strong>flora</strong> di Arakhara è affascinante e adattata ai suoi paesaggi estremi, e quando il sole tramonta e il cielo si riempie di stelle, emerge la magia nascosta della flora di Arakhara. <strong>Floris</strong>, una piccola pianta notturna, prende vita nel buio, sbocciando in un’esplosione di delicatezza luminosa. I suoi petali emettono una tenue luce gialla, simile a una fiamma soffusa che danza con il vento del deserto. Questi fiori, rari e preziosi, creano un tappeto scintillante tra le ombre delle dune. Il Floris rappresenta la resistenza e la bellezza nascosta di Arakhara, un gioiello che si svela solo a chi sa aspettare la notte.
+               </p>
+               <div class="row reset-margin button-s">
+                     <button type="button" class="btn btn-primary-map">Scopri</button>
+               </div>
+            </div>
+      </div>
+   </div>
+
+   <div class="container-fluid card-pop-up">
+      <div class="row reset-margin">
+            <div class="col margin-50 reset-padding">
+               <img src="img/fluttuanti.jpg" class="col-img-card" alt="Ruins">
+            </div>
+            <div class="col reset-all">
+               <div class="row d-flex reset-all">
+                     <h2 class="card-title-popup">Rovine</h2>
+                     <svg class= "cross" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M54.565 19.5611C55.704 18.4221 55.704 16.5753 54.565 15.4363C53.426 14.2973 51.5792 14.2973 50.4402 15.4363L35.0026 30.8739L19.565 15.4363C18.426 14.2973 16.5792 14.2973 15.4402 15.4363C14.3012 16.5753 14.3012 18.4221 15.4402 19.5611L30.8778 34.9987L15.4402 50.4363C14.3012 51.5753 14.3012 53.4221 15.4402 54.5611C16.5792 55.7001 18.426 55.7001 19.565 54.5611L35.0026 39.1235L50.4402 54.5611C51.5792 55.7001 53.426 55.7001 54.565 54.5611C55.704 53.4221 55.704 51.5753 54.565 50.4363L39.1274 34.9987L54.565 19.5611Z" fill="#C8F1F9"/>
+                     </svg>                    
+               </div>
+               <p class="p_map">
+                     Le <strong>Rovine Fluttuanti di Zeroth</strong> sono un enigma sospeso tra cielo e terra, un prodigio che sfida ogni logica conosciuta. Questi antichi templi, che sembrano librarsi in aria come sculture eteree, emergono dalle distese dorate del deserto di Saharhii come custodi di un passato dimenticato. Raggiungere queste rovine è un viaggio che attraversa l’immensità del deserto, tra dune cangianti e oasi nascoste, per poi culminare in uno spettacolo che toglie il fiato. Un’atmosfera di silenzio profondo e meraviglia pervade l’aria, amplificata dalla vista del mare Tirhanis all’orizzonte. Qui, il confine tra natura e storia si dissolve, offrendo ai visitatori un momento in cui il tempo sembra fermarsi, e l’anima del deserto si rivela nella sua più straordinaria bellezza.
+               </p>
+               <div class="row reset-margin button-s">
+                     <button type="button" class="btn btn-primary-map">Scopri</button>
+               </div>
+            </div>
+      </div>
+   </div>
+
+
+   <!-- pop up Nyxanthis -->
+   <div class="container-fluid card-pop-up">
+      <div class="row reset-margin">
+            <div class="col margin-50 reset-padding">
+               <img src="img/seaturtle.jpeg" class="col-img-card" alt="Rugaxys">
+            </div>
+            <div class="col reset-all">
+               <div class="row d-flex reset-all">
+                     <h2 class="card-title-popup">Rugaxys</h2>
+                     <svg class= "cross" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M54.565 19.5611C55.704 18.4221 55.704 16.5753 54.565 15.4363C53.426 14.2973 51.5792 14.2973 50.4402 15.4363L35.0026 30.8739L19.565 15.4363C18.426 14.2973 16.5792 14.2973 15.4402 15.4363C14.3012 16.5753 14.3012 18.4221 15.4402 19.5611L30.8778 34.9987L15.4402 50.4363C14.3012 51.5753 14.3012 53.4221 15.4402 54.5611C16.5792 55.7001 18.426 55.7001 19.565 54.5611L35.0026 39.1235L50.4402 54.5611C51.5792 55.7001 53.426 55.7001 54.565 54.5611C55.704 53.4221 55.704 51.5753 54.565 50.4363L39.1274 34.9987L54.565 19.5611Z" fill="#C8F1F9"/>
+                     </svg>                    
+               </div>
+               <p class="p_map">
+                     Nel cuore del <strong>Mare di Nyxanthis</strong>, le maestose tartarughe giganti <strong>Rugaxys</strong> si muovono con grazia trasformando ogni incontro con loro in un momento indimenticabile. Queste creature imponenti sono facilmente riconoscibili per i loro gusci ornati da intricate striature fluorescenti. Al calar della notte queste striature si accendono di una luce soffusa e vibrante, creando una danza di colori che si riflette sulle rovine sommerse e sui coralli circostanti. Le Rugaxys sono esseri gentili e longevi, spesso viste muoversi lentamente tra i resti delle antiche città sommerse o riposare tra le alghe e le anemoni giganti. La loro presenza porta un senso di serenità e maestosità al paesaggio subacqueo, arricchendolo con una bellezza naturale che si intreccia armoniosamente con la storia del luogo.
+               </p>
+               <div class="row reset-margin button-s">
+                     <button type="button" class="btn btn-primary-map">Scopri</button>
+               </div>
+            </div>
+      </div>
+   </div>
+
+   <div class="container-fluid card-pop-up">
+      <div class="row reset-margin">
+            <div class="col margin-50 reset-padding">
+               <img src="img/luminis.png" class="col-img-card" alt="Luminis">
+            </div>
+            <div class="col reset-all">
+               <div class="row d-flex reset-all">
+                     <h2 class="card-title-popup">Luminis</h2>
+                     <svg class= "cross" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M54.565 19.5611C55.704 18.4221 55.704 16.5753 54.565 15.4363C53.426 14.2973 51.5792 14.2973 50.4402 15.4363L35.0026 30.8739L19.565 15.4363C18.426 14.2973 16.5792 14.2973 15.4402 15.4363C14.3012 16.5753 14.3012 18.4221 15.4402 19.5611L30.8778 34.9987L15.4402 50.4363C14.3012 51.5753 14.3012 53.4221 15.4402 54.5611C16.5792 55.7001 18.426 55.7001 19.565 54.5611L35.0026 39.1235L50.4402 54.5611C51.5792 55.7001 53.426 55.7001 54.565 54.5611C55.704 53.4221 55.704 51.5753 54.565 50.4363L39.1274 34.9987L54.565 19.5611Z" fill="#C8F1F9"/>
+                     </svg>                    
+               </div>
+               <p class="p_map">
+                     La <strong>flora</strong> di Nyxanthis è ricca e diversificata, adattata perfettamente a questo ambiente unico. Tra le rovine emerse si ergono fiori di <strong>Luminis</strong>, come gioielli viventi, decorano le colonne e gli archi delle città sommerse con la loro fluorescenza incantata, emettendo una luce pulsante soffusa e magica che illumina le notti e sembra respirare insieme al mare, avvolgendo le rovine in un alone di mistero e fascino. Di notte, i Luminis brillano con maggiore intensità, creando un panorama mozzafiato: un universo sommerso che sembra danzare sotto l’abbraccio delle onde. Questa flora straordinaria non è solo un elemento di bellezza, ma anche un rifugio per i pesci iridescenti e le altre creature marine che abitano le profondità. I Luminis sono il cuore pulsante del Mare di Nyxanthis, un simbolo della fusione tra natura e storia, tra vita e memoria, che rende questo luogo unico e indimenticabile. 
+               </p>
+               <div class="row reset-margin button-s">
+                     <button type="button" class="btn btn-primary-map">Scopri</button>
+               </div>
+            </div>
+      </div>
+   </div>
+
+   <div class="container-fluid card-pop-up">
+      <div class="row reset-margin">
+         <div class="col margin-50 reset-padding">
+         <img src="img/nyx_map.png" class="col-img-card" alt="Rovine del mare">
+            </div>
+            <div class="col reset-all">
+               <div class="row d-flex reset-all">
+                     <h2 class="card-title-popup">Rovine del mare</h2>
+                     <svg class= "cross" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M54.565 19.5611C55.704 18.4221 55.704 16.5753 54.565 15.4363C53.426 14.2973 51.5792 14.2973 50.4402 15.4363L35.0026 30.8739L19.565 15.4363C18.426 14.2973 16.5792 14.2973 15.4402 15.4363C14.3012 16.5753 14.3012 18.4221 15.4402 19.5611L30.8778 34.9987L15.4402 50.4363C14.3012 51.5753 14.3012 53.4221 15.4402 54.5611C16.5792 55.7001 18.426 55.7001 19.565 54.5611L35.0026 39.1235L50.4402 54.5611C51.5792 55.7001 53.426 55.7001 54.565 54.5611C55.704 53.4221 55.704 51.5753 54.565 50.4363L39.1274 34.9987L54.565 19.5611Z" fill="#C8F1F9"/>
+                     </svg>                    
+               </div>
+               <p class="p_map">
+                     Le <strong>rovine del Mare di Nyxanthis</strong> sono testimonianze straordinarie di una civiltà perduta, sia sommerse che emerse, offrendo uno spettacolo affascinante per esploratori e studiosi. Sotto le acque turchesi, intricate città sommerse si svelano tra relitti di antiche navi, ormai corallizzati e popolati da una vivace fauna marina. Sulla terraferma, lungo le coste, si ergono le rovine emerse, scolpite in una pietra bianca iridescente che riflette i colori del mare. Questi resti architettonici, circondati da vegetazione lussureggiante e alte palme, narrano storie di un'epoca passata, intrecciando storia e natura in un panorama mozzafiato. Le rovine attirano archeologi, avventurieri e amanti della natura, offrendo un’esperienza unica di esplorazione e relax.
+               </p>
+               <div class="row reset-margin button-s">
+                     <button type="button" class="btn btn-primary-map">Scopri</button>
+               </div>
+            </div>
+      </div>
+   </div>
+
+
 
    <div class="filter-container space-filter">
       <h2 class="filter-title">Filtro</h2>
@@ -159,9 +398,44 @@
       </a>
    </div>
 
-   <script src="js/map.js"></script>
-</body>
+   <script src="js/map.js">
+            document.addEventListener('DOMContentLoaded', () => {
+         let currentPlace = null;
+         let currentDestination = null;
 
+         const selectedPlaces = document.querySelectorAll('.dropdown-item-route-start');
+         selectedPlaces.forEach(place => {
+            place.addEventListener('click', () => {
+                  if (currentPlace) {
+                     currentPlace.classList.remove('selected');
+                  }
+                  place.classList.add('selected');
+                  currentPlace = place;
+                  saveRouteSelection();
+            });
+         });
+
+         const selectedDestinations = document.querySelectorAll('.dropdown-item-route-end');
+         selectedDestinations.forEach(destination => {
+            destination.addEventListener('click', () => {
+                  if (currentDestination) {
+                     currentDestination.classList.remove('selected');
+                  }
+                  destination.classList.add('selected');
+                  currentDestination = destination;
+                  saveRouteSelection();
+            });
+         });
+
+         function saveRouteSelection() {
+            const place = currentPlace ? currentPlace.textContent.trim() : null;
+            const destination = currentDestination ? currentDestination.textContent.trim() : null;
+
+            console.log(`Place: ${place}, Destination: ${destination}`);
+         }
+      });
+   </script>
+</body>
 </html>
 
 
