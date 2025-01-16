@@ -671,6 +671,10 @@ p {
     padding: 30px 0px 0px 0px;
 }
 
+.booking-btn {
+    margin-top: 300px;
+}
+
 /*Qrcode*/ 
 .p-qrcode {
     font-size: 48px;
