@@ -435,7 +435,7 @@ h3 {
 .title-area{
     position: absolute;
     bottom: 0;
-    align-items: end;
+    align-items: end; 
 }
 
 /* specifiche per l'immagine */
