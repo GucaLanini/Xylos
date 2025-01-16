@@ -1,20 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     const filterItems = document.querySelectorAll('.filter-item');
     const zonas = document.querySelectorAll('.zona');
-    const pins = document.querySelectorAll('.primo');
- 
+    const pins = document.querySelectorAll('.pin');
+    const popup = document.getElementById("popup");
+
+
+
 
 
 
     pins.forEach(pin => {
         pin.addEventListener("click", () =>{
-
-            
-            console.log("la cosa funziona");
-
+            const nome_pin = pin.getAttribute("id");
+            popup.classList.toggle("popup-display");
+            const show = document.getElementsByName(nome_pin);
+            show.forEach(element => {
+                element.classList.toggle("card-pu-vis");
+            });
         });
     });
 
+    
     zonas.forEach(zona => {
         zona.addEventListener("click", () =>{
 
@@ -62,3 +68,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
  });
 
+
+ function pop_down(){
+    const card = document.querySelectorAll("card-pop-up");
+        
+    popup.classList.toggle("popup-display");
+
+    card.forEach(element => {
+        element.classList.toggle("card-pu-vis");
+    });
+
+    console.log("funziona");
+};

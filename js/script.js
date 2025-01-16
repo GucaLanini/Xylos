@@ -90,6 +90,7 @@ fauna.addEventListener('click', () => {
 
   `;
 });
+
 flora.addEventListener('click', () => {
     // Sostituisci l'intero contenuto del div
     content.innerHTML = `
