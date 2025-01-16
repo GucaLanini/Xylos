@@ -1418,7 +1418,6 @@ flex-direction: column;
 
 
 .option-box:hover {
-    transform: scale(1.1);
     border: 5px solid var(--gg-txt-color);
     box-shadow: inset 0px 0px 50px 0px var(--gg-txt-color);
 
@@ -1717,15 +1716,8 @@ flex-direction: column;
 
 /* 4.1.3_booking */
 
-.m-l-booking {
-    
-    margin-left: 100px;
-
-}
-
-.m-r-booking {
-    
-    margin-right: 100px 
+.margin-button {
+    margin-top: 300px;
 }
 
 .calendar-travel {
