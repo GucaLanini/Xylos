@@ -1357,6 +1357,7 @@ sunrise {
 
 /*create your travel*/
 .body-create-travel {
+    margin: 20px 0px 0px 0px;
     font-family: Panchang;
     font-weight: normal;
     font-size: 28px;
@@ -1420,11 +1421,12 @@ flex-direction: column;
     border: 5px solid var(--gg-txt-color);
     box-shadow: inset 0px 0px 50px 0px var(--gg-txt-color);
 
-}
+} 
 
 .option-box.selected {
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+    background: transparent;
+    box-shadow: inset 0px 0px 30px var(--gg-ice-color);
+    border: solid 5px var(--gg-ice-color);
 }
 
 .icon {
@@ -1442,8 +1444,12 @@ flex-direction: column;
 }
 
 /* Dots Navigation */
+
 .dots-navigation {
-    margin-top: 700px;
+    margin-top: 874px;
+}
+.dots-final-navigation {
+    margin-top: 150px;
     margin-bottom: 150px;
 }
 
@@ -1469,11 +1475,23 @@ flex-direction: column;
 
 }
 
+.dot-first {
+
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #011fe166;
+    border-radius: 50%;
+    transition: background 0.3s;
+
+}
+
 .button-create {
 
     display: flex;
     justify-content: center;
-    margin-top: 200px !important;
+    align-items: center;
+    margin-top: 607px !important;
 }
 
 /* 5.5_space-shuttle.html*/
@@ -1577,7 +1595,7 @@ flex-direction: column;
 
     font-family: Chillax;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 400px;
     color: #F1F1E6;
  }
 
@@ -1635,6 +1653,8 @@ flex-direction: column;
     margin: 0px;
     gap:34px;
  }
+
+
 
  .svg-travel {
    margin:0px;
@@ -1705,6 +1725,19 @@ flex-direction: column;
 .m-r-booking {
     
     margin-right: 100px 
+}
+
+.calendar-travel {
+    height: 720px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+    border: 5px, solid, var(--gg-deepblue-color);
+    flex: 2;
+    border-radius: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding: 0px;
 }
 
 .zona{
