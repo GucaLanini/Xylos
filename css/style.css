@@ -1144,7 +1144,7 @@ p {
     padding: 0px;
 }
 
-.dropdown-menu {
+.dropdown-menu-home {
     width: 170px;
     background-color: var(--gg-bg-color);
     opacity: 0.7;
