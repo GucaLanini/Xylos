@@ -5,78 +5,69 @@ document.addEventListener('DOMContentLoaded', () => {
     const popup = document.getElementById("popup");
 
 
-
-
-
-
     pins.forEach(pin => {
-        pin.addEventListener("click", () =>{
+        pin.addEventListener("click", () => {
             const nome_pin = pin.getAttribute("id");
             popup.classList.toggle("popup-display");
-            const show = document.getElementsByName(nome_pin);
+            
+            const show = document.querySelectorAll(`[name="pu-${nome_pin}"]`);
             show.forEach(element => {
                 element.classList.toggle("card-pu-vis");
             });
         });
     });
 
-    
+ 
     zonas.forEach(zona => {
-        zona.addEventListener("click", () =>{
-
-            
+        zona.addEventListener("click", () => {
             zona.classList.toggle("superstroke");
-     
+
             const nome_zona = zona.getAttribute("id");
-            const area = document.getElementsByClassName("area-" + nome_zona);
-            const rect_area = document.getElementsByClassName("p-area-" + nome_zona);
+            const area = document.querySelectorAll(`.area-${nome_zona}`);
+            const rect_area = document.querySelectorAll(`.p-area-${nome_zona}`);
 
-
-            Array.from(area).forEach(icon => {
+            area.forEach(icon => {
                 icon.classList.toggle("visible-area");
             });
-            
-            Array.from(rect_area).forEach(rect => {
+
+            rect_area.forEach(rect => {
                 rect.classList.toggle("pin-vis-area");
             });
-
         });
     });
 
+  
     filterItems.forEach(item => {
-    item.addEventListener('click', () => {
-       // Toggle active class
-       item.classList.toggle('active');
-        
+        item.addEventListener('click', () => {
+            
+            item.classList.toggle('active');
 
-       // Get the filter type
-       const filterType = item.getAttribute('data-filter');
-       const type = document.getElementsByClassName("type-" + filterType);
-       const rect_type = document.getElementsByClassName("p-type-" + filterType);
-     
-       
-       // Itera su ogni elemento della collezione e aggiungi la classe "visible"
-       Array.from(type).forEach(icon => {
-           icon.classList.toggle("visible-icon");;
-       });
-       Array.from(rect_type).forEach(rect => {
-            rect.classList.toggle("pin-vis-icon");;
+            
+            const filterType = item.getAttribute('data-filter');
+            const type = document.querySelectorAll(`.type-${filterType}`);
+            const rect_type = document.querySelectorAll(`.p-type-${filterType}`);
+
+            
+            type.forEach(icon => {
+                icon.classList.toggle("visible-icon");
+            });
+
+            rect_type.forEach(rect => {
+                rect.classList.toggle("pin-vis-icon");
+            });
         });
-
     });
-
-    });
- });
+});
 
 
- function pop_down(){
-    const card = document.querySelectorAll("card-pop-up");
-        
+function pop_down() {
+    const cards = document.querySelectorAll(".card-pu-vis");
+
+    const popup = document.getElementById("popup");
     popup.classList.toggle("popup-display");
 
-    card.forEach(element => {
-        element.classList.toggle("card-pu-vis");
+    cards.forEach(element => {
+        element.classList.remove("card-pu-vis");
     });
+}
 
-    console.log("funziona");
-};

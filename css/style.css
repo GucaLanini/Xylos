@@ -329,6 +329,7 @@ h3 {
 
   
 .footer {
+    position: fixed;
     bottom: 0; 
     left: 0;
     width: 100%;
@@ -1093,9 +1094,8 @@ p {
 }
 
 .line {
-    padding: 0px 0px 45px 0px;
+    margin: 50px 0px 50px 0px;
     border-bottom: 5px solid var(--gg-deepblue-color);
-    margin: 0px
 }
 
 .space-40 {
@@ -1709,7 +1709,7 @@ flex-direction: column;
     margin-bottom: 52px; /* Spazio di 50px sotto il secondo elemento */
 }
 
- .svg-price-first-travel {
+.svg-price-first-travel {
    margin:0px;
     display: flex; /* Garantisce che l'SVG mantenga il layout */
     
@@ -1740,16 +1740,119 @@ flex-direction: column;
     margin-right: 100px 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---se cancelli anche accidentalmente questo codice ----- */
+/* ---io cancello te--------Della Chiara Francesco--------- */
 .zona{
     fill: #040222;
     
 }
 
-
 .superstroke{
     stroke-width: 10;
 }
-
 
 .start{
     display: none;
@@ -1769,11 +1872,87 @@ flex-direction: column;
 
 .pin-vis-area{
     display: flex !important;
-    fill: aqua;
+    fill: rgba(0, 0, 0, 0);
 
+}
+
+.exit{
+    fill: rgba(0, 0, 0, 0);
 }
 
 .pin-vis-icon{
     display: flex !important;
+    fill: rgba(0, 0, 0, 0);
 
 }
+
+.dim{
+    height: 130px !important;
+    border-radius: 15px !important;
+}
+
+.margin-right-15{
+    margin-right: 15px !important;
+}
+
+.margin-top-100{
+    margin-top: 200px !important;
+}
+
+.text-item{
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    align-items: end;
+    padding: 30px !important;
+}
+
+.area-item .overlay{
+    position: absolute;
+    height: 100% !important;
+    border: 2px solid var(--gg-deepblue-color);
+    border-radius: 50px;
+    background: linear-gradient(to top, var(--gg-bg-color), rgba(0, 0, 0, 0.0));
+    z-index: 0;
+}
+
+a .overlay{
+    position: absolute;
+    height: 100% !important;
+    border-radius: 50px;
+    background: var(--gg-bg-color);
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.area-item{
+    background-color: black;
+    box-shadow: none;
+    position: relative;
+    margin-bottom: 50px !important; 
+}
+
+.exit{
+    z-index: 4;
+}
+
+.up {
+    height: 1030px;
+    width: 100%;
+}
+
+.low {
+    height: 550px;
+    width: 100%;
+}
+
+.margin-left{
+ margin-left: 25px !important;
+}
+
+.margin-right{
+    margin-right: 25px !important;
+}
+
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
