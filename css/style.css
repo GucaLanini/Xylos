@@ -1160,7 +1160,7 @@ p {
     padding: 0px;
 }
 
-.dropdown-menu {
+.dropdown-menu-home {
     width: 170px;
     background-color: var(--gg-bg-color);
     opacity: 0.7;
@@ -1192,8 +1192,8 @@ p {
     width: 820px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
     margin-bottom: 50px;
-    margi
 }
+
 .sand {
     height: 1494px;
     width: 820px;
@@ -1277,7 +1277,8 @@ sunrise {
 
 /***BOAT-TRAIN***/
 .b-radius{
-    border-radius: 6px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .dropdown-toggle{
@@ -1293,11 +1294,12 @@ sunrise {
     margin: 70px 0 50px 0;
 }
 
-.dropdown-wrapper{
+.dropdown-menu-transports{
     margin-bottom: 0px;
     background-color: var(--gg-bg-color);
     border: 5px, solid, var(--gg-deepblue-color);
-    border-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
 .dropdown-item-route{
