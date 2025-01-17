@@ -861,12 +861,23 @@ p {
 
 /*pop up*/
 .card-pop-up {
+    position: fixed;
     width: 1690px;
     height: 1110px;
     border: 10px solid var(--gg-deepblue-color);
+    background-color: var(--gg-bg-color);
     border-radius: 30px;
     margin: 587px 100px;
     padding: 110px 135px;
+    z-index: 3;
+}
+
+.popup-background {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 2, 34, 0.5);
 }
 
 .card-title {
