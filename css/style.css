@@ -1277,8 +1277,8 @@ sunrise {
 
 /***BOAT-TRAIN***/
 .b-radius{
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    border-radius: 30px;
+     30px;
 }
 
 .dropdown-toggle{
