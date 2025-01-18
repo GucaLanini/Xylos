@@ -42,9 +42,9 @@
     
                 <div class="row margin-70"> 
                     <p class="col padding-70 d-flex justify-content-star reset-margin">Citypass</p> 
-                    <p class="col padding-70 d-flex justify-content-end reset-margin">25€</p> 
+                    <p class="col padding-70 d-flex justify-content-end reset-margin">30€</p> 
                 </div>
-                <div class="counter d-flex justify-content-center">
+                <div class="counter counter-adults d-flex justify-content-center">
                     <button id="minus-1" class="counter-button minus"><p class="no-bottom reset-margin counter-sign">-</p></button>
                     <span class="number">0</span>
                     <button id="plus-1" class="counter-button plus"><p class="no-bottom reset-margin counter-sign">+</p></button>
@@ -68,10 +68,10 @@
     
                     <div class="row margin-70"> 
                         <p class="col padding-70 d-flex justify-content-star reset-margin">Citypass</p> 
-                        <p class="col padding-70 d-flex justify-content-end reset-margin">10€</p> 
+                        <p class="col padding-70 d-flex justify-content-end reset-margin">20€</p> 
                     </div>  
                 </div>
-                <div class="counter d-flex justify-content-center">
+                <div class="counter counter-children d-flex justify-content-center">
                     <button id="minus-2" class="counter-button minus"><p class="no-bottom reset-margin counter-sign">-</p></button>
                     <span class="number">0</span>
                     <button id="plus-2" class="counter-button plus"><p class="no-bottom reset-margin counter-sign">+</p></button>
@@ -94,10 +94,10 @@
     
                 <div class="row margin-70"> 
                     <p class="col padding-70 d-flex justify-content-star reset-margin">Citypass</p> 
-                    <p class="col padding-70 d-flex justify-content-end reset-margin">20€</p> 
+                    <p class="col padding-70 d-flex justify-content-end reset-margin">25€</p> 
                 </div>
             </div>
-            <div class="counter d-flex justify-content-center">
+            <div class="counter counter-seniors d-flex justify-content-center">
                 <button id="minus-3" class="counter-button minus"><p class="no-bottom reset-margin counter-sign">-</p></button>
                 <span class="number">0</span>
                 <button id="plus-3" class="counter-button plus"><p class="no-bottom reset-margin counter-sign">+</p></button>
@@ -105,7 +105,7 @@
         </div>
 
     <div> 
-        <p class="bold-text reset-margin space-30">Prezzo Totale:<span id="total-price">0€</span></p>
+        <p class="bold-text reset-margin space-30">Prezzo Totale: <span id="total-price">0€</span></p>
     </div>
 
 
@@ -273,58 +273,64 @@
         generateCalendar(currentDate);
     });
 
-    /***TOTALE DINAMICO***/
+     /***TOTALE DINAMICO***/
 
-document.addEventListener('DOMContentLoaded', () => {
-    
+     document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.card-tariffs');
+    const totalPriceElement = document.getElementById('total-price');
+    const cityPassCheckbox = document.getElementById('cityPassCheckbox');
+
+    let baseTotalPrice = 0;
 
     function calculateTotalPrice() {
-        let totalPrice = 0;
+        baseTotalPrice = 0;
 
         cards.forEach(card => {
             const unitPrice = parseFloat(card.dataset.unitPrice);
             const quantity = parseInt(card.querySelector('.number').textContent, 10);
-            totalPrice += unitPrice * quantity;
+            baseTotalPrice += unitPrice * quantity;
         });
 
-        document.getElementById('total-price').textContent = `${totalPrice.toFixed(2)}€`;
+        updateDisplayedPrice();
     }
 
+    function updateDisplayedPrice() {
+        let finalPrice;
+        if (cityPassCheckbox.checked) {
+        finalPrice = baseTotalPrice / 2;
+            } else {
+        finalPrice = baseTotalPrice;
+        }
+    totalPriceElement.textContent = `${finalPrice.toFixed(2)}€`;
+}
 
     function updateCounter(button, increment) {
         const counter = button.closest('.counter').querySelector('.number');
         let currentValue = parseInt(counter.textContent, 10);
 
-        if (increment) {
-    currentValue = currentValue + 1;
-        } else {
-    currentValue = Math.max(0, currentValue - 1);
-}        counter.textContent = currentValue;
-
+        currentValue = increment ? currentValue + 1 : Math.max(0, currentValue - 1);
+        counter.textContent = currentValue;
 
         calculateTotalPrice();
     }
-
 
     cards.forEach(card => {
         const minusButton = card.querySelector('.minus');
         const plusButton = card.querySelector('.plus');
 
-
         minusButton.addEventListener('click', () => {
             updateCounter(minusButton, false);
         });
-
 
         plusButton.addEventListener('click', () => {
             updateCounter(plusButton, true);
         });
     });
 
+    cityPassCheckbox.addEventListener('change', updateDisplayedPrice);
+
     calculateTotalPrice();
 });
-
     
     </script>
 </body>

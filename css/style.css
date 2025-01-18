@@ -1304,9 +1304,15 @@ sunrise {
     color: var(--gg-bg-color)
 }
 
-.dropdown-item:hover{
+
+.dropdown-item-route:hover{
     background-color: var(--gg-ice-color);
-} 
+}
+
+.dropdown-item-route:hover p {
+    color: var(--gg-bg-color)
+}
+
   
 .zone-selection{
     height: 100px;
