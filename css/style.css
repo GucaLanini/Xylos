@@ -783,9 +783,6 @@ p {
     margin-bottom: 311px;
 }
 
-.space-map {
-    margin-bottom: 270px;
-}
 
 .map-container {
     display: flex;
@@ -798,9 +795,13 @@ p {
 }
 
 /*filtro*/
+
+
+
 .filter-title {
     margin-bottom: 100px;
 }  
+
 .filter-options {
     display: flex;
     margin-left: 100px;
