@@ -273,63 +273,78 @@
         generateCalendar(currentDate);
     });
 
-     /***TOTALE DINAMICO***/
+/***TOTALE DINAMICO BIGLIETTI E PREZZO***/
 
-     document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.card-tariffs');
+document.addEventListener('DOMContentLoaded', () => {
+    const ticketPrices = {};
+    const counters = document.querySelectorAll('.card-tariffs');
     const totalPriceElement = document.getElementById('total-price');
     const cityPassCheckbox = document.getElementById('cityPassCheckbox');
 
-    let baseTotalPrice = 0;
+    let totalPrice = 0;
+   
+    counters.forEach(counter => {
+        const category = counter.querySelector('h3').textContent.toLowerCase();
+        const unitPrice = parseFloat(counter.dataset.unitPrice);
+        const counterElement = counter.querySelector('.number');
+        const minusButton = counter.querySelector('.minus');
+        const plusButton = counter.querySelector('.plus');
 
-    function calculateTotalPrice() {
-        baseTotalPrice = 0;
 
-        cards.forEach(card => {
-            const unitPrice = parseFloat(card.dataset.unitPrice);
-            const quantity = parseInt(card.querySelector('.number').textContent, 10);
-            baseTotalPrice += unitPrice * quantity;
-        });
+        ticketPrices[category] = {
+            unitPrice: unitPrice,
+            quantity: 0,
+        };
 
-        updateDisplayedPrice();
-    }
-
-    function updateDisplayedPrice() {
-        let finalPrice;
-        if (cityPassCheckbox.checked) {
-        finalPrice = baseTotalPrice / 2;
-            } else {
-        finalPrice = baseTotalPrice;
-        }
-    totalPriceElement.textContent = `${finalPrice.toFixed(2)}€`;
-}
-
-    function updateCounter(button, increment) {
-        const counter = button.closest('.counter').querySelector('.number');
-        let currentValue = parseInt(counter.textContent, 10);
-
-        currentValue = increment ? currentValue + 1 : Math.max(0, currentValue - 1);
-        counter.textContent = currentValue;
-
-        calculateTotalPrice();
-    }
-
-    cards.forEach(card => {
-        const minusButton = card.querySelector('.minus');
-        const plusButton = card.querySelector('.plus');
 
         minusButton.addEventListener('click', () => {
-            updateCounter(minusButton, false);
+            if (ticketPrices[category].quantity > 0) {
+                ticketPrices[category].quantity--;
+                counterElement.textContent = ticketPrices[category].quantity;
+                updateTotalPrice();
+            }
         });
 
         plusButton.addEventListener('click', () => {
-            updateCounter(plusButton, true);
+            ticketPrices[category].quantity++;
+            counterElement.textContent = ticketPrices[category].quantity;
+            updateTotalPrice();
         });
     });
 
-    cityPassCheckbox.addEventListener('change', updateDisplayedPrice);
 
-    calculateTotalPrice();
+    cityPassCheckbox.addEventListener('change', () => {
+        updateTotalPrice();
+    });
+
+
+    function updateTotalPrice() {
+        totalPrice = 0;
+        Object.values(ticketPrices).forEach(ticket => {
+            totalPrice += ticket.unitPrice * ticket.quantity;
+        });
+
+
+        if (cityPassCheckbox.checked) {
+            totalPrice /= 2;
+        }
+
+
+        totalPriceElement.textContent = `${totalPrice.toFixed(2)}€`;
+
+
+        saveDataToLocalStorage();
+    }
+
+
+    function saveDataToLocalStorage() {
+        localStorage.setItem('ticketPrices', JSON.stringify(ticketPrices));
+        localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
+        console.log('Quantità di biglietti e prezzo totale:', {
+            ticketPrices,
+            totalPrice,
+        });
+    }
 });
     
     </script>

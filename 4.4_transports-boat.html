@@ -86,7 +86,7 @@
                     <p class="col padding-70 d-flex justify-content-star reset-margin">Citypass</p> 
                     <p class="col padding-70 d-flex justify-content-end reset-margin">3€</p> 
                 </div>
-                <div class="counter d-flex justify-content-center">
+                <div class="counter counter-adults d-flex justify-content-center">
                     <button id="minus-1" class="counter-button minus"><p class="no-bottom reset-margin counter-sign">-</p></button>
                     <span class="number">0</span>
                     <button id="plus-1" class="counter-button plus"><p class="no-bottom reset-margin counter-sign">+</p></button>
@@ -113,7 +113,7 @@
                         <p class="col padding-70 d-flex justify-content-end reset-margin">2€</p> 
                     </div>  
                 </div>
-                <div class="counter d-flex justify-content-center">
+                <div class="counter counter-children d-flex justify-content-center">
                     <button id="minus-2" class="counter-button minus"><p class="no-bottom reset-margin counter-sign">-</p></button>
                     <span class="number">0</span>
                     <button id="plus-2" class="counter-button plus"><p class="no-bottom reset-margin counter-sign">+</p></button>
@@ -139,7 +139,7 @@
                     <p class="col padding-70 d-flex justify-content-end reset-margin">2,50€</p> 
                 </div>
             </div>
-            <div class="counter d-flex justify-content-center">
+            <div class="counter counter-seniorsd-flex justify-content-center">
                 <button id="minus-3" class="counter-button minus"><p class="no-bottom reset-margin counter-sign">-</p></button>
                 <span class="number">0</span>
                 <button id="plus-3" class="counter-button plus"><p class="no-bottom reset-margin counter-sign">+</p></button>
@@ -419,58 +419,6 @@ document.addEventListener('DOMContentLoaded', () => {
     generateCalendar(currentDate);
 });
 
-/***TOTALE DINAMICO***/
-
-document.addEventListener('DOMContentLoaded', () => {
-    
-    const cards = document.querySelectorAll('.card-tariffs');
-
-    function calculateTotalPrice() {
-        let totalPrice = 0;
-
-        cards.forEach(card => {
-            const unitPrice = parseFloat(card.dataset.unitPrice);
-            const quantity = parseInt(card.querySelector('.number').textContent, 10);
-            totalPrice += unitPrice * quantity;
-        });
-
-        document.getElementById('total-price').textContent = `${totalPrice.toFixed(2)}€`;
-    }
-
-
-    function updateCounter(button, increment) {
-        const counter = button.closest('.counter').querySelector('.number');
-        let currentValue = parseInt(counter.textContent, 10);
-
-        if (increment) {
-    currentValue = currentValue + 1;
-        } else {
-    currentValue = Math.max(0, currentValue - 1);
-}        counter.textContent = currentValue;
-
-
-        calculateTotalPrice();
-    }
-
-
-    cards.forEach(card => {
-        const minusButton = card.querySelector('.minus');
-        const plusButton = card.querySelector('.plus');
-
-
-        minusButton.addEventListener('click', () => {
-            updateCounter(minusButton, false);
-        });
-
-
-        plusButton.addEventListener('click', () => {
-            updateCounter(plusButton, true);
-        });
-    });
-
-    calculateTotalPrice();
-});
-
 /***classe selected a dropdown***/
 document.addEventListener('DOMContentLoaded', () => {
     let currentPlace = null;
@@ -500,11 +448,92 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.stopPropagation(); // Impedisce la chiusura del dropdown
+        });
+    });
+
     function saveRouteSelection() {
         const place = currentPlace ? currentPlace.textContent.trim() : null;
         const destination = currentDestination ? currentDestination.textContent.trim() : null;
 
         console.log(`Place: ${place}, Destination: ${destination}`);
+    }
+});
+
+
+/***TOTALE DINAMICO BIGLIETTI E PREZZO***/
+
+document.addEventListener('DOMContentLoaded', () => {
+    const ticketPrices = {};
+    const counters = document.querySelectorAll('.card-tariffs');
+    const totalPriceElement = document.getElementById('total-price');
+    const cityPassCheckbox = document.getElementById('cityPassCheckbox');
+
+    let totalPrice = 0;
+   
+    counters.forEach(counter => {
+        const category = counter.querySelector('h3').textContent.toLowerCase();
+        const unitPrice = parseFloat(counter.dataset.unitPrice);
+        const counterElement = counter.querySelector('.number');
+        const minusButton = counter.querySelector('.minus');
+        const plusButton = counter.querySelector('.plus');
+
+
+        ticketPrices[category] = {
+            unitPrice: unitPrice,
+            quantity: 0,
+        };
+
+
+        minusButton.addEventListener('click', () => {
+            if (ticketPrices[category].quantity > 0) {
+                ticketPrices[category].quantity--;
+                counterElement.textContent = ticketPrices[category].quantity;
+                updateTotalPrice();
+            }
+        });
+
+        plusButton.addEventListener('click', () => {
+            ticketPrices[category].quantity++;
+            counterElement.textContent = ticketPrices[category].quantity;
+            updateTotalPrice();
+        });
+    });
+
+
+    cityPassCheckbox.addEventListener('change', () => {
+        updateTotalPrice();
+    });
+
+
+    function updateTotalPrice() {
+        totalPrice = 0;
+        Object.values(ticketPrices).forEach(ticket => {
+            totalPrice += ticket.unitPrice * ticket.quantity;
+        });
+
+
+        if (cityPassCheckbox.checked) {
+            totalPrice /= 2;
+        }
+
+
+        totalPriceElement.textContent = `${totalPrice.toFixed(2)}€`;
+
+
+        saveDataToLocalStorage();
+    }
+
+
+    function saveDataToLocalStorage() {
+        localStorage.setItem('ticketPrices', JSON.stringify(ticketPrices));
+        localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
+        console.log('Quantità di biglietti e prezzo totale:', {
+            ticketPrices,
+            totalPrice,
+        });
     }
 });
 </script>
