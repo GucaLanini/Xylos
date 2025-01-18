@@ -307,7 +307,7 @@ h3 {
     bottom: 0; 
     left: 0;
     width: 100%;
-    height: 150px;
+    height: 150px !important;
     border: var(--gg-border-drop);
     display: flex;
     text-align: center;
@@ -632,7 +632,7 @@ p {
 }
 
 .margin-50 {
-    margin-right: 50px;
+    margin-right: 50px !important;
 }
   
 /*Prenota*/ 
@@ -799,35 +799,35 @@ p {
 
 /*filtro*/
 .filter-title {
-    margin-left: 100px;
+    margin-bottom: 100px;
 }  
 .filter-options {
     display: flex;
     margin-left: 100px;
     gap: 70px;
+    
   }
   
-.space-filter {
-    padding-top: 90px;
-}
+
+
 
 .filter-item span {
     font-size: 28px;
     font-family: chillax;
     font-weight: medium;
     color: var(--gg-txt-color);
-    text-align: center; 
-    padding: 0px 35px;
-  }
+    margin-left: 35px;
+    text-align: center;
+}
   
 .filter-item.active img {
     filter: none;
-  }
-  
+}
+
 .filter-item.active {
     transform: scale(1.1);
     opacity: 1;
-  }
+}
 
 
 
@@ -879,10 +879,9 @@ p {
 
 .p_map {
     text-align: justify;
-    margin-top: 50px;
 }
 
-.btn-primary-map{
+/* .btn-primary-map{
     font-family: panchang;
     font-weight: medium;
     color: var(--gg-bg-color);
@@ -892,7 +891,7 @@ p {
     background-color: var(--gg-ice-color);
     border-color: var(--gg-ice-color);
     margin-left: 270px;
-}
+} */
 
 .card-title-popup {
     font-weight: bold;
@@ -1904,6 +1903,10 @@ flex-direction: column;
     margin-top: 200px !important;
 }
 
+.margin-top-50{
+    margin-top: 50px !important;
+}
+
 .text-item{
     position: absolute;
     bottom: 0;
@@ -1960,7 +1963,23 @@ a .overlay{
     height: 1630px !important;
 }
 
+.button-s{
+    display: flex;
+    width: 100%;
+    height: 43% !important;
+    justify-content: center;
+    align-items: flex-end;
+}
 
+.form-check-input{
+    height: 50px;
+    width: 50px;
+    margin-right: 30px !important;
 
+}
+
+.form-check-input:checked {
+    background-color: var(--gg-deepblue-color);
+}
 /* ------------------------------------------------------- */
 /* ------------------------------------------------------- */
