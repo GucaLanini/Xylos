@@ -30,32 +30,6 @@
     margin: 0 !important;
 }
 
-.reset-padding {
-    padding: 0 !important;
-}
-
-.reset-margin {
-    margin: 0 !important;
-}
-
-.reset-all {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-.reset-padding {
-    padding: 0 !important;
-}
-
-.reset-margin {
-    margin: 0 !important;
-}
-
-.reset-all {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
 
 body {
     background-color: var(--gg-bg-color);
@@ -1260,7 +1234,7 @@ p {
     margin-bottom: 50px;
 }
 
-sunrise {
+.sunrise {
     height: 1494px;
     width: 820px;
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
@@ -1878,6 +1852,7 @@ flex-direction: column;
 
 .exit{
     fill: rgba(0, 0, 0, 0);
+    z-index: 4;
 }
 
 .pin-vis-icon{
@@ -1889,6 +1864,8 @@ flex-direction: column;
 .dim{
     height: 130px !important;
     border-radius: 15px !important;
+    box-shadow: inset 0px 0px 70px 0px var(--gg-deepblue-color) !important;
+
 }
 
 .margin-right-15{
@@ -1932,9 +1909,6 @@ a .overlay{
     margin-bottom: 50px !important; 
 }
 
-.exit{
-    z-index: 4;
-}
 
 .up {
     height: 1030px;
@@ -1953,6 +1927,12 @@ a .overlay{
 .margin-right{
     margin-right: 25px !important;
 }
+
+.maxxx{
+    height: 1630px !important;
+}
+
+
 
 /* ------------------------------------------------------- */
 /* ------------------------------------------------------- */

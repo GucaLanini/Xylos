@@ -7,257 +7,65 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Lumineth</title>
+    <style>
+
+
+        .linea-container {
+            position: relative;
+            width: 600px;
+            height: 100px;
+            justify-content: center;
+            margin: 50px;
+        }
+
+        .linea {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: #011FE1;
+            transform: translateY(-50%);
+            border-radius: 5px;
+        }
+
+        .stazione {
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color:  #011FE1;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+        }
+
+        .stazione-label {
+            position: absolute;
+            color: white;
+            font-size: 12px;
+            transform: rotate(-25deg);
+        }
+    </style>
 </head>
 <body >
 
-    <div class="container-fluid overlay-header header padding-100">    
-
-        <div class="row justify-content-between reset-all">
+        <div class="linea-container">
+            <div class="linea"></div>
+    
+            <!-- Stazioni -->
+            <div class="stazione" style="left: 0%;"></div>
+            <div class="stazione" style="left: 25%;"></div>
+            <div class="stazione" style="left: 50%;"></div>
+            <div class="stazione" style="left: 75%;"></div>
+            <div class="stazione" style="left: 100%;"></div>
             
-            <a href="home.html" class="col-auto header-button">
-                <svg width="95" height="95" viewBox="0 0 95 95" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50.3016 22.5913C51.8474 21.0455 51.8474 18.5392 50.3016 16.9934C48.7557 15.4475 46.2495 15.4475 44.7036 16.9934L16.9953 44.7017C15.4495 46.2475 15.4495 48.7538 16.9953 50.2996L44.7036 78.0079C46.2495 79.5538 48.7557 79.5538 50.3016 78.0079C51.8474 76.4621 51.8474 73.9558 50.3016 72.41L29.3505 51.459L75.2109 51.459C77.3971 51.459 79.1693 49.6868 79.1693 47.5007C79.1693 45.3145 77.3971 43.5423 75.2109 43.5423L29.3505 43.5423L50.3016 22.5913Z" fill="#C8F1F9"/>
-                  </svg>
-            </a>
-
-            <a href="" class="col-auto header-button justify-content-end">
-                <button type="button" class="btn btn-primary">Prenota</button>
-            </a> 
-            
+            <!-- Etichette -->
+            <div class="stazione-label" style="left: 0%;">Cupola</div>
+            <div class="stazione-label" style="left: 25%;">Rovine di Aerathos</div>
+            <div class="stazione-label" style="left: 50%;">Fiume Lumis</div>
+            <div class="stazione-label" style="left: 75%;">Monoliti</div>
+            <div class="stazione-label" style="left: 100%;">Nyxanthis</div>
         </div>
-
-  
-    </div>
-
-    <div class="wallpaper">
-        
-        <div class="goverlay">
-            <img src="img/zona 1/zona 1/wallpaper.jpg" alt="Lumineth" class="img-wall" >
-
-            <div class="row reset-all">
-            
-                <h1 class="col reset-all title-area">Lumineth</h1>
-                
-            </div>
-        
-        
-        </div>
-    </div>
-
-    <div class="container-fluid body reset-padding">
-        <div class="row reset-all padding-100">
-            <div class="col-6 reset-padding">
-
-                <div class="row  reset-all">
-                    <div class="col icons-alert">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-drizzle" viewBox="0 0 16 16">
-                            <path d="M4.158 12.025a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m-3.5 1.5a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m.747-8.498a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 11H13a3 3 0 0 0 .405-5.973M8.5 2a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4 4 0 0 1 8.5 2"/>
-                        </svg>
-                    </div>
-
-                    <div class="col icons-alert">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
-                            <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
-                            <path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
-                        </svg>
-                    </div>
-
-                    <div class="col icons-alert">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi-off" viewBox="0 0 16 16">
-                            <path d="M10.706 3.294A12.6 12.6 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.52.52 0 0 0 .668.05A11.45 11.45 0 0 1 8 4q.946 0 1.852.148zM8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065 8.45 8.45 0 0 1 3.51-1.27zm2.596 1.404.785-.785q.947.362 1.785.907a.482.482 0 0 1 .063.745.525.525 0 0 1-.652.065 8.5 8.5 0 0 0-1.98-.932zM8 10l.933-.933a6.5 6.5 0 0 1 2.013.637c.285.145.326.524.1.75l-.015.015a.53.53 0 0 1-.611.09A5.5 5.5 0 0 0 8 10m4.905-4.905.747-.747q.886.451 1.685 1.03a.485.485 0 0 1 .047.737.52.52 0 0 1-.668.05 11.5 11.5 0 0 0-1.811-1.07M9.02 11.78c.238.14.236.464.04.66l-.707.706a.5.5 0 0 1-.707 0l-.707-.707c-.195-.195-.197-.518.04-.66A2 2 0 0 1 8 11.5c.374 0 .723.102 1.021.28zm4.355-9.905a.53.53 0 0 1 .75.75l-10.75 10.75a.53.53 0 0 1-.75-.75z"/>
-                          </svg>
-                    </div>
-
-                    <div class="col icons-alert">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backpack4" viewBox="0 0 16 16">
-                            <path d="M4 9.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm1 .5v3h6v-3h-1v.5a.5.5 0 0 1-1 0V10z"/>
-                            <path d="M8 0a2 2 0 0 0-2 2H3.5a2 2 0 0 0-2 2v1c0 .52.198.993.523 1.349A.5.5 0 0 0 2 6.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6.5a.5.5 0 0 0-.023-.151c.325-.356.523-.83.523-1.349V4a2 2 0 0 0-2-2H10a2 2 0 0 0-2-2m0 1a1 1 0 0 0-1 1h2a1 1 0 0 0-1-1M3 14V6.937q.24.062.5.063h4v.5a.5.5 0 0 0 1 0V7h4q.26 0 .5-.063V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1m9.5-11a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/>
-                          </svg>
-                    </div>
-                </div>
-
-                <div class="row reset-all">
-                    <h2 class="col reset-all heavy-h2">Descrizione</h2>
-                </div>
-
-                <div class="row reset-all">
-                    <p class="col reset-all text">Lumineth è un luogo dove il cuore pulsante della natura di Xylos si manifesta in tutta la sua magnificenza. è un’area vasta e rigogliosa, dominata da due tipi di foreste: una bioluminescente che brilla al calar del sole, e una foresta di alberi giganteschi, dalle chiome talmente fitte da formare un tetto naturale. Tra queste meraviglie si ergono le rovine di un'antica civiltà ora avvolta dalle radici e dal muschio.
-                        Il fiume Lumis, che serpeggia attraverso la zona, è una delle principali attrazioni: le sue acque cristalline riflettono il cielo e le luci delle foreste, rendendolo un percorso magico per i visitatori.</p>
-                </div>
-
-                <div class="row reset-all icons-info">
-
-                    <div class="col-auto icons-alert">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-cloud-drizzle" viewBox="0 0 16 16">
-                            <path d="M4.158 12.025a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m-3.5 1.5a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m.747-8.498a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 11H13a3 3 0 0 0 .405-5.973M8.5 2a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4 4 0 0 1 8.5 2"/>
-                        </svg>
-
-                    </div>
-
-                   <p class="col reset-all"><b>Raggiungibile in:</b> 3 ore</p>
-
-                </div>
-
-                <div class="row reset-all icons-info">
-
-                     <div class="col-auto icons-alert">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-cloud-drizzle" viewBox="0 0 16 16">
-                             <path d="M4.158 12.025a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m-3.5 1.5a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m.747-8.498a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 11H13a3 3 0 0 0 .405-5.973M8.5 2a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4 4 0 0 1 8.5 2"/>
-                         </svg>
-                     
-                     </div>
-                 
-                    <p class="col reset-all"><b>Raggiungibile in:</b> 3 ore</p>
-
-                </div>
-
-                <div class="row reset-all icons-info">
-                
-                    <div class="col-auto icons-alert">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-cloud-drizzle" viewBox="0 0 16 16">
-                            <path d="M4.158 12.025a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m-3.5 1.5a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m.747-8.498a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 11H13a3 3 0 0 0 .405-5.973M8.5 2a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4 4 0 0 1 8.5 2"/>
-                        </svg>
-                    
-                    </div>
-                
-                   <p class="col reset-all"><b>Raggiungibile in:</b> 3 ore</p>
-
-                </div>
-
-            </div>
-                
-            <div class="col-6">
-
-            </div>
-        </div>
-
-    </div>
-
-
-
-    <div class="container-fluid reset-all padding-100">
-      
-       <div class="row reset-all align-items-center justify-content-end">
-
-            <button id = "fauna" type="button" class="col btn reset-all box"><h2 class="reset-all heavy-h2">Fauna</h2></button>
-            <button id = "flora" type="button" class="col btn reset-all box"><h2 class="reset-all heavy-h2">Flora</h2></button>
-            <button id = "fluviale" type="button" class="col btn reset-all box"><h2 class="reset-all heavy-h2">Fluviale</h2></button>
-            <button id = "rovine" type="button" class="col btn reset-all box"><h2 class="reset-all heavy-h2">Rovine</h2></button>
-
-       </div>
-
-       <div class="row reset-all">
-            <hr class="col line">
-       </div>
-
-       <div class="row reset-all">
-
-            <div id = "content" class = "col reset-all"> 
-
-                <div class="row reset-all align-items-start">
-
-                    <div class="row reset-all">
-
-                        <div class="col reset-all margin-right">
-            
-                            <div class="row card reset-all area-item">
-            
-                                <img src="img/zona 1/zona 1/d3d964f4fa2dbdded9ee1ec6ac46ad1e.jpg" class="card-img img-long reset-padding up" alt="Nyxari">
-            
-                                <div class="overlay"></div>
-            
-                                <div class="text-item">
-                                    <h2 class="semibold">Nyxari</h2>
-                                    <p class="text">
-                                        I Nyxari sono felini, simili alle tigri terrestri, con un manto luminoso. Sono animali solitari ma curiosi. Se attratti da uno stimolo luminoso, possono avvicinarsi cautamente.
-                                    </p>
-                                </div>
-            
-                            </div>
-            
-                            <div class="row card reset-all area-item">
-            
-                                <img src="img/zona 1/zona 1/farfalla.jpg" class="card-img img-long reset-padding low" alt="Lyserian">
-            
-                                <div class="overlay"></div>
-            
-                                <div class="text-item">
-                                    <h2 class="semibold">Lyserian</h2>
-                                    <p class="text">
-                                        Farfalle dalle ali trasparenti che volano in gruppi di centinaia, creando spettacoli di luce fluttuante. Le loro ali si accendono in sfumature di blu e arancione mentre si muovono.
-                                    </p>
-                                </div>
-            
-                            </div>
-            
-                        </div>
-            
-                        <div class="col reset-all margin-left">
-            
-                            <div class="row card reset-all area-item">
-            
-                                <img src="img/zona 1/zona 1/rana.jpg" class="card-img img-long reset-padding low" alt="Arakhara">
-            
-                                <div class="overlay"></div>
-            
-                                <div class="text-item">
-                                    <h2 class="semibold">Luminex</h2>
-                                    <p class="text">
-                                        I Luminex sono anfibi simili a rane che saltano in gruppi vicino al pelo dell’acqua, sincronizzando il loro bagliore con i movimenti del kayak.    
-                                    </p>
-                                </div>
-            
-                            </div>
-            
-                            <div class="row card reset-all area-item">
-            
-                                <img src="img/zona 1/zona 1/uccello2.jpg" class="card-img img-long reset-padding up" alt="Arboryx">
-            
-                                <div class="overlay"></div>
-            
-                                <div class="text-item">
-                                    <h2 class="semibold">Arboryx</h2>
-                                    <p class="text">
-                                        Gli Arboryx, con i loro nidi costruiti a decine di metri da terra, sono il simbolo della foresta. I loro piumaggi iridescenti, spettacolari da osservare, specialmente durante i voli collettivi.
-                                    </p>
-                                </div>
-            
-                            </div>
-            
-                        </div>
-                    </div>
-                   
-        
-                </div>
-            </div>
-       </div>
-
-
-       </div>
-
-    </div>
-
-
-    <div class="container-fluid reset-all">
-        <div class="row reset-all  padding-100">
-            <div class="col-6 reset-padding">
-
-                <div class="row reset-all">
-                    <h2 class="col reset-all heavy-h2">Come raggiungerlo</h2>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="row map">
-            
-        </div>
-
-        <div class="row path">
-        
-        </div>
-    </div>
-
-    <script src="js/script.js"></script>
+        <script src="js/line.js"></script>
 </body>
 </html>
