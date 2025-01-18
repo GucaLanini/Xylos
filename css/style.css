@@ -1271,7 +1271,7 @@ sunrise {
 }
 
 .dropdown-toggle[aria-expanded="true"] svg {
-    transform: rotate(180deg); /* Ruota la freccia */
+    transform: rotate(180deg);
 }
 
 .route-selection{
