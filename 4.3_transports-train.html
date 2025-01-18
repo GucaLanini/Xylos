@@ -87,7 +87,7 @@
                 <p class="col padding-70 d-flex justify-content-star reset-margin">Citypass</p> 
                 <p class="col padding-70 d-flex justify-content-end reset-margin">3€</p> 
             </div>
-            <div class="counter d-flex justify-content-center">
+            <div class="counter counter-adults d-flex justify-content-center">
                 <button id="minus-1" class="counter-button minus"><p class="no-bottom reset-margin counter-sign">-</p></button>
                 <span class="number">0</span>
                 <button id="plus-1" class="counter-button plus"><p class="no-bottom reset-margin counter-sign">+</p></button>
@@ -114,7 +114,7 @@
                     <p class="col padding-70 d-flex justify-content-end reset-margin">2€</p> 
                 </div>  
             </div>
-            <div class="counter d-flex justify-content-center">
+            <div class="counter counter-children d-flex justify-content-center">
                 <button id="minus-2" class="counter-button minus"><p class="no-bottom reset-margin counter-sign">-</p></button>
                 <span class="number">0</span>
                 <button id="plus-2" class="counter-button plus"><p class="no-bottom reset-margin counter-sign">+</p></button>
@@ -140,7 +140,7 @@
                 <p class="col padding-70 d-flex justify-content-end reset-margin">2,50€</p> 
             </div>
         </div>
-        <div class="counter d-flex justify-content-center">
+        <div class="counter counter-seniors d-flex justify-content-center">
             <button id="minus-3" class="counter-button minus"><p class="no-bottom reset-margin counter-sign">-</p></button>
             <span class="number">0</span>
             <button id="plus-3" class="counter-button plus"><p class="no-bottom reset-margin counter-sign">+</p></button>
@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
         generateCalendar(currentDate);
     });
 
-    /****SALVATAGGIO SELEZIONE****/
+    /****SALVATAGGIO SELEZIONE CALENDARIO****/
     function saveSelection() {
         const selectedDate = selectedDay ? selectedDay.textContent.trim() : null;
         const selectedMonth = getMonthName(currentDate.getMonth());
@@ -412,78 +412,70 @@ document.addEventListener('DOMContentLoaded', () => {
 /***TOTALE DINAMICO***/
 
 document.addEventListener('DOMContentLoaded', () => {
+    const totalPriceElement = document.getElementById('total-price');
+    const cityPassCheckbox = document.getElementById('cityPassCheckbox');
 
-const cards = document.querySelectorAll('.card-tariffs');
+    const ticketCounts = {
+        adults: 0,
+        children: 0,
+        seniors: 0,
+    };
 
-function calculateTotalPrice() {
-    let totalPrice = 0;
+    const ticketPrices = {
+        adults: 20,
+        children: 10,
+        seniors: 15,
+    };
 
-    cards.forEach(card => {
-        const unitPrice = parseFloat(card.dataset.unitPrice);
-        const quantity = parseInt(card.querySelector('.number').textContent, 10);
-        totalPrice += unitPrice * quantity;
+    function calculateTotalPrice() {
+        let baseTotalPrice = 0;
+
+        for (const [category, count] of Object.entries(ticketCounts)) {
+            baseTotalPrice += ticketPrices[category] * count;
+        }
+
+        let finalPrice = cityPassCheckbox.checked ? baseTotalPrice / 2 : baseTotalPrice;
+
+        totalPriceElement.textContent = `${finalPrice.toFixed(2)}€`;
+
+        localStorage.setItem('ticketCounts', JSON.stringify(ticketCounts));
+        localStorage.setItem('finalPrice', JSON.stringify(finalPrice));
+
+        console.log('Biglietti selezionati:', ticketCounts);
+        console.log('Prezzo totale:', finalPrice, '€');
+    }
+
+    function updateCounter(category, increment) {
+        ticketCounts[category] = Math.max(0, ticketCounts[category] + (increment ? 1 : -1));
+
+        const counterElement = document.querySelector(`.counter-${category} .number`);
+        counterElement.textContent = ticketCounts[category];
+
+        calculateTotalPrice();
+    }
+
+    ['adults', 'children', 'seniors'].forEach(category => {
+        const minusButton = document.querySelector(`.counter-${category} .minus`);
+        const plusButton = document.querySelector(`.counter-${category} .plus`);
+
+        minusButton.addEventListener('click', () => updateCounter(category, false));
+        plusButton.addEventListener('click', () => updateCounter(category, true));
     });
 
-    document.getElementById('total-price').textContent = `${totalPrice.toFixed(2)}€`;
-}
-
-function updateCounter(button, increment) {
-    const card = button.closest('.card-tariffs'); // Trova la card corrente
-    const counter = card.querySelector('.number');
-    const cardId = card.id; // Usa un ID univoco per la card
-    let currentValue = parseInt(counter.textContent, 10);
-
-    if (increment) {
-        currentValue = currentValue + 1;
-    } else {
-        currentValue = Math.max(0, currentValue - 1);
-    }
-    counter.textContent = currentValue;
-
-    // Salva il valore corrente nel Local Storage con una chiave unica
-    localStorage.setItem(`counter-${cardId}`, currentValue);
+    cityPassCheckbox.addEventListener('change', calculateTotalPrice);
 
     calculateTotalPrice();
-
-    console.log("numero biglietti", currentValue)
-}
-
-// Ripristina i valori salvati dal Local Storage
-cards.forEach(card => {
-    const cardId = card.id; // Identificatore unico della card
-    const savedValue = localStorage.getItem(`counter-${cardId}`); // Recupera il valore salvato
-
-    if (savedValue !== null) {
-        card.querySelector('.number').textContent = savedValue;
-    }
-
-    const minusButton = card.querySelector('.minus');
-    const plusButton = card.querySelector('.plus');
-
-    minusButton.addEventListener('click', () => {
-        updateCounter(minusButton, false);
-    });
-
-    plusButton.addEventListener('click', () => {
-        updateCounter(plusButton, true);
-    });
-});
-
-// Calcola il prezzo totale iniziale
-calculateTotalPrice();
 });
 
 
-/*****Il menù non si chiude***/
 
 document.querySelectorAll('.dropdown-item').forEach(item => {
         item.addEventListener('click', function (event) {
-            event.stopPropagation(); // Impedisce la chiusura del dropdown
+            event.stopPropagation();
         });
     });
 
 
-/***classe selected a dropdown***/
 document.addEventListener('DOMContentLoaded', () => {
     let currentPlace = null;
     let currentDestination = null;
