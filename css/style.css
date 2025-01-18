@@ -1265,8 +1265,13 @@ sunrise {
     border-top-right-radius: 30px;
 }
 
-.dropdown-toggle{
+.dropdown-toggle::after{
     font-size: 32px;
+    display: none;
+}
+
+.dropdown-toggle[aria-expanded="true"] svg {
+    transform: rotate(180deg); /* Ruota la freccia */
 }
 
 .route-selection{

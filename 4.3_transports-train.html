@@ -33,7 +33,9 @@
                 <div class="calendarheader b-radius d-flex justify-content-between btn btn-secondary dropdown-toggle dropdown-selection" 
                      type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <p>Seleziona tratta:</p>
-                
+                    <svg width="32" height="17" viewBox="0 0 32 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow">
+                        <path d="M30.7107 1.00952C30.4205 0.725392 30.0759 0.499996 29.6966 0.346214C29.3173 0.192433 28.9108 0.113281 28.5003 0.113281C28.0897 0.113281 27.6832 0.192433 27.3039 0.346214C26.9246 0.499996 26.5801 0.725392 26.2898 1.00952L16.7357 10.3556C16.5403 10.5467 16.2754 10.654 15.9992 10.654C15.723 10.654 15.4581 10.5467 15.2628 10.3556L5.71068 1.00952C5.12472 0.435929 4.32987 0.113579 3.501 0.113388C2.67213 0.113197 1.87713 0.43518 1.29089 1.0085C0.70465 1.58183 0.375195 2.35953 0.375 3.17052C0.374805 3.98152 0.703885 4.75937 1.28985 5.33297L10.844 14.6811C11.5211 15.3436 12.325 15.8692 13.2097 16.2278C14.0944 16.5864 15.0426 16.7709 16.0003 16.7709C16.9579 16.7709 17.9061 16.5864 18.7908 16.2278C19.6755 15.8692 20.4794 15.3436 21.1565 14.6811L30.7107 5.33297C31.2965 4.75958 31.6256 3.98201 31.6256 3.17125C31.6256 2.36048 31.2965 1.58291 30.7107 1.00952Z" fill="#F1F1E6"/>
+                        </svg>
                 </div>
                 <div class="dropdown-menu container-fluid reset-padding reset-margin custom-d-m dropdown-menu-transports">
                     <div class="row reset-margin dropdown-wrapper">
@@ -455,6 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
             event.stopPropagation(); // Impedisce la chiusura del dropdown
         });
     });
+
 
     function saveRouteSelection() {
         const place = currentPlace ? currentPlace.textContent.trim() : null;
