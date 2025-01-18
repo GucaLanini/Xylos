@@ -33,6 +33,7 @@
                 <div class="calendarheader b-radius d-flex justify-content-between btn btn-secondary dropdown-toggle dropdown-selection" 
                      type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <p>Seleziona tratta:</p>
+                
                 </div>
                 <div class="dropdown-menu container-fluid reset-padding reset-margin custom-d-m dropdown-menu-transports">
                     <div class="row reset-margin dropdown-wrapper">
@@ -418,6 +419,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
     generateCalendar(currentDate);
 });
+
+
+/***classe selected a dropdown***/
+document.addEventListener('DOMContentLoaded', () => {
+    let currentPlace = null;
+    let currentDestination = null;
+
+    const selectedPlaces = document.querySelectorAll('.dropdown-item-route-start');
+    selectedPlaces.forEach(place => {
+        place.addEventListener('click', () => {
+            if (currentPlace) {
+                currentPlace.classList.remove('selected');
+            }
+            place.classList.add('selected');
+            currentPlace = place;
+            saveRouteSelection();
+        });
+    });
+
+    const selectedDestinations = document.querySelectorAll('.dropdown-item-route-end');
+    selectedDestinations.forEach(destination => {
+        destination.addEventListener('click', () => {
+            if (currentDestination) {
+                currentDestination.classList.remove('selected');
+            }
+            destination.classList.add('selected');
+            currentDestination = destination;
+            saveRouteSelection();
+        });
+    });
+
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.stopPropagation(); // Impedisce la chiusura del dropdown
+        });
+    });
+
+    function saveRouteSelection() {
+        const place = currentPlace ? currentPlace.textContent.trim() : null;
+        const destination = currentDestination ? currentDestination.textContent.trim() : null;
+
+        console.log(`Place: ${place}, Destination: ${destination}`);
+    }
+});
+
+
 
 
 /***TOTALE DINAMICO BIGLIETTI E PREZZO***/
