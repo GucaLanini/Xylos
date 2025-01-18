@@ -417,7 +417,7 @@ h3 {
 .title-area{
     position: absolute;
     bottom: 0;
-    align-items: end;
+    align-items: end; 
 }
 
 /* specifiche per l'immagine */
@@ -640,6 +640,7 @@ p {
 {
     width: 20px;
     height: 20px;
+    margin: 0px 20px 0px 80px;
     border: 2px solid var(--gg-deepblue-color);
     border-radius: 3px;
     background-color: var(--gg-bg-color);
@@ -650,6 +651,10 @@ p {
 
 .padding-30 {
     padding: 30px 0px 0px 0px;
+}
+
+.booking-btn {
+    margin-top: 300px;
 }
 
 /*Qrcode*/ 
@@ -710,20 +715,12 @@ p {
     margin: 0px 0px 265px 0px;
 }
 
-.counter-transports {
-    margin-left: 200px;
-}
-
 .margin-b-transports {
     margin: 0px 0px 110px 0px;
 }
 
 .counter-transports {
     margin-left: 200px;
-}
-
-.margin-b-transports {
-    margin: 0px 0px 110px 0px;
 }
 
 .custom-button-base {
@@ -735,18 +732,14 @@ p {
     font-family: Chillax;
     font-size: 28px;
     border-radius: 30px;
-    margin: 0px 340px 110px 145px;
 }
 
-.custom-button-super {
-    width: 530px;
-    height: 120px;
-    background-color: var(--gg-ice-color);
+.custom-button-base.selected {
     color: var(--gg-bg-color);
-    font-family: Chillax;
-    font-size: 28px;
-    border-radius: 30px;
-    margin: 0px 145px 110px 0px;
+}
+
+.space-340 {
+    margin-right: 340px;
 }
 
 .space-180 {
@@ -849,6 +842,7 @@ p {
     height: 1110px;
     background-color: var(--gg-bg-color);
     border: 10px solid var(--gg-deepblue-color);
+    background-color: var(--gg-bg-color);
     border-radius: 30px;
     margin: 587px 100px;
     padding: 110px 135px;
@@ -910,15 +904,11 @@ p {
     width: 70px;
 }
 
-.button-s {
-    position: absolute;
-}
-
 /*****CALENDARIO*****/
 .calendar {
     height: 720px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     overflow: hidden;
     border: 5px, solid, var(--gg-deepblue-color);
     flex: 2;
@@ -932,8 +922,8 @@ p {
     align-items: center;
     background-color: var(--gg-deepblue-color);
     padding: 25px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     text-align: left;
     font-weight: bold;
     cursor: pointer;
@@ -1151,7 +1141,7 @@ p {
     padding: 0px;
 }
 
-.dropdown-menu {
+.dropdown-menu-home {
     width: 170px;
     background-color: var(--gg-bg-color);
     opacity: 0.7;
@@ -1170,22 +1160,6 @@ p {
 
 
 /* EVENTS */
-.container img {
-    width: 100%;
-    height:25vh;
-}
-
-.photoevents {
-    width: 100%;
-    height:25vh;
-
-}
-
-.containerbtn {
-    width:240px;
-    height:25vh;
-}
-
 .img-bird {
     height: 1494px;
 }
@@ -1207,7 +1181,6 @@ p {
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
     margin-bottom: 50px;
 }
-
 .sky {
     height: 1494px;
     width: 820px;
@@ -1246,18 +1219,35 @@ p {
     box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
 }
 
-.contbox { /* div del testo */
-    display:flex;
+.card-events {
+    border: none; 
+    background: none;
+    border-radius: 50px;
+    margin-bottom: 50px !important;
+    justify-content: flex-end;
+
 }
 
-.insta { 
-    margin-bottom: 20px;
+.card-img-events {
+    border-radius: 50px;
+    object-fit: cover;
+    display: flex;
+    justify-content: flex-end; 
 }
 
-.inside { /* testo del div non fuzniona :) */
-   display: flex;
-   align-items: flex-end;
+
+.pudding{
+   padding-left: 40px;
+   padding-bottom: 20px;
 }
+
+.title-area-events{
+    bottom: 0;
+    align-items: end;
+    margin-top: 590px;
+}
+
+
 
 /* bagliori celesti */
 
@@ -1268,11 +1258,17 @@ p {
 
 /***BOAT-TRAIN***/
 .b-radius{
-    border-radius: 6px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
-.dropdown-toggle{
+.dropdown-toggle::after{
     font-size: 32px;
+    display: none;
+}
+
+.dropdown-toggle[aria-expanded="true"] svg {
+    transform: rotate(180deg); /* Ruota la freccia */
 }
 
 .route-selection{
@@ -1284,11 +1280,12 @@ p {
     margin: 70px 0 50px 0;
 }
 
-.dropdown-wrapper{
+.dropdown-menu-transports{
     margin-bottom: 0px;
     background-color: var(--gg-bg-color);
     border: 5px, solid, var(--gg-deepblue-color);
-    border-radius: 6px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
 .dropdown-item-route{
@@ -1309,9 +1306,15 @@ p {
     color: var(--gg-bg-color)
 }
 
-.dropdown-item:hover{
+
+.dropdown-item-route:hover{
     background-color: var(--gg-ice-color);
-} 
+}
+
+.dropdown-item-route:hover p {
+    color: var(--gg-bg-color)
+}
+
   
 .zone-selection{
     height: 100px;
@@ -1364,6 +1367,7 @@ p {
 
 /*create your travel*/
 .body-create-travel {
+    margin: 20px 0px 0px 0px;
     font-family: Panchang;
     font-weight: normal;
     font-size: 28px;
@@ -1423,15 +1427,15 @@ flex-direction: column;
 
 
 .option-box:hover {
-    transform: scale(1.1);
     border: 5px solid var(--gg-txt-color);
     box-shadow: inset 0px 0px 50px 0px var(--gg-txt-color);
 
-}
+} 
 
 .option-box.selected {
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+    background: transparent;
+    box-shadow: inset 0px 0px 30px var(--gg-ice-color);
+    border: solid 5px var(--gg-ice-color);
 }
 
 .icon {
@@ -1449,8 +1453,12 @@ flex-direction: column;
 }
 
 /* Dots Navigation */
+
 .dots-navigation {
-    margin-top: 700px;
+    margin-top: 874px;
+}
+.dots-final-navigation {
+    margin-top: 150px;
     margin-bottom: 150px;
 }
 
@@ -1476,11 +1484,23 @@ flex-direction: column;
 
 }
 
+.dot-first {
+
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #011fe166;
+    border-radius: 50%;
+    transition: background 0.3s;
+
+}
+
 .button-create {
 
     display: flex;
     justify-content: center;
-    margin-top: 200px !important;
+    align-items: center;
+    margin-top: 607px !important;
 }
 
 /* 5.5_space-shuttle.html*/
@@ -1584,7 +1604,7 @@ flex-direction: column;
 
     font-family: Chillax;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 400px;
     color: #F1F1E6;
  }
 
@@ -1642,6 +1662,8 @@ flex-direction: column;
     margin: 0px;
     gap:34px;
  }
+
+
 
  .svg-travel {
    margin:0px;
@@ -1703,15 +1725,21 @@ flex-direction: column;
 
 /* 4.1.3_booking */
 
-.m-l-booking {
-    
-    margin-left: 100px;
-
+.margin-button {
+    margin-top: 300px;
 }
 
-.m-r-booking {
-    
-    margin-right: 100px 
+.calendar-travel {
+    height: 720px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+    border: 5px, solid, var(--gg-deepblue-color);
+    flex: 2;
+    border-radius: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding: 0px;
 }
 
 
