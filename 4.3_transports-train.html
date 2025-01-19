@@ -454,7 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.dropdown-item').forEach(item => {
         item.addEventListener('click', function (event) {
-            event.stopPropagation(); // Impedisce la chiusura del dropdown
+            event.stopPropagation();
         });
     });
 
@@ -462,6 +462,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function saveRouteSelection() {
         const place = currentPlace ? currentPlace.textContent.trim() : null;
         const destination = currentDestination ? currentDestination.textContent.trim() : null;
+
+                localStorage.setItem('selectedPlace', place);
+        localStorage.setItem('selectedDestination', destination);
 
         console.log(`Place: ${place}, Destination: ${destination}`);
     }
@@ -535,13 +538,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function saveDataToLocalStorage() {
-        localStorage.setItem('ticketPrices', JSON.stringify(ticketPrices));
-        localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
-        console.log('Quantità di biglietti e prezzo totale:', {
-            ticketPrices,
-            totalPrice,
-        });
-    }
+    Object.keys(ticketPrices).forEach(category => {
+        const data = {
+            quantity: ticketPrices[category].quantity,
+            unitPrice: ticketPrices[category].unitPrice, 
+        };
+        localStorage.setItem(`ticketPrices-${category}`, JSON.stringify(data)); 
+    });
+
+    localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
+
+    console.log('Quantità e prezzi unitari dei biglietti salvati:', ticketPrices);
+    console.log('Prezzo totale salvato:', totalPrice);
+}
+
 });
 </script>
 
