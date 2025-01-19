@@ -66,9 +66,9 @@ h3 {
 
 .header{
     text-align: center;
-    margin-top: 150px;
-}
+    margin-top: 150px !important;
 
+}
 .body{
     margin: 100px 0px 0px 0px;
 }
@@ -399,6 +399,7 @@ h3 {
 .header-button{
     padding: 0px;
     display: flex;
+    
 }
 
 .btn-primary{
@@ -796,7 +797,11 @@ p {
 
 /*filtro*/
 
-
+.filter{
+    position: fixed;
+    bottom: 315px;
+    width: 100%;
+}
 
 .filter-title {
     margin-bottom: 100px;
@@ -893,6 +898,11 @@ p {
     border-color: var(--gg-ice-color);
     margin-left: 270px;
 } */
+
+.space-map{
+    margin-bottom: 300px !important;
+    align-items: flex-end;
+}
 
 .card-title-popup {
     font-weight: bold;
