@@ -27,27 +27,36 @@
     <div class="padding-100"> 
         <div class="bottom-150">
             <h3 class="h3-esperienza reset-padding">Tratta:</h3>
-            <p class="line">Cupola-Bosco di Lumineth</p>
+            <p class="line"><span id="summary-startSelection"></span> - <span id="summary-destinationSelection"></span></p>
         </div>
 
-        <div class="row bottom-150">
+        <div class="row bottom-150" id="ticket-list">
             <h3 class="h3-esperienza reset-padding">Numero di biglietti selezionati:</h3>
-            <p class="col-1 reset-padding space-40">2x</p>
+            
+            <p class="col-1 reset-padding space-40"><span id="summary-adultsTicketNumber"></span>x</p>
             <p class="col-11 reset-padding space-40">Adulti</p>
-            <p class="col-1 line">1x</p>
-            <p class="col-11 line">Bambini</p>
+            
+            <p class="col-1 reset-padding space-40"><span id="summary-childrenTicketNumber"></span>x</p>
+            <p class="col-11 reset-padding space-40">Bambini</p>
+            
+            <p class="col-1 line"><span id="summary-seniorsTicketNumber"></span>x</p>
+            <p class="col-11 line">Over 65</p>
         </div>
 
-        <div class="bottom-150" id="selection-result">
+        <div class="bottom-150">
             <h3 class="h3-esperienza">Giorno e ora selezionata:</h3>
             <p class="space-40">Giorno: <span id="selected-date"></span></p>
             <p class="line">Ora: <span id="selected-time"></span></p>
         </div>
 
         <div class="bottom-150">
-            <h3 class="h3-esperienza">Tariffa:</h3>
-            <p class="space-40"><span class="bold-text">Adulti: </span> 60€</p>
-            <p class="line"><span class="bold-text">Bambini: </span> 40€</p>
+            <h3 class="h3-esperienza reset-padding">Tariffa:</h3>
+            
+            <p class="col reset-padding space-40">Adulti: <span id="summary-adultsTicketPrice"></span></p>
+            
+            <p class="col reset-padding space-40">Bambini: <span id="summary-childrenTicketPrice"></span></p>
+            
+            <p class="col line ">Over 65: <span id="summary-seniorsTicketPrice"></span></p>
         </div>
 
         <div class="bottom-150">
@@ -57,7 +66,7 @@
 
         <div>
             <h3 class="h3-esperienza">Prezzo totale:</h3>
-            <p class="line">160€</p>
+            <p class="line"><span id="summary-totalPrice"></span>€</p>
         </div>
     </div>
 
@@ -76,43 +85,100 @@
     
 </div>
 
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-   document.addEventListener('DOMContentLoaded', () => {
-    let currentPlace = null;
-    let currentDestination = null;
 
-    const selectedPlaces = document.querySelectorAll('.dropdown-item-route-start');
-    selectedPlaces.forEach(place => {
-        place.addEventListener('click', () => {
-            if (currentPlace) {
-                currentPlace.classList.remove('selected');
-            }
-            place.classList.add('selected');
-            currentPlace = place;
-            saveRouteSelection();
-        });
-    });
+document.addEventListener('DOMContentLoaded', () => {
 
-    const selectedDestinations = document.querySelectorAll('.dropdown-item-route-end');
-    selectedDestinations.forEach(destination => {
-        destination.addEventListener('click', () => {
-            if (currentDestination) {
-                currentDestination.classList.remove('selected');
-            }
-            destination.classList.add('selected');
-            currentDestination = destination;
-            saveRouteSelection();
-        });
-    });
 
-    function saveRouteSelection() {
-        const place = currentPlace ? currentPlace.textContent.trim() : null;
-        const destination = currentDestination ? currentDestination.textContent.trim() : null;
+/***DATA E ORA***/
 
-        console.log(`Place: ${place}, Destination: ${destination}`);
+     const selectedData = JSON.parse(localStorage.getItem('selectedData'));
+
+if (selectedData) {
+    document.getElementById('selected-date').textContent = selectedData.date;
+    document.getElementById('selected-time').textContent = selectedData.time;
+} else {
+    document.getElementById('selected-date').textContent = "Nessuna data selezionata";
+    document.getElementById('selected-time').textContent = "Nessun orario selezionato";
+
+}
+
+
+
+/****TRATTA***/
+
+    const selectedStart = document.getElementById('summary-startSelection');
+    const selectedDestination = document.getElementById('summary-destinationSelection');
+
+    const savedPlace = localStorage.getItem('selectedPlace');
+    const savedDestination = localStorage.getItem('selectedDestination');
+
+    if (selectedStart && selectedDestination) {
+        if (savedPlace && savedDestination) {
+            selectedStart.textContent = savedPlace;
+            selectedDestination.textContent = savedDestination;
+        } else {
+            selectedStart.textContent = "Nessuna stazione di partenza selezionata";
+            selectedDestination.textContent = "Nessuna stazione di arrivo selezionata";
+        }
+    } else {
+        console.error("Gli elementi HTML per mostrare i dati non sono stati trovati.");
+    }
+
+
+/***PREZZO TOTALE***/
+
+const totalPrice = document.getElementById('summary-totalPrice');
+
+const savedPrice = localStorage.getItem('totalPrice');
+
+    if(savedPrice) {
+        totalPrice.textContent = parseFloat(savedPrice).toFixed(2);
+    
+    } else {
+        totalPrice.textContent = "0";
+    }
+
+
+
+// Recupera i dati dal localStorage per ogni categoria di biglietti
+const adultsData = localStorage.getItem('ticketPrices-adulti');
+    const childrenData = localStorage.getItem('ticketPrices-bambini 4-12');
+    const seniorsData = localStorage.getItem('ticketPrices-over 65');
+
+    // Verifica se i dati esistono nel localStorage
+    if (adultsData && childrenData && seniorsData) {
+        const adults = JSON.parse(adultsData);
+        const children = JSON.parse(childrenData);
+        const seniors = JSON.parse(seniorsData);
+
+        // Inserisce la quantità di biglietti nel DOM
+        document.getElementById('summary-adultsTicketNumber').textContent = adults.quantity || 0;
+        document.getElementById('summary-childrenTicketNumber').textContent = children.quantity || 0;
+        document.getElementById('summary-seniorsTicketNumber').textContent = seniors.quantity || 0;
+
+        // Inserisce il prezzo per ogni tipo di biglietto nel DOM (unitario * quantità)
+        document.getElementById('summary-adultsTicketPrice').textContent = `${(adults.unitPrice * adults.quantity).toFixed(2)}€`;
+        document.getElementById('summary-childrenTicketPrice').textContent = `${(children.unitPrice * children.quantity).toFixed(2)}€`;
+        document.getElementById('summary-seniorsTicketPrice').textContent = `${(seniors.unitPrice * seniors.quantity).toFixed(2)}€`;
+
+    } else {
+        console.log('I dati non sono presenti nel localStorage.');
+
+        // Se i dati non sono trovati, mostra un messaggio alternativo o imposta i valori a zero
+        document.getElementById('summary-adultsTicketNumber').textContent = "0";
+        document.getElementById('summary-childrenTicketNumber').textContent = "0";
+        document.getElementById('summary-seniorsTicketNumber').textContent = "0";
+
+        // Prezzi a zero se i dati non sono trovati
+        document.getElementById('summary-adultsTicket').textContent = "0€";
+        document.getElementById('summary-childrenTicket').textContent = "0€";
+        document.getElementById('summary-seniorsTicket').textContent = "0€";
     }
 });
+
 </script>
 </body>
