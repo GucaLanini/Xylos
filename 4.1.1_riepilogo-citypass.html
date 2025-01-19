@@ -26,7 +26,7 @@
 
 <div class="padding-100">
 
-    <div class="row bottom-150">
+    <div class="row bottom-150 reset-margin citypasssummary">
         <h3 class="h3-esperienza reset-padding">Hai selezionato:</h3>
         
         <p class="col-1 reset-padding space-40"><span id="summary-singleCityPass"></span>x</p>
@@ -68,7 +68,82 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+document.addEventListener('DOMContentLoaded', () => {
+
+const datiSingoli = localStorage.getItem(`cityPassData-Singolo`);
+const datiFamiglia = localStorage.getItem(`cityPassData-Famiglia`);
+const datiGruppi = localStorage.getItem(`cityPassData-Gruppi`);
+const totalPrice = localStorage.getItem('totalPrice')
 
 
+if (datiSingoli) {
+    const singoliData = JSON.parse(datiSingoli); // Convertiamo i dati in oggetto
+    document.getElementById('summary-singleCityPass').textContent = singoliData.quantity;
+}
+
+if (datiFamiglia) {
+    const famigliaData = JSON.parse(datiFamiglia); // Convertiamo i dati in oggetto
+    document.getElementById('summary-familyCityPass').textContent = famigliaData.quantity;
+}
+
+if (datiGruppi) {
+    const gruppiData = JSON.parse(datiGruppi); // Convertiamo i dati in oggetto
+    document.getElementById('summary-groupCityPass').textContent = gruppiData.quantity;
+}
+
+if (totalPrice) {
+    document.getElementById('summary-totalPrice').textContent = totalPrice;
+}
+
+
+
+function displaySelectedDurationFromStorage(elementId) {
+        const category = localStorage.getItem('selectedCategory');
+        console.log("Categoria recuperata:", category);
+
+        if (category) {
+            const data = localStorage.getItem(`cityPassData-${category}`);
+            console.log("Dati della categoria:", data);
+
+            if (data) {
+                const parsedData = JSON.parse(data);
+                const selectedDuration = parsedData.selectedDuration;
+                console.log("Durata selezionata:", selectedDuration);
+
+                if (selectedDuration !== null) {
+                    const durationText = getDurationText(selectedDuration);
+                    document.getElementById(elementId).textContent = `${durationText}`;
+                } else {
+                    document.getElementById(elementId).textContent = 'Nessuna durata selezionata';
+                }
+            } else {
+                document.getElementById(elementId).textContent = 'Nessun dato trovato';
+            }
+        } else {
+            document.getElementById(elementId).textContent = 'Categoria non selezionata';
+        }
+    }
+
+    // Funzione per ottenere il testo della durata a partire dal valore numerico
+    function getDurationText(duration) {
+        switch (duration) {
+            case 1:
+                return '24h';
+            case 2:
+                return '48h';
+            case 3:
+                return '72h';
+            default:
+                return 'Durata non valida';
+        }
+    }
+
+    // Chiama la funzione per visualizzare la durata selezionata
+    displaySelectedDurationFromStorage('summary-selectedTimeSpan');
+
+
+
+
+});
 </script>
 </body>

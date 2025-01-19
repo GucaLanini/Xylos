@@ -123,60 +123,174 @@
             <h3 class="col reset-padding m-bottom-100">Durata</h3>
          </div>  
 
-         <div class="row reset-margin">
-             <div class="col card-tariffs margin-50 citypass-tariffs citypass-hour bottom-150">
+         <div type="button" class="row reset-margin">
+             <div class="col card-tariffs margin-50 citypass-tariffs citypass-hour bottom-150 timespan">
                  <h3 class="d-flex justify-content-center">24h</h3>
              </div>
          
      
-             <div class="col card-tariffs margin-50 citypass-tariffs citypass-hour bottom-150">
+             <div type="button" class="col card-tariffs margin-50 citypass-tariffs citypass-hour bottom-150 timespan">
                <h3 class="d-flex justify-content-center">48h</h3>
            </div>
        
      
-           <div class="col card-tariffs citypass-tariffs citypass-hour bottom-150">
+           <div type="button" class="col card-tariffs citypass-tariffs citypass-hour bottom-150 timespan">
             <h3 class="d-flex justify-content-center">72h</h3>
         </div>
     
       </div>
 
       <div class="row d-flex justify-content-center bottom-150"> 
-         <a href="4.3.1_riepilogotrain.html" class="col-auto header-button justify-content-center body">
+         <a href="4.1.1_riepilogo-citypass.html" class="col-auto header-button justify-content-center body">
              <button type="button" class="btn btn-primary">Prenota</button>
          </a>
      </div> 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-    
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cityPassPrices = {};  // Memorizza i dati dei city pass
+    let currentTimeSpan = null;
+
+    // Funzione per aggiornare il contatore
     function updateCounter(button, increment) {
         const counter = button.closest('.counter').querySelector('.number');
         let currentValue = parseInt(counter.textContent, 10);
 
         if (increment) {
-    currentValue = currentValue + 1;
+            currentValue = currentValue + 1;
         } else {
-    currentValue = Math.max(0, currentValue - 1);
-}        counter.textContent = currentValue;
+            currentValue = Math.max(0, currentValue - 1);
+        }
+
+        counter.textContent = currentValue;
+
+        const category = button.closest('.citypass-tariffs').querySelector('h3').textContent.trim();
+
+        if (!cityPassPrices[category]) {
+            cityPassPrices[category] = {
+                unitPrice: parseFloat(button.closest('.citypass-tariffs').dataset.unitPrice),
+                quantity: 0,
+                selectedDuration: null
+            };
+        }
+
+        cityPassPrices[category].quantity = currentValue;
+
+        if (currentValue > 0) {
+            localStorage.setItem(`cityPassData-${category}`, JSON.stringify(cityPassPrices[category]));
+        } else {
+            localStorage.removeItem(`cityPassData-${category}`);
+        }
+
+        updateTotalPrice();
     }
 
-    const cards = document.querySelectorAll('.counter');
+    // Funzione per aggiornare il prezzo totale
+    function updateTotalPrice() {
+        let totalPrice = 0;
 
+        console.log("Prezzi dei city pass:");
+
+        Object.keys(cityPassPrices).forEach(category => {
+            const cityPass = cityPassPrices[category];
+            const categoryTotal = cityPass.quantity * cityPass.unitPrice;
+            totalPrice += categoryTotal;
+
+            console.log(`Categoria: ${category} - Prezzo unitario: ${cityPass.unitPrice}€ - Quantità: ${cityPass.quantity} - Totale: ${categoryTotal}€`);
+        
+        });
+
+        localStorage
+
+        console.log(`Prezzo totale: ${totalPrice}€`);
+
+        localStorage.setItem('stotalPrice', totalPrice);
+
+
+    }
+
+    // Seleziona tutte le carte (con il contatore)
+    const cards = document.querySelectorAll('.counter');
 
     cards.forEach(card => {
         const minusButton = card.querySelector('.minus');
         const plusButton = card.querySelector('.plus');
+        const category = card.closest('.citypass-tariffs').querySelector('h3').textContent.trim();
+        const unitPrice = parseFloat(card.closest('.citypass-tariffs').dataset.unitPrice);
 
+        if (!cityPassPrices[category]) {
+            cityPassPrices[category] = {
+                unitPrice: unitPrice,
+                quantity: 0,
+                selectedDuration: null
+            };
+        }
 
-        minusButton.addEventListener('click', () => {
-            updateCounter(minusButton, false);
-        });
+        if (minusButton) {
+            minusButton.addEventListener('click', () => {
+                updateCounter(minusButton, false);
+            });
+        }
 
-
-        plusButton.addEventListener('click', () => {
-            updateCounter(plusButton, true);
-        });
+        if (plusButton) {
+            plusButton.addEventListener('click', () => {
+                updateCounter(plusButton, true);
+            });
+        }
     });
+
+    // Selezione della durata (tempo) e associazione di un valore numerico
+    const timeSpan = document.querySelectorAll('.timespan');
+    timeSpan.forEach(card => {
+    card.addEventListener('click', () => {
+        if (currentTimeSpan) {
+            currentTimeSpan.classList.remove('selected');
+        }
+        card.classList.add('selected');
+        currentTimeSpan = card;
+
+        const category = card.closest('.citypass-tariffs').querySelector('h3').textContent.trim();
+
+        if (!cityPassPrices[category]) {
+            cityPassPrices[category] = {
+                unitPrice: parseFloat(card.closest('.citypass-tariffs').dataset.unitPrice),
+                quantity: 0,
+                selectedDuration: null
+            };
+        }
+
+        let durationValue = 0;
+        switch (card.textContent.trim()) {
+            case '24h':
+                durationValue = 1;
+                break;
+            case '48h':
+                durationValue = 2;
+                break;
+            case '72h':
+                durationValue = 3;
+                break;
+            default:
+                durationValue = 0;
+                break;
+        }
+
+        // Memorizza i dati nel localStorage
+        cityPassPrices[category].selectedDuration = durationValue;
+
+        localStorage.setItem(`cityPassData-${category}`, JSON.stringify(cityPassPrices[category]));
+        localStorage.setItem('selectedCategory', category); // Salva anche la categoria
+
+        console.log(`Durata selezionata per ${category}: ${durationValue} (${card.textContent.trim()})`);
+    });
+});
+
+});
+
+
+
 
 </script>
 
