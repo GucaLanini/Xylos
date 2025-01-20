@@ -42,8 +42,8 @@
         </div>
 
         <div class="row reset-margin d-flex justify-content-evenly"> 
-            <button class="custom-button-base space-340">Assicurazione base</button>
-            <button class="custom-button-base custom-button-super">Assicurazione super</button>        
+            <button id="base-button" class="custom-button-base space-340">Assicurazione base</button>
+            <button id="super-button" class="custom-button-base custom-button-super">Assicurazione super</button>        
         </div>
 
     </div>
@@ -267,19 +267,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
 /*gestione bottoni assicurazioni*/
 document.addEventListener("DOMContentLoaded", () => {
-    const baseButton = document.querySelector(".custom-button-base");
-    const superButton = document.querySelector(".custom-button-super");
+    const baseButton = document.querySelector("#base-button");
+    const superButton = document.querySelector("#super-button");
 
     baseButton.addEventListener("click", () => {
-
-        baseButton.classList.toggle("selected");
+        baseButton.classList.add("selected"); 
+        superButton.classList.remove("selected"); 
     });
 
     superButton.addEventListener("click", () => {
-          superButton.classList.toggle("selected");
+        superButton.classList.add("selected"); 
+        baseButton.classList.remove("selected"); 
     });
 });
 
