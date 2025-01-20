@@ -2044,3 +2044,20 @@ a .overlay{
 
 /* ------------------------------------------------------- */
 /* ------------------------------------------------------- */
+
+
+/* 6_events.html */
+
+.button-container {
+    display: flex; /* Allinea i bottoni in riga */
+    gap: 50px; /* Spazio tra i bottoni */
+    margin-top: 63px; /* Distanza dalla parte inferiore dell'immagine */
+}
+
+.button-container a {
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+}
+
+.text-content-events {
+    margin-left: 193px; /* Spazio dal lato sinistro */
+}
