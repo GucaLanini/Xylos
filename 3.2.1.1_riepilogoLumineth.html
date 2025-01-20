@@ -30,29 +30,38 @@
             <p class="line">Esplorazione della foresta bioluminescente</p>
         </div>
 
-        <div class="row bottom-150">
-            <h3 class="h3-esperienza reset-padding">Numero di biglietti selezionati:</h3>
-            <p class="col-1 reset-padding space-40">2x</p>
-            <p class="col-11 reset-padding space-40">Adulti</p>
-            <p class="col-1 line">1x</p>
-            <p class="col-11 line">Bambini</p>
-        </div>
+            <div class="row bottom-150 reset-padding summarymargin-left" id="ticket-list">
+                <h3 class="h3-esperienza reset-padding">Numero di biglietti selezionati:</h3>
+                
+                <p class="col-1 reset-padding space-40"><span id="summary-adultsTicketNumber"></span>x</p>
+                <p class="col-11 reset-padding space-40">Adulti</p>
+                
+                <p class="col-1 reset-padding space-40"><span id="summary-childrenTicketNumber"></span>x</p>
+                <p class="col-11 reset-padding space-40">Bambini</p>
+                
+                <p class="col-1 line"><span id="summary-seniorsTicketNumber"></span>x</p>
+                <p class="col-11 line">Over 65</p>
+            </div>
 
-        <div class="bottom-150" id="selection-result">
+        <div class="bottom-150">
             <h3 class="h3-esperienza">Giorno e ora selezionata:</h3>
-            <p class="space-40">Giorno: <span id="selected-date"></span></p>
-            <p class="line">Ora: <span id="selected-time"></span></p>
+            <p class="space-40"><strong>Data:</strong> <span id="selected-date"></span></p>
+            <p class="line"><strong>Ora:</strong> <span id="selected-time"></span></p>
         </div>
 
         <div class="bottom-150">
-            <h3 class="h3-esperienza">Tariffa:</h3>
-            <p class="space-40"><span class="bold-text">Adulti: </span> 60€</p>
-            <p class="line"><span class="bold-text">Bambini: </span> 40€</p>
+            <h3 class="h3-esperienza reset-padding">Tariffa:</h3>
+            
+            <p class="col reset-padding space-40"><strong>Adulti: </strong><span id="summary-adultsTicketPrice"></span></p>
+            
+            <p class="col reset-padding space-40"><strong>Bambini: </strong><span id="summary-childrenTicketPrice"></span></p>
+            
+            <p class="col line "><strong>Over 65: </strong><span id="summary-seniorsTicketPrice"></span></p>
         </div>
 
         <div>
             <h3 class="h3-esperienza">Prezzo totale:</h3>
-            <p class="line">110€</p>
+            <p class="line"><span id="summary-totalPrice"></span>€</p>
         </div>
     </div>
 
@@ -73,6 +82,12 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+
+document.addEventListener('DOMContentLoaded', () => {
+
+/***DATA E ORA**/
+
+
      const selectedData = JSON.parse(localStorage.getItem('selectedData'));
 
 if (selectedData) {
@@ -83,5 +98,47 @@ if (selectedData) {
 }
 
 
+/***BIGLIETTI***/
+
+
+const adultsData = localStorage.getItem('ticketPrices-adulti');
+    const childrenData = localStorage.getItem('ticketPrices-bambini 4-12');
+    const seniorsData = localStorage.getItem('ticketPrices-over 65');
+
+    if (adultsData && childrenData && seniorsData) {
+        const adults = JSON.parse(adultsData);
+        const children = JSON.parse(childrenData);
+        const seniors = JSON.parse(seniorsData);
+
+        document.getElementById('summary-adultsTicketNumber').textContent = adults.quantity || 0;
+        document.getElementById('summary-childrenTicketNumber').textContent = children.quantity || 0;
+        document.getElementById('summary-seniorsTicketNumber').textContent = seniors.quantity || 0;
+
+        document.getElementById('summary-adultsTicketPrice').textContent = `${(adults.unitPrice * adults.quantity).toFixed(2)}€`;
+        document.getElementById('summary-childrenTicketPrice').textContent = `${(children.unitPrice * children.quantity).toFixed(2)}€`;
+        document.getElementById('summary-seniorsTicketPrice').textContent = `${(seniors.unitPrice * seniors.quantity).toFixed(2)}€`;
+
+    } else {
+        console.log('I dati non sono presenti nel localStorage.');
+
+        document.getElementById('summary-adultsTicketNumber').textContent = "0";
+        document.getElementById('summary-childrenTicketNumber').textContent = "0";
+        document.getElementById('summary-seniorsTicketNumber').textContent = "0";
+
+        document.getElementById('summary-adultsTicketPrice').textContent = "0€";
+        document.getElementById('summary-childrenTicketPrice').textContent = "0€";
+        document.getElementById('summary-seniorsTicketPrice').textContent = "0€";
+    }
+
+      /**PREZZO TOTALE**/
+
+    const totalPrice = JSON.parse(localStorage.getItem('totalPrice'))
+
+        if (totalPrice) {
+            document.getElementById('summary-totalPrice').textContent = totalPrice
+        }
+
+
+});
 </script>
 </body>
