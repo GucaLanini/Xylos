@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+
     const filterItems = document.querySelectorAll('.filter-item');
     const zonas = document.querySelectorAll('.zona');
     const pins = document.querySelectorAll('.pin');
@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         
     }
+
+    console.log (document.referrer);
 
     pins.forEach(pin => {
         pin.addEventListener("click", () => {
@@ -72,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-});
+
 
 
 function pop_down() {
