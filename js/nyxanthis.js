@@ -28,7 +28,7 @@ this_fauna.addEventListener('click', () => {
      
                      <div class="row card reset-all area-item">
      
-                         <img src="img/zona_3/zona 3/ruga 2.jpg" class="card-img img-long reset-padding low" alt="Rugaxys">
+                         <img src="img/tartarughe.jpg" class="card-img img-long reset-padding low" alt="Rugaxys">
      
                          <div class="overlay"></div>
      
@@ -160,7 +160,7 @@ this_rovine.addEventListener('click', () => {
             
                             <div class="row card reset-all area-item">
             
-                                <img src = "img/nyx_map.png" class="card-img img-long reset-padding up" alt="Rovine del mare">
+                                <img src = "img/città sommersa.jpg" class="card-img img-long reset-padding up" alt="Rovine del mare">
             
                                 <div class="overlay"></div>
             
