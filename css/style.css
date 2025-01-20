@@ -1874,6 +1874,10 @@ flex-direction: column;
     
 }
 
+.space-train {
+    margin-top: 230px;
+}
+
 a .btn-primary:active,
 a .btn-primary:focus, 
 a .btn-primary:focus-visible {
