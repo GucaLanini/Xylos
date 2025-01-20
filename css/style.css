@@ -1071,13 +1071,20 @@ p {
 }
 
 .line {
-    margin: 40px 0px 50px 0px;
     border-bottom: 5px solid var(--gg-deepblue-color);
     padding-bottom: 45px;
 }
 
 .space-40 {
     margin-bottom: 40px;
+}
+
+p.line{
+padding-left: 0 !important;
+}
+
+.citypasssummary{
+    margin-bottom: 150px !important;
 }
 
 .calendars{
@@ -1352,7 +1359,6 @@ p {
     background-color: var(--gg-deepblue-color) !important;
     border-style: none;
 }
-
 
 /****CITY PASS****/
 .margin-x-70{
@@ -1811,6 +1817,12 @@ flex-direction: column;
     display: none;
 }
 
+
+.timespan.selected{
+    background-color: transparent;
+    box-shadow: inset 0px 0px 90px 0px var(--gg-ice-color)
+}
+
 @media only screen and (min-width: 1890px) {
     .totem-content {
         display: none;
@@ -2048,6 +2060,10 @@ a .overlay{
 
 .margin-left{
  margin-left: 25px !important;
+}
+
+.summarymargin-left{
+    margin-left: 0px !important;
 }
 
 .margin-right{

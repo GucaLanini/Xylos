@@ -24,51 +24,52 @@
         </div> 
     </div>
 
-    <div class="padding-100"> 
+    <div class="container-fluid padding-100"> 
         <div class="bottom-150">
             <h3 class="h3-esperienza reset-padding">Tratta:</h3>
             <p class="line"><span id="summary-startSelection"></span> - <span id="summary-destinationSelection"></span></p>
         </div>
-
-        <div class="row bottom-150" id="ticket-list">
+    
+        <div class="bottom-150">
             <h3 class="h3-esperienza reset-padding">Numero di biglietti selezionati:</h3>
-            
-            <p class="col-1 reset-padding space-40"><span id="summary-adultsTicketNumber"></span>x</p>
-            <p class="col-11 reset-padding space-40">Adulti</p>
-            
-            <p class="col-1 reset-padding space-40"><span id="summary-childrenTicketNumber"></span>x</p>
-            <p class="col-11 reset-padding space-40">Bambini</p>
-            
-            <p class="col-1 line"><span id="summary-seniorsTicketNumber"></span>x</p>
-            <p class="col-11 line">Over 65</p>
+            <div class="col-12 d-flex align-items-center">
+                <p class="col-1 reset-padding space-40"><span id="summary-adultsTicketNumber" class="bold-text"></span>x</p>
+                <p class="col-11 reset-padding space-40">Adulti</p>
+            </div>
+            <div class="col-12 d-flex align-items-center">
+                <p class="col-1 reset-padding space-40"><span id="summary-childrenTicketNumber" class="bold-text"></span>x</p>
+                <p class="col-11 reset-padding space-40">Bambini</p>
+            </div>
+            <div class="col-12 d-flex align-items-cente line">
+                <p class="col-1 reset-padding space-40"><span id="summary-seniorsTicketNumber"></span>x</p>
+                <p class="col-11 reset-padding space-40">Over 65</p>
+            </div>
         </div>
-
+    
         <div class="bottom-150">
             <h3 class="h3-esperienza">Giorno e ora selezionata:</h3>
             <p class="space-40">Giorno: <span id="selected-date"></span></p>
             <p class="line">Ora: <span id="selected-time"></span></p>
         </div>
-
+    
         <div class="bottom-150">
             <h3 class="h3-esperienza reset-padding">Tariffa:</h3>
-            
-            <p class="col reset-padding space-40">Adulti: <span id="summary-adultsTicketPrice"></span></p>
-            
-            <p class="col reset-padding space-40">Bambini: <span id="summary-childrenTicketPrice"></span></p>
-            
-            <p class="col line ">Over 65: <span id="summary-seniorsTicketPrice"></span></p>
+            <p class="space-40"><strong>Adulti: </strong><span id="summary-adultsTicketPrice"></span></p>
+            <p class="space-40"><strong>Bambini: </strong><span id="summary-childrenTicketPrice"></span></p>
+            <p class="line"><strong>Over 65: </strong><span id="summary-seniorsTicketPrice"></span></p>
         </div>
-
+    
         <div class="bottom-150">
             <h3 class="h3-esperienza">Durata del viaggio:</h3>
             <p class="line">3 ore</p>
         </div>
-
+    
         <div>
             <h3 class="h3-esperienza">Prezzo totale:</h3>
             <p class="line"><span id="summary-totalPrice"></span>€</p>
         </div>
     </div>
+    
 
     <div class="space-430"> </div>
 
@@ -144,23 +145,19 @@ const savedPrice = localStorage.getItem('totalPrice');
 
 
 
-// Recupera i dati dal localStorage per ogni categoria di biglietti
 const adultsData = localStorage.getItem('ticketPrices-adulti');
     const childrenData = localStorage.getItem('ticketPrices-bambini 4-12');
     const seniorsData = localStorage.getItem('ticketPrices-over 65');
 
-    // Verifica se i dati esistono nel localStorage
     if (adultsData && childrenData && seniorsData) {
         const adults = JSON.parse(adultsData);
         const children = JSON.parse(childrenData);
         const seniors = JSON.parse(seniorsData);
 
-        // Inserisce la quantità di biglietti nel DOM
         document.getElementById('summary-adultsTicketNumber').textContent = adults.quantity || 0;
         document.getElementById('summary-childrenTicketNumber').textContent = children.quantity || 0;
         document.getElementById('summary-seniorsTicketNumber').textContent = seniors.quantity || 0;
 
-        // Inserisce il prezzo per ogni tipo di biglietto nel DOM (unitario * quantità)
         document.getElementById('summary-adultsTicketPrice').textContent = `${(adults.unitPrice * adults.quantity).toFixed(2)}€`;
         document.getElementById('summary-childrenTicketPrice').textContent = `${(children.unitPrice * children.quantity).toFixed(2)}€`;
         document.getElementById('summary-seniorsTicketPrice').textContent = `${(seniors.unitPrice * seniors.quantity).toFixed(2)}€`;
@@ -168,12 +165,10 @@ const adultsData = localStorage.getItem('ticketPrices-adulti');
     } else {
         console.log('I dati non sono presenti nel localStorage.');
 
-        // Se i dati non sono trovati, mostra un messaggio alternativo o imposta i valori a zero
         document.getElementById('summary-adultsTicketNumber').textContent = "0";
         document.getElementById('summary-childrenTicketNumber').textContent = "0";
         document.getElementById('summary-seniorsTicketNumber').textContent = "0";
 
-        // Prezzi a zero se i dati non sono trovati
         document.getElementById('summary-adultsTicket').textContent = "0€";
         document.getElementById('summary-childrenTicket').textContent = "0€";
         document.getElementById('summary-seniorsTicket').textContent = "0€";
