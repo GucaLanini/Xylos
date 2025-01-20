@@ -73,51 +73,42 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
-const datiSingoli = localStorage.getItem(`cityPassData-Singolo`);
-const datiFamiglia = localStorage.getItem(`cityPassData-Famiglia`);
-const datiGruppi = localStorage.getItem(`cityPassData-Gruppi`);
-const totalPrice = localStorage.getItem('totalCityPassPrice')
+    const datiSingoli = localStorage.getItem(`cityPassData-Singolo`);
+    const datiFamiglia = localStorage.getItem(`cityPassData-Famiglia`);
+    const datiGruppi = localStorage.getItem(`cityPassData-Gruppi`);
+    const totalPrice = localStorage.getItem('totalCityPassPrice');
 
+    // Gestione Singolo
+    if (datiSingoli) {
+        const singoliData = JSON.parse(datiSingoli);
+        document.getElementById('summary-singleCityPass').textContent = singoliData.quantity;
+    } else {
+        document.getElementById('summary-singleCityPass').textContent = 0;
+    }
 
-if (datiSingoli) {
-    const singoliData = JSON.parse(datiSingoli);
-    document.getElementById('summary-singleCityPass').textContent = singoliData.quantity;
-}
+    // Gestione Famiglia
+    if (datiFamiglia) {
+        const famigliaData = JSON.parse(datiFamiglia);
+        document.getElementById('summary-familyCityPass').textContent = famigliaData.quantity;
+    } else {
+        document.getElementById('summary-familyCityPass').textContent = 0;
+    }
 
-else {
-    document.getElementById('summary-singleCityPass').textContent = singoliData.quantity || 0;
+    // Gestione Gruppi
+    if (datiGruppi) {
+        const gruppiData = JSON.parse(datiGruppi);
+        document.getElementById('summary-groupCityPass').textContent = gruppiData.quantity;
+    } else {
+        document.getElementById('summary-groupCityPass').textContent = 0;
+    }
 
-};
+    // Gestione Prezzo Totale
+    if (totalPrice) {
+        document.getElementById('summary-totalPrice').textContent = totalPrice;
+    } else {
+        document.getElementById('summary-totalPrice').textContent = '0';
+    }
 
-if (datiFamiglia) {
-    const famigliaData = JSON.parse(datiFamiglia);
-    document.getElementById('summary-familyCityPass').textContent = famigliaData.quantity;
-}
-
-else {
-    document.getElementById('summary-familyCityPass').textContent = famigliaData.quantity || 0;
-
-};
-
-if (datiGruppi) {
-    const gruppiData = JSON.parse(datiGruppi);
-    document.getElementById('summary-groupCityPass').textContent = gruppiData.quantity;
-}
-
-
-else {
-    document.getElementById('summary-groupCityPass').textContent = gruppiData.quantity || 0;
-
-};
-
-if (totalPrice) {
-    document.getElementById('summary-totalPrice').textContent = totalPrice;
-}
-
-else {
-    document.getElementById('summary-groupCityPass').textContent = totalPrice.quantity || 0;
-
-};
 
 
 
@@ -148,7 +139,6 @@ function displaySelectedDurationFromStorage(elementId) {
         }
     }
 
-    // Funzione per ottenere il testo della durata a partire dal valore numerico
     function getDurationText(duration) {
         switch (duration) {
             case 1:
@@ -162,7 +152,6 @@ function displaySelectedDurationFromStorage(elementId) {
         }
     }
 
-    // Chiama la funzione per visualizzare la durata selezionata
     displaySelectedDurationFromStorage('summary-selectedTimeSpan');
 
 

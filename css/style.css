@@ -1882,6 +1882,10 @@ flex-direction: column;
     margin-top: 690px;
 }
 
+.space-button-citypass{
+    margin-top: 345px;
+}
+
 a .btn-primary:active,
 a .btn-primary:focus, 
 a .btn-primary:focus-visible {

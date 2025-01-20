@@ -140,7 +140,7 @@
     
       </div>
 
-      <div class="row d-flex justify-content-center bottom-150"> 
+      <div class="row d-flex justify-content-center bottom-150 space-button-citypass"> 
          <a href="4.1.1_riepilogo-citypass.html" class="col-auto header-button justify-content-center body">
              <button type="button" class="btn btn-primary">Prenota</button>
          </a>
@@ -187,7 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateTotalPrice();
     }
 
-    // Funzione per aggiornare il prezzo totale
     function updateTotalPrice() {
         let totalPrice = 0;
 
@@ -211,7 +210,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    // Seleziona tutte le carte (con il contatore)
     const cards = document.querySelectorAll('.counter');
 
     cards.forEach(card => {
@@ -241,7 +239,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Selezione della durata (tempo) e associazione di un valore numerico
     const timeSpan = document.querySelectorAll('.timespan');
     timeSpan.forEach(card => {
     card.addEventListener('click', () => {
@@ -277,11 +274,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
         }
 
-        // Memorizza i dati nel localStorage
         cityPassPrices[category].selectedDuration = durationValue;
 
         localStorage.setItem(`cityPassData-${category}`, JSON.stringify(cityPassPrices[category]));
-        localStorage.setItem('selectedCategory', category); // Salva anche la categoria
+        localStorage.setItem('selectedCategory', category); 
 
         console.log(`Durata selezionata per ${category}: ${durationValue} (${card.textContent.trim()})`);
     });
