@@ -674,6 +674,15 @@ p {
     height: 3024px;
 }
 
+.page-height-summary{
+    flex-direction: column;
+}
+
+.summary-button{
+    align-self: flex-end;
+    margin-top: 813px;
+}
+
 /****TRANSPORTS****/
 .small-box {
     display: flex;
@@ -1256,6 +1265,10 @@ padding-left: 0 !important;
     justify-content: flex-end; 
 }
 
+.event-cards{
+    flex-direction: column;
+    height: 530px;
+}
 
 .pudding{
    padding-left: 40px;
