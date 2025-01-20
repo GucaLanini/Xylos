@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/0167d479aa47624215ac938373d3a6fc.jpg" class="card-img img-long reset-padding up" alt="Rovine di Azathot">
+                                        <img src="img/rovine.jpg" class="card-img img-long reset-padding up" alt="Rovine di Azathot">
                     
                                         <div class="overlay"></div>
                     
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/9651de678bc1343066eb8e68ec625299.jpg" class="card-img img-long reset-padding up" alt="Città sospesa di Cortex">
+                                        <img src="img/cortex.jpg" class="card-img img-long reset-padding up" alt="Città sospesa di Cortex">
                     
                                         <div class="overlay"></div>
                     
@@ -471,7 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/dunenotte 2.jpg" class="card-img img-long reset-padding up" alt="Deserto Mir">
+                                        <img src="img/desertomir.jpg" class="card-img img-long reset-padding up" alt="Deserto Mir">
                     
                                         <div class="overlay"></div>
                     
