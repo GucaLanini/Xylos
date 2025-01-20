@@ -22,22 +22,22 @@
     </div>
 
     <div class="padding-100"> 
-        <div class="row bottom-150">
+        <div class="row bottom-150 summarymargin-left">
             <h3 class="h3-esperienza reset-padding">Modello noleggiato:</h3>
-            <p class="col-1 line">2x</p>
-            <p class="col-11 line">MTB Full Elettrica</p>
+            <p class="col-1 space-40 line"><span id="summary-rentValue"></span>x</p>
+            <p class="col-11 space-40 line">Mtb Full Elettrica</p>
         </div>
 
         <div class="bottom-150" id="selection-result">
             <h3 class="h3-esperienza">Giorno e ora del ritiro:</h3>
-            <p class="space-40">Giorno:<span id="selected--rent-date"></span></p>
-            <p class="line">Ora:<span id="selected.rent-time"></span></p>
+            <p class="space-40"><strong>Giorno:</strong> <span id="selected-rent-date"></span></p>
+            <p class="line"><strong>Ora:</strong> <span id="selected-rent-time"></span></p>
         </div>
 
         <div class="bottom-150" id="selection-result">
             <h3 class="h3-esperienza">Giorno e ora della restituzione:</h3>
-            <p class="space-40">Giorno:<span id="selected-return-date"></span></p>
-            <p class="line">Ora:<span id="selected-return-time"></span></p>
+            <p class="space-40"><strong>Giorno:</strong> <span id="selected-return-date"></span></p>
+            <p class="line"><strong>Ora:</strong> <span id="selected-return-time"></span></p>
         </div>
 
         <div class="bottom-150">
@@ -62,13 +62,24 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    const selectedData = JSON.parse(localStorage.getItem('selectedData'));
+document.addEventListener('DOMContentLoaded', () => {
 
-if (selectedData) {
-   document.getElementById('selected-date').textContent = selectedData.date;
-   document.getElementById('selected-time').textContent = selectedData.time;
-} else {
-   document.getElementById('selection-result').textContent = "Nessuna data o ora selezionata.";
+const rentDateData = localStorage.getItem(`selectedData-calendar-1`);
+const returnDateData = localStorage.getItem(`selectedData-calendar-2`);
+const counterValue = localStorage.getItem('counterValue-rent')
+
+const rentDate = rentDateData ? JSON.parse(rentDateData) : null;
+const returnDate = returnDateData ? JSON.parse(returnDateData) : null;
+
+if (rentDate && returnDate && counterValue) {
+    document.getElementById('summary-rentValue').textContent = counterValue;
+    document.getElementById('selected-rent-date').textContent = rentDate.date;
+    document.getElementById('selected-rent-time').textContent = rentDate.time;
+    document.getElementById('selected-return-date').textContent = returnDate.date;
+    document.getElementById('selected-return-time').textContent = returnDate.time;
+
 }
+
+});
 </script>
     </body>

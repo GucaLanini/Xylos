@@ -26,8 +26,8 @@
         </div>
 
         <div class="row reset-margin d-flex justify-content-evenly"> 
-            <button onclick="selectOption('base')" class="custom-button-base space-340">Assicurazione base</button>
-            <button onclick="selectOption('super')"  class="custom-button-base custom-button-super">Assicurazione super</button>        
+            <button class="custom-button-base space-340" id="base-button">Assicurazione base</button>
+            <button  class="custom-button-base custom-button-super" id="super-button">Assicurazione super</button>        
         </div>
     </div>
 
@@ -165,9 +165,10 @@
 
 /****CALENDARIO 1****/
 document.addEventListener('DOMContentLoaded', () => {
-    const calendars = document.querySelectorAll('.calendar'); // Seleziona tutti i contenitori di calendario
+    const calendars = document.querySelectorAll('.calendar-wrapper'); 
 
     calendars.forEach(calendar => {
+        const calendarId = calendar.id;
         const currentMonthElement = calendar.querySelector('.current-month');
         const daysContainer = calendar.querySelector('.days-container');
         const prevMonthButton = calendar.querySelector('.prev-month');
@@ -177,6 +178,21 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentDate = new Date();
         let selectedDay = null;
         let selectedTime = null;
+
+        const savedData = localStorage.getItem(`selectedData-${calendarId}`);
+        if (savedData) {
+            const parsedData = JSON.parse(savedData);
+            console.log('Dati recuperati per il calendario ID ' + calendarId, parsedData);
+            selectedDay = document.querySelector(`.day[data-date="${parsedData.date}"]`);
+            selectedTime = document.querySelector(`.time-option[data-time="${parsedData.time}"]`);
+
+            if (selectedDay) {
+                selectedDay.classList.add('selected');
+            }
+            if (selectedTime) {
+                selectedTime.classList.add('selected');
+            }
+        }
 
         function getMonthName(monthIndex) {
             const monthNames = [
@@ -205,6 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const dayElement = document.createElement('div');
                 dayElement.classList.add('day');
                 dayElement.textContent = day;
+                dayElement.setAttribute('data-date', `${day} ${getMonthName(month)} ${year}`); 
 
                 dayElement.addEventListener('click', () => {
                     if (selectedDay) {
@@ -212,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     dayElement.classList.add('selected');
                     selectedDay = dayElement;
-                    saveSelection();
+                    saveSelection(calendarId);
                 });
 
                 daysContainer.appendChild(dayElement);
@@ -231,26 +248,6 @@ document.addEventListener('DOMContentLoaded', () => {
             generateCalendar(currentDate);
         });
 
-        function saveSelection() {
-            const selectedDate = selectedDay ? selectedDay.textContent.trim() : null;
-            const selectedMonth = getMonthName(currentDate.getMonth());
-            const selectedYear = currentDate.getFullYear();
-            const selectedHour = selectedTime ? selectedTime.textContent.trim() : null;
-
-            if (selectedDate && selectedHour) {
-                const selectedData = {
-                    date: `${selectedDate} ${selectedMonth} ${selectedYear}`,
-                    time: selectedHour
-                };
-
-                localStorage.setItem(`selectedData-${calendar.dataset.id}`, JSON.stringify(selectedData));
-
-                console.log('Dati salvati:', selectedData);
-            } else {
-                console.warn('Seleziona sia una data che un orario.');
-            }
-        }
-
         timeOptions.forEach(time => {
             time.addEventListener('click', () => {
                 if (selectedTime) {
@@ -258,80 +255,48 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 time.classList.add('selected');
                 selectedTime = time;
-                saveSelection();
+                saveSelection(calendarId);
             });
         });
 
         generateCalendar(currentDate);
+
+        function saveSelection(calendarId) {
+            const selectedDate = selectedDay ? selectedDay.getAttribute('data-date') : null;
+            const selectedHour = selectedTime ? selectedTime.textContent.trim() : null;
+
+            if (selectedDate && selectedHour) {
+                const selectedData = {
+                    id: calendarId, 
+                    date: selectedDate,
+                    time: selectedHour
+                };
+
+                localStorage.setItem(`selectedData-${calendarId}`, JSON.stringify(selectedData));
+
+                console.log('Dati salvati per il calendario ID ' + calendarId, selectedData);
+            } else {
+                console.warn('Seleziona sia una data che un orario.');
+            }
+        }
     });
 });
-
 
 /*gestione bottoni assicurazioni*/
 document.addEventListener("DOMContentLoaded", () => {
-    const baseButton = document.querySelector(".custom-button-base");
-    const superButton = document.querySelector(".custom-button-super");
+    const baseButton = document.querySelector("#base-button");
+    const superButton = document.querySelector("#super-button");
 
     baseButton.addEventListener("click", () => {
-
-        baseButton.classList.toggle("selected");
+        baseButton.classList.add("selected"); 
+        superButton.classList.remove("selected"); 
     });
 
     superButton.addEventListener("click", () => {
-          superButton.classList.toggle("selected");
+        superButton.classList.add("selected"); 
+        baseButton.classList.remove("selected"); 
     });
 });
-
-/***** Gestione counter *****/
-document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.counter-rent');
-
-    function calculateTotalPrice() {
-        let totalPrice = 0;
-
-        cards.forEach(card => {
-            const unitPrice = parseFloat(card.dataset.unitPrice || 0);
-            const quantity = parseInt(card.querySelector('.number').textContent, 10) || 0;
-            totalPrice += unitPrice * quantity;
-        });
-
-        document.getElementById('total-price').textContent = `Total: ${totalPrice.toFixed(2)}€`;
-    }
-
-    function updateCounter(button, increment) {
-        const counter = button.closest('.counter-transports').querySelector('.number');
-        let currentValue = parseInt(counter.textContent, 10) || 0;
-
-        currentValue = increment ? currentValue + 1 : Math.max(0, currentValue - 1);
-        counter.textContent = currentValue;
-
-        calculateTotalPrice();
-    }
-
-    cards.forEach(card => {
-        const minusButton = card.querySelector('.minus');
-        const plusButton = card.querySelector('.plus');
-
-        minusButton.addEventListener('click', () => {
-            updateCounter(minusButton, false);
-        });
-
-        plusButton.addEventListener('click', () => {
-            updateCounter(plusButton, true);
-        });
-    });
-});
-
-        function selectOption(option) {
-            // Reset all buttons
-            let buttons = document.querySelectorAll('.custom-button-base');
-            buttons.forEach(button => button.classList.remove('selected'));
-    
-            // Add the 'selected' class to the clicked button
-            let selectedButton = document.querySelector(`.custom-button-base.${option}`);
-            selectedButton.classList.add('selected');
-
-        }
 
     
     </script>
