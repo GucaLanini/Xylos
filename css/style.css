@@ -1858,8 +1858,20 @@ flex-direction: column;
     
 }
 
+a .btn-primary:active,
+a .btn-primary:focus, 
+a .btn-primary:focus-visible {
+    background-color:var(--gg-deepblue-color) !important ;
+}
 
 
+.e-low{
+    height: 700px;
+}
+
+.e-high{
+    height: 1500px;
+}
 
 
 
@@ -2008,10 +2020,20 @@ flex-direction: column;
 
 }
 
+
+
+
 .dim{
     height: 130px !important;
     border-radius: 15px !important;
     box-shadow: inset 0px 0px 70px 0px var(--gg-deepblue-color) !important;
+
+}
+
+
+.dim:active,
+.dim:focus{
+    box-shadow: inset 0px 0px 70px 0px var(--gg-ice-color) !important;
 
 }
 
