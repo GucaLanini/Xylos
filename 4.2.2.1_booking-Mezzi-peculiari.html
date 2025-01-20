@@ -54,17 +54,25 @@
         <div class="col">
             <div id="calendar-1" class="calendar-wrapper">
                 <div class="calendarbody">
-                    <div class="calendarheader"><p>Seleziona data e ora del ritiro</p></div>
+                    <div class="calendarheader">
+                        <p>Seleziona data e ora del ritiro</p>
+                    </div>
                     <div class="container-fluid calendar">
                         <div class="row">
+                            <!-- Selezione data -->
                             <div class="col-7 border-right px-0">
                                 <div class="calendar-selector">
-                                    <button id="prev-month"><p class="reset-margin">&lt;</p></button>
-                                    <h3><span id="current-month"></span></h3>
-                                    <button id="next-month"><p class="reset-margin">&gt;</p></button>
+                                    <button class="prev-month">
+                                        <p class="reset-margin">&lt;</p>
+                                    </button>
+                                    <h3><span class="current-month"></span></h3>
+                                    <button class="next-month">
+                                        <p class="reset-margin">&gt;</p>
+                                    </button>
                                 </div>
-                                <div class="days" id="days-container"></div>
+                                <div class="days days-container"></div>
                             </div>
+                            <!-- Selezione orario -->
                             <div class="col-5 reset-padding">
                                 <div class="time-selector calendar-selector">
                                     <h3>Orario</h3>
@@ -90,24 +98,32 @@
             </div>
         </div>
     </div>
-
+    
     <div class="space-50"></div>
-
-     <div class="row bottom-150 padding-100">
+    
+    <div class="row bottom-150 padding-100">
         <div class="col">
             <div id="calendar-2" class="calendar-wrapper">
                 <div class="calendarbody">
-                    <div class="calendarheader"><p>Seleziona data e ora della restituzione</p></div>
+                    <div class="calendarheader">
+                        <p>Seleziona data e ora della restituzione</p>
+                    </div>
                     <div class="container-fluid calendar">
                         <div class="row">
+                            <!-- Selezione data -->
                             <div class="col-7 border-right px-0">
                                 <div class="calendar-selector">
-                                    <button id="prev-month"><p class="reset-margin">&lt;</p></button>
-                                    <h3><span id="current-month"></span></h3>
-                                    <button id="next-month"><p class="reset-margin">&gt;</p></button>
+                                    <button class="prev-month">
+                                        <p class="reset-margin">&lt;</p>
+                                    </button>
+                                    <h3><span class="current-month"></span></h3>
+                                    <button class="next-month">
+                                        <p class="reset-margin">&gt;</p>
+                                    </button>
                                 </div>
-                                <div class="days" id="days-container"></div>
+                                <div class="days days-container"></div>
                             </div>
+                            <!-- Selezione orario -->
                             <div class="col-5 reset-padding">
                                 <div class="time-selector calendar-selector">
                                     <h3>Orario</h3>
@@ -148,10 +164,14 @@
 
 /****CALENDARIO 1****/
 document.addEventListener('DOMContentLoaded', () => {
-    const currentMonthElement = document.getElementById('current-month');
-    const daysContainer = document.getElementById('days-container');
-    const prevMonthButton = document.getElementById('prev-month');
-    const nextMonthButton = document.getElementById('next-month');
+    const calendars = document.querySelectorAll('.calendar'); // Seleziona tutti i contenitori di calendario
+
+calendars.forEach(calendar => {
+    const currentMonthElement = calendar.querySelector('.current-month');
+    const daysContainer = calendar.querySelector('.days-container');
+    const prevMonthButton = calendar.querySelector('.prev-month');
+    const nextMonthButton = calendar.querySelector('.next-month');
+    const timeOptions = calendar.querySelectorAll('.time-option');
 
     let currentDate = new Date();
     let selectedDay = null;
@@ -210,7 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
         generateCalendar(currentDate);
     });
 
-    /****SALVATAGGIO SELEZIONE****/
     function saveSelection() {
         const selectedDate = selectedDay ? selectedDay.textContent.trim() : null;
         const selectedMonth = getMonthName(currentDate.getMonth());
@@ -223,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 time: selectedHour
             };
 
-            localStorage.setItem('selectedData', JSON.stringify(selectedData));
+            localStorage.setItem(`selectedData-${calendar.dataset.id}`, JSON.stringify(selectedData));
 
             console.log('Dati salvati:', selectedData);
         } else {
@@ -231,7 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const timeOptions = document.querySelectorAll('.time-option');
     timeOptions.forEach(time => {
         time.addEventListener('click', () => {
             if (selectedTime) {
@@ -244,6 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     generateCalendar(currentDate);
+});
 });
 
 

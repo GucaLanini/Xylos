@@ -2062,6 +2062,10 @@ a .overlay{
  margin-left: 25px !important;
 }
 
+.summarymargin-left{
+    margin-left: 0px !important;
+}
+
 .margin-right{
     margin-right: 25px !important;
 }
