@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const dayElement = document.createElement('div');
                 dayElement.classList.add('day');
                 dayElement.textContent = day;
-                dayElement.setAttribute('data-date', `${day} ${getMonthName(month)} ${year}`);  // Aggiungi l'attributo data-date
+                dayElement.setAttribute('data-date', `${day} ${getMonthName(month)} ${year}`); 
 
                 dayElement.addEventListener('click', () => {
                     if (selectedDay) {
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     dayElement.classList.add('selected');
                     selectedDay = dayElement;
-                    saveSelection(calendarId);  // Passa l'ID del calendario
+                    saveSelection(calendarId); 
                 });
 
                 daysContainer.appendChild(dayElement);
@@ -257,25 +257,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 time.classList.add('selected');
                 selectedTime = time;
-                saveSelection(calendarId);  // Passa l'ID del calendario
+                saveSelection(calendarId);
             });
         });
 
         generateCalendar(currentDate);
 
-        // Funzione per salvare la selezione
         function saveSelection(calendarId) {
             const selectedDate = selectedDay ? selectedDay.getAttribute('data-date') : null;
             const selectedHour = selectedTime ? selectedTime.textContent.trim() : null;
 
             if (selectedDate && selectedHour) {
                 const selectedData = {
-                    id: calendarId,  // Aggiungi l'ID del calendario ai dati
+                    id: calendarId,
                     date: selectedDate,
                     time: selectedHour
                 };
 
-                // Usa calendarId per salvare i dati separatamente per ogni calendario
                 localStorage.setItem(`selectedData-${calendarId}`, JSON.stringify(selectedData));
 
                 console.log('Dati salvati per il calendario ID ' + calendarId, selectedData);

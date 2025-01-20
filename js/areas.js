@@ -487,7 +487,7 @@
                             </div>
                             <div class="row card reset-all area-item">
                     
-                                <img src="img/zona_2/zona 2/dunenotte2 2.jpg" class="card-img img-long reset-padding low" alt="Deserto Moan">
+                                <img src="img/desertomoan.jpg" class="card-img img-long reset-padding low" alt="Deserto Moan">
             
                                 <div class="overlay"></div>
             
