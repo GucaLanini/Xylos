@@ -112,6 +112,7 @@ h3 {
     box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
     border-radius: 50px;
 }
+
 .box-btn:active{
     box-shadow: inset 0px 0px 90px 0px var(--gg-ice-color);
     border-color: var(--gg-ice-color);
@@ -698,6 +699,10 @@ p {
     border-radius: 50px;
   }
 
+.small-box:active{
+    box-shadow: inset 0px 0px 90px 0px var(--gg-ice-color);
+    border-color: var(--gg-ice-color);
+}
 .h2-transport {
     font-weight: bold;
     font-size: 48px;
@@ -723,6 +728,10 @@ p {
 
 .bottom-265 {
     margin: 0px 0px 265px 0px;
+}
+
+.bottom-300 {
+    margin: 0px 0px 300px 0px;
 }
 
 .margin-b-transports {
@@ -756,8 +765,12 @@ p {
     margin: 0px 0px 180px 0px;
 }
 
-.space-640 {
-    margin: 0px 0px 640px 0px;    
+.space-750 {
+    margin: 0px 0px 750px 0px;    
+}
+
+.space-h2 {
+    margin-bottom: 225px;
 }
 
 /****MAP****/
@@ -1072,7 +1085,7 @@ p {
 
 /*RIEPILOGO*/ 
 .h3-esperienza {
-    font-family: Panchang;
+    font-family: Panchang !important;
     font-weight: 600px;
     font-size: 36px;
     color: var(--gg-txt-color);
@@ -1281,6 +1294,9 @@ padding-left: 0 !important;
     margin-top: 590px;
 }
 
+.space-1490 {
+    margin: 0px 0px 1490px 0px;
+}
 
 
 /* bagliori celesti */
