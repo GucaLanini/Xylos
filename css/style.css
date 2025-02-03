@@ -1852,7 +1852,7 @@ flex-direction: column;
     box-shadow: inset 0px 0px 90px 0px var(--gg-ice-color)
 }
 
-@media only screen and (min-width: 1890px) {
+@media only screen and (min-width: 1891px) {
     .totem-content {
         display: none;
     } 
@@ -1872,6 +1872,18 @@ flex-direction: column;
         display: none;
     }
     
+}
+
+.space-train {
+    margin-top: 365px;
+}
+
+.space-citypass{
+    margin-top: 690px;
+}
+
+.space-button-citypass{
+    margin-top: 345px;
 }
 
 a .btn-primary:active,

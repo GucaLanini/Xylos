@@ -85,9 +85,9 @@
                </div>
    
                <div class="counter d-flex justify-content-center">
-                   <button id="minus-1" class="counter-button minus"><p class="no-bottom reset-margin counter-sign">-</p></button>
+                   <button id="minus-2" class="counter-button minus"><p class="no-bottom reset-margin counter-sign">-</p></button>
                    <span class="number">0</span>
-                   <button id="plus-1" class="counter-button plus"><p class="no-bottom reset-margin counter-sign">+</p></button>
+                   <button id="plus-2" class="counter-button plus"><p class="no-bottom reset-margin counter-sign">+</p></button>
                </div>
            </div>
        
@@ -111,9 +111,9 @@
             </div>
 
             <div class="counter d-flex justify-content-center">
-                <button id="minus-1" class="counter-button minus"><p class="no-bottom reset-margin counter-sign">-</p></button>
+                <button id="minus-3" class="counter-button minus"><p class="no-bottom reset-margin counter-sign">-</p></button>
                 <span class="number">0</span>
-                <button id="plus-1" class="counter-button plus"><p class="no-bottom reset-margin counter-sign">+</p></button>
+                <button id="plus-3" class="counter-button plus"><p class="no-bottom reset-margin counter-sign">+</p></button>
             </div>
         </div>
     
@@ -137,11 +137,12 @@
            <div type="button" class="col card-tariffs citypass-tariffs citypass-hour bottom-150 timespan">
             <h3 class="d-flex justify-content-center">72h</h3>
         </div>
+        </div>
     
       </div>
 
-      <div class="row d-flex justify-content-center bottom-150"> 
-         <a href="4.1.1_riepilogo-citypass.html" class="col-auto header-button justify-content-center body">
+      <div class="row d-flex justify-content-center bottom-150 space-button-citypass"> 
+         <a href="4.1.1_citypass-summary.html" class="col-auto header-button justify-content-center body">
              <button type="button" class="btn btn-primary">Prenota</button>
          </a>
      </div> 
@@ -187,7 +188,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateTotalPrice();
     }
 
-    // Funzione per aggiornare il prezzo totale
     function updateTotalPrice() {
         let totalPrice = 0;
 
@@ -211,7 +211,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    // Seleziona tutte le carte (con il contatore)
     const cards = document.querySelectorAll('.counter');
 
     cards.forEach(card => {
@@ -241,7 +240,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Selezione della durata (tempo) e associazione di un valore numerico
     const timeSpan = document.querySelectorAll('.timespan');
     timeSpan.forEach(card => {
     card.addEventListener('click', () => {
@@ -277,11 +275,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
         }
 
-        // Memorizza i dati nel localStorage
         cityPassPrices[category].selectedDuration = durationValue;
 
         localStorage.setItem(`cityPassData-${category}`, JSON.stringify(cityPassPrices[category]));
-        localStorage.setItem('selectedCategory', category); // Salva anche la categoria
+        localStorage.setItem('selectedCategory', category); 
 
         console.log(`Durata selezionata per ${category}: ${durationValue} (${card.textContent.trim()})`);
     });
@@ -292,9 +289,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-</script>
-
-
-
-   
+</script>   
 </body>
