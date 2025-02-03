@@ -403,7 +403,7 @@ h3 {
     
 }
 
-.btn-primary{
+.btn-primary {
     font-family: panchang;
     font-weight: 800PX;
     color: var(--gg-bg-color);
@@ -414,6 +414,9 @@ h3 {
     border-color: var(--gg-ice-color);
     border-radius: 15px;
     padding: auto;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
 } 
 
 .title-area{
@@ -1151,6 +1154,9 @@ padding-left: 0 !important;
   }
 
 .topindex {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
     margin-top: 1773px;
 }
 
