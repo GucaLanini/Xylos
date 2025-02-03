@@ -698,7 +698,7 @@ this_rovine.addEventListener('click', () => {
             
                             <div class="row card reset-all area-item">
             
-                                <img src = "img/città sommersa.jpg" class="card-img img-long reset-padding up" alt="Rovine del mare">
+                                <img src = "img/cittàsommersa.jpg" class="card-img img-long reset-padding up" alt="Rovine del mare">
             
                                 <div class="overlay"></div>
             
