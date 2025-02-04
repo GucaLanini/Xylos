@@ -1209,6 +1209,32 @@ padding-left: 0 !important;
 
 
 /* EVENTS */
+
+.small-card-e{
+    height: 1110px;
+    width: 820px;
+    border-radius: 15px;
+}
+
+.img-small-e {
+    height: 1110px;
+    width: 820px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+}
+
+.big-card-e {
+    height: 1494px;
+    width: 820px;
+    border-radius: 15px;
+}
+
+.img-large-e {
+    height: 1494px;
+    width: 820px;
+    box-shadow: 0px 0px 50px 8px var(--gg-backgroungblue-color);
+}
+
+
 .img-bird {
     height: 1494px;
 }
@@ -1275,7 +1301,7 @@ padding-left: 0 !important;
     margin-bottom: 50px !important;
     justify-content: flex-end;
 
-}
+} 
 
 .card-img-events {
     border-radius: 50px;
