@@ -13,81 +13,81 @@
         // Sostituisci l'intero contenuto del div
         content.innerHTML = `
 
-                        <div class="row reset-all align-items-start">
-
-                            <div class="row reset-all">
-
-                                <div class="col reset-all margin-right">
+                  <div class="row reset-all align-items-start">
+ 
+                     <div class="row reset-all">
+ 
+                         <div class="col reset-all margin-right">
+             
+                             <div class="row card reset-all area-item">
+             
+                                 <img src="img/zona_1/zona_1/d3d964f4fa2dbdded9ee1ec6ac46ad1e.jpg" class="card-img img-long reset-padding up" alt="Nyxari">
+             
+                                 <div class="overlay"></div>
+                                 
+                                 <div class="text-item">
+                                     <h2 class="semibold">Nyxari</h2>
+                                     <p class="text">
+                                         I Nyxari sono felini, simili alle tigri terrestri, con un manto luminoso. Sono animali solitari ma curiosi. Se attratti da uno stimolo luminoso, possono avvicinarsi cautamente.
+                                     </p>
+                                 </div>
+             
+                             </div>
+             
+                             <div class="row card reset-all area-item">
+             
+                                 <img src="img/zona_1/zona_1/farfalla.jpg" class="card-img img-long reset-padding low" alt="Lyserian">
+             
+                                 <div class="overlay"></div>
+             
+                                 <div class="text-item">
+                                     <h2 class="semibold">Lyserian</h2>
+                                     <p class="text">
+                                         Farfalle dalle ali trasparenti che volano in gruppi di centinaia, creando spettacoli di luce fluttuante. Le loro ali si accendono in sfumature di blu e arancione mentre si muovono.
+                                     </p>
+                                 </div>
+             
+                             </div>
+             
+                         </div>
+             
+                         <div class="col reset-all margin-left">
+             
+                             <div class="row card reset-all area-item ">
+             
+                                 <img src="img/zona_1/zona_1/rana.jpg" class="card-img img-long reset-padding low" alt="Arakhara">
+             
+                                 <div class="overlay"></div>
+             
+                                 <div class="text-item">
+                                     <h2 class="semibold">Luminex</h2>
+                                     <p class="text">
+                                         I Luminex sono anfibi simili a rane che saltano in gruppi vicino al pelo dell’acqua, sincronizzando il loro bagliore con i movimenti del kayak.    
+                                     </p>
+                                 </div>
+             
+                             </div>
+             
+                             <div class="row card reset-all area-item">
+                                
+                                 <img src="img/arboryx.png" class="card-img img-long reset-padding up" alt="Arboryx">
+             
+                                 <div class="overlay"></div>
+                                 
+                                 <div class="text-item">
+                                     <h2 class="semibold">Arboryx</h2>
+                                     <p class="text">
+                                         Gli Arboryx, con i loro nidi costruiti a decine di metri da terra, sono il simbolo della foresta. I loro piumaggi iridescenti, spettacolari da osservare, specialmente durante i voli collettivi.
+                                     </p>
+                                 </div>
+             
+                             </div>
+             
+                         </div>
+                     </div>
                     
-                                    <div class="row card reset-all area-item">
-                    
-                                        <img src="img/zona 1/zona 1/d3d964f4fa2dbdded9ee1ec6ac46ad1e.jpg" class="card-img img-long reset-padding up" alt="Nyxari">
-                    
-                                        <div class="overlay"></div>
-                    
-                                        <div class="text-item">
-                                            <h2 class="semibold">Nyxari</h2>
-                                            <p class="text">
-                                                I Nyxari sono felini, simili alle tigri terrestri, con un manto luminoso. Sono animali solitari ma curiosi. Se attratti da uno stimolo luminoso, possono avvicinarsi cautamente.
-                                            </p>
-                                        </div>
-                    
-                                    </div>
-                    
-                                    <div class="row card reset-all area-item">
-                    
-                                        <img src="img/zona 1/zona 1/farfalla.jpg" class="card-img img-long reset-padding low" alt="Lyserian">
-                    
-                                        <div class="overlay"></div>
-                    
-                                        <div class="text-item">
-                                            <h2 class="semibold">Lyserian</h2>
-                                            <p class="text">
-                                                Farfalle dalle ali trasparenti che volano in gruppi di centinaia, creando spettacoli di luce fluttuante. Le loro ali si accendono in sfumature di blu e arancione mentre si muovono.
-                                            </p>
-                                        </div>
-                    
-                                    </div>
-                    
-                                </div>
-                    
-                                <div class="col reset-all margin-left">
-                    
-                                    <div class="row card reset-all area-item">
-                    
-                                        <img src="img/zona 1/zona 1/rana.jpg" class="card-img img-long reset-padding low" alt="Arakhara">
-                    
-                                        <div class="overlay"></div>
-                    
-                                        <div class="text-item">
-                                            <h2 class="semibold">Luminex</h2>
-                                            <p class="text">
-                                                I Luminex sono anfibi simili a rane che saltano in gruppi vicino al pelo dell’acqua, sincronizzando il loro bagliore con i movimenti del kayak.    
-                                            </p>
-                                        </div>
-                    
-                                    </div>
-                    
-                                    <div class="row card reset-all area-item">
-                    
-                                        <img src="img/zona 1/zona 1/uccello2.jpg" class="card-img img-long reset-padding up" alt="Arboryx">
-                    
-                                        <div class="overlay"></div>
-                    
-                                        <div class="text-item">
-                                            <h2 class="semibold">Arboryx</h2>
-                                            <p class="text">
-                                                Gli Arboryx, con i loro nidi costruiti a decine di metri da terra, sono il simbolo della foresta. I loro piumaggi iridescenti, spettacolari da osservare, specialmente durante i voli collettivi.
-                                            </p>
-                                        </div>
-                    
-                                    </div>
-                    
-                                </div>
-                            </div>
-                        
-                
-                        </div>
+         
+                 </div>
 
         `;
         });
@@ -102,7 +102,7 @@
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/funghi.jpg" class="card-img img-long reset-padding up" alt="Mescalite">
+                                        <img src="img/zona_1/zona_1/funghi.jpg" class="card-img img-long reset-padding up" alt="Mescalite">
                     
                                         <div class="overlay"></div>
                     
@@ -117,7 +117,7 @@
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/aurelias.jpg" class="card-img img-long reset-padding low" alt="Plinus">
+                                        <img src="img/zona_1/zona_1/aurelias.jpg" class="card-img img-long reset-padding low" alt="Plinus">
                     
                                         <div class="overlay"></div>
                     
@@ -136,7 +136,7 @@
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/campanla.jpg" class="card-img img-long reset-padding low" alt="Aurelias">
+                                        <img src="img/zona_1/zona_1/campanla.jpg" class="card-img img-long reset-padding low" alt="Aurelias">
                     
                                         <div class="overlay"></div>
                     
@@ -151,7 +151,7 @@
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/orchidea.jpg" class="card-img img-long reset-padding up" alt="Luminorchid">
+                                        <img src="img/zona_1/zona_1/orchidea.jpg" class="card-img img-long reset-padding up" alt="Luminorchid">
                     
                                         <div class="overlay"></div>
                     
@@ -182,7 +182,7 @@
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/b8865d85f827140da1f5fc72d6b0e477.jpg" class="card-img img-long reset-padding up" alt="Laudor">
+                                        <img src="img/zona_1/zona_1/b8865d85f827140da1f5fc72d6b0e477.jpg" class="card-img img-long reset-padding up" alt="Laudor">
                     
                                         <div class="overlay"></div>
                     
@@ -203,7 +203,7 @@
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/pesci.jpg" class="card-img img-long reset-padding up" alt="Nymphyr">
+                                        <img src="img/zona_1/zona_1/pesci.jpg" class="card-img img-long reset-padding up" alt="Nymphyr">
                     
                                         <div class="overlay"></div>
                     
@@ -308,7 +308,7 @@
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/serpente 2.jpg" class="card-img img-long reset-padding up" alt="Anodick">
+                                        <img src="img/zona_2/zona_2/serpente.jpg" class="card-img img-long reset-padding up" alt="Anodick">
                     
                                         <div class="overlay"></div>
                                         
@@ -323,7 +323,7 @@
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/ragno.jpg" class="card-img img-long reset-padding low" alt="Luminorchid">
+                                        <img src="img/zona_2/zona_2/ragno.jpg" class="card-img img-long reset-padding low" alt="Luminorchid">
                     
                                         <div class="overlay"></div>
                     
@@ -340,7 +340,7 @@
                     
                                     <div class="row card reset-all area-item ">
                     
-                                        <img src="img/zona_2/zona 2/falena 2.jpg" class="card-img img-long reset-padding low" alt="Stellar Moth">
+                                        <img src="img/zona_2/zona_2/falena.jpg" class="card-img img-long reset-padding low" alt="Stellar Moth">
                     
                                         <div class="overlay"></div>
                     
@@ -353,7 +353,7 @@
                     
                                     <div class="row card reset-all area-item">
                                         
-                                        <img src="img/zona_2/zona 2/scarabeo 2.jpg" class="card-img img-long reset-padding up" alt="Gloscaw">
+                                        <img src="img/zona_2/zona_2/scarabeo.jpg" class="card-img img-long reset-padding up" alt="Gloscaw">
                     
                                         <div class="overlay"></div>
                                         
@@ -382,7 +382,7 @@
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/lucciole2.jpg" class="card-img img-long reset-padding up" alt="Dooce">
+                                        <img src="img/zona_2/zona_2/lucciole2.jpg" class="card-img img-long reset-padding up" alt="Dooce">
                     
                                         <div class="overlay"></div>
                     
@@ -412,7 +412,7 @@
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/cactus2 2.jpg" class="card-img img-long reset-padding low" alt="Cacuroth">
+                                        <img src="img/zona_2/zona_2/cactus2.jpg" class="card-img img-long reset-padding low" alt="Cacuroth">
                     
                                         <div class="overlay"></div>
                     
@@ -425,7 +425,7 @@
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/funghetto 2.jpg" class="card-img img-long reset-padding up" alt="Tame impala">
+                                        <img src="img/zona_2/zona_2/funghetto.jpg" class="card-img img-long reset-padding up" alt="Tame impala">
                     
                                         <div class="overlay"></div>
                     
@@ -453,7 +453,7 @@
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/fluttuanti 2.jpg" class="card-img img-long reset-padding up" alt="Rocce fluttuanti">
+                                        <img src="img/zona_2/zona_2/fluttuanti.jpg" class="card-img img-long reset-padding up" alt="Rocce fluttuanti">
                     
                                         <div class="overlay"></div>
                     
@@ -511,7 +511,7 @@
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/deserto 2.jpg" class="card-img img-long reset-padding up" alt="Tempio di Mesron">
+                                        <img src="img/zona_2/zona_2/deserto.jpg" class="card-img img-long reset-padding up" alt="Tempio di Mesron">
                     
                                         <div class="overlay"></div>
                     
@@ -553,7 +553,7 @@ this_fauna.addEventListener('click', () => {
      
                      <div class="row card reset-all area-item">
      
-                         <img src="img/zona_3/zona 3/jeco 2.jpg" class="card-img img-long reset-padding up" alt="Luminix">
+                         <img src="img/zona_3/zona_3/jeco.jpg" class="card-img img-long reset-padding up" alt="Luminix">
      
                          <div class="overlay"></div>
                          
@@ -583,7 +583,7 @@ this_fauna.addEventListener('click', () => {
      
                      <div class="row card reset-all area-item ">
      
-                         <img src="img/zona_3/zona 3/colibrì 2.jpg" class="card-img img-long reset-padding maxxx" alt="Cortox">
+                         <img src="img/zona_3/zona_3/colibrì.jpg" class="card-img img-long reset-padding maxxx" alt="Cortox">
      
                          <div class="overlay"></div>
      
@@ -640,7 +640,7 @@ this_fluviale.addEventListener('click', () => {
             
                             <div class="row card reset-all area-item">
             
-                                <img src="img/zona_3/zona 3/crab 2.jpg" class="card-img img-long reset-padding up" alt="Crabxys">
+                                <img src="img/zona_3/zona_3/crab.jpg" class="card-img img-long reset-padding up" alt="Crabxys">
             
                                 <div class="overlay"></div>
             
@@ -659,7 +659,7 @@ this_fluviale.addEventListener('click', () => {
             
                             <div class="row card reset-all area-item">
             
-                                <img src="img/zona_3/zona 3/pescefantasma 2.jpg" class="card-img img-long reset-padding up" alt="Phantys">
+                                <img src="img/zona_3/zona_3/pescefantasma.jpg" class="card-img img-long reset-padding up" alt="Phantys">
             
                                 <div class="overlay"></div>
             
@@ -674,7 +674,7 @@ this_fluviale.addEventListener('click', () => {
                     </div>
                     <div class="row card reset-all area-item">
             
-                        <img src="img/zona_3/zona 3/stella marina 2.jpg" class="card-img img-long reset-padding low" alt="Stelaxys">
+                        <img src="img/zona_3/zona_3/stella_marina.jpg" class="card-img img-long reset-padding low" alt="Stelaxys">
     
                         <div class="overlay"></div>
     
@@ -698,7 +698,7 @@ this_rovine.addEventListener('click', () => {
             
                             <div class="row card reset-all area-item">
             
-                                <img src = "img/cittàsommersa.jpg" class="card-img img-long reset-padding up" alt="Rovine del mare">
+                                <img src = "img/citta_sommersa.jpg" class="card-img img-long reset-padding up" alt="Rovine del mare">
             
                                 <div class="overlay"></div>
             
@@ -719,7 +719,81 @@ this_rovine.addEventListener('click', () => {
 
 
     }
+    
+    if (window.location.pathname === '/Users/laura/Desktop/Gruppo%20Gabri/Xylos/2.4_dome.html'){
+        const alloggi =    document.getElementById('alloggi');
+const ristoranti =    document.getElementById('ristoranti');
+const farmacia = document.getElementById('farmacia');
+const negozi =   document.getElementById('negozi');
+const content =  document.getElementById('content');
 
+alloggi.addEventListener('click', () => {
+    console.log("funziona");
+    
+    content.innerHTML = `
+
+        <div class="row reset-margin d-flex"> 
+            <div class="col-6 reset-all">
+                  <img src="img/Pantheon.png" alt="Pantheon" class="img-dome">
+            </div>
+
+            <div class="col-6 reset-padding">
+                  <h2 class="row reset-all">Pantheon</h2>
+                  <p class="row reset-all margin-top-50">Il Pantheon è un lussuoso albergo immerso in un ecosistema unico e incontaminato. Costruito su piattaforme sospese tra le cime degli alberi giganti della foresta di Lyvion, offre una vista mozzafiato su un mare verde pulsante di vita. Le sue pareti in vetro bio-trasparente permettono agli ospiti di ammirare panorami spettacolari, dall’aurora multicolore che danza nel cielo ai misteriosi bioluminescenti che illuminano la foresta di notte. Con un'architettura che si fonde armoniosamente con la natura circostante, il Pantheon è il rifugio perfetto per esploratori intergalattici e amanti della tranquillità cosmica.
+                  </p>
+            </div> 
+        </div>
+
+    `;
+});
+
+ristoranti.addEventListener('click', () => {
+    content.innerHTML = `
+        <div class="row reset-margin d-flex"> 
+                <div class="col-6 reset-all">
+                    <img src="img/Luce_Lumineth.jpg" alt="Luce di Lumineth" class="img-dome">
+                </div>
+
+                <div class="col-6 reset-padding">
+                    <h2 class="row reset-all">Luce di Lumineth</h2>
+                    <p class="row reset-all margin-top-50">Al centro della maestosa cupola di Lumineth, simbolo dell’armonia tra natura e architettura, sorge il ristorante Luce di Lumineth. Circondato dalla vista mozzafiato delle foreste bioluminescenti e delle rovine scintillanti, il ristorante offre un’esperienza unica in un ambiente elegante e immersivo. Il menù celebra i sapori della zona, preparati con ingredienti locali sostenibili. All’interno della cupola, giochi di luci e suoni richiamano i canti dei Vironis e il bagliore naturale delle foreste, rendendo ogni pasto un’esperienza indimenticabile. Un luogo perfetto per gustare la magia di Lumineth, nel cuore pulsante della sua straordinaria cupola.
+                    </p>
+                </div> 
+        </div>
+    `;
+});
+farmacia.addEventListener('click', () => {
+    content.innerHTML = `
+                      <div class="row reset-margin d-flex"> 
+            <div class="col-6 reset-all">
+                  <img src="img/Armonia_Lumineth.jpg" alt="Armonia di Lumineth" class="img-dome">
+            </div>
+
+            <div class="col-6 reset-padding">
+                  <h2 class="row reset-all">Armonia di Lumineth</h2>
+                  <p class="row reset-all margin-top-50">Nel cuore della cupola di Lumineth, la Farmacia Armonia di Lumineth è un punto di riferimento per chi cerca rimedi naturali e cure moderne. Specializzata in prodotti locali, offre un'ampia gamma di preparati a base di erbe bioluminescenti, note per le loro proprietà rigeneranti, e oli estratti da piante uniche della foresta. La farmacia, progettata per integrarsi con l’ambiente, utilizza luci soffuse e decorazioni ispirate alle rovine e alla flora locale, creando un’atmosfera accogliente e rilassante. Un luogo dove la tradizione di Lumineth incontra la cura del benessere.
+                  </p>
+            </div> 
+      </div>
+    `;
+});
+
+negozi.addEventListener('click', () => {
+    content.innerHTML = `
+        <div class="row reset-margin d-flex"> 
+            <div class="col-6 reset-all">
+                  <img src="img/ricordi_Lumineth.jpg" alt="Ricordi di Lumineth" class="img-dome">
+            </div>
+
+            <div class="col-6 reset-padding">
+                  <h2 class="row reset-all">Ricordi di Lumineth</h2>
+                  <p class="row reset-all margin-top-50">All’interno della cupola di Lumineth, il negozio di Souvenir Ricordi di Lumineth offre oggetti unici per portare a casa la magia di questa terra straordinaria. Tra gli articoli disponibili ci sono gioielli ispirati alle rovine luminose, riproduzioni artigianali dei Nyxari e piume decorate degli Arboryx, oltre a candele bioluminescenti e tessuti realizzati con motivi della foresta. Ogni prodotto racconta una storia, creato da artisti locali con materiali sostenibili, per offrire un pezzo autentico del cuore pulsante di Lumineth. Perfetto per chi desidera un ricordo speciale di questo luogo incantato.
+                  </p>
+            </div> 
+      </div>
+    `;
+});
+    }
 
 
 
@@ -747,7 +821,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/d3d964f4fa2dbdded9ee1ec6ac46ad1e.jpg" class="card-img img-long reset-padding up" alt="Nyxari">
+                                        <img src="img/zona_1/zona_1/d3d964f4fa2dbdded9ee1ec6ac46ad1e.jpg" class="card-img img-long reset-padding up" alt="Nyxari">
                     
                                         <div class="overlay"></div>
                     
@@ -762,7 +836,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/farfalla.jpg" class="card-img img-long reset-padding low" alt="Lyserian">
+                                        <img src="img/zona_1/zona_1/farfalla.jpg" class="card-img img-long reset-padding low" alt="Lyserian">
                     
                                         <div class="overlay"></div>
                     
@@ -781,7 +855,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/rana.jpg" class="card-img img-long reset-padding low" alt="Arakhara">
+                                        <img src="img/zona_1/zona_1/rana.jpg" class="card-img img-long reset-padding low" alt="Arakhara">
                     
                                         <div class="overlay"></div>
                     
@@ -796,7 +870,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/uccello2.jpg" class="card-img img-long reset-padding up" alt="Arboryx">
+                                        <img src="img/zona_1/zona_1/uccello2.jpg" class="card-img img-long reset-padding up" alt="Arboryx">
                     
                                         <div class="overlay"></div>
                     
@@ -828,7 +902,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/funghi.jpg" class="card-img img-long reset-padding up" alt="Mescalite">
+                                        <img src="img/zona_1/zona_1/funghi.jpg" class="card-img img-long reset-padding up" alt="Mescalite">
                     
                                         <div class="overlay"></div>
                     
@@ -843,7 +917,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/aurelias.jpg" class="card-img img-long reset-padding low" alt="Plinus">
+                                        <img src="img/zona_1/zona_1/aurelias.jpg" class="card-img img-long reset-padding low" alt="Plinus">
                     
                                         <div class="overlay"></div>
                     
@@ -862,7 +936,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/campanla.jpg" class="card-img img-long reset-padding low" alt="Aurelias">
+                                        <img src="img/zona_1/zona_1/campanla.jpg" class="card-img img-long reset-padding low" alt="Aurelias">
                     
                                         <div class="overlay"></div>
                     
@@ -877,7 +951,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/orchidea.jpg" class="card-img img-long reset-padding up" alt="Luminorchid">
+                                        <img src="img/zona_1/zona_1/orchidea.jpg" class="card-img img-long reset-padding up" alt="Luminorchid">
                     
                                         <div class="overlay"></div>
                     
@@ -908,7 +982,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/b8865d85f827140da1f5fc72d6b0e477.jpg" class="card-img img-long reset-padding up" alt="Laudor">
+                                        <img src="img/zona_1/zona_1/b8865d85f827140da1f5fc72d6b0e477.jpg" class="card-img img-long reset-padding up" alt="Laudor">
                     
                                         <div class="overlay"></div>
                     
@@ -929,7 +1003,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona 1/zona 1/pesci.jpg" class="card-img img-long reset-padding up" alt="Nymphyr">
+                                        <img src="img/zona_1/zona_1/pesci.jpg" class="card-img img-long reset-padding up" alt="Nymphyr">
                     
                                         <div class="overlay"></div>
                     
@@ -1034,7 +1108,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/serpente 2.jpg" class="card-img img-long reset-padding up" alt="Anodick">
+                                        <img src="img/zona_2/zona_2/serpente.jpg" class="card-img img-long reset-padding up" alt="Anodick">
                     
                                         <div class="overlay"></div>
                                         
@@ -1049,7 +1123,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/ragno.jpg" class="card-img img-long reset-padding low" alt="Luminorchid">
+                                        <img src="img/zona_2/zona_2/ragno.jpg" class="card-img img-long reset-padding low" alt="Luminorchid">
                     
                                         <div class="overlay"></div>
                     
@@ -1066,7 +1140,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item ">
                     
-                                        <img src="img/zona_2/zona 2/falena 2.jpg" class="card-img img-long reset-padding low" alt="Stellar Moth">
+                                        <img src="img/zona_2/zona_2/falena.jpg" class="card-img img-long reset-padding low" alt="Stellar Moth">
                     
                                         <div class="overlay"></div>
                     
@@ -1079,7 +1153,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                                         
-                                        <img src="img/zona_2/zona 2/scarabeo 2.jpg" class="card-img img-long reset-padding up" alt="Gloscaw">
+                                        <img src="img/zona_2/zona_2/scarabeo.jpg" class="card-img img-long reset-padding up" alt="Gloscaw">
                     
                                         <div class="overlay"></div>
                                         
@@ -1108,7 +1182,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/lucciole2.jpg" class="card-img img-long reset-padding up" alt="Dooce">
+                                        <img src="img/zona_2/zona_2/lucciole2.jpg" class="card-img img-long reset-padding up" alt="Dooce">
                     
                                         <div class="overlay"></div>
                     
@@ -1121,7 +1195,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/fioredeserto 2.jpg" class="card-img img-long reset-padding low" alt="Rapunzel">
+                                        <img src="img/zona_2/zona_2/fioredeserto.jpg" class="card-img img-long reset-padding low" alt="Rapunzel">
                     
                                         <div class="overlay"></div>
                     
@@ -1138,7 +1212,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/cactus2 2.jpg" class="card-img img-long reset-padding low" alt="Cacuroth">
+                                        <img src="img/zona_2/zona_2/cactus2.jpg" class="card-img img-long reset-padding low" alt="Cacuroth">
                     
                                         <div class="overlay"></div>
                     
@@ -1151,7 +1225,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/funghetto 2.jpg" class="card-img img-long reset-padding up" alt="Tame impala">
+                                        <img src="img/zona_2/zona_2/funghetto.jpg" class="card-img img-long reset-padding up" alt="Tame impala">
                     
                                         <div class="overlay"></div>
                     
@@ -1179,7 +1253,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/fluttuanti 2.jpg" class="card-img img-long reset-padding up" alt="Rocce fluttuanti">
+                                        <img src="img/zona_2/zona_2/fluttuanti.jpg" class="card-img img-long reset-padding up" alt="Rocce fluttuanti">
                     
                                         <div class="overlay"></div>
                     
@@ -1213,7 +1287,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                             </div>
                             <div class="row card reset-all area-item">
                     
-                                <img src="img/zona_2/zona 2/dunenotte2 2.jpg" class="card-img img-long reset-padding low" alt="Deserto Moan">
+                                <img src="img/zona_2/zona_2/dunenotte2.jpg" class="card-img img-long reset-padding low" alt="Deserto Moan">
             
                                 <div class="overlay"></div>
             
@@ -1237,7 +1311,7 @@ document.addEventListener ("DOMContentLoaded", () => {
                     
                                     <div class="row card reset-all area-item">
                     
-                                        <img src="img/zona_2/zona 2/deserto 2.jpg" class="card-img img-long reset-padding up" alt="Tempio di Mesron">
+                                        <img src="img/zona_2/zona_2/deserto.jpg" class="card-img img-long reset-padding up" alt="Tempio di Mesron">
                     
                                         <div class="overlay"></div>
                     
@@ -1279,7 +1353,7 @@ this_fauna.addEventListener('click', () => {
      
                      <div class="row card reset-all area-item">
      
-                         <img src="img/zona_3/zona 3/jeco 2.jpg" class="card-img img-long reset-padding up" alt="Luminix">
+                         <img src="img/zona_3/zona_3/jeco.jpg" class="card-img img-long reset-padding up" alt="Luminix">
      
                          <div class="overlay"></div>
                          
@@ -1309,7 +1383,7 @@ this_fauna.addEventListener('click', () => {
      
                      <div class="row card reset-all area-item ">
      
-                         <img src="img/zona_3/zona 3/colibrì 2.jpg" class="card-img img-long reset-padding maxxx" alt="Cortox">
+                         <img src="img/zona_3/zona_3/colibrì.jpg" class="card-img img-long reset-padding maxxx" alt="Cortox">
      
                          <div class="overlay"></div>
      
@@ -1366,7 +1440,7 @@ this_fluviale.addEventListener('click', () => {
             
                             <div class="row card reset-all area-item">
             
-                                <img src="img/zona_3/zona 3/crab 2.jpg" class="card-img img-long reset-padding up" alt="Crabxys">
+                                <img src="img/zona_3/zona_3/crab.jpg" class="card-img img-long reset-padding up" alt="Crabxys">
             
                                 <div class="overlay"></div>
             
@@ -1385,7 +1459,7 @@ this_fluviale.addEventListener('click', () => {
             
                             <div class="row card reset-all area-item">
             
-                                <img src="img/zona_3/zona 3/pescefantasma 2.jpg" class="card-img img-long reset-padding up" alt="Phantys">
+                                <img src="img/zona_3/zona_3/pescefantasma.jpg" class="card-img img-long reset-padding up" alt="Phantys">
             
                                 <div class="overlay"></div>
             
@@ -1400,7 +1474,7 @@ this_fluviale.addEventListener('click', () => {
                     </div>
                     <div class="row card reset-all area-item">
             
-                        <img src="img/zona_3/zona 3/stella marina 2.jpg" class="card-img img-long reset-padding low" alt="Stelaxys">
+                        <img src="img/zona_3/zona_3/stella_marina.jpg" class="card-img img-long reset-padding low" alt="Stelaxys">
     
                         <div class="overlay"></div>
     
@@ -1424,7 +1498,7 @@ this_rovine.addEventListener('click', () => {
             
                             <div class="row card reset-all area-item">
             
-                                <img src = "img/città sommersa.jpg" class="card-img img-long reset-padding up" alt="Rovine del mare">
+                                <img src = "img/citta_sommersa.jpg" class="card-img img-long reset-padding up" alt="Rovine del mare">
             
                                 <div class="overlay"></div>
             
@@ -1446,6 +1520,81 @@ this_rovine.addEventListener('click', () => {
 
     }
 
+    if (window.location.pathname === '/2.4_dome.html') {
+        const alloggi =    document.getElementById('alloggi');
+const ristoranti =    document.getElementById('ristoranti');
+const farmacia = document.getElementById('farmacia');
+const negozi =   document.getElementById('negozi');
+const content =  document.getElementById('content');
+
+alloggi.addEventListener('click', () => {
+    console.log("funziona");
+    
+    content.innerHTML = `
+
+        <div class="row reset-margin d-flex"> 
+            <div class="col-6 reset-all">
+                  <img src="img/Pantheon.png" alt="Pantheon" class="img-dome">
+            </div>
+
+            <div class="col-6 reset-padding">
+                  <h2 class="row reset-all">Pantheon</h2>
+                  <p class="row reset-all margin-top-50">Il Pantheon è un lussuoso albergo immerso in un ecosistema unico e incontaminato. Costruito su piattaforme sospese tra le cime degli alberi giganti della foresta di Lyvion, offre una vista mozzafiato su un mare verde pulsante di vita. Le sue pareti in vetro bio-trasparente permettono agli ospiti di ammirare panorami spettacolari, dall’aurora multicolore che danza nel cielo ai misteriosi bioluminescenti che illuminano la foresta di notte. Con un'architettura che si fonde armoniosamente con la natura circostante, il Pantheon è il rifugio perfetto per esploratori intergalattici e amanti della tranquillità cosmica.
+                  </p>
+            </div> 
+        </div>
+
+    `;
+});
+
+ristoranti.addEventListener('click', () => {
+    content.innerHTML = `
+        <div class="row reset-margin d-flex"> 
+                <div class="col-6 reset-all">
+                    <img src="img/Luce_Lumineth.jpg" alt="Luce di Lumineth" class="img-dome">
+                </div>
+
+                <div class="col-6 reset-padding">
+                    <h2 class="row reset-all">Luce di Lumineth</h2>
+                    <p class="row reset-all margin-top-50">Al centro della maestosa cupola di Lumineth, simbolo dell’armonia tra natura e architettura, sorge il ristorante Luce di Lumineth. Circondato dalla vista mozzafiato delle foreste bioluminescenti e delle rovine scintillanti, il ristorante offre un’esperienza unica in un ambiente elegante e immersivo. Il menù celebra i sapori della zona, preparati con ingredienti locali sostenibili. All’interno della cupola, giochi di luci e suoni richiamano i canti dei Vironis e il bagliore naturale delle foreste, rendendo ogni pasto un’esperienza indimenticabile. Un luogo perfetto per gustare la magia di Lumineth, nel cuore pulsante della sua straordinaria cupola.
+                    </p>
+                </div> 
+        </div>
+    `;
+});
+farmacia.addEventListener('click', () => {
+    content.innerHTML = `
+                      <div class="row reset-margin d-flex"> 
+            <div class="col-6 reset-all">
+                  <img src="img/Armonia_Lumineth.jpg" alt="Armonia di Lumineth" class="img-dome">
+            </div>
+
+            <div class="col-6 reset-padding">
+                  <h2 class="row reset-all">Armonia di Lumineth</h2>
+                  <p class="row reset-all margin-top-50">Nel cuore della cupola di Lumineth, la Farmacia Armonia di Lumineth è un punto di riferimento per chi cerca rimedi naturali e cure moderne. Specializzata in prodotti locali, offre un'ampia gamma di preparati a base di erbe bioluminescenti, note per le loro proprietà rigeneranti, e oli estratti da piante uniche della foresta. La farmacia, progettata per integrarsi con l’ambiente, utilizza luci soffuse e decorazioni ispirate alle rovine e alla flora locale, creando un’atmosfera accogliente e rilassante. Un luogo dove la tradizione di Lumineth incontra la cura del benessere.
+                  </p>
+            </div> 
+      </div>
+    `;
+});
+
+negozi.addEventListener('click', () => {
+    content.innerHTML = `
+        <div class="row reset-margin d-flex"> 
+            <div class="col-6 reset-all">
+                  <img src="img/ricordi_Lumineth.jpg" alt="Ricordi di Lumineth" class="img-dome">
+            </div>
+
+            <div class="col-6 reset-padding">
+                  <h2 class="row reset-all">Ricordi di Lumineth</h2>
+                  <p class="row reset-all margin-top-50">All’interno della cupola di Lumineth, il negozio di Souvenir Ricordi di Lumineth offre oggetti unici per portare a casa la magia di questa terra straordinaria. Tra gli articoli disponibili ci sono gioielli ispirati alle rovine luminose, riproduzioni artigianali dei Nyxari e piume decorate degli Arboryx, oltre a candele bioluminescenti e tessuti realizzati con motivi della foresta. Ogni prodotto racconta una storia, creato da artisti locali con materiali sostenibili, per offrire un pezzo autentico del cuore pulsante di Lumineth. Perfetto per chi desidera un ricordo speciale di questo luogo incantato.
+                  </p>
+            </div> 
+      </div>
+    `;
+});
+    }
+    
 
 
 
