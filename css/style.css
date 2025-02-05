@@ -2225,3 +2225,14 @@ a .overlay{
     height: 760px;
     border-radius: 30px;
 }
+
+.xtx {
+    font-weight: bold;
+    font-family: panchang;
+    font-size: 48px;
+    color: var(--gg-ice-color);
+}
+
+.btn-primary:disabled{
+    background-color: #7d959b;
+}
