@@ -1946,6 +1946,12 @@ a .btn-primary:focus-visible {
 }
 
 
+.overlay-rent
+{
+    position: relative;
+    box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
+
+   }
 
 
 
