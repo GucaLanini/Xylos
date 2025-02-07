@@ -66,10 +66,12 @@
         </div>
 
 
-        <div class="row d-flex justify-content-center bottom-150 space-button-citypass"> 
+        <div class="row d-flex justify-content-center bottom-150 space-button-citypass">
+
             <a href="qrcode.html" class="btn btn-primary col-auto header-button justify-content-center body space-citypass">
-        Conferma
+                Conferma
             </a>
+            
         </div>
 
         
@@ -91,15 +93,15 @@
 
 Se quando inserite le pagine nel W3C Validator vi dà un WARNING di questo tipo: 
 
-Warning: This document appears to be written in Italian but the html start tag has lang="en". Consider using lang="it" (or variant) instead.
+<p> This document appears to be written in Italian but the html start tag has lang="en". Consider using lang="it" (or variant) instead.
 From line 1, column 16; to line 2, column 16
-TYPE html>↩<html lang="en">↩<head>
+TYPE html ↩ html lang="en" ↩</p>
 
 Vuol dire che la lingua del testo non è corretta è va cambiata. 
 
 Per cui:
 
-Da <html lang="en"> fate <html lang="it">
+Da "html lang="en" fate html lang="it".
 
 
 
