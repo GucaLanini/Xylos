@@ -24,10 +24,10 @@
 
     pins.forEach(pin => {
         pin.addEventListener("click", () => {
-            const nome_pin = pin.getAttribute("id");
+            const nome_pin = pin.getAttribute("data-name");
             popup.classList.toggle("popup-display");
             
-            const show = document.querySelectorAll(`[name="pu-${nome_pin}"]`);
+            const show = document.querySelectorAll(`[data-name="pu-${nome_pin}"]`);
             show.forEach(element => {
                 element.classList.toggle("card-pu-vis");
             });
