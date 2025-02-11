@@ -272,13 +272,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
     generateCalendar(currentDate);
 
-    /***** Gestione delle tariffe dinamiche *****/
+  /****SALVATAGGIO SELEZIONE****/
+  function saveSelection() {
+        const selectedDate = selectedDay ? selectedDay.textContent.trim() : null;
+        const selectedMonth = getMonthName(currentDate.getMonth());
+        const selectedYear = currentDate.getFullYear();
+        const selectedHour = selectedTime ? selectedTime.textContent.trim() : null;
 
+        if (selectedDate && selectedHour) {
+            const selectedData = {
+                date: `${selectedDate} ${selectedMonth} ${selectedYear}`,
+                time: selectedHour
+            };
+
+            localStorage.setItem('selectedData', JSON.stringify(selectedData));
+
+            console.log('Dati salvati:', selectedData);
+        } else {
+            console.warn('Seleziona sia una data che un orario.');
+        }
+    }
+
+    const timeOptions = document.querySelectorAll('.time-option');
+    timeOptions.forEach(time => {
+        time.addEventListener('click', () => {
+            if (selectedTime) {
+                selectedTime.classList.remove('selected');
+            }
+            time.classList.add('selected');
+            selectedTime = time;
+            saveSelection();
+        });
+    });
+
+    generateCalendar(currentDate);
+});
+
+/***TOTALE DINAMICO BIGLIETTI E PREZZO***/
+
+document.addEventListener('DOMContentLoaded', () => {
     const ticketPrices = {};
     const counters = document.querySelectorAll('.card-tariffs');
     const totalPriceElement = document.getElementById('total-price');
     const cityPassCheckbox = document.getElementById('cityPassCheckbox');
-    
 
     let totalPrice = 0;
    
@@ -350,8 +386,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Quantità e prezzi unitari dei biglietti salvati:', ticketPrices);
     console.log('Prezzo totale salvato:', totalPrice);
 }
-
-
 
 });
 
