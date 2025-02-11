@@ -840,8 +840,10 @@ p {
     
   }
   
-
-
+.filter-item {
+    display: flex;
+    align-items: center; 
+}
 
 .filter-item span {
     font-size: 28px;
