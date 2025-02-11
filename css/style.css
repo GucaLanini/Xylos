@@ -403,9 +403,9 @@ h3 {
     
 }
 
-.btn-primary {
+.btn-primary{
     font-family: panchang;
-    font-weight: 800PX;
+    font-weight: 600;
     color: var(--gg-bg-color);
     font-size: 28px;
     height: 117px;
@@ -501,7 +501,7 @@ h3 {
 
 p {
     font-family: chillax;
-    font-weight: 600px;
+    font-weight: 400;
     font-size: 24px;
     color: var(--gg-txt-color);
     text-align: left;
