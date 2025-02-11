@@ -85,16 +85,27 @@
 /***DATA E ORA**/
 
 
-     const selectedData = JSON.parse(localStorage.getItem('selectedData'));
+     const selectedData = JSON.parse(localStorage.getItem('selectedDate'));
 
 if (selectedData) {
     document.getElementById('selected-date').textContent = selectedData.date;
-} else {
-    document.getElementById('selection-result').textContent = "Nessuna data selezionata.";
 }
 
 
 /***BIGLIETTI***/
+
+
+const totalPrice = document.getElementById('summary-totalPrice');
+
+const savedPrice = localStorage.getItem('totalPrice');
+
+    if(savedPrice) {
+        totalPrice.textContent = parseFloat(savedPrice).toFixed(2);
+    
+    } else {
+        totalPrice.textContent = "0";
+    }
+
 
 
 const adultsData = localStorage.getItem('ticketPrices-adulti');
@@ -125,17 +136,9 @@ const adultsData = localStorage.getItem('ticketPrices-adulti');
         document.getElementById('summary-childrenTicket').textContent = "0€";
         document.getElementById('summary-seniorsTicket').textContent = "0€";
     }
-
-      /**PREZZO TOTALE**/
-
-      const totalPrice = JSON.parse(localStorage.getItem('totalPrice'))
-
-if (totalPrice) {
-    document.getElementById('summary-totalPrice').textContent = totalPrice
-}
-
-
 });
+
+
 
 </script>
     </body>

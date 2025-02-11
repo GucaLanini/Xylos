@@ -291,20 +291,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             console.warn('Seleziona sia una data che un orario.');
         }
+        saveSelection();
     }
-
-    const timeOptions = document.querySelectorAll('.time-option');
-    timeOptions.forEach(time => {
-        time.addEventListener('click', () => {
-            if (selectedTime) {
-                selectedTime.classList.remove('selected');
-            }
-            time.classList.add('selected');
-            selectedTime = time;
-            saveSelection();
-        });
-    });
-
     generateCalendar(currentDate);
 });
 
