@@ -1087,6 +1087,7 @@ p {
 .line {
     border-bottom: 5px solid var(--gg-deepblue-color);
     padding-bottom: 45px;
+    margin: 0px;
 }
 
 .space-40 {
