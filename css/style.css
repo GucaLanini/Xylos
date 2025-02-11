@@ -915,18 +915,6 @@ p {
 
 }
 
-/* .btn-primary-map{
-    font-family: panchang;
-    font-weight: medium;
-    color: var(--gg-bg-color);
-    font-size: 28px;
-    height: 117px;
-    width: 240px;
-    background-color: var(--gg-ice-color);
-    border-color: var(--gg-ice-color);
-    margin-left: 270px;
-} */
-
 .space-map{
     margin-bottom: 300px !important;
     align-items: flex-end;
