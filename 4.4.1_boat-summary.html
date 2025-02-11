@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css"> 
 </head>
 <body>
-    <div class="container-fluid header reset-padding bottom-150">    
+    <div class="container-fluid header reset-padding">    
 
         <div class="row justify-content-between reset-margin padding-100">
             
@@ -30,17 +30,20 @@
             <p class="line"><span id="summary-startSelection"></span> - <span id="summary-destinationSelection"></span></p>
         </div>
 
-        <div class="bottom-150" id="ticket-list">
+        <div class="bottom-150">
             <h3 class="h3-esperienza reset-padding">Numero di biglietti selezionati:</h3>
-            
-            <p class="col-1 reset-padding space-40"><span id="summary-adultsTicketNumber" class="bold-text"></span>x</p>
-            <p class="col-11 reset-padding space-40">Adulti</p>
-            
-            <p class="col-1 reset-padding space-40"><span id="summary-childrenTicketNumber" class="bold-text"></span>x</p>
-            <p class="col-11 reset-padding space-40">Bambini</p>
-            
-            <p class="col-1 line"><span id="summary-seniorsTicketNumber" class="bold-text"></span>x</p>
-            <p class="col-11 line">Over 65</p>
+            <div class="col-12 d-flex align-items-center">
+                <p class="col-1 reset-padding space-40"><span id="summary-adultsTicketNumber"></span>x</p>
+                <p class="col-11 reset-padding space-40">Adulti</p>
+            </div>
+            <div class="col-12 d-flex align-items-center">
+                <p class="col-1 reset-padding space-40"><span id="summary-childrenTicketNumber"></span>x</p>
+                <p class="col-11 reset-padding space-40">Bambini</p>
+            </div>
+            <div class="col-12 d-flex align-items-cente line">
+                <p class="col-1 reset-padding space-40"><span id="summary-seniorsTicketNumber"></span>x</p>
+                <p class="col-11 reset-padding space-40">Over 65</p>
+            </div>
         </div>
 
         <div class="bottom-150">
@@ -70,13 +73,12 @@
         </div>
     </div>
 
-    <div class="space-430"> </div>
 
 
 
 
     <div class="row d-flex justify-content-center bottom-150 space-button-citypass"> 
-        <a href="qrcode.html" class="btn btn-primary col-auto header-button justify-content-center body space-citypass">
+        <a href="qrcode.html" class="btn btn-primary col-auto header-button justify-content-center">
     Conferma
         </a>
     </div>

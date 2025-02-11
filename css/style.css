@@ -1379,8 +1379,8 @@ padding-left: 0 !important;
     margin-bottom: 0px;
     background-color: var(--gg-bg-color);
     border: 5px solid var(--gg-deepblue-color); /*,*/
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 
 .dropdown-item-route{
