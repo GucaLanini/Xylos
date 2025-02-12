@@ -780,38 +780,6 @@ p {
 
 /****MAP****/
 /*search bar*/
-.dropdown-map {
-    display: flex;
-    align-items: center;
-    background-color: var(--gg-deepblue-color);
-    width: 1400px;
-    height: 86px;
-    border-radius: 15px;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
-  
-.search-input {
-    flex: 1;
-    border: none;
-    background: none;
-    outline: none;
-    font-size: 40px;
-    color: var(--gg-txt-color);
-    font-family: Chillax;
-    font-weight: 500; /*medium*/
-    margin-left: 95px;
-  }
-
-.search-input::placeholder {
-    color: var(--gg-txt-color);
-  }
-
-.space-bar {
-    margin-bottom: 311px;
-}
-
-
 .map-container {
     display: flex;
     justify-content: center;
@@ -822,8 +790,16 @@ p {
     margin-top: 60px;
 }
 
-/*filtro*/
+.span-map {
+    font-size: 28px;
+    font-family: chillax;
+    font-weight: 500; /*medium*/
+    color: var(--gg-txt-color);
+    margin-left: 35px;
+    text-align: center;    
+}
 
+/*filtro*/
 .filter{
     position: fixed;
     bottom: 315px;
@@ -845,15 +821,6 @@ p {
     display: flex;
     align-items: center; 
 }
-
-.filter-item span {
-    font-size: 28px;
-    font-family: chillax;
-    font-weight: 500; /*medium*/
-    color: var(--gg-txt-color);
-    margin-left: 35px;
-    text-align: center;
-}
   
 .filter-item.active img {
     filter: none;
@@ -864,10 +831,7 @@ p {
     opacity: 1;
 }
 
-
-
 /*pop up*/
-
 .card-pop-up {
     display: none;
     position: fixed;
