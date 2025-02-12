@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let totalPrice = 0;
    
     counters.forEach(counter => {
-        const category = counter.querySelector('h3').textContent.toLowerCase();
+        const category = counter.querySelector('h3').textContent.toLowerCase().replace(/[\s-]/g, "");
         const unitPrice = parseFloat(counter.dataset.unitPrice);
         const counterElement = counter.querySelector('.number');
         const minusButton = counter.querySelector('.minus');
