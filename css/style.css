@@ -1799,12 +1799,17 @@ padding-left: 0 !important;
     margin-top: 345px;
 }
 
-a .btn-primary:active,
+/*a .btn-primary:active,
 a .btn-primary:focus, 
 a .btn-primary:focus-visible {
     background-color:var(--gg-deepblue-color) !important ;
-}
+}*/
 
+.btn-primary:active,
+.btn-primary:focus, 
+.btn-primary:focus-visible {
+    background-color:var(--gg-deepblue-color) !important ;
+}
 
 .e-low{
     height: 700px;
@@ -2105,3 +2110,9 @@ a .overlay{
 .btn-primary:disabled{
     background-color: #7d959b;
 }
+/*
+.btn-primary:disabled{
+    background-color: var(--gg-ice-color);
+    border-color: var(--gg-ice-color);
+    color: var(--gg-bg-color);
+}*/
