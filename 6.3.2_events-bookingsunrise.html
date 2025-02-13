@@ -93,54 +93,46 @@
 <script>
 
 document.addEventListener('DOMContentLoaded', () => {
-    const ticketPrices = {};
+    const ticketPrices = {}; 
     const counters = document.querySelectorAll('.event-cards');
 
-    function loadCountersFromLocalStorage() {
-        counters.forEach(counter => {
-            const category = counter.querySelector('h3').textContent.toLowerCase();
-            const savedData = JSON.parse(localStorage.getItem(`ticketPrices-${category}`));
-            const counterElement = counter.querySelector('.number');
-
-            if (savedData) {
-                ticketPrices[category] = { quantity: savedData.quantity };
-                counterElement.textContent = savedData.quantity;
-            } else {
-                ticketPrices[category] = { quantity: 0 };
-            }
-        });
-    }
-
-    function saveEventToLocalStorage() {
-        Object.keys(ticketPrices).forEach(category => {
-            const data = { quantity: ticketPrices[category].quantity };
-            localStorage.setItem(`ticketPrices-${category}`, JSON.stringify(data));
-        });
-
-        console.log('Quantità salvate nel localStorage:', ticketPrices);
-    }
-
     counters.forEach(counter => {
-        const category = counter.querySelector('h3').textContent.toLowerCase();
+        const category = counter.querySelector('h3').textContent.toLowerCase().replace(/[\s-]/g, "");
         const counterElement = counter.querySelector('.number');
         const minusButton = counter.querySelector('.minus');
         const plusButton = counter.querySelector('.plus');
+
+        ticketPrices[category] = {
+            quantity: 0,
+        };
+        
+        counterElement.textContent = ticketPrices[category].quantity;
 
         minusButton.addEventListener('click', () => {
             if (ticketPrices[category].quantity > 0) {
                 ticketPrices[category].quantity--;
                 counterElement.textContent = ticketPrices[category].quantity;
-                saveEventToLocalStorage();
+                saveEventToLocalStorage(); 
             }
         });
 
         plusButton.addEventListener('click', () => {
             ticketPrices[category].quantity++;
             counterElement.textContent = ticketPrices[category].quantity;
-            saveEventToLocalStorage();
+            saveEventToLocalStorage(); 
         });
     });
 
+    function saveEventToLocalStorage() {
+        Object.keys(ticketPrices).forEach(category => {
+            const data = {
+                quantity: ticketPrices[category].quantity,
+            };
+            localStorage.setItem(`ticketEvents${category}`, JSON.stringify(data));
+        });
+
+        console.log('Quantità salvate nel localStorage:', ticketPrices);
+    }
 });
 
 </script>

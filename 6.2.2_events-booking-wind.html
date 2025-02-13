@@ -97,42 +97,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.event-cards');
 
     counters.forEach(counter => {
-        const category = counter.querySelector('h3').textContent.toLowerCase().trim(); // Rimuovi gli spazi e usa il testo della categoria
+        const category = counter.querySelector('h3').textContent.toLowerCase().replace(/[\s-]/g, "");
         const counterElement = counter.querySelector('.number');
         const minusButton = counter.querySelector('.minus');
         const plusButton = counter.querySelector('.plus');
 
-        // Inizializza la quantità a zero per ogni categoria
         ticketPrices[category] = {
             quantity: 0,
         };
         
-        // Imposta il contatore a 0 all'inizio
         counterElement.textContent = ticketPrices[category].quantity;
 
         minusButton.addEventListener('click', () => {
             if (ticketPrices[category].quantity > 0) {
                 ticketPrices[category].quantity--;
                 counterElement.textContent = ticketPrices[category].quantity;
-                saveEventToLocalStorage(); // Salva i dati ogni volta che cambia la quantità
+                saveEventToLocalStorage(); 
             }
         });
 
         plusButton.addEventListener('click', () => {
             ticketPrices[category].quantity++;
             counterElement.textContent = ticketPrices[category].quantity;
-            saveEventToLocalStorage(); // Salva i dati ogni volta che cambia la quantità
+            saveEventToLocalStorage(); 
         });
     });
 
-    // Funzione per salvare i dati nel localStorage
     function saveEventToLocalStorage() {
         Object.keys(ticketPrices).forEach(category => {
             const data = {
                 quantity: ticketPrices[category].quantity,
             };
-            // Salva nel localStorage per ogni categoria separatamente
-            localStorage.setItem(`ticketEvents-${category}`, JSON.stringify(data));
+            localStorage.setItem(`ticketEvents${category}`, JSON.stringify(data));
         });
 
         console.log('Quantità salvate nel localStorage:', ticketPrices);

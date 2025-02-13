@@ -368,7 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.dropdown-item').forEach(item => {
         item.addEventListener('click', function (event) {
-            event.stopPropagation();
+            event.stopPropagation(); // Impedisce la chiusura del dropdown
         });
     });
 
@@ -394,12 +394,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.card-tariffs');
     const totalPriceElement = document.getElementById('total-price');
     const cityPassCheckbox = document.getElementById('cityPassCheckbox');
-    
 
     let totalPrice = 0;
    
     counters.forEach(counter => {
-        const category = counter.querySelector('h3').textContent.toLowerCase();
+        const category = counter.querySelector('h3').textContent.toLowerCase().replace(/[\s-]/g, "");
         const unitPrice = parseFloat(counter.dataset.unitPrice);
         const counterElement = counter.querySelector('.number');
         const minusButton = counter.querySelector('.minus');
@@ -458,7 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
             quantity: ticketPrices[category].quantity,
             unitPrice: ticketPrices[category].unitPrice, 
         };
-        localStorage.setItem(`ticketPrices-${category}`, JSON.stringify(data)); 
+        localStorage.setItem(`ticketPrices${category}`, JSON.stringify(data)); 
     });
 
     localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
