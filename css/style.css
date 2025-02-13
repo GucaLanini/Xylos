@@ -664,6 +664,10 @@ p {
     margin-top: 300px;
 }
 
+.space-1580 {
+    margin: 1582px 0px 0px 0px;
+}
+
 /*Qrcode*/ 
 .p-qrcode {
     font-size: 48px;
