@@ -111,9 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
         adultsTicketPriceElement.textContent = "0€";
     }
 
-    if (ticketPrices.bambini) {
-        childrenTicketNumberElement.textContent = ticketPrices.bambini.quantity || 0;
-        childrenTicketPriceElement.textContent = `${(ticketPrices.bambini.unitPrice * ticketPrices.bambini.quantity).toFixed(2)}€`;
+    if (ticketPrices.bambini412) {
+        childrenTicketNumberElement.textContent = ticketPrices.bambini412.quantity || 0;
+        childrenTicketPriceElement.textContent = `${(ticketPrices.bambini412.unitPrice * ticketPrices.bambini412.quantity).toFixed(2)}€`;
     } else {
         childrenTicketNumberElement.textContent = "0";
         childrenTicketPriceElement.textContent = "0€";
