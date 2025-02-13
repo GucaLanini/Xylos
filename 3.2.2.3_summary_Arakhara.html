@@ -83,7 +83,10 @@
 <script>
  document.addEventListener('DOMContentLoaded', () => {
     const selectedData = JSON.parse(localStorage.getItem('selectedData')) || {};
-    const ticketPrices = JSON.parse(localStorage.getItem('ticketPrices')) || {};
+    const ticketPricesadulti = JSON.parse(localStorage.getItem('ticketPricesadulti')) || {};
+    const ticketPricesbambini412 = JSON.parse(localStorage.getItem('ticketPricesbambini412')) || {};
+    const ticketPricesover65 = JSON.parse(localStorage.getItem('ticketPricesover65')) || {};
+
     const totalPrice = JSON.parse(localStorage.getItem('totalPrice')) || 0;
 
     const selectedDateElement = document.getElementById('selected-date');
@@ -104,25 +107,25 @@
         selectedTimeElement.textContent = "Nessuna ora selezionata";
     }
 
-    if (ticketPrices.adulti) {
-        adultsTicketNumberElement.textContent = ticketPrices.adulti.quantity || 0;
-        adultsTicketPriceElement.textContent = `${(ticketPrices.adulti.unitPrice * ticketPrices.adulti.quantity).toFixed(2)}€`;
+    if (ticketPricesadulti) {
+        adultsTicketNumberElement.textContent = ticketPricesadulti.quantity || 0;
+        adultsTicketPriceElement.textContent = `${(ticketPricesadulti.unitPrice * ticketPricesadulti.quantity).toFixed(2)}€`;
     } else {
         adultsTicketNumberElement.textContent = "0";
         adultsTicketPriceElement.textContent = "0€";
     }
 
-    if (ticketPrices.bambini412) {
-        childrenTicketNumberElement.textContent = ticketPrices.bambini412.quantity || 0;
-        childrenTicketPriceElement.textContent = `${(ticketPrices.bambini412.unitPrice * ticketPrices.bambini412.quantity).toFixed(2)}€`;
+    if (ticketPricesbambini412) {
+        childrenTicketNumberElement.textContent = ticketPricesbambini412.quantity || 0;
+        childrenTicketPriceElement.textContent = `${(ticketPricesbambini412.unitPrice * ticketPricesbambini412.quantity).toFixed(2)}€`;
     } else {
         childrenTicketNumberElement.textContent = "0";
         childrenTicketPriceElement.textContent = "0€";
     }
 
-    if (ticketPrices.over65) {
-        seniorsTicketNumberElement.textContent = ticketPrices.over65.quantity || 0;
-        seniorsTicketPriceElement.textContent = `${(ticketPrices.over65.unitPrice * ticketPrices.over65.quantity).toFixed(2)}€`;
+    if (ticketPricesover65) {
+        seniorsTicketNumberElement.textContent = ticketPricesover65.quantity || 0;
+        seniorsTicketPriceElement.textContent = `${(ticketPricesover65.unitPrice * ticketPricesover65.quantity).toFixed(2)}€`;
     } else {
         seniorsTicketNumberElement.textContent = "0";
         seniorsTicketPriceElement.textContent = "0€";
