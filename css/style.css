@@ -77,6 +77,10 @@ h3 {
     margin-top:20px;
 }
 
+.tty-cross{
+    margin-top:90px;
+}
+
 .margin-y-70{
     margin: 70px 0;
 }
@@ -735,12 +739,12 @@ p {
     margin-bottom: 90px;
 }
 
-.bottom-265 {
-    margin: 0px 0px 265px 0px;
+.bottom-260 {
+    margin: 0px 0px 260px 0px;
 }
 
-.bottom-300 {
-    margin: 0px 0px 300px 0px;
+.bottom-200 {
+    margin: 0px 0px 200px 0px;
 }
 
 .margin-b-transports {
@@ -774,12 +778,16 @@ p {
     margin: 0px 0px 180px 0px;
 }
 
-.space-750 {
-    margin: 0px 0px 750px 0px;    
+.space-590 {
+    margin: 0px 0px 590px 0px;    
 }
 
 .space-h2 {
     margin-bottom: 225px;
+}
+
+.bottom-180 {
+    margin-bottom: 180px;    
 }
 
 /****MAP****/
