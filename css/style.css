@@ -1,7 +1,19 @@
 @charset "UTF-8";
 /* CSS Document */
 
+@font-face {
+    font-family: chillax;
+    src: url(font/Chillax-Bold.otf) format('otf');
+    src: url(font/Chillax-Extralight.otf) format('otf');
+    src: url(font/Chillax-bold.otf) format('otf');
+    src: url(font/Chillax-Light.otf) format('otf');
+    src: url(font/Chillax-Variable.otf) format('otf');
+    src: url(font/Panchang-Bold.otf) format('otf');
+    src: url(font/Panchang-Extrabold.otf) format('otf');
+    src: url(font/Panchang-Regular.otf) format('otf');
+    src: url(font/Panchang-Variable.otf) format('otf');
 
+}
 
 /******MODIFICHE GENERALI*****/
 *{
@@ -33,6 +45,8 @@
 
 body {
     background-color: var(--gg-bg-color);
+    font-family: chillax, panchang, sans-serif;
+
 }
 
 a {
