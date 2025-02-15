@@ -42,11 +42,9 @@
     margin: 0 !important;
 }
 
-
 body {
     background-color: var(--gg-bg-color);
     font-family: chillax, panchang, sans-serif;
-
 }
 
 a {
@@ -81,8 +79,8 @@ h3 {
 .header{
     text-align: center;
     margin-top: 150px !important;
-
 }
+
 .body{
     margin: 100px 0px 0px 0px;
 }
@@ -153,7 +151,6 @@ h3 {
 }
 
 /*****EXPERIENCES****/
-
 .space-experiences {
     margin-bottom: 450px;
 }
@@ -294,7 +291,7 @@ h3 {
     opacity: 0.3; 
     border-radius: 50px;
     z-index: 1; 
-  }
+}
 
 .card-img-overlay {
     z-index: 2;
@@ -321,7 +318,6 @@ h3 {
     z-index: 2; 
 }
 
-  
 .footer {
     position: fixed;
     bottom: 0; 
@@ -418,8 +414,7 @@ h3 {
 /* specifiche del menu*/
 .header-button{
     padding: 0px;
-    display: flex;
-    
+    display: flex;  
 }
 
 .btn-primary{
@@ -559,7 +554,6 @@ p {
 }
 
 /*Galleria*/
-
 .card-1 {
     height: 560px;
     width: 505px;
@@ -680,11 +674,15 @@ p {
 }
 
 .booking-btn {
-    margin-top: 300px;
+    margin-top: 400px;
 }
 
 .space-1580 {
     margin: 1582px 0px 0px 0px;
+}
+
+.top-90 {
+    margin: 90px 0px 0px 0px;
 }
 
 /*Qrcode*/ 
@@ -725,12 +723,13 @@ p {
     margin: 0px 0px 100px 0px;
     box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
     border-radius: 50px;
-  }
+}
 
 .small-box:active{
     box-shadow: inset 0px 0px 90px 0px var(--gg-ice-color);
     border-color: var(--gg-ice-color);
 }
+
 .h2-transport {
     font-weight: bold;
     font-size: 48px;
@@ -806,7 +805,6 @@ p {
 }
 
 /****MAP****/
-/*search bar*/
 .map-container {
     display: flex;
     justify-content: center;
@@ -904,7 +902,6 @@ p {
 .p_map {
     text-align: justify;
     margin-top: 30px !important;
-
 }
 
 .space-map{
@@ -915,7 +912,6 @@ p {
 .card-title-popup {
     font-weight: bold;
     width: 604px;
-
 }
 
 .cross {
@@ -1113,7 +1109,6 @@ padding-left: 0 !important;
 
 
 /*INDEX*/ 
-
 .video-background {
     position: fixed;
     top: 0;
@@ -1133,7 +1128,7 @@ padding-left: 0 !important;
     background-color: var(--gg-bg-color);
     opacity: 0.6; 
     z-index: -1; 
-  }
+}
 
 .topindex {
     display: flex;
@@ -1150,7 +1145,6 @@ padding-left: 0 !important;
     justify-content: space-between;
     padding: 0px 100px; 
 }
-
 
 .btn-accessibility{
     height: 124px;
@@ -1190,9 +1184,7 @@ padding-left: 0 !important;
     background-color: var(--gg-bg-color); 
 }
 
-
 /* EVENTS */
-
 .small-card-e{
     height: 1110px;
     width: 820px;
@@ -1229,24 +1221,19 @@ padding-left: 0 !important;
     z-index: 1; 
 }
 
-
 .pudding{
    padding-left: 40px;
    padding-bottom: 20px;
 }
 
-
 /* bagliori celesti */
-
 .card-text {
   text-align: justify;
 }
 
-
 /***BOAT-TRAIN***/
 .b-radius{
-    border-radius: 30px;
-     
+    border-radius: 30px;  
 }
 
 .dropdown-toggle::after{
@@ -1293,7 +1280,6 @@ padding-left: 0 !important;
     color: var(--gg-bg-color)
 }
 
-
 .dropdown-item-route:hover{
     background-color: var(--gg-ice-color);
 }
@@ -1302,7 +1288,6 @@ padding-left: 0 !important;
     color: var(--gg-bg-color)
 }
 
-  
 .zone-selection{
     height: 100px;
     margin-top: 50px;
@@ -1349,7 +1334,6 @@ padding-left: 0 !important;
 .m-bottom-100{
     margin-bottom: 100px;
 }
-
 
 /*create your travel*/
 .body-create-travel {
@@ -1410,12 +1394,9 @@ padding-left: 0 !important;
     align-items: center;
 }
 
-
-
 .option-box:hover {
     border: 5px solid var(--gg-txt-color);
     box-shadow: inset 0px 0px 50px 0px var(--gg-txt-color);
-
 } 
 
 .option-box.selected {
@@ -1435,11 +1416,9 @@ padding-left: 0 !important;
     font-weight: lighter;
     text-transform: uppercase;
     text-align: center; 
-
 }
 
 /* Dots Navigation */
-
 .dots-navigation {
     margin-top: 874px;
 }
@@ -1467,22 +1446,18 @@ padding-left: 0 !important;
     border-radius: 50%;
     margin-left: 50px;
     transition: background 0.3s;
-
 }
 
 .dot-first {
-
     display: inline-block;
     width: 50px;
     height: 50px;
     background: #011fe166;
     border-radius: 50%;
     transition: background 0.3s;
-
 }
 
 .button-create {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1490,8 +1465,6 @@ padding-left: 0 !important;
 }
 
 /* 5.5_space-shuttle.html*/
-
-
 .box-shuttle {
     margin-top: 100px !important;
     margin-left: 100px !important;
@@ -1518,11 +1491,9 @@ padding-left: 0 !important;
     padding-bottom: 20px;
     padding-left: 0;
     padding-right: 0;
-
 }
 
 .box-text {
-   
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
@@ -1535,22 +1506,16 @@ padding-left: 0 !important;
     font-family: Panchang;
     padding:0px 60px;
     align-items: center;
-    
-
 }
 
  /* 4.1.1_your_travel */
-
 .title-travel {
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
 }
 
  .style-title-travel {
-
     font-family: Panchang;
     font-size: 48px;
     font-weight: bolder;
@@ -1565,21 +1530,17 @@ padding-left: 0 !important;
  }
 
  .border-button-travel {
-
     border-radius: 15px;
  }
 
- .style-title-experience-travel {
-    
+ .style-title-experience-travel {   
     font-family: Panchang;
     font-size: 24px;
     font-weight: bold;
     color: #F1F1E6;
-
  }
 
  .body-travel {
-
     font-family: Chillax;
     font-size: 24px;
     font-weight: normal;
@@ -1587,7 +1548,6 @@ padding-left: 0 !important;
  }
 
  .body-bold-travel {
-
     font-family: Chillax;
     font-size: 24px;
     font-weight: 400;
@@ -1607,7 +1567,6 @@ padding-left: 0 !important;
     margin-left:100px;
     margin-top: 50px;
     margin-bottom: 200px;
-
  }
 
  .card-travel {
@@ -1622,34 +1581,27 @@ padding-left: 0 !important;
     align-items: center;
     margin-top: 50px;
     margin-bottom: 200px;
-
  }
 
  .card-content-travel {
     margin-top: 52px;
     margin-left: 52px;
     margin-bottom: 52px;
-    margin-right: 52px;
-    
+    margin-right: 52px;   
  }
 
  .card-title-travel {
-
     margin:0px;
     text-align:center;
-    white-space: nowrap; /* Impedisce l'andata a capo del testo */
-    
-
+    white-space: nowrap; 
  }
 
  .box-title-travel {
     display: flex;
-    align-items: center; /* Allinea verticalmente l'SVG e il titolo */
+    align-items: center; 
     margin: 0px;
     gap:34px;
  }
-
-
 
  .svg-travel {
    margin:0px;
@@ -1659,8 +1611,7 @@ padding-left: 0 !important;
 
  .time-travel {
     margin-top: 30px;
-    text-align: center;
-    
+    text-align: center;   
  }
 
  .text-travel {
@@ -1669,14 +1620,12 @@ padding-left: 0 !important;
     text-align: left;
     width: 406px;
     height: 166px;
-
  }
 
  .box-svg-price-travel {
     display:flex;
     align-items: center;
-    gap:63px;
-    
+    gap:63px;    
  }
 
  .box-svg-travel {
@@ -1684,17 +1633,16 @@ padding-left: 0 !important;
  }
 
  .box-svg-price-travel:nth-of-type(1) {
-    margin-bottom: 52px; /* Spazio di 50px sotto il primo elemento */
+    margin-bottom: 52px; 
 }
 
 .box-svg-price-travel:nth-of-type(2) {
-    margin-bottom: 52px; /* Spazio di 50px sotto il secondo elemento */
+    margin-bottom: 52px; 
 }
 
 .svg-price-first-travel {
    margin:0px;
-    display: flex; /* Garantisce che l'SVG mantenga il layout */
-    
+    display: flex;    
  }
 
  .svg-price-travel {
@@ -1702,15 +1650,12 @@ padding-left: 0 !important;
     display: flex;
  }
 
-
  .cards-container-travel {
    display: flex;
    gap: 57px;
  }
 
-
 /* 4.1.3_booking */
-
 .margin-button {
     margin-top: 300px;
 }
@@ -1783,7 +1728,6 @@ padding-left: 0 !important;
     display: none;
 }
 
-
 .timespan.selected{
     background-color: transparent;
     box-shadow: inset 0px 0px 90px 0px var(--gg-ice-color)
@@ -1792,23 +1736,19 @@ padding-left: 0 !important;
 @media only screen and (min-width: 1891px) {
     .totem-content {
         display: none;
-    } 
-    
+    }     
     .companion-content {
         display: block;
     }
 }
 
-
 @media only screen and (max-width: 1890px) {
     .totem-content {
         display: block;
-    } 
-    
+    }    
     .companion-content {
         display: none;
-    }
-    
+    } 
 }
 
 .space-train {
@@ -1822,12 +1762,6 @@ padding-left: 0 !important;
 .space-button-citypass{
     margin-top: 345px;
 }
-
-/*a .btn-primary:active,
-a .btn-primary:focus, 
-a .btn-primary:focus-visible {
-    background-color:var(--gg-deepblue-color) !important ;
-}*/
 
 .btn-primary:active,
 .btn-primary:focus, 
@@ -1850,7 +1784,6 @@ a .btn-primary:focus-visible {
 
 .zona{
     fill: #040222;
-    
 }
 
 .superstroke{
@@ -1876,7 +1809,6 @@ a .btn-primary:focus-visible {
 .pin-vis-area{
     display: flex !important;
     fill: rgba(0, 0, 0, 0);
-
 }
 
 .exit{
@@ -1887,24 +1819,17 @@ a .btn-primary:focus-visible {
 .pin-vis-icon{
     display: flex !important;
     fill: rgba(0, 0, 0, 0);
-
 }
-
-
-
 
 .dim{
     height: 130px !important;
     border-radius: 15px !important;
     box-shadow: inset 0px 0px 70px 0px var(--gg-deepblue-color) !important;
-
 }
-
 
 .dim:active,
 .dim:focus{
     box-shadow: inset 0px 0px 70px 0px var(--gg-ice-color) !important;
-
 }
 
 .margin-right-15{
@@ -1952,7 +1877,6 @@ a .overlay{
     margin-bottom: 50px !important; 
 }
 
-
 .up {
     height: 1030px;
     width: 100%;
@@ -1987,25 +1911,20 @@ a .overlay{
     height: 50px;
     width: 50px;
     margin-right: 30px !important;
-
 }
 
 .form-check-input:checked {
     background-color: var(--gg-deepblue-color);
 }
 
-
 .reverse-link{
     height: 117px;
     width: 240px;
 }
 
-
 .event-cont{
     text-align: left !important ;
 }
-/* ------------------------------------------------------- */
-/* ------------------------------------------------------- */
 
 /* CUPOLA */
 .margin-top-50 {
@@ -2024,13 +1943,3 @@ a .overlay{
     font-size: 48px;
     color: var(--gg-ice-color);
 }
-
-.btn-primary:disabled{
-    background-color: #7d959b;
-}
-/*
-.btn-primary:disabled{
-    background-color: var(--gg-ice-color);
-    border-color: var(--gg-ice-color);
-    color: var(--gg-bg-color);
-}*/
