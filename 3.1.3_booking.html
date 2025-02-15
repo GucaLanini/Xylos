@@ -272,18 +272,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     generateCalendar(currentDate);
 
-    /***** Gestione delle tariffe dinamiche *****/
+  /****SALVATAGGIO SELEZIONE****/
+  function saveSelection() {
+        const selectedDate = selectedDay ? selectedDay.textContent.trim() : null;
+        const selectedMonth = getMonthName(currentDate.getMonth());
+        const selectedYear = currentDate.getFullYear();
+        const selectedHour = selectedTime ? selectedTime.textContent.trim() : null;
 
+        if (selectedDate && selectedHour) {
+            const selectedData = {
+                date: `${selectedDate} ${selectedMonth} ${selectedYear}`,
+                time: selectedHour
+            };
+
+            localStorage.setItem('selectedData', JSON.stringify(selectedData));
+
+            console.log('Dati salvati:', selectedData);
+        } else {
+            console.warn('Seleziona sia una data che un orario.');
+        }
+        saveSelection();
+    }
+    generateCalendar(currentDate);
+});
+
+/***TOTALE DINAMICO BIGLIETTI E PREZZO***/
+
+document.addEventListener('DOMContentLoaded', () => {
     const ticketPrices = {};
     const counters = document.querySelectorAll('.card-tariffs');
     const totalPriceElement = document.getElementById('total-price');
     const cityPassCheckbox = document.getElementById('cityPassCheckbox');
-    
 
     let totalPrice = 0;
    
     counters.forEach(counter => {
-        const category = counter.querySelector('h3').textContent.toLowerCase();
+        const category = counter.querySelector('h3').textContent.toLowerCase().replace(/[\s-]/g, "");
         const unitPrice = parseFloat(counter.dataset.unitPrice);
         const counterElement = counter.querySelector('.number');
         const minusButton = counter.querySelector('.minus');
@@ -342,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
             quantity: ticketPrices[category].quantity,
             unitPrice: ticketPrices[category].unitPrice, 
         };
-        localStorage.setItem(`ticketPrices-${category}`, JSON.stringify(data)); 
+        localStorage.setItem(`ticketPrices${category}`, JSON.stringify(data)); 
     });
 
     localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
@@ -350,8 +374,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Quantità e prezzi unitari dei biglietti salvati:', ticketPrices);
     console.log('Prezzo totale salvato:', totalPrice);
 }
-
-
 
 });
 

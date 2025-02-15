@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css"> 
 </head>
 <body>
-    <div class="container-fluid header reset-padding bottom-150">    
+    <div class="container-fluid header reset-padding">    
 
         <div class="row justify-content-between reset-margin padding-100">
             
@@ -30,33 +30,36 @@
             <p class="line"><span id="summary-startSelection"></span> - <span id="summary-destinationSelection"></span></p>
         </div>
 
-        <div class="bottom-150" id="ticket-list">
+        <div class="bottom-150">
             <h3 class="h3-esperienza reset-padding">Numero di biglietti selezionati:</h3>
-            
-            <p class="col-1 reset-padding space-40"><span id="summary-adultsTicketNumber" class="bold-text"></span>x</p>
-            <p class="col-11 reset-padding space-40">Adulti</p>
-            
-            <p class="col-1 reset-padding space-40"><span id="summary-childrenTicketNumber" class="bold-text"></span>x</p>
-            <p class="col-11 reset-padding space-40">Bambini</p>
-            
-            <p class="col-1 line"><span id="summary-seniorsTicketNumber" class="bold-text"></span>x</p>
-            <p class="col-11 line">Over 65</p>
+            <div class="col-12 d-flex align-items-center">
+                <p class="col-1 reset-padding space-40"><span id="summary-adultsTicketNumber"></span>x</p>
+                <p class="col-11 reset-padding space-40">Adulti</p>
+            </div>
+            <div class="col-12 d-flex align-items-center">
+                <p class="col-1 reset-padding space-40"><span id="summary-childrenTicketNumber"></span>x</p>
+                <p class="col-11 reset-padding space-40">Bambini</p>
+            </div>
+            <div class="col-12 d-flex align-items-cente line">
+                <p class="col-1 reset-padding space-40"><span id="summary-seniorsTicketNumber"></span>x</p>
+                <p class="col-11 reset-padding space-40">Over 65</p>
+            </div>
         </div>
 
         <div class="bottom-150">
             <h3 class="h3-esperienza">Giorno e ora selezionata:</h3>
-            <p class="space-40">Giorno: <span id="selected-date" class="bold-text"></span></p>
-            <p class="line">Ora: <span id="selected-time" class="bold-text"></span></p>
+            <p class="space-40"><strong>Giorno:</strong> <span id="selected-date"></span></p>
+            <p class="line"><strong>Ora:</strong> <span id="selected-time"></span></p>
         </div>
 
         <div class="bottom-150">
             <h3 class="h3-esperienza reset-padding">Tariffa:</h3>
             
-            <p class="col reset-padding space-40">Adulti: <span id="summary-adultsTicketPrice" class="bold-text"></span></p>
+            <p class="col reset-padding space-40"><strong>Adulti:</strong> <span id="summary-adultsTicketPrice"></span></p>
             
-            <p class="col reset-padding space-40">Bambini: <span id="summary-childrenTicketPrice" class="bold-text"></span></p>
+            <p class="col reset-padding space-40"><strong>Bambini:</strong> <span id="summary-childrenTicketPrice"></span></p>
             
-            <p class="col line">Over 65: <span id="summary-seniorsTicketPrice" class="bold-text"></span></p>
+            <p class="col line"><strong>Over 65:</strong> <span id="summary-seniorsTicketPrice"></span></p>
         </div>
 
         <div class="bottom-150">
@@ -66,17 +69,16 @@
 
         <div>
             <h3 class="h3-esperienza">Prezzo totale:</h3>
-            <p class="line"><span id="summary-totalPrice" class="bold-text"></span>€</p>
+            <p class="line"><span id="summary-totalPrice"></span>€</p>
         </div>
     </div>
 
-    <div class="space-430"> </div>
 
 
 
 
     <div class="row d-flex justify-content-center bottom-150 space-button-citypass"> 
-        <a href="qrcode.html" class="btn btn-primary col-auto header-button justify-content-center body space-citypass">
+        <a href="qrcode.html" class="btn btn-primary col-auto header-button justify-content-center">
     Conferma
         </a>
     </div>
@@ -125,50 +127,56 @@ if (selectedData) {
         console.error("Gli elementi HTML per mostrare i dati non sono stati trovati.");
     }
 
+    const ticketPricesadulti = JSON.parse(localStorage.getItem('ticketPricesadulti')) || {};
+    const ticketPricesbambini412 = JSON.parse(localStorage.getItem('ticketPricesbambini412')) || {};
+    const ticketPricesover65 = JSON.parse(localStorage.getItem('ticketPricesover65')) || {};
 
-/***PREZZO TOTALE***/
+    const totalPrice = JSON.parse(localStorage.getItem('totalPrice')) || 0;
 
-const totalPrice = document.getElementById('summary-totalPrice');
+    const selectedDateElement = document.getElementById('selected-date');
+    const selectedTimeElement = document.getElementById('selected-time');
+    const adultsTicketNumberElement = document.getElementById('summary-adultsTicketNumber');
+    const childrenTicketNumberElement = document.getElementById('summary-childrenTicketNumber');
+    const seniorsTicketNumberElement = document.getElementById('summary-seniorsTicketNumber');
+    const adultsTicketPriceElement = document.getElementById('summary-adultsTicketPrice');
+    const childrenTicketPriceElement = document.getElementById('summary-childrenTicketPrice');
+    const seniorsTicketPriceElement = document.getElementById('summary-seniorsTicketPrice');
+    const totalPriceElement = document.getElementById('summary-totalPrice');
 
-const savedPrice = localStorage.getItem('totalPrice');
-
-    if(savedPrice) {
-        totalPrice.textContent = parseFloat(savedPrice).toFixed(2);
-    
+    if (selectedData.date && selectedData.time) {
+        selectedDateElement.textContent = selectedData.date;
+        selectedTimeElement.textContent = selectedData.time;
     } else {
-        totalPrice.textContent = "0";
+        selectedDateElement.textContent = "Nessuna data selezionata";
+        selectedTimeElement.textContent = "Nessuna ora selezionata";
     }
 
-
-
-const adultsData = localStorage.getItem('ticketPrices-adulti');
-    const childrenData = localStorage.getItem('ticketPrices-bambini 4-12');
-    const seniorsData = localStorage.getItem('ticketPrices-over 65');
-
-    if (adultsData && childrenData && seniorsData) {
-        const adults = JSON.parse(adultsData);
-        const children = JSON.parse(childrenData);
-        const seniors = JSON.parse(seniorsData);
-
-        document.getElementById('summary-adultsTicketNumber').textContent = adults.quantity || 0;
-        document.getElementById('summary-childrenTicketNumber').textContent = children.quantity || 0;
-        document.getElementById('summary-seniorsTicketNumber').textContent = seniors.quantity || 0;
-
-        document.getElementById('summary-adultsTicketPrice').textContent = `${(adults.unitPrice * adults.quantity).toFixed(2)}€`;
-        document.getElementById('summary-childrenTicketPrice').textContent = `${(children.unitPrice * children.quantity).toFixed(2)}€`;
-        document.getElementById('summary-seniorsTicketPrice').textContent = `${(seniors.unitPrice * seniors.quantity).toFixed(2)}€`;
-
+    if (ticketPricesadulti) {
+        adultsTicketNumberElement.textContent = ticketPricesadulti.quantity || 0;
+        adultsTicketPriceElement.textContent = `${(ticketPricesadulti.unitPrice * ticketPricesadulti.quantity).toFixed(2)}€`;
     } else {
-        console.log('I dati non sono presenti nel localStorage.');
-
-        document.getElementById('summary-adultsTicketNumber').textContent = "0";
-        document.getElementById('summary-childrenTicketNumber').textContent = "0";
-        document.getElementById('summary-seniorsTicketNumber').textContent = "0";
-
-        document.getElementById('summary-adultsTicket').textContent = "0€";
-        document.getElementById('summary-childrenTicket').textContent = "0€";
-        document.getElementById('summary-seniorsTicket').textContent = "0€";
+        adultsTicketNumberElement.textContent = "0";
+        adultsTicketPriceElement.textContent = "0€";
     }
+
+    if (ticketPricesbambini412) {
+        childrenTicketNumberElement.textContent = ticketPricesbambini412.quantity || 0;
+        childrenTicketPriceElement.textContent = `${(ticketPricesbambini412.unitPrice * ticketPricesbambini412.quantity).toFixed(2)}€`;
+    } else {
+        childrenTicketNumberElement.textContent = "0";
+        childrenTicketPriceElement.textContent = "0€";
+    }
+
+    if (ticketPricesover65) {
+        seniorsTicketNumberElement.textContent = ticketPricesover65.quantity || 0;
+        seniorsTicketPriceElement.textContent = `${(ticketPricesover65.unitPrice * ticketPricesover65.quantity).toFixed(2)}€`;
+    } else {
+        seniorsTicketNumberElement.textContent = "0";
+        seniorsTicketPriceElement.textContent = "0€";
+    }
+
+    // Imposta il prezzo totale
+    totalPriceElement.textContent = `${totalPrice.toFixed(2)}`;
 });
 
 </script>

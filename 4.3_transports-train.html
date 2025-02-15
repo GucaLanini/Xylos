@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div class="container-fluid padding-100 height-page">
+<div class="container-fluid padding-100">
 
     <div class="row bottom-150 reset-margin">
         <div class="col reset-padding">
@@ -32,7 +32,7 @@
 
         <div class="col reset-padding">
             <div class="dropdown">
-                <div class="calendarheader b-radius d-flex justify-content-between btn btn-secondary dropdown-toggle dropdown-selection" 
+                <div class="calendarheader d-flex justify-content-between btn btn-secondary dropdown-toggle dropdown-selection" 
                      role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <p>Seleziona tratta:</p>
                     <svg width="32" height="17" viewBox="0 0 32 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow">
@@ -172,7 +172,7 @@
 </div>
 </div>
 <div class="row reset-margin">
-    <div class="col">
+    <div class="col reset-padding">
     <div class="calendarbody">
         <div class="calendarheader"><p>Seleziona data e ora:</p></div>
         <div class="container-fluid calendar">
@@ -368,7 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.dropdown-item').forEach(item => {
         item.addEventListener('click', function (event) {
-            event.stopPropagation();
+            event.stopPropagation(); // Impedisce la chiusura del dropdown
         });
     });
 
@@ -394,12 +394,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.card-tariffs');
     const totalPriceElement = document.getElementById('total-price');
     const cityPassCheckbox = document.getElementById('cityPassCheckbox');
-    
 
     let totalPrice = 0;
    
     counters.forEach(counter => {
-        const category = counter.querySelector('h3').textContent.toLowerCase();
+        const category = counter.querySelector('h3').textContent.toLowerCase().replace(/[\s-]/g, "");
         const unitPrice = parseFloat(counter.dataset.unitPrice);
         const counterElement = counter.querySelector('.number');
         const minusButton = counter.querySelector('.minus');
@@ -458,7 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
             quantity: ticketPrices[category].quantity,
             unitPrice: ticketPrices[category].unitPrice, 
         };
-        localStorage.setItem(`ticketPrices-${category}`, JSON.stringify(data)); 
+        localStorage.setItem(`ticketPrices${category}`, JSON.stringify(data)); 
     });
 
     localStorage.setItem('totalPrice', JSON.stringify(totalPrice));

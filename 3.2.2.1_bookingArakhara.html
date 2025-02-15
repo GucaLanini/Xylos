@@ -172,7 +172,7 @@
 
 
     <div class="d-flex justify-content-center"> 
-        <a href="3.2.2.3_riepilogoArakhara.html" class="reset-padding btn btn-primary booking-btn">Prenota</a>  
+        <a href="3.2.2.3_summary_Arakhara.html" class="reset-padding btn btn-primary booking-btn">Prenota</a>  
     </div>
 
     <div class="bottom-150"> </div>
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let totalPrice = 0;
    
     counters.forEach(counter => {
-        const category = counter.querySelector('h3').textContent.toLowerCase();
+        const category = counter.querySelector('h3').textContent.toLowerCase().replace(/[\s-]/g, "");
         const unitPrice = parseFloat(counter.dataset.unitPrice);
         const counterElement = counter.querySelector('.number');
         const minusButton = counter.querySelector('.minus');
@@ -348,12 +348,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function saveDataToLocalStorage() {
-        localStorage.setItem('ticketPrices', JSON.stringify(ticketPrices));
-        localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
-        console.log('Quantità di biglietti e prezzo totale:', {
-            ticketPrices,
-            totalPrice,
-        });
+        Object.keys(ticketPrices).forEach(category => {
+        const data = {
+            quantity: ticketPrices[category].quantity,
+            unitPrice: ticketPrices[category].unitPrice, 
+        };
+        localStorage.setItem(`ticketPrices${category}`, JSON.stringify(data)); 
+    });
+
+    localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
+
+    console.log('Quantità e prezzi unitari dei biglietti salvati:', ticketPrices);
+    console.log('Prezzo totale salvato:', totalPrice);
     }
 });
     

@@ -176,7 +176,7 @@
     </div>
 
     <div class="d-flex justify-content-center"> 
-        <a href="3.2.1.1_riepilogoLumineth.html" class="reset-padding btn btn-primary booking-btn">Prenota</a>  
+        <a href="3.2.1.1_summary_Lumineth.html" class="reset-padding btn btn-primary booking-btn">Prenota</a>  
     </div>
 
     <div class="bottom-150"> </div>
@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let totalPrice = 0;
    
     counters.forEach(counter => {
-        const category = counter.querySelector('h3').textContent.toLowerCase();
+        const category = counter.querySelector('h3').textContent.toLowerCase().replace(/[\s-]/g, "");
         const unitPrice = parseFloat(counter.dataset.unitPrice);
         const counterElement = counter.querySelector('.number');
         const minusButton = counter.querySelector('.minus');
@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
             quantity: ticketPrices[category].quantity,
             unitPrice: ticketPrices[category].unitPrice, 
         };
-        localStorage.setItem(`ticketPrices-${category}`, JSON.stringify(data)); 
+        localStorage.setItem(`ticketPrices${category}`, JSON.stringify(data)); 
     });
 
     localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
