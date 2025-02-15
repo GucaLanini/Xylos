@@ -2,7 +2,8 @@
 /* CSS Document */
 
 @font-face {
-    font-family: chillax, panchang;
+    font-family: chillax;
+    font-family: panchang;
     src: url(font/Chillax-Bold.otf) format('otf');
     src: url(font/Chillax-Extralight.otf) format('otf');
     src: url(font/Chillax-bold.otf) format('otf');
