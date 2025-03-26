@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* CSS Document */
+
+:root{
+    --gg-bg-color: rgb(4, 2, 34);
+    --gg-txt-color: #f1f1e6;
+    --gg-ice-color: #c8f1f9;
+    --gg-deepblue-color: #011fe1;
+}
+
+body {
+    background-color: var(--gg-bg-color);
+    font-family: chillax, panchang, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1{
+    font-family: panchang;
+    font-weight: bold;
+    font-size: 84px;
+    color: var(--gg-ice-color);
+    filter: drop-shadow(0px 0px 50px var(--gg-deepblue-color));
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+h2{
+    font-family: panchang;
+    font-weight: normal;
+    font-size: 48px;
+    color: var(--gg-ice-color);
+}
+
+h3 {
+    font-family: panchang;
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--gg-ice-color);
+    margin:0;
+}
+
+p {
+    font-family: chillax;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--gg-txt-color);
+    text-align: left;
+}
+
+.padding-100 {
+    padding: 0px 100px;
+}
+
+.heavy-h2{
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 50px var(--gg-deepblue-color));
+    white-space: nowrap;
+    margin-bottom: 40px;
+}
+
+.top-150 {
+    margin-top: 150px;
+}
+
+.space-50 {
+    margin: 0px 0px 50px 0px;
+}
+
+/*Galleria*/
+
+.card-1-img {
+    height: 560px;
+    width: 530px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-2-img {
+    height: 255px;
+    width: 675px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-3-img {
+    height: 255px;
+    width: 385px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-4-img, .card-5-img {
+    height: 255px;
+    width: 530px;
+    object-fit: cover;
+    border-radius: 15px;
+}
