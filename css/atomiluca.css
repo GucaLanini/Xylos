@@ -1,0 +1,60 @@
+/*CARD CON TARIFFE*/
+
+
+body {
+    background-color: var(--gg-bg-color);
+    font-family: chillax, panchang, sans-serif;
+}
+
+.margin-70 {
+    margin: 0px 0px 70px 0px;
+}
+
+.card-tariffs {
+    height: auto;
+    width: 498px;
+    border: 5px solid var(--gg-deepblue-color);
+    border-radius: 50px;
+    padding: 0px;
+    justify-content: center; 
+}
+
+.margin-50 {
+    margin-right: 50px !important;
+}
+
+.padding-70 {
+    padding: 0px 70px;
+}
+
+.counter{
+    margin-top: 85px;
+    margin-bottom: 65px;
+}
+
+.counter{
+    margin-top: 85px;
+    margin-bottom: 65px;
+}
+
+.number{
+    height: 32px;
+    width: 70px;
+    text-align: center;
+    border: 2px solid var(--gg-ice-color); /*,*/
+    border-radius: 6px;
+    margin: 0 10px;
+    color: var(--gg-ice-color);
+}
+
+.counter-button{
+    background-color: var(--gg-ice-color);
+    border-radius: 6px;
+}
+
+.counter-sign{
+    color: var(--gg-bg-color);
+    text-align: center;
+    width: 32px;
+    height: 32px;
+}
