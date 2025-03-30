@@ -1,0 +1,241 @@
+@charset "UTF-8";
+/* CSS Document */
+
+:root{
+    --gg-bg-color: rgb(4, 2, 34);
+    --gg-txt-color: #f1f1e6;
+    --gg-ice-color: #c8f1f9;
+    --gg-deepblue-color: #011fe1;
+}
+
+body {
+    background-color: var(--gg-bg-color);
+    font-family: chillax, panchang, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1{
+    font-family: panchang;
+    font-weight: bold;
+    font-size: 84px;
+    color: var(--gg-ice-color);
+    filter: drop-shadow(0px 0px 50px var(--gg-deepblue-color));
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+h2{
+    font-family: panchang;
+    font-weight: normal;
+    font-size: 48px;
+    color: var(--gg-ice-color);
+}
+
+h3 {
+    font-family: panchang;
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--gg-ice-color);
+    margin:0;
+}
+
+p {
+    font-family: chillax;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--gg-txt-color);
+    text-align: left;
+}
+
+.padding-100 {
+    padding: 0px 100px;
+}
+
+.heavy-h2{
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 50px var(--gg-deepblue-color));
+    white-space: nowrap;
+    margin-bottom: 40px;
+}
+
+.top-150 {
+    margin-top: 150px;
+}
+
+.space-50 {
+    margin: 0px 0px 50px 0px;
+}
+
+/*bottone assicurazione*/
+.custom-button-base {
+    width: 530px;
+    height: 120px;
+    border: solid 5px var(--gg-ice-color);
+    background-color: var(--gg-bg-color);
+    color: var(--gg-txt-color);
+    font-family: Chillax;
+    font-size: 28px;
+    border-radius: 30px;
+}
+
+.custom-button-base.selected {
+    background-color: var(--gg-ice-color);
+    color: var(--gg-bg-color); 
+    border-color: var(--gg-txt-color); 
+}
+.space-insurance-340 {
+    margin-right: 340px;
+}
+
+.margin-insurance-70 {
+    margin: 0px 0px 70px 0px;
+}
+
+/*checkbox*/
+.checkbox-style
+{
+    width: 20px;
+    height: 20px;
+    margin: 0px 20px 0px 80px;
+    border: 2px solid var(--gg-deepblue-color);
+    border-radius: 3px;
+    background-color: var(--gg-bg-color);
+    filter: none; 
+    display: flex;
+    align-items: center;
+}
+
+.form-check-input{
+    height: 50px;
+    width: 50px;
+    margin-right: 30px;
+}
+
+.form-check-input:checked {
+    background-color: var(--gg-deepblue-color);
+}
+
+
+/*scelta mezzi trasporti*/ 
+.small-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: var(--gg-txt-color);
+    border: solid 5px var(--gg-deepblue-color);
+    height: 300px;
+    width: 1688px;
+    margin: 0px 0px 100px 0px;
+    box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
+    border-radius: 50px;
+}
+
+.small-box:active{
+    box-shadow: inset 0px 0px 90px 0px var(--gg-ice-color);
+    border-color: var(--gg-ice-color);
+}
+
+.h2-transport {
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--gg-txt-color);
+    margin-left: 245px;
+}
+
+.h3-transport {
+    font-family: Chillax;
+    font-weight: normal;
+    font-size: 40px;
+    color: var(--gg-txt-color);
+    margin-right: 245px;
+}
+
+/*bottone titolo H2*/ 
+.space-50 {
+    margin: 0px 0px 50px 0px;
+}
+
+.box-btn{
+    border: solid 5px var(--gg-deepblue-color);
+    height: 700px;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
+    border-radius: 50px;
+}
+
+.box-btn:active{
+    box-shadow: inset 0px 0px 90px 0px var(--gg-ice-color);
+    border-color: var(--gg-ice-color);
+}
+
+.margin-50 {
+    margin-right: 50px;
+}
+
+.box-txt-H2{
+    color: var(--gg-txt-color);
+    font-weight: bold;
+    margin-top:20px
+}
+
+.overlay-rent {
+    position: relative;
+    box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
+}
+
+.overlay-event {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gg-bg-color);
+    opacity: 0.7; 
+    border-radius: 50px;
+    z-index: 1; 
+}
+/*Qrcode*/ 
+.p-qrcode {
+    font-size: 48px;
+    color: var(--gg-ice-color);
+    text-align: center;
+    margin: 150px 0px;
+}
+
+.qrcode {
+    margin-top: 150px;
+}
+
+.height-page-qr {
+    height: 3024px;
+}
+
+.btn-close-qr{
+    font-family: panchang;
+    font-weight: 600;
+    color: var(--gg-bg-color);
+    font-size: 28px;
+    height: 117px;
+    width: 240px;
+    background-color: var(--gg-ice-color);
+    border-color: var(--gg-ice-color);
+    border-radius: 15px;
+    padding: 0; /*auto*/
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+} 
+
+.btn-close-qr:active,
+.btn-close-qr:focus, 
+.btn-close-qr:focus-visible {
+    background-color:var(--gg-deepblue-color);
+}
