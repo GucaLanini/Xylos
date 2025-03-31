@@ -1,9 +1,32 @@
-/*CARD CON TARIFFE*/
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+    font-family: "chillax";
+    src: 
+        url("../font/Chillax-Bold.otf") format("opentype"),
+        url("../font/Chillax-Extralight.otf") format("opentype"),
+        url("../font/Chillax-Light.otf") format("opentype"),
+        url("../font/Chillax-Variable.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "panchang";
+    src: 
+        local("panchang"),
+        url("../font/Panchang-Bold.otf") format("opentype"),
+        url("../font/Panchang-Extrabold.otf") format("opentype"),
+        url("../font/Panchang-Regular.otf") format("opentype"),
+        url("../font/Panchang-Variable.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 *{
-
     box-sizing: border-box;
-    background-color: var(--gg-bg-color);
 }
 
 :root{
@@ -13,13 +36,18 @@
     --gg-deepblue-color: #011fe1;
 }
 
-
-body {
-    background-color: var(--gg-bg-color) !important;
-    font-family: chillax, panchang, sans-serif;
+a{
+    text-decoration: none;
 }
 
 
+p {
+    font-family: chillax;
+    font-weight: 100;
+    font-size: 24px;
+    color: var(--gg-txt-color);
+    text-align: left;
+}
 
 h1{
     font-family: panchang;
@@ -28,7 +56,6 @@ h1{
     color: var(--gg-ice-color);
     filter: drop-shadow(0px 0px 50px var(--gg-deepblue-color));
     text-align: center;
-    margin-bottom: 70px;
 }
 
 h2{
@@ -43,13 +70,27 @@ h3 {
     font-weight: 600;
     font-size: 36px;
     color: var(--gg-ice-color);
-    margin:0;
+}
+h2{
+    font-family: panchang;
+    font-weight: normal;
+    font-size: 48px;
+    color: var(--gg-ice-color);
 }
 
-p{
-    color: var(--gg-txt-color);
+h3 {
+    font-family: panchang;
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--gg-ice-color);
 }
 
+
+body{
+    background-color: var(--gg-bg-color);
+    font-family: chillax, panchang, sans-serif;
+    margin: 0 100px 0 100px;
+}
 
 
 /**TARIFFE**/
@@ -146,7 +187,6 @@ padding-top: 5px;
     display: flex;
     align-items: center;
     background-color: var(--gg-deepblue-color);
-    padding: 25px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     text-align: left;
@@ -158,6 +198,9 @@ padding-top: 5px;
 
 .calendarheader p{
     margin-bottom: 0px;
+    background-color: var(--gg-deepblue-color);
+    padding-left: 25px;
+
 }
 
 .calendar-selector {
@@ -275,3 +318,33 @@ padding-top: 5px;
     justify-content: center;
     text-decoration: none;
 } 
+
+
+/**BANDIERE**/
+
+.btn-language {
+    width: 170px;
+    height: 124px;
+    background-color: var(--gg-bg-color);
+    opacity: 0.7;
+    border: none;
+    padding: 0px;
+}
+
+.dropdown-menu-home {
+    width: 170px;
+    background-color: var(--gg-bg-color);
+    opacity: 0.7;
+    border: none;
+    padding: 0px;
+    align-items: center;
+}
+
+.flag {
+    margin: 0px 24px 65px 24px;
+    padding: 0px;
+}
+
+.btn.show {
+    background-color: var(--gg-bg-color); 
+}
