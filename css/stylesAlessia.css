@@ -95,8 +95,7 @@ p {
 }
 
 /*checkbox*/
-.checkbox-style
-{
+.checkbox {
     width: 20px;
     height: 20px;
     margin: 0px 20px 0px 80px;
@@ -104,6 +103,10 @@ p {
     border-radius: 3px;
     background-color: var(--gg-bg-color);
     filter: none; 
+}
+
+.p-check {
+    margin: 0px;
     display: flex;
     align-items: center;
 }
@@ -112,12 +115,13 @@ p {
     height: 50px;
     width: 50px;
     margin-right: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .form-check-input:checked {
     background-color: var(--gg-deepblue-color);
 }
-
 
 /*scelta mezzi trasporti*/ 
 .small-box {
@@ -202,6 +206,30 @@ p {
     border-radius: 50px;
     z-index: 1; 
 }
+
+/*bottone pagina esperienze*/ 
+.big-box-experiences{
+    border: solid 5px var(--gg-deepblue-color);
+    height: 577px;
+    margin: 0px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
+    border-radius: 50px;
+    background-color: var(--gg-bg-color);
+}
+
+.big-box-experiences:active{
+    border: solid 5px var(--gg-ice-color);
+    box-shadow: inset 0px 0px 90px 0px var(--gg-ice-color);
+}
+
+.space-box-experiences{
+    margin-bottom:200px;
+}
+
 /*Qrcode*/ 
 .p-qrcode {
     font-size: 48px;
