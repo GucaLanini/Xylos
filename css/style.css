@@ -1300,6 +1300,7 @@ padding-left: 0 !important;
     border-style: solid;
     border-color: var(--gg-deepblue-color);
     border-radius: 30px;
+    width: 655px;
 }
 
 .zone-selection p {

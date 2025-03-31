@@ -15,7 +15,7 @@
 
 
 body {
-    background-color: var(--gg-bg-color);
+    background-color: var(--gg-bg-color) !important;
     font-family: chillax, panchang, sans-serif;
 }
 
@@ -52,14 +52,14 @@ p{
 
 
 
+/**TARIFFE**/
+
 .card-tariffs {
     border-radius: 15px;
     padding: 20px;
     text-align: center;
     color: #C8F1F9;
     border: 2px solid var(--gg-deepblue-color);
-    
-    /* Allineamento verticale */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -74,7 +74,6 @@ p{
     margin-bottom: 10px;
 }
 
-/* Stile del counter migliorato */
 .counter {
     display: flex;
     align-items: center;
@@ -223,6 +222,8 @@ padding-top: 5px;
     border-style: none solid none none;
 }
 
+
+
 .time-options {
     display: flex;
     flex-wrap: wrap;
@@ -246,7 +247,31 @@ padding-top: 5px;
     color: var(--gg-bg-color)
 }
 
+
+
+/***COUNTER PAGINA ALE***/
 .counter-transports{
     display: flex;
     align-items: center;
 }
+
+
+
+/**BOTTONE**/
+
+.button{
+    font-family: panchang;
+    font-weight: 600;
+    color: var(--gg-bg-color);
+    font-size: 28px;
+    height: 117px;
+    width: 240px;
+    background-color: var(--gg-ice-color);
+    border-color: var(--gg-ice-color);
+    border-radius: 15px;
+    padding: 0; /*auto*/
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-decoration: none;
+} 
