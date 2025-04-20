@@ -79,6 +79,33 @@ h3 {
     font-size: 36px;
     color: var(--gg-ice-color);
 }
+
+
+.top-150 {
+    margin-top: 150px;
+}
+
+.space-50 {
+    margin: 0px 0px 50px 0px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 150px !important;
+    border: var(--gg-border-drop);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 50px 0px var(--gg-deepblue-color);
+    background-color: var(--gg-bg-color);
+    padding:0px;
+    z-index: 2;
+}
+
 /******FINE MODIFICHE GENERALI*****/
 
 /******header*****/
@@ -106,7 +133,10 @@ h3 {
 
 .filter-item.active {
     transform: scale(1.2);
+
+    
 }
+
 /******FINE filtro mappa*****/
 
 
@@ -242,6 +272,11 @@ h3 {
     align-items: center; 
     justify-content: center; 
 }
+
+.exit{
+    fill: rgba(0, 0, 0, 0);
+    z-index: 4;
+}
 /******FINE pop up*****/
 
 
@@ -263,6 +298,7 @@ h3 {
     position: relative;
     margin-bottom: 50px !important; 
 }
+
 
 .card-img {
     border-radius: 50px;
@@ -294,6 +330,12 @@ h3 {
 
 .low {
     height: 550px;
+    width: 100%;
+    padding: 0%;
+}
+
+.mid{
+    height: 1630px;
     width: 100%;
     padding: 0%;
 }
@@ -383,19 +425,22 @@ h3 {
 
 
 /******icon alert*****/
-.icons-alert{
-    width: 78px;
-    height: 78px;
+.icons.alert{
+    width: 100px;
+    height: 100px;
     justify-content: flex-start; /*flex*/
     display: flex; /*aggiunto*/
+    margin-bottom: 85px;
 }
+
 /******FINE icon alert*****/
 
 /***bottoni pagine luoghi****/
-.line {
+.linee {
     border-bottom: 5px solid var(--gg-deepblue-color);
     padding-bottom: 45px;
     margin: 0px;
+    margin-bottom: 50px;
     opacity: 1;
 }
 
@@ -422,3 +467,242 @@ button span{
     color: var(--gg-ice-color);
 }
 /***FINE bottoni pagine luoghi****/
+
+
+.card-1-img {
+    height: 560px;
+    width: 530px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-2-img {
+    height: 255px;
+    width: 675px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-3-img {
+    height: 255px;
+    width: 385px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-4-img, .card-5-img {
+    height: 255px;
+    width: 530px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/*Card "cosa puoi trovare"*/
+
+.card-find {
+    background: none;
+    height: 580px;
+    width: 530px;
+}
+
+
+.card-find-img {
+    height: 315px;
+    width: 530px;
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.card-title {
+    font-family: panchang;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--gg-ice-color);
+    margin: 0px 0px 20px 0px; 
+}
+
+/*****EXPERIENCES BOX****/
+
+.card-experience {
+    border: none;
+    background: none;
+    height: 490px;
+    width: 1690px;
+    border-radius: 50px;
+    object-fit: cover;
+    box-shadow: 0px 0px 50px 0px var(--gg-ice-color);
+}
+
+.card-experience:active{
+    box-shadow: 0px 0px 50px 0px var(--gg-txt-color);
+}
+
+.space-card-experience {
+    margin: 0px 0px 100px 0px;
+}
+
+.card-img-overlay-black {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gg-bg-color);
+    opacity: 0.3; 
+    border-radius: 50px;
+    z-index: 1; 
+    padding: 0px;
+}
+
+.card-img-overlay {
+    z-index: 2;
+}
+
+.overlay-exp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gg-bg-color);
+    opacity: 0.7; 
+    border-radius: 50px;
+    z-index: 1; 
+}
+
+.card-text {
+    text-align: justify;
+}
+
+
+.h2-card-experince {
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--gg-txt-color);
+    padding: 30px;
+}
+
+/*summary*/
+.h3-summary {
+    font-family: Panchang;
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--gg-txt-color);
+    margin-bottom: 40px;
+}
+
+.line {
+    border-bottom: 5px solid var(--gg-deepblue-color);
+    padding-bottom: 45px;
+    margin: 0px;
+}
+
+/*SCHACCHIERA ZONE*/
+.card-long {
+    position: relative;
+    height: 1031px;
+    width: 820px;
+    border: none; 
+    border-radius: 50px;
+    margin-bottom: 50px;
+    object-fit: cover;
+    box-shadow: 0px 0px 50px 8px var(--gg-bg-color);
+    overflow: hidden;
+    padding: 0px;
+}
+
+.card-short {
+    position: relative;
+    height: 550px;
+    width: 820px;
+    border: none; 
+    border-radius: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 50px 8px var(--gg-bg-color);
+    overflow: hidden;
+    padding: 0px;
+}
+
+.card-large {
+    position: relative;
+    height: 550px;
+    width: 1690px;
+    border: none; 
+    border-radius: 50px;
+    object-fit: cover;
+    box-shadow: 0px 0px 50px 8px var(--gg-bg-color);
+    overflow: hidden;
+    padding: 0px;
+}
+
+.card-long:active{
+    box-shadow: 0px 0px 50px 0px var(--gg-ice-color);
+}
+
+.card-short:active{
+    box-shadow: 0px 0px 50px 0px var(--gg-ice-color);
+}
+
+.card-large:active{
+    box-shadow: 0px 0px 50px 0px var(--gg-ice-color);
+}
+
+.h2-card-title {
+    font-family: panchang;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--gg-txt-color);
+    margin: 0px 0px 20px 0px; 
+}
+
+.h3-card {
+    font-family: panchang;
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--gg-txt-color);
+    margin: 0px 0px 20px 0px; 
+}
+
+.card-long-img {
+    border-radius: 50px;
+    object-fit: cover;
+    padding: 0px;
+}
+
+.card-short-img {
+    border-radius: 50px;
+    padding: 0px;
+}
+
+.card-large-img {
+    width: 100%;
+    height: 550px;
+    border-radius: 50px;
+    padding: 0px;
+}
+
+.card-text-overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    padding: 0px;
+}
+
+.overlay-exp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gg-bg-color);
+    opacity: 0.7; 
+    border-radius: 50px;
+    z-index: 1; 
+}
