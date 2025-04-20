@@ -54,6 +54,7 @@ zonas.forEach(zona => {
 });
 
 
+
 filterItems.forEach(item => {
     item.addEventListener('click', () => {
         
