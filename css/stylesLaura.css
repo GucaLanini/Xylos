@@ -1,0 +1,313 @@
+@charset "UTF-8";
+/* CSS Document */
+
+:root{
+    --gg-bg-color: rgb(4, 2, 34);
+    --gg-txt-color: #f1f1e6;
+    --gg-ice-color: #c8f1f9;
+    --gg-deepblue-color: #011fe1;
+}
+
+body {
+    background-color: var(--gg-bg-color);
+    font-family: chillax, panchang, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1{
+    font-family: panchang;
+    font-weight: bold;
+    font-size: 84px;
+    color: var(--gg-ice-color);
+    filter: drop-shadow(0px 0px 50px var(--gg-deepblue-color));
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+h2{
+    font-family: panchang;
+    font-weight: normal;
+    font-size: 48px;
+    color: var(--gg-ice-color);
+}
+
+h3 {
+    font-family: panchang;
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--gg-ice-color);
+    margin:0;
+}
+
+p {
+    font-family: chillax;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--gg-txt-color);
+    text-align: left;
+}
+
+.padding-100 {
+    padding: 0px 100px;
+}
+
+.heavy-h2{
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 50px var(--gg-deepblue-color));
+    white-space: nowrap;
+    margin-bottom: 40px;
+}
+
+.top-150 {
+    margin-top: 150px;
+}
+
+.space-50 {
+    margin: 0px 0px 50px 0px;
+}
+
+/*Galleria*/
+
+.card-1-img {
+    height: 560px;
+    width: 530px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-2-img {
+    height: 255px;
+    width: 675px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-3-img {
+    height: 255px;
+    width: 385px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-4-img, .card-5-img {
+    height: 255px;
+    width: 530px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/*Card "cosa puoi trovare"*/
+
+.card-find {
+    background: none;
+    height: 580px;
+    width: 530px;
+}
+
+
+.card-find-img {
+    height: 315px;
+    width: 530px;
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.card-title {
+    font-family: panchang;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--gg-ice-color);
+    margin: 0px 0px 20px 0px; 
+}
+
+/*****EXPERIENCES BOX****/
+
+.card-experience {
+    border: none;
+    background: none;
+    height: 490px;
+    width: 1690px;
+    border-radius: 50px;
+    object-fit: cover;
+    box-shadow: 0px 0px 50px 0px var(--gg-ice-color);
+}
+
+.card-experience:active{
+    box-shadow: 0px 0px 50px 0px var(--gg-txt-color);
+}
+
+.space-card-experience {
+    margin: 0px 0px 100px 0px;
+}
+
+.card-img-overlay-black {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gg-bg-color);
+    opacity: 0.3; 
+    border-radius: 50px;
+    z-index: 1; 
+    padding: 0px;
+}
+
+.card-img-overlay {
+    z-index: 2;
+}
+
+.overlay-exp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gg-bg-color);
+    opacity: 0.7; 
+    border-radius: 50px;
+    z-index: 1; 
+}
+
+.card-text {
+    text-align: justify;
+}
+
+
+.h2-card-experince {
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--gg-txt-color);
+    padding: 30px;
+}
+
+/*summary*/
+.h3-summary {
+    font-family: Panchang;
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--gg-txt-color);
+    margin-bottom: 40px;
+}
+
+.line {
+    border-bottom: 5px solid var(--gg-deepblue-color);
+    padding-bottom: 45px;
+    margin: 0px;
+}
+
+/*SCHACCHIERA ZONE*/
+.card-long {
+    position: relative;
+    height: 1031px;
+    width: 820px;
+    border: none; 
+    border-radius: 50px;
+    margin-bottom: 50px;
+    object-fit: cover;
+    box-shadow: 0px 0px 50px 8px var(--gg-bg-color);
+    overflow: hidden;
+    padding: 0px;
+}
+
+.card-short {
+    position: relative;
+    height: 550px;
+    width: 820px;
+    border: none; 
+    border-radius: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 50px 8px var(--gg-bg-color);
+    overflow: hidden;
+    padding: 0px;
+}
+
+.card-large {
+    position: relative;
+    height: 550px;
+    width: 1690px;
+    border: none; 
+    border-radius: 50px;
+    object-fit: cover;
+    box-shadow: 0px 0px 50px 8px var(--gg-bg-color);
+    overflow: hidden;
+    padding: 0px;
+}
+
+.card-long:active{
+    box-shadow: 0px 0px 50px 0px var(--gg-ice-color);
+}
+
+.card-short:active{
+    box-shadow: 0px 0px 50px 0px var(--gg-ice-color);
+}
+
+.card-large:active{
+    box-shadow: 0px 0px 50px 0px var(--gg-ice-color);
+}
+
+.h2-card-title {
+    font-family: panchang;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--gg-txt-color);
+    margin: 0px 0px 20px 0px; 
+}
+
+.h3-card {
+    font-family: panchang;
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--gg-txt-color);
+    margin: 0px 0px 20px 0px; 
+}
+
+.card-long-img {
+    border-radius: 50px;
+    object-fit: cover;
+    padding: 0px;
+}
+
+.card-short-img {
+    border-radius: 50px;
+    padding: 0px;
+}
+
+.card-large-img {
+    width: 100%;
+    height: 550px;
+    border-radius: 50px;
+    padding: 0px;
+}
+
+.card-text-overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    padding: 0px;
+}
+
+.overlay-exp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gg-bg-color);
+    opacity: 0.7; 
+    border-radius: 50px;
+    z-index: 1; 
+}
+
+
+
