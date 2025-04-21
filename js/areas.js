@@ -12,85 +12,69 @@ document.addEventListener ("DOMContentLoaded", () => {
         
 
         fauna.addEventListener('click', () => {
-        // Sostituisci l'intero contenuto del div
+        
         content.innerHTML = `
-
-                        <div class="row reset-all align-items-start">
-
-                            <div class="row reset-all">
-
-                                <div class="col reset-all margin-right">
+             <div class="row align-items-start">
+ 
+             <div class="col margin-right">
+                 
+                 <div class="row card area-item">
+                     <img src="img/zona_1/zona_1/d3d964f4fa2dbdded9ee1ec6ac46ad1e.jpg" class="card-img up" alt="Nyxari">
+                     <div class="overlay"></div>
+                     
+                     <div class="text-item">
+                         <h2 class="semibold">Nyxari</h2>
+                         <p>
+                             I Nyxari sono felini, simili alle tigri terrestri, con un manto luminoso. Sono animali solitari ma curiosi. Se attratti da uno stimolo luminoso, possono avvicinarsi cautamente.
+                         </p>
+                     </div>
+                 </div>
+             
+                 <div class="row card area-item">
+                     <img src="img/zona_1/zona_1/farfalla.jpg" class="card-img low" alt="Lyserian">
+                     <div class="overlay"></div>
+                     <div class="text-item">
+                         <h2 class="semibold">Lyserian</h2>
+                         <p class="text">
+                             Farfalle dalle ali trasparenti che volano in gruppi di centinaia, creando spettacoli di luce fluttuante. Le loro ali si accendono in sfumature di blu e arancione mentre si muovono.
+                         </p>
+                     </div>
+                 </div>            
+             </div>  
+ 
+             <div class="col margin-left">
+              
+                 <div class="row card area-item ">
+ 
+                     <img src="img/zona_1/zona_1/rana.jpg" class="card-img low" alt="Arakhara">
+ 
+                     <div class="overlay"></div>
+ 
+                     <div class="text-item">
+                         <h2 class="semibold">Luminex</h2>
+                         <p class="text">
+                             I Luminex sono anfibi simili a rane che saltano in gruppi vicino al pelo dell’acqua, sincronizzando il loro bagliore con i movimenti del kayak.    
+                         </p>
+                     </div>
+ 
+                 </div>
+ 
+                 <div class="row card area-item">
                     
-                                    <div class="row card reset-all area-item">
-                    
-                                        <img src="img/zona_1/zona_1/d3d964f4fa2dbdded9ee1ec6ac46ad1e.jpg" class="card-img img-long reset-padding up" alt="Nyxari">
-                    
-                                        <div class="overlay"></div>
-                    
-                                        <div class="text-item">
-                                            <h2 class="semibold">Nyxari</h2>
-                                            <p class="text">
-                                                I Nyxari sono felini, simili alle tigri terrestri, con un manto luminoso. Sono animali solitari ma curiosi. Se attratti da uno stimolo luminoso, possono avvicinarsi cautamente.
-                                            </p>
-                                        </div>
-                    
-                                    </div>
-                    
-                                    <div class="row card reset-all area-item">
-                    
-                                        <img src="img/zona_1/zona_1/farfalla.jpg" class="card-img img-long reset-padding low" alt="Lyserian">
-                    
-                                        <div class="overlay"></div>
-                    
-                                        <div class="text-item">
-                                            <h2 class="semibold">Lyserian</h2>
-                                            <p class="text">
-                                                Farfalle dalle ali trasparenti che volano in gruppi di centinaia, creando spettacoli di luce fluttuante. Le loro ali si accendono in sfumature di blu e arancione mentre si muovono.
-                                            </p>
-                                        </div>
-                    
-                                    </div>
-                    
-                                </div>
-                    
-                                <div class="col reset-all margin-left">
-                    
-                                    <div class="row card reset-all area-item">
-                    
-                                        <img src="img/zona_1/zona_1/rana.jpg" class="card-img img-long reset-padding low" alt="Arakhara">
-                    
-                                        <div class="overlay"></div>
-                    
-                                        <div class="text-item">
-                                            <h2 class="semibold">Luminex</h2>
-                                            <p class="text">
-                                                I Luminex sono anfibi simili a rane che saltano in gruppi vicino al pelo dell’acqua, sincronizzando il loro bagliore con i movimenti del kayak.    
-                                            </p>
-                                        </div>
-                    
-                                    </div>
-                    
-                                    <div class="row card reset-all area-item">
-                    
-                                        <img src="img/zona_1/zona_1/uccello2.jpg" class="card-img img-long reset-padding up" alt="Arboryx">
-                    
-                                        <div class="overlay"></div>
-                    
-                                        <div class="text-item">
-                                            <h2 class="semibold">Arboryx</h2>
-                                            <p class="text">
-                                                Gli Arboryx, con i loro nidi costruiti a decine di metri da terra, sono il simbolo della foresta. I loro piumaggi iridescenti, spettacolari da osservare, specialmente durante i voli collettivi.
-                                            </p>
-                                        </div>
-                    
-                                    </div>
-                    
-                                </div>
-                            </div>
-                        
-                
-                        </div>
-
+                     <img src="img/arboryx.png" class="card-img up" alt="Arboryx">
+ 
+                     <div class="overlay"></div>
+                     
+                     <div class="text-item">
+                         <h2 class="semibold">Arboryx</h2>
+                         <p class="text">
+                             Gli Arboryx, con i loro nidi costruiti a decine di metri da terra, sono il simbolo della foresta. I loro piumaggi iridescenti, spettacolari da osservare, specialmente durante i voli collettivi.
+                         </p>
+                     </div>
+ 
+                 </div>
+             </div>
+        </div>
         `;
         });
         flora.addEventListener('click', () => {
@@ -293,84 +277,68 @@ document.addEventListener ("DOMContentLoaded", () => {
 
     if (window.location.pathname === '/2.2_arakhara.html') {
         
-        const ara_fauna = document.getElementById('ara-fauna');
-        const ara_flora = document.getElementById('ara-flora');
-        const ara_fluviale = document.getElementById('ara-fluviale');
-        const ara_rovine = document.getElementById('ara-rovine');
-        const ara_content = document.getElementById('ara-content');
+        const ara_fauna = document.getElementById('fauna');
+        const ara_flora = document.getElementById('flora');
+        const ara_fluviale = document.getElementById('fluviale');
+        const ara_rovine = document.getElementById('rovine');
+        const ara_content = document.getElementById('content');
 
         ara_fauna.addEventListener('click', () => {
             ara_content.innerHTML = `
-        
-                            <div class="row reset-all align-items-start">
-        
-                            <div class="row reset-all">
-        
-                                <div class="col reset-all margin-right">
+               <div class="row align-items-start">
+ 
+             <div class="col margin-right">
+                 
+                 <div class="row card area-item">
+                     <img src="img/zona_2/zona_2/serpente.jpg" class="card-img up" alt="Nyxari">
+                     <div class="overlay"></div>
+                     
+                     <div class="text-item">
+                        <h2 class="semibold">Anodick</h2>
+                        <p class="text">
+                            Una creatura dalla pelle anodizzata che brilla come un arcobaleno metallico. Le sue scaglie iridescenti cambiano colore con il movimento, passando da zaffiro a verde smeraldo e oro liquido. I suoi occhi luminosi emanano un bagliore ipnotico, mentre la sua scia luminosa danza nell’aria come pura magia. Tanto venerato quanto temuto, il Prismaglio è il simbolo vivente della magnificenza e del mistero di Arakhara.
+                        </p>
+                    </div>
+                 </div>
+             
+                 <div class="row card area-item">
+                     <img src="img/zona_2/zona_2/ragno.jpg" class="card-img low" alt="Lyserian">
+                     <div class="overlay"></div>
+                     <div class="text-item">
+                        <h2 class="semibold">Luminorchid</h2>
+                        <p class="text">Un ragno gigante con zampe lunghe e delicate e un corpo lucente di un blu.  Non è aggressivo, ma la sua presenza imponente lascia i visitatori senza fiato</p>
+                    </div>
+                 </div>            
+             </div>  
+ 
+             <div class="col margin-left">
+              
+                <div class="row card area-item ">
+ 
+                    <img src="img/zona_2/zona_2/falena.jpg" class="card-img low" alt="Arakhara">
+ 
+                    <div class="overlay"></div>
+                    <div class="text-item">
+                        <h2 class="semibold">Stellar Moth</h2>
+                        <p class="text">Grandi falene luminose che si raccolgono attorno alle rovine fluttuanti, emettendo bagliori argentati.</p>
+                    </div>
+ 
+                </div>
+ 
+                <div class="row card area-item">
                     
-                                    <div class="row card reset-all area-item">
-                    
-                                        <img src="img/zona_2/zona_2/serpente.jpg" class="card-img img-long reset-padding up" alt="Anodick">
-                    
-                                        <div class="overlay"></div>
-                                        
-                                        <div class="text-item">
-                                            <h2 class="semibold">Anodick</h2>
-                                            <p class="text">
-                                                Una creatura dalla pelle anodizzata che brilla come un arcobaleno metallico. Le sue scaglie iridescenti cambiano colore con il movimento, passando da zaffiro a verde smeraldo e oro liquido. I suoi occhi luminosi emanano un bagliore ipnotico, mentre la sua scia luminosa danza nell’aria come pura magia. Tanto venerato quanto temuto, il Prismaglio è il simbolo vivente della magnificenza e del mistero di Arakhara.
-                                            </p>
-                                        </div>
-                    
-                                    </div>
-                    
-                                    <div class="row card reset-all area-item">
-                    
-                                        <img src="img/zona_2/zona_2/ragno.jpg" class="card-img img-long reset-padding low" alt="Luminorchid">
-                    
-                                        <div class="overlay"></div>
-                    
-                                        <div class="text-item">
-                                            <h2 class="semibold">Luminorchid</h2>
-                                            <p class="text">Un ragno gigante con zampe lunghe e delicate e un corpo lucente di un blu.  Non è aggressivo, ma la sua presenza imponente lascia i visitatori senza fiato</p>
-                                        </div>
-                    
-                                    </div>
-                    
-                                </div>
-                    
-                                <div class="col reset-all margin-left">
-                    
-                                    <div class="row card reset-all area-item ">
-                    
-                                        <img src="img/zona_2/zona_2/falena.jpg" class="card-img img-long reset-padding low" alt="Stellar Moth">
-                    
-                                        <div class="overlay"></div>
-                    
-                                        <div class="text-item">
-                                            <h2 class="semibold">Stellar Moth</h2>
-                                            <p class="text">Grandi falene luminose che si raccolgono attorno alle rovine fluttuanti, emettendo bagliori argentati.</p>
-                                        </div>
-                    
-                                    </div>
-                    
-                                    <div class="row card reset-all area-item">
-                                        
-                                        <img src="img/zona_2/zona_2/scarabeo.jpg" class="card-img img-long reset-padding up" alt="Gloscaw">
-                    
-                                        <div class="overlay"></div>
-                                        
-                                        <div class="text-item">
-                                            <h2 class="semibold">Gloscaw</h2>
-                                            <p class="text">Scarabei bioluminescenti che si radunano attorno alle rovine al calare del sole, emettendo una luce verde brillante.</p>
-                                        </div>
-                    
-                                    </div>
-                    
-                                </div>
-                            </div>
-                            
-                
-                        </div>
+                    <img src="img/zona_2/zona_2/scarabeo.jpg" class="card-img up" alt="Arboryx">
+ 
+                    <div class="overlay"></div>
+                     
+                    <div class="text-item">
+                        <h2 class="semibold">Gloscaw</h2>
+                        <p class="text">Scarabei bioluminescenti che si radunano attorno alle rovine al calare del sole, emettendo una luce verde brillante.</p>
+                    </div>
+ 
+                </div>
+             </div>
+        </div>
         
             `;
         });
@@ -535,11 +503,11 @@ document.addEventListener ("DOMContentLoaded", () => {
     }
 
     if (window.location.pathname === '/2.3_nyxanthis.html') {
-        const this_fauna =    document.getElementById('this_fauna');
-        const this_flora =    document.getElementById('this_flora');
-        const this_fluviale = document.getElementById('this_fluviale');
-        const this_rovine =   document.getElementById('this_rovine');
-        const this_content =  document.getElementById('this_content'); 
+        const this_fauna =    document.getElementById('fauna');
+        const this_flora =    document.getElementById('flora');
+        const this_fluviale = document.getElementById('fluviale');
+        const this_rovine =   document.getElementById('rovine');
+        const this_content =  document.getElementById('content'); 
 
 
 
@@ -547,60 +515,44 @@ this_fauna.addEventListener('click', () => {
 
     this_content.innerHTML = `
 
-            <div class="row reset-all align-items-start">
-
-             <div class="row reset-all">
-
-                 <div class="col reset-all margin-right">
-     
-                     <div class="row card reset-all area-item">
-     
-                         <img src="img/zona_3/zona_3/jeco.jpg" class="card-img img-long reset-padding up" alt="Luminix">
-     
-                         <div class="overlay"></div>
-                         
-                         <div class="text-item">
-                             <h2 class="semibold">Luminix</h2>
-                             <p class="text">Un piccolo geco dalle squame brillanti che riflette i colori dell’arcobaleno, spesso visibile arrampicato sugli archi e colonne antiche.</p>
-                         </div>
-     
-                     </div>
-     
-                     <div class="row card reset-all area-item">
-     
-                         <img src="img/tartarughe.jpg" class="card-img img-long reset-padding low" alt="Rugaxys">
-     
-                         <div class="overlay"></div>
-     
-                         <div class="text-item">
-                             <h2 class="semibold">Rugaxys</h2>
-                             <p class="text">Le tartarughe giganti Rugaxys sono imponenti e gentili, con gusci decorati da striature fluorescenti che si illuminano leggermente al buio, creando uno spettacolo visivo unico.</p>
-                         </div>
-     
-                     </div>
-     
-                 </div>
-     
-                 <div class="col reset-all margin-left">
-     
-                     <div class="row card reset-all area-item ">
-     
-                         <img src="img/zona_3/zona_3/colibrì.jpg" class="card-img img-long reset-padding maxxx" alt="Cortox">
-     
-                         <div class="overlay"></div>
-     
-                         <div class="text-item">
-                             <h2 class="semibold">Cortox</h2>
-                             <p class="text">Il Cortox è un uccello bioluminescente che popola le foreste di Xylos, un mondo intriso di luce naturale. Con le sue piume sottili e iridescenti, il Cortox emette un bagliore tenue che varia dal blu elettrico al verde.</p>
-                         </div>
-     
-                     </div>
-     
-                 </div>
-             </div>
-            
+       <div class="row align-items-start">
  
-         </div>
+            <div class="col margin-right">
+                
+                <div class="row card area-item">
+                    <img src="img/zona_3/zona_3/jeco.jpg" class="card-img up" alt="Nyxari">
+                    <div class="overlay"></div>
+                    
+                    <div class="text-item">
+                        <h2 class="semibold">Luminix</h2>
+                        <p class="text">Un piccolo geco dalle squame brillanti che riflette i colori dell’arcobaleno, spesso visibile arrampicato sugli archi e colonne antiche.</p>
+                    </div>
+                </div>
+            
+                <div class="row card area-item">
+                    <img src="img/zona_3/zona_3/ruga.jpg" class="card-img low" alt="Lyserian">
+                    <div class="overlay"></div>
+     
+                    <div class="text-item">
+                        <h2 class="semibold">Rugaxys</h2>
+                        <p class="text">Le tartarughe giganti Rugaxys sono imponenti e gentili, con gusci decorati da striature fluorescenti che si illuminano leggermente al buio, creando uno spettacolo visivo unico.</p>
+                    </div>
+                </div>            
+            </div>  
+
+            <div class="col margin-left ">
+             
+               <div class="row card area-item">
+                   <img src="img/zona_3/zona_3/colibrì.jpg" class="card-img mid" alt="Arakhara">
+
+                   <div class="overlay"></div>
+                   <div class="text-item">
+                        <h2 class="semibold">Cortox</h2>
+                        <p class="text">Il Cortox è un uccello bioluminescente che popola le foreste di Xylos, un mondo intriso di luce naturale. Con le sue piume sottili e iridescenti, il Cortox emette un bagliore tenue che varia dal blu elettrico al verde.</p>
+                   </div>
+               </div>
+            </div>
+       </div>
 
     `;
 });
