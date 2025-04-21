@@ -30,7 +30,7 @@
 
 
 :root{
-    --gg-bg-color: rgb(4, 2, 34);
+    --gg-bg-color: #040222;
     --gg-txt-color: #f1f1e6;
     --gg-ice-color: #c8f1f9;
     --gg-deepblue-color: #011fe1;
@@ -97,6 +97,107 @@ p {
 .space-50 {
     margin: 0px 0px 50px 0px;
 }
+
+/**BOTTONE**/
+
+.button{
+    font-family: panchang;
+    font-weight: 600;
+    color: var(--gg-bg-color);
+    font-size: 28px;
+    height: 117px;
+    width: 240px;
+    background-color: var(--gg-ice-color);
+    border-color: var(--gg-ice-color);
+    border-radius: 15px;
+    padding: 0; /*auto*/
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-decoration: none;
+} 
+
+.button:active {
+    color: var(--gg-txt-color);
+    background-color: var(--gg-deepblue-color);
+    border-color: var(--gg-deepblue-color);
+} 
+
+
+/******INIZIO PAGINA INDEX*****/
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1890px;
+    height: 3024px;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.video-overlay-black {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gg-bg-color);
+    opacity: 0.6; 
+    z-index: -1; 
+}
+
+.topindex {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 1773px;
+}
+
+.footbox {
+    position: fixed;
+    bottom: 150px; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px; 
+}
+
+.btn-accessibility{
+    height: 124px;
+    width: 124px;
+    background-color: var(--gg-ice-color);
+    padding: 0; 
+    border-radius: 15px;
+} 
+
+.btn-accessibility:hover {
+    background-color: var(--gg-deepblue-color);
+}
+
+.btn-language {
+    width: 170px;
+    height: 124px;
+    background-color: var(--gg-bg-color);
+    opacity: 0.7;
+    border: none;
+    padding: 0px;
+}
+
+.dropdown-menu-home {
+    width: 170px;
+    background-color: var(--gg-bg-color);
+    opacity: 0.7;
+    border: none;
+    padding: 0px;
+    align-items: center;
+}
+
+.flag {
+    margin: 0px 24px 65px 24px;
+    padding: 0px;
+}
+
+/******FINE PAGINA INDEX*****/
 
 /*Galleria*/
 
