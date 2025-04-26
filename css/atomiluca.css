@@ -8,7 +8,7 @@
         url("../font/Chillax-Extralight.otf") format("opentype"),
         url("../font/Chillax-Light.otf") format("opentype"),
         url("../font/Chillax-Variable.otf") format("opentype");
-    font-weight: normal;
+    font-weight: lighter;
     font-style: normal;
 }
 
@@ -168,7 +168,9 @@ padding-top: 5px;
     gap: 50px;
 }
 
-
+.card-tariffs-container{
+    margin-bottom: 100px;
+}
 
 /*****CALENDARIO*****/
 .calendar {
@@ -427,4 +429,33 @@ padding-top: 5px;
 .dropdown-selection {
     background-color: var(--gg-deepblue-color) !important;
     border-style: none;
+}
+
+/****CITY PASS****/
+.margin-x-70{
+    margin: 0 70px;
+}
+
+.p-top-50{
+    padding-top: 50px;
+}
+
+.citypass-tariffs{
+    box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
+    border-radius: 50px;
+    border: var(--gg-border-drop);
+}
+
+
+.citypass-hour{
+    width: 530px;
+    height: 250px;
+}
+
+.citypass-hour h3{
+    margin: 100px 0;
+}
+
+.m-bottom-100{
+    margin-bottom: 100px;
 }
