@@ -39,6 +39,7 @@
     --gg-deepblue-color: #011fe1;
 }
 
+
 .reset-padding {
     padding: 0 !important;
 }
@@ -654,11 +655,11 @@ p {
 
 /*Tariffe*/
 .card-tariffs {
-    border-radius: 15px;
+    border-radius: 50px;
     padding: 20px;
     text-align: center;
     color: #C8F1F9;
-    border: 2px solid var(--gg-deepblue-color);
+    border: 5px solid var(--gg-deepblue-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -722,13 +723,13 @@ padding-top: 5px;
     padding: 0px 70px;
 }
 
-.p-top-20{
-    padding-top: 20px;
-}
 .tariff-rows{
     gap: 50px;
 }
 
+.card-tariffs-container{
+    margin-bottom: 100px;
+}
 
 /*Prenota*/ 
 .checkbox-style
@@ -1011,7 +1012,6 @@ padding-top: 5px;
     display: flex;
     align-items: center;
     background-color: var(--gg-deepblue-color);
-    padding: 25px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     text-align: left;
@@ -1023,6 +1023,9 @@ padding-top: 5px;
 
 .calendarheader p{
     margin-bottom: 0px;
+    background-color: var(--gg-deepblue-color);
+    padding-left: 25px;
+
 }
 
 .calendar-selector {
@@ -1087,12 +1090,14 @@ padding-top: 5px;
     border-style: none solid none none;
 }
 
+
+
 .time-options {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
-    padding: 15px 0 50px 0;
+    padding: 15px 7px 50px 7px;
 }
 
 .time-option {
@@ -1110,77 +1115,6 @@ padding-top: 5px;
     color: var(--gg-bg-color)
 }
 
-/***COUNTER BIGLIETTI***/
-.counter{
-    margin-top: 85px;
-    margin-bottom: 65px;
-}
-
-.number{
-    height: 32px;
-    width: 70px;
-    text-align: center;
-    border: 2px solid var(--gg-ice-color); /*,*/
-    border-radius: 6px;
-    margin: 0 10px;
-    color: var(--gg-ice-color);
-}
-
-.counter-button{
-    background-color: var(--gg-ice-color);
-    border-radius: 6px;
-}
-
-.counter-sign{
-    color: var(--gg-bg-color);
-    text-align: center;
-    width: 32px;
-    height: 32px;
-}
-
-/*RIEPILOGO*/ 
-.h3-esperienza {
-    font-family: Panchang !important;
-    font-weight: 600;
-    font-size: 36px;
-    color: var(--gg-txt-color);
-    margin-bottom: 40px;
-}
-
-.line {
-    border-bottom: 5px solid var(--gg-deepblue-color);
-    padding-bottom: 45px;
-    margin: 0px;
-}
-
-.space-40 {
-    margin-bottom: 40px;
-}
-
-p.line{
-padding-left: 0 !important;
-}
-
-.citypasssummary{
-    margin-bottom: 150px !important;
-}
-
-.calendars{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 500px;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.space-430 {
-    margin-bottom: 430px;
-}
-
-.selection{
-    display: flex;
-}
 
 
 /*INDEX*/ 
@@ -1347,10 +1281,6 @@ padding-left: 0 !important;
     border-radius: 8px;
 }
 
-.custom-d-m{
-    position: relative !important;
-    transform: none !important;
-}
 
 .dropdown-item-route.selected p{
     color: var(--gg-bg-color)
@@ -1372,8 +1302,9 @@ padding-left: 0 !important;
     border-style: solid;
     border-color: var(--gg-deepblue-color);
     border-radius: 30px;
-    width: 655px;
+    width: 840px;
 }
+
 
 .zone-selection p {
     text-align: center;
@@ -1387,7 +1318,6 @@ padding-left: 0 !important;
     background-color: var(--gg-deepblue-color) !important;
     border-style: none;
 }
-
 /****CITY PASS****/
 .margin-x-70{
     margin: 0 70px;
