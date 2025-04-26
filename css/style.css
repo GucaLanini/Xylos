@@ -2,18 +2,28 @@
 /* CSS Document */
 
 @font-face {
-    font-family: chillax;
-    font-family: panchang;
-    src: url(font/Chillax-Bold.otf) format('otf');
-    src: url(font/Chillax-Extralight.otf) format('otf');
-    src: url(font/Chillax-bold.otf) format('otf');
-    src: url(font/Chillax-Light.otf) format('otf');
-    src: url(font/Chillax-Variable.otf) format('otf');
-    src: url(font/Panchang-Bold.otf) format('otf');
-    src: url(font/Panchang-Extrabold.otf) format('otf');
-    src: url(font/Panchang-Regular.otf) format('otf');
-    src: url(font/Panchang-Variable.otf) format('otf');
+    font-family: "chillax";
+    src: 
+        url("../font/Chillax-Bold.otf") format("opentype"),
+        url("../font/Chillax-Extralight.otf") format("opentype"),
+        url("../font/Chillax-Light.otf") format("opentype"),
+        url("../font/Chillax-Variable.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: "panchang";
+    src: 
+        local("panchang"),
+        url("../font/Panchang-Bold.otf") format("opentype"),
+        url("../font/Panchang-Extrabold.otf") format("opentype"),
+        url("../font/Panchang-Regular.otf") format("opentype"),
+        url("../font/Panchang-Variable.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /******MODIFICHE GENERALI*****/
 *{
@@ -348,7 +358,7 @@ h3 {
     z-index: 2;
 }
 
-/*****EXPERIENCES BOX****/
+/****EXPERIENCES BOX****/
 .space-experience {
     margin-bottom: 150px;
 }
