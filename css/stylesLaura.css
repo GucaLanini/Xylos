@@ -609,7 +609,7 @@ p {
 
 /******PRENOTAZIONE*****/
 .card-tariffs {
-    border-radius: 15px;
+    border-radius: 50px;
     padding: 20px;
     text-align: center;
     color: #C8F1F9;
@@ -667,7 +667,6 @@ padding-top: 5px;
     text-align: center;
     width: 68px;
     height: 32px;
-
 }
 
 .margin-70{
