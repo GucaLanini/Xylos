@@ -459,3 +459,26 @@ padding-top: 5px;
 .m-bottom-100{
     margin-bottom: 100px;
 }
+
+/**riepilogo**/
+
+.h3-summary {
+    font-family: Panchang;
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--gg-txt-color);
+    margin-bottom: 40px;
+}
+
+.line {
+    border-bottom: 5px solid var(--gg-deepblue-color);
+    padding-bottom: 45px;
+}
+
+.space-40 {
+    margin-bottom: 40px;
+}
+
+.space-430 {
+    margin-bottom: 430px;
+}

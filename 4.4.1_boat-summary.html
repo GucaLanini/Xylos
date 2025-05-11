@@ -26,62 +26,53 @@
 
     <div class="padding-100"> 
         <div class="bottom-150">
-            <h3 class="h3-esperienza reset-padding">Tratta:</h3>
+            <h3 class="h3-summary">Tratta:</h3>
             <p class="line"><span id="summary-startSelection"></span> - <span id="summary-destinationSelection"></span></p>
         </div>
 
-        <div class="bottom-150">
-            <h3 class="h3-esperienza reset-padding">Numero di biglietti selezionati:</h3>
-            <div class="col-12 d-flex align-items-center">
-                <p class="col-1 reset-padding space-40"><span id="summary-adultsTicketNumber"></span>x</p>
-                <p class="col-11 reset-padding space-40">Adulti</p>
-            </div>
-            <div class="col-12 d-flex align-items-center">
-                <p class="col-1 reset-padding space-40"><span id="summary-childrenTicketNumber"></span>x</p>
-                <p class="col-11 reset-padding space-40">Bambini</p>
-            </div>
-            <div class="col-12 d-flex align-items-cente line">
-                <p class="col-1 reset-padding space-40"><span id="summary-seniorsTicketNumber"></span>x</p>
-                <p class="col-11 reset-padding space-40">Over 65</p>
-            </div>
-        </div>
+   <div class="row bottom-150" id="ticket-list">
+        <h3 class="h3-summary">Numero di biglietti selezionati:</h3>
+        
+        <p class="col-1 space-40"><span id="summary-adultsTicketNumber"></span>x</p>
+        <p class="col-11 space-40">Adulti</p>
+        
+        <p class="col-1 space-40"><span id="summary-childrenTicketNumber"></span>x</p>
+        <p class="col-11 space-40">Bambini</p>
+        
+        <p class="col-1 line"><span id="summary-seniorsTicketNumber"></span>x</p>
+        <p class="col-11 line">Over 65</p>
+    </div>
+
+
+    <div class="bottom-150">
+        <h3 class="h3-summary">Giorno e ora selezionata:</h3>
+        <p class="space-40"><strong>Data:</strong> <span id="selected-date"></span></p>
+        <p class="line"><strong>Ora:</strong> <span id="selected-time"></span></p>
+    </div>
+
+
+    <div class="bottom-150">
+        <h3 class="h3-summary">Tariffa:</h3>
+        <p class="col space-40"><strong>Adulti: </strong><span id="summary-adultsTicketPrice"></span></p>
+        <p class="col space-40"><strong>Bambini: </strong><span id="summary-childrenTicketPrice"></span></p>
+        <p class="col line "><strong>Over 65: </strong><span id="summary-seniorsTicketPrice"></span></p>
+    </div>
 
         <div class="bottom-150">
-            <h3 class="h3-esperienza">Giorno e ora selezionata:</h3>
-            <p class="space-40"><strong>Giorno:</strong> <span id="selected-date"></span></p>
-            <p class="line"><strong>Ora:</strong> <span id="selected-time"></span></p>
-        </div>
-
-        <div class="bottom-150">
-            <h3 class="h3-esperienza reset-padding">Tariffa:</h3>
-            
-            <p class="col reset-padding space-40"><strong>Adulti:</strong> <span id="summary-adultsTicketPrice"></span></p>
-            
-            <p class="col reset-padding space-40"><strong>Bambini:</strong> <span id="summary-childrenTicketPrice"></span></p>
-            
-            <p class="col line"><strong>Over 65:</strong> <span id="summary-seniorsTicketPrice"></span></p>
-        </div>
-
-        <div class="bottom-150">
-            <h3 class="h3-esperienza">Durata del viaggio:</h3>
+            <h3 class="h3-summary">Durata del viaggio:</h3>
             <p class="line">3 ore</p>
         </div>
 
-        <div>
-            <h3 class="h3-esperienza">Prezzo totale:</h3>
-            <p class="line"><span id="summary-totalPrice"></span>€</p>
-        </div>
+    <div>
+        <h3 class="h3-summary">Prezzo totale:</h3>
+        <p class="line"><span id="summary-totalPrice"></span>€</p>
+    </div>
+    
+    <div class="d-flex justify-content-center"> 
+        <a href="qrcode.html" class="button booking-btn">Conferma</a>
     </div>
 
-
-
-
-
-    <div class="row d-flex justify-content-center bottom-150 space-button-citypass"> 
-        <a href="qrcode.html" class="btn btn-primary col-auto header-button justify-content-center">
-    Conferma
-        </a>
-    </div>
+    <div class="bottom-150"> </div>
     
 
 
