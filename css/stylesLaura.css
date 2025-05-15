@@ -18,7 +18,7 @@
     font-family: "panchang";
     src: 
         local("panchang"),
-        url("../font/Panchang-Regular.otf") format("opentype"),
+        url("../font/Panchang-Regular.otf") format("opentype");
 }
 
 @font-face {
