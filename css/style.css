@@ -43,11 +43,6 @@ body{
     padding-right: 100px;
 }
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
 
 :root{
     --gg-bg-color: rgb(4, 2, 34);
@@ -56,19 +51,6 @@ body{
     --gg-deepblue-color: #011fe1;
 }
 
-
-.reset-padding {
-    padding: 0 !important;
-}
-
-.reset-margin {
-    margin: 0 !important;
-}
-
-.reset-all {
-    padding: 0 !important;
-    margin: 0 !important;
-}
 
 body {
     background-color: var(--gg-bg-color);
@@ -156,6 +138,11 @@ h3 {
     align-items: center;
     box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
     border-radius: 50px;
+}
+
+.big-boxhome{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .box-btn{
