@@ -353,6 +353,11 @@ p {
     z-index: 2;
 }
 
+.card-img-overlay-blue{
+    background-color: var(--gg-bg-color) !important;
+}
+
+
 .overlay-exp {
     position: absolute;
     top: 0;
