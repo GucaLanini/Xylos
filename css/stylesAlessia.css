@@ -24,6 +24,11 @@
     font-style: normal;
 }
 
+body{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -308,6 +313,25 @@ padding-top: 5px;
     border-radius: 50px;
     z-index: 1; 
 }
+
+@media only screen and (min-width: 1891px) {
+    .totem-content {
+        display: none;
+    }     
+    .companion-content {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1891px) {
+    .totem-content {
+        display: block;
+    }    
+    .companion-content {
+        display: none;
+    } 
+}
+
 
 /*bottone pagina esperienze*/ 
 .big-box-experiences{

@@ -716,7 +716,7 @@ p {
     justify-content: center;
 }
 
-.counter-button-plus{
+.counter-button .plus{
 padding-top: 5px;
 }
 
