@@ -4,7 +4,7 @@
 @font-face {
     font-family: "chillax";
     src: 
-        url("../font/Chillax-Light.otf") format("opentype")
+        url("../font/Chillax-Light.otf") format("opentype");
 }
 
 @font-face {
@@ -350,7 +350,7 @@ h3 {
     border-radius: 50px;
     z-index: 1; 
 }
-}
+
 
 .card-img-overlay {
     z-index: 2;
@@ -539,7 +539,7 @@ h3 {
     height: 78px;
     justify-content: flex-start; /*flex*/
     display: flex; /*aggiunto*/
-}
+
     justify-content: flex-start; /*flex*/
     display: flex; /*aggiunto*/
 }
@@ -1319,8 +1319,7 @@ padding-top: 5px;
 }
 
 /* EVENTS */
-.small-card-e{
-    height: 1110px;
+
 .small-card-e{
     height: 1110px;
     width: 820px;
@@ -1328,8 +1327,7 @@ padding-top: 5px;
     border-radius: 15px;
 }
 
-.img-small-e {
-    height: 1110px;
+
 .img-small-e {
     height: 1110px;
     width: 820px;
@@ -2048,9 +2046,6 @@ padding-top: 5px;
 .dim:active,
 .dim:focus{
     box-shadow: inset 0px 0px 70px 0px var(--gg-ice-color) !important;
-.dim:active,
-.dim:focus{
-    box-shadow: inset 0px 0px 70px 0px var(--gg-ice-color) !important;
 }
 
 .margin-right-15{
@@ -2217,4 +2212,4 @@ a .overlay{
     color: var(--gg-txt-color);
     background-color: var(--gg-deepblue-color);
     border-color: var(--gg-deepblue-color);
-} 
+}
