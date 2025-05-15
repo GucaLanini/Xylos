@@ -4,7 +4,7 @@
 @font-face {
     font-family: "chillax";
     src: 
-        url("../font/Chillax-Light.otf") format("opentype");
+        url("../font/Chillax-Light.otf") format("opentype")
 }
 
 @font-face {
@@ -334,7 +334,6 @@ h3 {
     z-index: 1; 
 }
 
-
 .card-img-overlay {
     z-index: 2;
     background-color: var(--gg-bg-color);
@@ -512,7 +511,7 @@ h3 {
     height: 78px;
     justify-content: flex-start; /*flex*/
     display: flex; /*aggiunto*/
-
+}
 
 
 .icon-alert svg{
@@ -1214,13 +1213,11 @@ padding-top: 5px;
 }
 
 /* EVENTS */
-
 .small-card-e{
     height: 1110px;
     width: 820px;
     border-radius: 15px;
 }
-
 
 .img-small-e {
     height: 1110px;
@@ -2021,4 +2018,4 @@ a .overlay{
     color: var(--gg-txt-color);
     background-color: var(--gg-deepblue-color);
     border-color: var(--gg-deepblue-color);
-}
+} 
