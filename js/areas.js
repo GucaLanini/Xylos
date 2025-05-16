@@ -682,18 +682,18 @@ const negozi =   document.getElementById('negozi');
 const content =  document.getElementById('content');
 
 alloggi.addEventListener('click', () => {
-    console.log("funziona");
+
     
     content.innerHTML = `
 
         <div class="row reset-margin d-flex"> 
-            <div class="col-6 reset-all">
+                <div class="col-6">
                   <img src="img/Pantheon.png" alt="Pantheon" class="img-dome">
             </div>
 
-            <div class="col-6 reset-padding">
-                  <h2 class="row reset-all">Pantheon</h2>
-                  <p class="row reset-all margin-top-50">Il Pantheon è un lussuoso albergo immerso in un ecosistema unico e incontaminato. Costruito su piattaforme sospese tra le cime degli alberi giganti della foresta di Lyvion, offre una vista mozzafiato su un mare verde pulsante di vita. Le sue pareti in vetro bio-trasparente permettono agli ospiti di ammirare panorami spettacolari, dall’aurora multicolore che danza nel cielo ai misteriosi bioluminescenti che illuminano la foresta di notte. Con un'architettura che si fonde armoniosamente con la natura circostante, il Pantheon è il rifugio perfetto per esploratori intergalattici e amanti della tranquillità cosmica.
+            <div class="col-6">
+                  <h2 class="row ">Pantheon</h2>
+                  <p class="row margin-top-50">Il Pantheon è un lussuoso albergo immerso in un ecosistema unico e incontaminato. Costruito su piattaforme sospese tra le cime degli alberi giganti della foresta di Lyvion, offre una vista mozzafiato su un mare verde pulsante di vita. Le sue pareti in vetro bio-trasparente permettono agli ospiti di ammirare panorami spettacolari, dall’aurora multicolore che danza nel cielo ai misteriosi bioluminescenti che illuminano la foresta di notte. Con un'architettura che si fonde armoniosamente con la natura circostante, il Pantheon è il rifugio perfetto per esploratori intergalattici e amanti della tranquillità cosmica.
                   </p>
             </div> 
         </div>
@@ -704,13 +704,13 @@ alloggi.addEventListener('click', () => {
 ristoranti.addEventListener('click', () => {
     content.innerHTML = `
         <div class="row reset-margin d-flex"> 
-                <div class="col-6 reset-all">
+                <div class="col-6">
                     <img src="img/Luce_Lumineth.jpg" alt="Luce di Lumineth" class="img-dome">
                 </div>
 
-                <div class="col-6 reset-padding">
-                    <h2 class="row reset-all">Luce di Lumineth</h2>
-                    <p class="row reset-all margin-top-50">Al centro della maestosa cupola di Lumineth, simbolo dell’armonia tra natura e architettura, sorge il ristorante Luce di Lumineth. Circondato dalla vista mozzafiato delle foreste bioluminescenti e delle rovine scintillanti, il ristorante offre un’esperienza unica in un ambiente elegante e immersivo. Il menù celebra i sapori della zona, preparati con ingredienti locali sostenibili. All’interno della cupola, giochi di luci e suoni richiamano i canti dei Vironis e il bagliore naturale delle foreste, rendendo ogni pasto un’esperienza indimenticabile. Un luogo perfetto per gustare la magia di Lumineth, nel cuore pulsante della sua straordinaria cupola.
+                <div class="col-6 ">
+                    <h2 class="row">Luce di Lumineth</h2>
+                    <p class="row  margin-top-50">Al centro della maestosa cupola di Lumineth, simbolo dell’armonia tra natura e architettura, sorge il ristorante Luce di Lumineth. Circondato dalla vista mozzafiato delle foreste bioluminescenti e delle rovine scintillanti, il ristorante offre un’esperienza unica in un ambiente elegante e immersivo. Il menù celebra i sapori della zona, preparati con ingredienti locali sostenibili. All’interno della cupola, giochi di luci e suoni richiamano i canti dei Vironis e il bagliore naturale delle foreste, rendendo ogni pasto un’esperienza indimenticabile. Un luogo perfetto per gustare la magia di Lumineth, nel cuore pulsante della sua straordinaria cupola.
                     </p>
                 </div> 
         </div>
@@ -718,7 +718,7 @@ ristoranti.addEventListener('click', () => {
 });
 farmacia.addEventListener('click', () => {
     content.innerHTML = `
-                      <div class="row reset-margin d-flex"> 
+            <div class="row reset-margin d-flex"> 
             <div class="col-6 reset-all">
                   <img src="img/Armonia_Lumineth.jpg" alt="Armonia di Lumineth" class="img-dome">
             </div>
