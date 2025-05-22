@@ -6,24 +6,36 @@
 @font-face {
     font-family: "chillax";
     src: 
-        url("../font/Chillax-Bold.otf") format("opentype"),
-        url("../font/Chillax-Extralight.otf") format("opentype"),
-        url("../font/Chillax-Light.otf") format("opentype"),
-        url("../font/Chillax-Variable.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+        url("../font/Chillax-Light.otf") format("opentype")
+}
+
+@font-face {
+    font-family: "chillax";
+    src: 
+        url("../font/Chillax-Bold.otf") format("opentype");
+    font-weight: bold;
 }
 
 @font-face {
     font-family: "panchang";
     src: 
         local("panchang"),
-        url("../font/Panchang-Bold.otf") format("opentype"),
-        url("../font/Panchang-Extrabold.otf") format("opentype"),
         url("../font/Panchang-Regular.otf") format("opentype"),
-        url("../font/Panchang-Variable.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+}
+
+@font-face {
+    font-family: "panchang";
+    src: 
+        local("panchang"),
+        url("../font/Panchang-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "panchang";
+    src: 
+        local("panchang"),
+        url("../font/Panchang-Semibold.otf") format("opentype");
 }
 
 
@@ -448,12 +460,12 @@ div.row.justify-content-between button{
     height: 130px;
     width: 20%;
     border-radius: 15px;
-    box-shadow: inset 0px 0px 70px 0px var(--gg-deepblue-color);
+    box-shadow: inset 0px 0px 35px 0px var(--gg-deepblue-color);
 }
 
 div.row.justify-content-between button:active,
 div.row.justify-content-between button:focus{
-    box-shadow: inset 0px 0px 70px 0px var(--gg-ice-color);
+    box-shadow: inset 0px 0px 35px 0px var(--gg-ice-color);
 }
 
 #info-btn.row{
@@ -705,4 +717,19 @@ button span{
     opacity: 0.7; 
     border-radius: 50px;
     z-index: 1; 
+}
+
+.map-container .map{
+    transform: scale(1.4);
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+
+.img-dome {
+    width: 720px;
+    height: 760px;
+    border-radius: 30px;
 }

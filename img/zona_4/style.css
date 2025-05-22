@@ -2,47 +2,25 @@
 /* CSS Document */
 
 @font-face {
-    font-family: "chillax";
-    src: 
-        url("../font/Chillax-Light.otf") format("opentype")
-}
-
-@font-face {
-    font-family: "chillax";
-    src: 
-        url("../font/Chillax-Bold.otf") format("opentype");
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: "panchang";
-    src: 
-        local("panchang"),
-        url("../font/Panchang-Regular.otf") format("opentype"),
-}
-
-@font-face {
-    font-family: "panchang";
-    src: 
-        local("panchang"),
-        url("../font/Panchang-Bold.otf") format("opentype");
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: "panchang";
-    src: 
-        local("panchang"),
-        url("../font/Panchang-Semibold.otf") format("opentype");
+    font-family: chillax;
+    font-family: panchang;
+    src: url(font/Chillax-Bold.otf) format('otf');
+    src: url(font/Chillax-Extralight.otf) format('otf');
+    src: url(font/Chillax-bold.otf) format('otf');
+    src: url(font/Chillax-Light.otf) format('otf');
+    src: url(font/Chillax-Variable.otf) format('otf');
+    src: url(font/Panchang-Bold.otf) format('otf');
+    src: url(font/Panchang-Extrabold.otf) format('otf');
+    src: url(font/Panchang-Regular.otf) format('otf');
+    src: url(font/Panchang-Variable.otf) format('otf');
 }
 
 /******MODIFICHE GENERALI*****/
-
-body{
-    margin-left: 100px;
-    margin-right: 100px;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
-
 
 :root{
     --gg-bg-color: rgb(4, 2, 34);
@@ -51,6 +29,18 @@ body{
     --gg-deepblue-color: #011fe1;
 }
 
+.reset-padding {
+    padding: 0 !important;
+}
+
+.reset-margin {
+    margin: 0 !important;
+}
+
+.reset-all {
+    padding: 0 !important;
+    margin: 0 !important;
+}
 
 body {
     background-color: var(--gg-bg-color);
@@ -119,15 +109,6 @@ h3 {
     margin-bottom: 50px !important;
 }
 
-.m-top-210{
-    margin-top: 210px;
-
-}
-
-.p-top-20{
-    padding-top: 20px;
-}
-
 /*****HOME PAGE****/
 .boxhome{
     border: solid 5px var(--gg-deepblue-color);
@@ -138,11 +119,6 @@ h3 {
     align-items: center;
     box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
     border-radius: 50px;
-}
-
-.big-boxhome{
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .box-btn{
@@ -323,7 +299,6 @@ h3 {
 
 .card-img-overlay {
     z-index: 2;
-    background-color: var(--gg-bg-color);
 }
 
 .overlay-exp {
@@ -364,7 +339,7 @@ h3 {
     z-index: 2;
 }
 
-/****EXPERIENCES BOX****/
+/*****EXPERIENCES BOX****/
 .space-experience {
     margin-bottom: 150px;
 }
@@ -660,82 +635,30 @@ p {
 
 /*Tariffe*/
 .card-tariffs {
-    border-radius: 50px;
-    padding: 20px;
-    text-align: center;
-    color: #C8F1F9;
+    height: auto;
+    width: 498px;
     border: 5px solid var(--gg-deepblue-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 600px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    border-radius: 50px;
+    padding: 0px;
+    justify-content: center; 
 }
 
-.card-tariffs h3 {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
+.icon-margin-70 {
+    margin: 70px;
 }
 
-.counter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    padding: 5px;
-    border-radius: 10px;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+.margin-70 {
+    margin: 0px 0px 70px 0px;
 }
 
-.counter-button {
-    background-color: var(--gg-ice-color);
-    border: none;
-    color: var(--gg-bg-color);
-    font-size: 1.2em;
-    width: 36px;
-    height: 32px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-}
-
-.counter-button .plus{
-padding-top: 5px;
-}
-
-.number {
-    margin: 0 10px;
-    color: var(--gg-txt-color);
-    border: 2px solid var(--gg-ice-color);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 68px;
-    height: 32px;
-
-}
-
-.margin-70{
-    margin-top: 70px;
-}
 .padding-70 {
     padding: 0px 70px;
 }
 
-.tariff-rows{
-    gap: 50px;
+.margin-50 {
+    margin-right: 50px !important;
 }
-
-.card-tariffs-container{
-    margin-bottom: 100px;
-}
-
+  
 /*Prenota*/ 
 .checkbox-style
 {
@@ -788,7 +711,7 @@ padding-top: 5px;
 
 .summary-button{
     align-self: flex-end;
-    margin-top: 1800px;
+    margin-top: 813px;
 }
 
 /****TRANSPORTS****/
@@ -1017,6 +940,7 @@ padding-top: 5px;
     display: flex;
     align-items: center;
     background-color: var(--gg-deepblue-color);
+    padding: 25px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     text-align: left;
@@ -1028,9 +952,6 @@ padding-top: 5px;
 
 .calendarheader p{
     margin-bottom: 0px;
-    background-color: var(--gg-deepblue-color);
-    padding-left: 25px;
-
 }
 
 .calendar-selector {
@@ -1095,14 +1016,12 @@ padding-top: 5px;
     border-style: none solid none none;
 }
 
-
-
 .time-options {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
-    padding: 15px 7px 50px 7px;
+    padding: 15px 0 50px 0;
 }
 
 .time-option {
@@ -1120,6 +1039,77 @@ padding-top: 5px;
     color: var(--gg-bg-color)
 }
 
+/***COUNTER BIGLIETTI***/
+.counter{
+    margin-top: 85px;
+    margin-bottom: 65px;
+}
+
+.number{
+    height: 32px;
+    width: 70px;
+    text-align: center;
+    border: 2px solid var(--gg-ice-color); /*,*/
+    border-radius: 6px;
+    margin: 0 10px;
+    color: var(--gg-ice-color);
+}
+
+.counter-button{
+    background-color: var(--gg-ice-color);
+    border-radius: 6px;
+}
+
+.counter-sign{
+    color: var(--gg-bg-color);
+    text-align: center;
+    width: 32px;
+    height: 32px;
+}
+
+/*RIEPILOGO*/ 
+.h3-esperienza {
+    font-family: Panchang !important;
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--gg-txt-color);
+    margin-bottom: 40px;
+}
+
+.line {
+    border-bottom: 5px solid var(--gg-deepblue-color);
+    padding-bottom: 45px;
+    margin: 0px;
+}
+
+.space-40 {
+    margin-bottom: 40px;
+}
+
+p.line{
+padding-left: 0 !important;
+}
+
+.citypasssummary{
+    margin-bottom: 150px !important;
+}
+
+.calendars{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.space-430 {
+    margin-bottom: 430px;
+}
+
+.selection{
+    display: flex;
+}
 
 
 /*INDEX*/ 
@@ -1192,7 +1182,6 @@ padding-top: 5px;
 
 .flag {
     margin: 0px 24px 65px 24px;
-    
 }
 
 .btn.show {
@@ -1286,6 +1275,10 @@ padding-top: 5px;
     border-radius: 8px;
 }
 
+.custom-d-m{
+    position: relative !important;
+    transform: none !important;
+}
 
 .dropdown-item-route.selected p{
     color: var(--gg-bg-color)
@@ -1307,9 +1300,7 @@ padding-top: 5px;
     border-style: solid;
     border-color: var(--gg-deepblue-color);
     border-radius: 30px;
-    width: 840px;
 }
-
 
 .zone-selection p {
     text-align: center;
@@ -1323,13 +1314,10 @@ padding-top: 5px;
     background-color: var(--gg-deepblue-color) !important;
     border-style: none;
 }
+
 /****CITY PASS****/
 .margin-x-70{
     margin: 0 70px;
-}
-
-.p-top-50{
-    padding-top: 50px;
 }
 
 .citypass-tariffs{
@@ -1337,7 +1325,6 @@ padding-top: 5px;
     border-radius: 50px;
     border: var(--gg-border-drop);
 }
-
 
 .citypass-hour{
     width: 530px;
@@ -1960,49 +1947,3 @@ a .overlay{
     font-size: 48px;
     color: var(--gg-ice-color);
 }
-
-.h3-summary {
-    font-family: Panchang;
-    font-weight: 600;
-    font-size: 36px;
-    color: var(--gg-txt-color);
-    margin-bottom: 40px;
-}
-
-.line {
-    border-bottom: 5px solid var(--gg-deepblue-color);
-    padding-bottom: 45px;
-}
-
-.space-40 {
-    margin-bottom: 40px;
-}
-
-.space-430 {
-    margin-bottom: 430px;
-}
-.booking-btn {
-    margin-top: 400px;
-}
-.button{
-    font-family: panchang;
-    font-weight: 600;
-    color: var(--gg-bg-color);
-    font-size: 28px;
-    height: 117px;
-    width: 240px;
-    background-color: var(--gg-ice-color);
-    border-color: var(--gg-ice-color);
-    border-radius: 15px;
-    padding: 0; /*auto*/
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    text-decoration: none;
-} 
-
-.button:active {
-    color: var(--gg-txt-color);
-    background-color: var(--gg-deepblue-color);
-    border-color: var(--gg-deepblue-color);
-} 

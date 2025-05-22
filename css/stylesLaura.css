@@ -4,25 +4,39 @@
 @font-face {
     font-family: "chillax";
     src: 
-        url("../font/Chillax-Bold.otf") format("opentype"),
-        url("../font/Chillax-Extralight.otf") format("opentype"),
-        url("../font/Chillax-Light.otf") format("opentype"),
-        url("../font/Chillax-Variable.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+        url("../font/Chillax-Light.otf") format("opentype")
+}
+
+@font-face {
+    font-family: "chillax";
+    src: 
+        url("../font/Chillax-Bold.otf") format("opentype");
+    font-weight: bold;
 }
 
 @font-face {
     font-family: "panchang";
     src: 
         local("panchang"),
-        url("../font/Panchang-Bold.otf") format("opentype"),
-        url("../font/Panchang-Extrabold.otf") format("opentype"),
-        url("../font/Panchang-Regular.otf") format("opentype"),
-        url("../font/Panchang-Variable.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+        url("../font/Panchang-Regular.otf") format("opentype");
 }
+
+@font-face {
+    font-family: "panchang";
+    src: 
+        local("panchang"),
+        url("../font/Panchang-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "panchang";
+    src: 
+        local("panchang"),
+        url("../font/Panchang-Semibold.otf") format("opentype");
+}
+
+
 
 *{
     box-sizing: border-box;
@@ -102,7 +116,6 @@ p {
 
 .button{
     font-family: panchang;
-    font-weight: 600;
     color: var(--gg-bg-color);
     font-size: 28px;
     height: 117px;
@@ -259,6 +272,10 @@ p {
     font-weight: bold;
 }
 
+.bold-text {
+    font-weight: bold;
+}
+
 /******FINE PAGINA EXPERIENCES*****/
 
 /*Galleria*/
@@ -352,6 +369,11 @@ p {
 .card-img-overlay {
     z-index: 2;
 }
+
+.card-img-overlay-blue{
+    background-color: var(--gg-bg-color) !important;
+}
+
 
 .overlay-exp {
     position: absolute;

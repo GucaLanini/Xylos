@@ -4,24 +4,36 @@
 @font-face {
     font-family: "chillax";
     src: 
-        url("../font/Chillax-Bold.otf") format("opentype"),
-        url("../font/Chillax-Extralight.otf") format("opentype"),
-        url("../font/Chillax-Light.otf") format("opentype"),
-        url("../font/Chillax-Variable.otf") format("opentype");
-    font-weight: lighter;
-    font-style: normal;
+        url("../font/Chillax-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "chillax";
+    src: 
+        url("../font/Chillax-Bold.otf") format("opentype");
+    font-weight: bold;
 }
 
 @font-face {
     font-family: "panchang";
     src: 
         local("panchang"),
-        url("../font/Panchang-Bold.otf") format("opentype"),
-        url("../font/Panchang-Extrabold.otf") format("opentype"),
-        url("../font/Panchang-Regular.otf") format("opentype"),
-        url("../font/Panchang-Variable.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+        url("../font/Panchang-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "panchang";
+    src: 
+        local("panchang"),
+        url("../font/Panchang-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "panchang";
+    src: 
+        local("panchang"),
+        url("../font/Panchang-Semibold.otf") format("opentype");
 }
 
 
@@ -274,7 +286,7 @@ padding-top: 5px;
     flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
-    padding: 15px 0 50px 0;
+    padding: 15px 7px 50px 7px;
 }
 
 .time-option {
@@ -291,8 +303,6 @@ padding-top: 5px;
     background-color: var(--gg-ice-color);
     color: var(--gg-bg-color)
 }
-
-
 
 /***COUNTER PAGINA ALE***/
 .counter-transports{
@@ -459,3 +469,52 @@ padding-top: 5px;
 .m-bottom-100{
     margin-bottom: 100px;
 }
+
+/**riepilogo**/
+
+.h3-summary {
+    font-family: Panchang;
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--gg-txt-color);
+    margin-bottom: 40px;
+}
+
+.line {
+    border-bottom: 5px solid var(--gg-deepblue-color);
+    padding-bottom: 45px;
+}
+
+.space-40 {
+    margin-bottom: 40px;
+}
+
+.space-430 {
+    margin-bottom: 430px;
+}
+.booking-btn {
+    margin-top: 400px;
+}
+
+.button{
+    font-family: panchang;
+    font-weight: 600;
+    color: var(--gg-bg-color);
+    font-size: 28px;
+    height: 117px;
+    width: 240px;
+    background-color: var(--gg-ice-color);
+    border-color: var(--gg-ice-color);
+    border-radius: 15px;
+    padding: 0; /*auto*/
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-decoration: none;
+} 
+
+.button:active {
+    color: var(--gg-txt-color);
+    background-color: var(--gg-deepblue-color);
+    border-color: var(--gg-deepblue-color);
+} 
