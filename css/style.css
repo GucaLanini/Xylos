@@ -1574,3 +1574,157 @@ padding-top: 5px;
 .margin-800{
     margin-top: 800px;
 }
+
+
+/****ULTIME PAGINE LAURA****/
+
+/****MAPPA****/
+/******filtro mappa*****/
+.filter-opt{
+    margin-top: 50px;
+    padding-left: 25px;
+    
+
+}
+
+.span-map {
+    font-size: 28px;
+    font-family: chillax;
+    font-weight: 200;
+    color: var(--gg-txt-color);
+    margin-left: 35px;
+    text-align: center;    
+}
+
+.filter-item.active {
+    transform: scale(1.2);
+
+    
+}
+
+/******FINE filtro mappa*****/
+
+
+/******mappa*****/
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zona{
+    fill: #040222;
+    
+}
+
+.start{
+    display: none;
+}
+
+.pin{
+    display: none;
+}
+
+.visible-area{
+    display:flex;
+}
+
+.pin-vis-area{
+    display: flex;
+    fill: rgba(0, 0, 0, 0);
+
+}
+.visible-icon{
+    display:flex;
+}
+
+.pin-vis-icon{
+    display: flex;
+    fill: rgba(0, 0, 0, 0);
+
+}
+
+.pin-vis-icon{
+    display: flex;
+    fill: rgba(0, 0, 0, 0);
+
+}
+
+.card-pu-vis{
+    display: flex;
+}
+
+.superstroke{
+    stroke-width: 10;
+}
+/******FINE mappa*****/
+
+
+/******pop up*****/
+.card-pop-up {
+    display: none;
+    position: fixed;
+    width: 1690px;
+    height: 1110px;
+    background-color: var(--gg-bg-color);
+    border: 10px solid var(--gg-deepblue-color);
+    background-color: var(--gg-bg-color);
+    border-radius: 30px;
+    margin-top: 590px;
+    padding: 110px 135px;
+    z-index: 3;
+}
+
+.popup-background {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 2, 34, 0.5);
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.col-img-card {
+    width: 676px;
+    height: 864px;
+    gap: 50px;
+    border-radius: 30px;
+}
+
+.p_map {
+    font-family: chillax;
+    font-weight: 200;/*problematico, chiedere*/
+    font-size: 24px;
+    color: var(--gg-txt-color);
+    text-align: left;
+    text-align: justify;
+    margin-top: 30px;
+}
+
+.card-title-popup {
+    width: 604px;
+}
+
+.cross {
+    justify-content: end;
+    width: 70px;
+}
+
+.card-pu-vis{
+    display: flex;
+}
+
+.popup-display{
+    display: flex;
+}
+
+
+.exit{
+    fill: rgba(0, 0, 0, 0);
+    z-index: 4;
+}
+/******FINE pop up*****/
