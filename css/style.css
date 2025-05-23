@@ -137,10 +137,6 @@ p {
 
 /***UTILITY****/
 
-.bottom-150 {
-    margin-bottom: 150px;
-}
-
 .space-50 {
     margin: 0px 0px 50px 0px;
 }
@@ -174,6 +170,13 @@ p {
     margin-top: 50px;
 }
 
+.m-bottom-100{
+    margin-bottom: 100px;
+}
+
+.space-620 {
+    margin-top: 60px;
+}
 
 
 /****INDEX***/
@@ -1200,23 +1203,143 @@ button span{
 }
 
 
+/* COMPANION*/
+.h1-companion {
+    margin: 150px 0px;
+}
+
+.title-companion {
+    font-family: panchang;
+    font-size: 84px;
+    color: var(--gg-txt-color);
+    font-weight: bold;
+    filter: none;
+    margin-bottom: 50px;
+}
+
+.h2-companion {
+    font-family: panchang;
+    font-size: 48px;
+    color: var(--gg-txt-color);
+    font-weight: bold;
+    margin-bottom: 75px;
+}
+
+.txt-companion {
+    font-family: chillax;
+    font-size: 36px;
+    color: var(--gg-txt-color);
+    font-weight: 600;
+    height: 100px;
+    margin: 0; /*none*/
+}
+
+
+
+.height-100 {
+    height: 100px;
+}
+
+
+.space-companion{
+    margin: 0px 0px 150px 0px;
+}
+
+.companion-content {
+    display: none;
+}
+
+.timespan.selected{
+    background-color: transparent;
+    box-shadow: inset 0px 0px 90px 0px var(--gg-ice-color)
+}
+
+
+@media only screen and (min-width: 1891px) {
+    .totem-content {
+        display: none;
+    }     
+    .companion-content {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1891px) {
+    .totem-content {
+        display: block;
+    }    
+    .companion-content {
+        display: none;
+    } 
+}
 
 
 
 
 
+/*bottone titolo H2*/
+.big-box-transports{
+    border: solid 5px var(--gg-deepblue-color);
+    height: 700px;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
+    border-radius: 50px;
+}
 
+.big-box-transports:active{
+    box-shadow: inset 0px 0px 90px 0px var(--gg-ice-color);
+    border-color: var(--gg-ice-color);
+}
 
+.margin-right-50 {
+    margin-right: 50px;
+}
 
+.box-txt-H2{
+    color: var(--gg-txt-color);
+    font-weight: bold;
+    margin-top:20px
+}
 
+.overlay-rent {
+    position: relative;
+    box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
+}
 
+.overlay-event {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gg-bg-color);
+    opacity: 0.7; 
+    border-radius: 50px;
+    z-index: 1; 
+}
 
+.line-bg {
+    background-color: #07043F;
+    height: 100px;
+}
+.line-dott{
+    border: none;
+    border-top: 3px dashed var(--gg-txt-color); 
+    width: 1347px;  
+    opacity: 1;             
+}
 
+.p-top-50{
+    padding-top: 50px;
+}
 
-
-
-
-
+.p-top-20{
+    padding-top: 20px;
+}
 
 
 /*Tariffe*/
@@ -1412,4 +1535,42 @@ padding-top: 5px;
 .time-option.selected {
     background-color: var(--gg-ice-color);
     color: var(--gg-bg-color)
+}
+
+
+/****CITY PASS****/
+.margin-x-70{
+    margin: 0 70px;
+}
+
+.p-top-50{
+    padding-top: 50px;
+}
+
+.citypass-tariffs{
+    box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
+    border-radius: 50px;
+    border: var(--gg-border-drop);
+}
+
+
+.citypass-hour{
+    width: 530px;
+    height: 250px;
+}
+
+.citypass-hour h3{
+    margin: 100px 0;
+}
+
+.m-bottom-100{
+    margin-bottom: 100px;
+}
+
+.space-button-citypass{
+    margin-top: 345px;
+}
+
+.margin-800{
+    margin-top: 800px;
 }

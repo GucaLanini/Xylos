@@ -1736,7 +1736,6 @@ padding-left: 0 !important;
     background-color: transparent;
     box-shadow: inset 0px 0px 90px 0px var(--gg-ice-color)
 }
-
 @media only screen and (min-width: 1891px) {
     .totem-content {
         display: none;
