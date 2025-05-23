@@ -182,6 +182,18 @@ p {
     margin: 0px 0px 210px 0px;
 }
 
+.bottom-110 {
+    margin: 0px 0px 110px 0px;
+}
+
+.bottom-180 {
+    margin-bottom: 180px;    
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
 /****INDEX***/
 
 .video-background {
@@ -1566,9 +1578,6 @@ padding-top: 5px;
     margin: 80px 0;
 }
 
-.m-bottom-100{
-    margin-bottom: 100px;
-}
 
 .space-button-citypass{
     margin-top: 345px;
@@ -1936,4 +1945,141 @@ padding-top: 5px;
 
 .overlay-transports{
     border-radius: 50px;
+}
+
+/*bottone assicurazione*/
+.custom-button-base {
+    width: 530px;
+    height: 120px;
+    border: solid 5px var(--gg-ice-color);
+    background-color: var(--gg-bg-color);
+    color: var(--gg-txt-color);
+    font-family: Chillax;
+    font-size: 28px;
+    border-radius: 30px;
+}
+
+.custom-button-base.selected {
+    background-color: var(--gg-ice-color);
+    color: var(--gg-bg-color); 
+    border-color: var(--gg-txt-color); 
+}
+.space-insurance-340 {
+    margin-right: 340px;
+}
+
+.margin-insurance-70 {
+    margin: 0px 0px 70px 0px;
+}
+
+.summary-transports-btn{
+    margin-top: 530px;
+}
+
+/*DROPDOWN*/
+
+.b-radius{
+    border-radius: 30px;  
+}
+
+.dropdown-toggle::after{
+    font-size: 32px;
+    display: none;
+}
+
+.dropdown-toggle[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+}
+
+.route-selection{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 0px;
+    border: none;
+    margin: 70px 0 50px 0;
+}
+
+.dropdown-menu-transports{
+    margin-bottom: 0px;
+    background-color: var(--gg-bg-color);
+    border: 5px solid var(--gg-deepblue-color); /*,*/
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.dropdown-item-route{
+    width: 290px;
+    height: 72px;
+    padding-left: 25px;
+    padding-top: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+
+.dropdown-item-route.selected p{
+    color: var(--gg-bg-color)
+}
+
+.dropdown-item-route:hover{
+    background-color: var(--gg-ice-color);
+}
+
+.dropdown-item-route:hover p {
+    color: var(--gg-bg-color)
+}
+
+.zone-selection{
+    height: 100px;
+    margin-top: 50px;
+    padding: 28px 0;
+    border: 5px;
+    border-style: solid;
+    border-color: var(--gg-deepblue-color);
+    border-radius: 30px;
+    width: 840px;
+}
+
+
+.zone-selection p {
+    text-align: center;
+}
+ 
+.zone-selection-right{
+    margin-left: auto;
+}
+
+.dropdown-selection {
+    background-color: var(--gg-deepblue-color) !important;
+    border-style: none;
+}
+
+.box {
+    height: 120px;
+    border: 5px solid var(--gg-deepblue-color);
+    border-radius: 30px;
+    gap: 12px;
+}
+
+.shuttle-subtitle {
+    text-align: center;
+}
+
+.text {
+   
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--gg-txt-color);
+    height: 120px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between; 
+    text-align: center; 
+    font-family: Panchang;
+    padding:0px 60px;
+    align-items: center;
+    
+
 }
