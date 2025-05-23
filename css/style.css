@@ -1198,8 +1198,8 @@ button span{
     margin: 70px;
 }
 
-.card-tariffs .row {
-    margin: 0px 0px 70px 0px;
+.citypass-counter{
+    margin-bottom: 10px;
 }
 
 
@@ -1551,7 +1551,6 @@ padding-top: 5px;
     box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
     border-radius: 50px;
     border: var(--gg-border-drop);
-    margin-bottom: 0px;
 }
 
 
@@ -1561,7 +1560,7 @@ padding-top: 5px;
 }
 
 .citypass-hour h3{
-    margin: 100px 0;
+    margin: 80px 0;
 }
 
 .m-bottom-100{
