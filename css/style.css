@@ -1551,6 +1551,7 @@ padding-top: 5px;
     box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
     border-radius: 50px;
     border: var(--gg-border-drop);
+    margin-bottom: 0px;
 }
 
 
@@ -1573,4 +1574,10 @@ padding-top: 5px;
 
 .margin-800{
     margin-top: 800px;
+}
+
+
+.experience-tariffs{
+    height: 530px;
+    padding-top: 50px;
 }
