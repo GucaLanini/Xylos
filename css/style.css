@@ -178,6 +178,9 @@ p {
     margin-top: 60px;
 }
 
+.bottom-210 {
+    margin: 0px 0px 210px 0px;
+}
 
 /****INDEX***/
 
@@ -1885,4 +1888,52 @@ padding-top: 5px;
 .experience-tariffs{
     height: 530px;
     padding-top: 50px;
+}
+
+/*scelta mezzi trasporti*/ 
+.small-box-transports {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: var(--gg-txt-color);
+    border: solid 5px var(--gg-deepblue-color);
+    height: 300px;
+    width: 1688px;
+    margin: 0px 0px 100px 0px;
+    box-shadow: inset 0px 0px 90px 0px var(--gg-deepblue-color);
+    border-radius: 50px;
+    position: relative;
+}
+
+.small-box-transports:active{
+    box-shadow: inset 0px 0px 90px 0px var(--gg-ice-color);
+    border-color: var(--gg-ice-color);
+}
+
+.h2-transport {
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--gg-txt-color);
+    margin-left: 245px;
+}
+
+.h3-transport {
+    font-family: Chillax;
+    font-weight: normal;
+    font-size: 40px;
+    color: var(--gg-txt-color);
+    margin-right: 245px;
+}
+
+.h2-special-vehicles{
+    font-family: panchang;
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--gg-ice-color);
+    margin-bottom: 90px;
+}
+
+.overlay-transports{
+    border-radius: 50px;
 }
