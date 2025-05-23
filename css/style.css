@@ -507,7 +507,7 @@ p {
 .wallpaper h1{
     position: absolute;
     bottom: 0;
-    margin-left: 100px;
+    padding-left: 100px;
 }
 
 /******FINE wallpaper*****/
