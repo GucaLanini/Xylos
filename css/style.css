@@ -42,6 +42,8 @@
     box-sizing: border-box;
 }
 
+strong { font-weight: bold; }
+
 
 :root{
     --gg-bg-color: #040222;
