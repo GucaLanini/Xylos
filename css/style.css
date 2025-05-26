@@ -485,6 +485,9 @@ p {
     padding: 0px;
 }
 
+.col-10.p-lightblue>.bold-text{
+    padding-right: 10px;
+}
 
 /******wallpaper*****/
 
