@@ -207,6 +207,11 @@ p {
 
 .container-fluid.top-175{
     text-align: center;
+
+}
+
+.container-fluid.top-175>.row>h1.col{
+    margin-right: 110px;
 }
 
 /****INDEX***/
@@ -493,6 +498,7 @@ p {
 
 .container-fluid.header{
     height: 1005px;
+    margin-right: 110px;
 }
 
 
@@ -2099,4 +2105,8 @@ padding-top: 5px;
     padding:0px 60px;
     align-items: center;   
 
+}
+
+.event-cards{
+    padding:70px;
 }
