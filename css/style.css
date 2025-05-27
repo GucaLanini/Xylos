@@ -2097,3 +2097,7 @@ padding-top: 5px;
 .event-cards{
     padding:70px;
 }
+
+.image-event{
+    border-radius: 0px;
+}
