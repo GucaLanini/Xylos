@@ -4,12 +4,14 @@
 @font-face {
     font-family: "chillax";
     src: 
+        local("chillax")
         url("../font/Chillax-Light.otf") format("opentype")
 }
 
 @font-face {
     font-family: "chillax";
     src: 
+        local("chillax")
         url("../font/Chillax-Bold.otf") format("opentype");
     font-weight: bold;
 }
